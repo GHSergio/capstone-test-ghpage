@@ -1,3 +1,10 @@
+$inactive-color: rgba(255, 255, 255, 0.5);
+$active-color: rgba(255, 255, 255);
+
+$background-1: #23262f;
+$background-2: #2d3831;
+$background-3: #063540;
+
 body {
   padding: 0;
   margin: 0;
@@ -137,7 +144,12 @@ body {
 .right-container {
   width: 50%;
   height: 100%;
-  background: #23262f;
+}
+
+.SideIllustration {
+  width: 100%;
+  height: 100%;
+  background: $background-1;
   position: relative;
 }
 
@@ -158,15 +170,14 @@ body {
   top: 127px;
   left: 50%;
   transform: translate(-50%);
-  filter: blur(41.8502px);
   border-radius: 24px;
-  box-shadow: 0 0 0px 5px rgb(255, 255, 255);
-  // box-shadow: 0px 47.34px 37.87px -28.4px #0f0f0f1f;
+  box-shadow: 0px 0px 0px 3px rgb(255, 255, 255, 0.7);
+  filter: blur(15.8502px);
 }
 
 .content {
   position: absolute;
-  width: 294px;
+  width: 380px;
   height: 109px;
   top: 582px;
   left: 50%;
@@ -228,11 +239,11 @@ body {
       left: 323px;
       top: 391px;
       margin: 3px;
-      background: rgba(255, 255, 255, 0.5);
+      background: $inactive-color;
       border-radius: 8px;
     }
     .active {
-      background: rgba(255, 255, 255);
+      background: $active-color;
     }
   }
 }
