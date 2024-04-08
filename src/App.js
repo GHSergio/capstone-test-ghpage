@@ -16,6 +16,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/main/*" element={<Main />}>
+            {/* main的其他分頁 */}
             <Route path="commuteList" element={<CommuteList />} />
             <Route path="learnList" element={<LearnList />} />
             <Route path="preSleepList" element={<PreSleepList />} />
