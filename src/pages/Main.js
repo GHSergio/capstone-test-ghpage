@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import "../styles/main.scss";
 // import Player from "../components/Player";
 
@@ -14,17 +14,12 @@ import {
 import Hamburger from "../components/Hamburger";
 
 const Main = () => {
-  const [activeList, setActiveList] = useState(null);
+  const navigate = useNavigate();
+  const [activeList, setActiveList] = useState("commuteList");
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const handleClickList = (item) => {
     setActiveList(item);
-    // if (activeDropdown === item) {
-    //   setActiveDropdown(null);
-    // } else {
-    //   setActiveDropdown(item);
-    // }
-    // setActiveDropdown(null);
   };
 
   // 與當前activeDropdown相同,則改為null,不同則改為value
@@ -33,6 +28,8 @@ const Main = () => {
       prevDropdown === dropdownName ? null : dropdownName
     );
   };
+
+  // console.log(activeList, activeDropdown);
 
   return (
     <div className="main-container">
@@ -114,19 +111,20 @@ const Main = () => {
             className={
               activeList === "commuteList" ? "list-item active" : "list-item"
             }
-            onClick={() => handleClickList("commuteList")}
+            onClick={() => {
+              handleClickList("commuteList");
+              navigate("/main/commuteList");
+            }}
           >
-            <div className="list-item-title">
+            <div className="list-item-content">
               <BusIcon />
-              <Link to="/main/commuteList" className="link-item">
-                通勤清單
-              </Link>
+              <p className="list-item-title">通勤清單</p>
             </div>
             <div className="hamburger-container">
               <Hamburger
                 isActive={activeDropdown === "commuteList"}
                 onClick={() => handleClickDropdown("commuteList")}
-                disabled={activeList !== "commuteList"}
+                // disabled={activeList !== "commuteList"}
               />
             </div>
           </li>
@@ -135,18 +133,20 @@ const Main = () => {
             className={
               activeList === "learnList" ? "list-item active" : "list-item"
             }
-            onClick={() => handleClickList("learnList")}
+            onClick={() => {
+              handleClickList("learnList");
+              navigate("/main/learnList");
+            }}
           >
-            <div className="list-item-title">
+            <div className="list-item-content">
               <LearnIcon />
-              <Link to="/main/learnList" className="link-item">
-                學習清單
-              </Link>
+              <p className="list-item-title">學習清單</p>
             </div>
             <div className="hamburger-container">
               <Hamburger
                 isActive={activeDropdown === "learnList"}
                 onClick={() => handleClickDropdown("learnList")}
+                // disabled={activeList !== "learnList"}
               />
             </div>
           </li>
@@ -154,18 +154,20 @@ const Main = () => {
             className={
               activeList === "preSleepList" ? "list-item active" : "list-item"
             }
-            onClick={() => handleClickList("preSleepList")}
+            onClick={() => {
+              handleClickList("preSleepList");
+              navigate("/main/preSleepList");
+            }}
           >
-            <div className="list-item-title">
+            <div className="list-item-content">
               <PreSleep />
-              <Link to="/main/preSleepList" className="link-item">
-                睡前清單
-              </Link>
+              <p className="list-item-title">睡前清單</p>
             </div>
             <div className="hamburger-container">
               <Hamburger
                 isActive={activeDropdown === "preSleepList"}
                 onClick={() => handleClickDropdown("preSleepList")}
+                // disabled={activeList !== "preSleepList"}
               />
             </div>
           </li>
@@ -173,18 +175,20 @@ const Main = () => {
             className={
               activeList === "myPodcastList" ? "list-item active" : "list-item"
             }
-            onClick={() => handleClickList("myPodcastList")}
+            onClick={() => {
+              handleClickList("myPodcastList");
+              navigate("/main/myPodcastList");
+            }}
           >
-            <div className="list-item-title">
+            <div className="list-item-content">
               <PodcastIcon />
-              <Link to="/main/myPodcastList" className="link-item">
-                我的Podcast
-              </Link>
+              <p className="list-item-title">我的Podcast</p>
             </div>
             <div className="hamburger-container">
               <Hamburger
                 isActive={activeDropdown === "myPodcastList"}
                 onClick={() => handleClickDropdown("myPodcastList")}
+                // disabled={activeList !== "myPodcastList"}
               />
             </div>
           </li>
@@ -192,29 +196,29 @@ const Main = () => {
             className={
               activeList === "myFavoriteList" ? "list-item active" : "list-item"
             }
-            onClick={() => handleClickList("myFavoriteList")}
+            onClick={() => {
+              handleClickList("myFavoriteList");
+              navigate("/main/myFavoriteList");
+            }}
           >
-            <div className="list-item-title">
+            <div className="list-item-content">
               <Favorite />
-              <Link to="/main/myFavoriteList" className="link-item">
-                已收藏
-              </Link>
+              <p className="list-item-title">收藏清單</p>
             </div>
             <div className="hamburger-container">
               <Hamburger
                 isActive={activeDropdown === "myFavoriteList"}
                 onClick={() => handleClickDropdown("myFavoriteList")}
+                // disabled={activeList !== "myFavoriteList"}
               />
             </div>
           </li>
 
           {/* addCategory */}
           <li className="list-item addCategory">
-            <div className="list-item-title">
+            <div className="list-item-content">
               <AddIcon />
-              <Link to="/main/myFavoriteList" className="link-item">
-                新增分類
-              </Link>
+              <p className="list-item-title">新增分類</p>
             </div>
           </li>
         </ul>

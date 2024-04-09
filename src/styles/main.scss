@@ -44,7 +44,7 @@ a {
 
   .list-container {
     width: 80%;
-    margin: 41px auto 0px auto;
+    margin: 70px auto 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,15 +60,15 @@ a {
       margin: 12px 5px;
       padding: 0 0 0 15px;
       font-size: 0.8rem;
-      // cursor: pointer;
+      cursor: pointer;
 
-      .list-item-title {
+      .list-item-content {
         width: 180px;
         height: 47px;
         display: flex;
         color: $link-item-color;
         align-items: center;
-        .link-item {
+        .list-item-title {
           margin: 0 10px;
         }
       }

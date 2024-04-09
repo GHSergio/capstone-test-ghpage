@@ -5,7 +5,6 @@ const Hamburger = ({ isActive, onClick, disabled }) => {
     ? "dropdown-container active"
     : "dropdown-container";
 
-  console.log(isActive);
   return (
     <div class="hamburger-wrapper" onClick={disabled ? null : onClick}>
       <div class="hamburger-dot"></div>
