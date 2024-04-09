@@ -1,0 +1,78 @@
+.card-container {
+  position: relative;
+  height: 100%;
+  width: 808px;
+  display: flex;
+  flex-direction: column;
+  /* 早安 */
+  h1 {
+    position: absolute;
+    width: 65px;
+    height: 48px;
+    left: 24px;
+    top: 40px;
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    color: #000000;
+  }
+}
+
+.default {
+  position: absolute;
+  top: 104px;
+  left: 214px;
+  display: flex;
+  width: 379px;
+  height: 182px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 56px;
+    height: 56px;
+  }
+  span {
+    width: 379px;
+    height: 26px;
+
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    // line-height: 26px;
+    margin-top: 26px;
+    text-align: center;
+    color: #718096;
+  }
+  .button-add {
+    position: absolute;
+    top: 142px;
+    left: 94px;
+    width: 191px;
+    height: 44px;
+    background-color: #ff7f50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+    p {
+      width: 95px;
+      height: 23px;
+      font-family: Noto Sans TC;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.17px;
+      color: #ffffff;
+    }
+  }
+}

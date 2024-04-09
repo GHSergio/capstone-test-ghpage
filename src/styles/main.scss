@@ -1,3 +1,7 @@
+// 引入其他的 SCSS 文件
+@import "footer"; // 引入變量文件
+@import "card"; // 引入變量文件
+
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +21,7 @@ a {
   position: relative;
   display: flex;
   height: 1024px;
+  width: 1440px;
 }
 
 //navigation
@@ -28,7 +33,7 @@ a {
   height: 100%;
 
   .logo-container {
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
 
     hr {
@@ -44,7 +49,7 @@ a {
 
   .list-container {
     width: 80%;
-    margin: 70px auto 0px auto;
+    margin: 97px auto 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,35 +156,40 @@ a {
   display: block;
 }
 
-//player
-.playing-container {
-  position: absolute;
-  right: 60px;
-  top: 104px;
-  margin-top: 104px;
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-  border-radius: 16px;
-}
+// //footer
+// .footer {
+//   flex: 1;
+// }
 
-.player-container {
-  width: 312px;
-  height: 560px;
-}
+// //player
+// .playing-container {
+//   position: absolute;
+//   right: 60px;
+//   top: 104px;
+//   margin-top: 104px;
+//   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+//   border-radius: 16px;
+// }
 
-.bookmark {
-  position: absolute;
-  top: 22px;
-  right: 32px;
-  background: #ff7f50;
-}
+// .player-container {
+//   width: 312px;
+//   height: 560px;
+// }
 
-.player {
-  position: absolute;
-  width: 248px;
-  height: 348px;
-  left: 32px;
-  top: 216px;
+// .bookmark {
+//   position: absolute;
+//   top: 22px;
+//   right: 32px;
+//   background: #ff7f50;
+// }
 
-  background: #91b4c1;
-  border-radius: 16px;
-}
+// .player {
+//   position: absolute;
+//   width: 248px;
+//   height: 348px;
+//   left: 32px;
+//   top: 216px;
+
+//   background: #91b4c1;
+//   border-radius: 16px;
+// }
