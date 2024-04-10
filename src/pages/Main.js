@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/main.scss";
 import Card from "../components/Main/Card";
 import User from "../components/Footer/User";
-// import Player from "../components/Footer/Player";
+import Player from "../components/Footer/Player";
 
 import {
   BusIcon,
@@ -231,12 +231,8 @@ const Main = () => {
       </div>
 
       <div className="footer">
-        {/* <div className="user-container"> */}
         <User />
-        {/* </div> */}
-        {/* <div className="playing-container">
-          <Player />
-        </div> */}
+        <Player />
       </div>
     </div>
   );
