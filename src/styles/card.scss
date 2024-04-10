@@ -1,4 +1,4 @@
-.card-container {
+.content-container {
   position: relative;
   height: 100%;
   width: 808px;
@@ -13,16 +13,18 @@
     top: 40px;
     font-family: "Noto Sans TC";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 32px;
     line-height: 150%;
     display: flex;
     align-items: center;
     letter-spacing: 0.2px;
     color: #000000;
+    margin: 0;
   }
 }
 
+// default
 .default {
   position: absolute;
   top: 104px;
@@ -75,4 +77,16 @@
       color: #ffffff;
     }
   }
+}
+
+//card
+.card-list-container {
+}
+.card-cover {
+}
+
+.card-conten {
+}
+
+.button-more {
 }
