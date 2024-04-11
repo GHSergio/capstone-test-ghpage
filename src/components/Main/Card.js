@@ -12,9 +12,7 @@ const Card = ({ title, type, imageUrl }) => {
           <h2 className="card-content-title">{title}</h2>
           <p className="card-content-type">{type}</p>
         </div>
-        {/* <div className="button-more"> */}
         <button className="button-more">更多</button>
-        {/* </div> */}
       </div>
     </div>
   );

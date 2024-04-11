@@ -1,7 +1,7 @@
 // 引入其他的 SCSS 文件
-@import "footer"; // 引入變量文件
-@import "content"; // 引入變量文件
-
+@import "footer";
+@import "content";
+@import "showModal";
 body {
   margin: 0;
   padding: 0;
@@ -15,6 +15,12 @@ li,
 a {
   list-style: none;
   text-decoration: none;
+}
+
+button {
+  // border-style: none; //邊框
+  border: none; //邊框的樣式、寬度和顏色
+  cursor: pointer;
 }
 
 .main-container {

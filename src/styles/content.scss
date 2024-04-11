@@ -1,3 +1,5 @@
+@import "showModal";
+
 .content-container {
   position: relative;
   height: 100%;
@@ -99,10 +101,11 @@
     margin: 8px 8px;
 
     .card-wrapper {
-      margin: 16px 17px;
+      margin: 16px 17px 0px 17px;
     }
   }
 }
+
 .card-cover {
   width: 144px;
   height: 144px;
@@ -140,7 +143,6 @@
 .button-more {
   width: 44px;
   height: 28px;
-  font-size: 0.8rem;
   border-style: none;
   background: #30a9de;
   color: #ffffff;

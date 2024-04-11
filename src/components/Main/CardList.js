@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
+import AddCardModal from "./AddCardModal";
 
 const CardList = ({ activeList, activeListContent }) => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedPodcast, setSelectedPodcast] = useState(null);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleConfirmAdd = () => {
+    if (selectedPodcast) {
+      // 执行添加操作
+      // 例如：添加 selectedPodcast 到 activeListContent
+      setShowModal(false);
+    }
+  };
+
   //根據List名稱 渲染emptyList
   const renderEmptyList = () => {
     if (activeList === "myFavoriteList") {
@@ -14,9 +34,6 @@ const CardList = ({ activeList, activeListContent }) => {
               alt=""
             />
             <span>您尚未收藏任何 Podcast</span>
-            {/* <button className="button-add">
-              <p>新增 Podcast</p>
-            </button> */}
           </div>
         </>
       );
@@ -29,9 +46,16 @@ const CardList = ({ activeList, activeListContent }) => {
               alt=""
             />
             <span>您尚未加入任何 Podcast，可以點擊按鈕新增！</span>
-            <button className="button-add">
+            <button className="button-add" onClick={handleOpenModal}>
               <p>新增 Podcast</p>
             </button>
+            {showModal && (
+              <AddCardModal
+                isOpen={showModal}
+                onConfirm={handleConfirmAdd}
+                onClose={handleCloseModal}
+              />
+            )}
           </div>
         </>
       );
