@@ -64,7 +64,6 @@ const ListContentProvider = ({ children }) => {
 
   const [activeList, setActiveList] = useState("commuteList");
   const [activeDropdown, setActiveDropdown] = useState(null);
-
   const handleClickList = (item) => {
     setActiveList(item);
   };

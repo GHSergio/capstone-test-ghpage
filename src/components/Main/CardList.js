@@ -6,8 +6,11 @@ import { useListContent } from "../../contexts/ListContentContext";
 
 const CardList = () => {
   const [showModal, setShowModal] = useState(false);
-  const { activeList, activeListContent, podcastList } = useListContent();
+  const { activeList, listContent } = useListContent();
 
+  console.log(activeList, listContent);
+  console.log(listContent[activeList]);
+  const activeListContent = listContent[activeList];
   const handleOpenModal = () => {
     setShowModal(true);
   };
@@ -47,7 +50,6 @@ const CardList = () => {
                 isOpen={showModal}
                 // onConfirm={handleConfirmAdd}
                 onClose={handleCloseModal}
-                podcastList={podcastList}
               />
             )}
           </div>
