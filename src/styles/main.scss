@@ -1,6 +1,6 @@
 // 引入其他的 SCSS 文件
 @import "footer"; // 引入變量文件
-@import "card"; // 引入變量文件
+@import "content"; // 引入變量文件
 
 body {
   margin: 0;
@@ -155,41 +155,3 @@ a {
 .dropdown-container.active {
   display: block;
 }
-
-// //footer
-// .footer {
-//   flex: 1;
-// }
-
-// //player
-// .playing-container {
-//   position: absolute;
-//   right: 60px;
-//   top: 104px;
-//   margin-top: 104px;
-//   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-//   border-radius: 16px;
-// }
-
-// .player-container {
-//   width: 312px;
-//   height: 560px;
-// }
-
-// .bookmark {
-//   position: absolute;
-//   top: 22px;
-//   right: 32px;
-//   background: #ff7f50;
-// }
-
-// .player {
-//   position: absolute;
-//   width: 248px;
-//   height: 348px;
-//   left: 32px;
-//   top: 216px;
-
-//   background: #91b4c1;
-//   border-radius: 16px;
-// }

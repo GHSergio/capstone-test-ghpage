@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/card.scss";
+import "../../styles/content.scss";
 import Card from "./Card";
 
 const CardList = ({ activeList, activeListContent }) => {
@@ -46,7 +46,7 @@ const CardList = ({ activeList, activeListContent }) => {
       // List有內容
       return (
         <>
-          <div className="content-container">
+          <div className="card-list-container">
             {activeListContent &&
               activeListContent.map((item, index) => (
                 <Card
@@ -62,12 +62,14 @@ const CardList = ({ activeList, activeListContent }) => {
     }
   };
 
-  console.log(activeList, activeListContent);
-  // console.log(activeListContent);
+  // console.log(activeList, activeListContent);
+
   return (
     <>
-      <h1>早安</h1>
-      {getContent()}
+      <div className="content-container">
+        <h1>早安</h1>
+        {getContent()}
+      </div>
     </>
   );
 };
