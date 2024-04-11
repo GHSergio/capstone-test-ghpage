@@ -84,24 +84,23 @@
 //card
 .card-list-container {
   margin: 96px 16px;
-  // width: 100%;
-  // height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-
+  display: grid;
+  grid-template-columns: repeat(4, minmax(178px, 1fr));
+  grid-gap: 16px;
   flex-wrap: wrap;
 
   .card-container {
     width: 178px;
     height: 266px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background: #ffffff;
     box-shadow: 24px 8px 24px 8px rgba(199, 199, 199, 0.24);
     border-radius: 8px;
-    margin: 8px 8px;
-
     .card-wrapper {
-      margin: 16px 17px 0px 17px;
+      margin: 16px;
     }
   }
 }

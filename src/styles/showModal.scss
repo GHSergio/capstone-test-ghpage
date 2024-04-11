@@ -10,6 +10,9 @@
   .modal-container {
     width: 868px;
     height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #ffffff;
     border: 1px solid #ebebeb;
     border-radius: 10px;
@@ -56,8 +59,77 @@
       }
       .modal-main {
         width: 836px;
+        max-height: 600px;
         flex: 1;
-        overflow-y: auto;
+
+        .search-result {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          /* 搜尋結果 */
+          .search-result-header {
+            width: 72px;
+            height: 26px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            color: #111111;
+            margin: 0px;
+          }
+          .card-list-container {
+            margin: 0px;
+            position: relative;
+            max-height: 492px;
+            overflow-y: auto;
+            grid-template-columns: repeat(4, minmax(182px, 1fr));
+            grid-gap: 32px;
+
+            // scrollbar
+            &::-webkit-scrollbar {
+              width: 6px;
+            }
+            /* 自定義 scrollbar 輪廓顏色 */
+            &::-webkit-scrollbar-track {
+              position: absolute;
+
+              background: #ffffff;
+              cursor: pointer;
+            }
+
+            /* 自定義 scrollbar 滑塊顏色 */
+            &::-webkit-scrollbar-thumb {
+              position: absolute;
+              background: #c1c9d3;
+              border-radius: 3px;
+              cursor: pointer;
+            }
+
+            /* 自定義 scrollbar 滑塊 hover 時的顏色 */
+            &::-webkit-scrollbar-thumb:hover {
+              position: absolute;
+              background: #838a93;
+            }
+
+            .card-container {
+              display: flex;
+              width: 182px;
+              height: 230px;
+              cursor: pointer;
+              .card-cover {
+                display: flex;
+              }
+              .card-content {
+                justify-content: space-between;
+                width: 114px;
+                height: 45px;
+              }
+            }
+          }
+          .button-more {
+            display: none;
+          }
+        }
 
         .modal-search-container {
           width: 100%;
@@ -109,8 +181,6 @@
 
           p {
             height: 23px;
-            font-family: "Noto Sans TC";
-            font-style: normal;
             font-weight: 400;
             font-size: 16px;
             color: #111111;
@@ -129,8 +199,6 @@
           margin-right: 16px;
           p {
             height: 23px;
-            font-family: "Noto Sans TC";
-            font-style: normal;
             font-weight: 400;
             font-size: 16px;
             color: #ffffff;

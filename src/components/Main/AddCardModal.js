@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import Card from "./Card";
+import { usePodcastList } from "../../contexts/PodcastListContext";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const {
+    podcastList,
+    selectedPodcast,
+    setSelectedPodcast,
+    handlePodcastClick,
+  } = usePodcastList();
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredPodcasts = podcastList.filter((podcast) =>
+    podcast.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // console.log(podcastList);
+
   return (
     <>
       {isOpen && (
@@ -58,7 +78,22 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                     className="search-input"
                     type="text"
                     placeholder="開始搜尋..."
+                    value={searchTerm}
+                    onChange={handleSearch}
                   />
+                </div>
+                <div className="search-result">
+                  <p className="search-result-header">搜尋結果</p>
+                  <div className="card-list-container">
+                    {filteredPodcasts.map((podcast) => (
+                      <Card
+                        key={podcast.id}
+                        title={podcast.title}
+                        type={podcast.type}
+                        imageUrl={podcast.imageUrl}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="modal-footer">

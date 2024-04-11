@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
 import AddCardModal from "./AddCardModal";
+import { useListContent } from "../../contexts/ListContentContext";
 
-const CardList = ({ activeList, activeListContent }) => {
+const CardList = () => {
   const [showModal, setShowModal] = useState(false);
-  const [selectedPodcast, setSelectedPodcast] = useState(null);
+  const { activeList, activeListContent, podcastList } = useListContent();
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -13,14 +14,6 @@ const CardList = ({ activeList, activeListContent }) => {
 
   const handleCloseModal = () => {
     setShowModal(false);
-  };
-
-  const handleConfirmAdd = () => {
-    if (selectedPodcast) {
-      // 执行添加操作
-      // 例如：添加 selectedPodcast 到 activeListContent
-      setShowModal(false);
-    }
   };
 
   //根據List名稱 渲染emptyList
@@ -52,8 +45,9 @@ const CardList = ({ activeList, activeListContent }) => {
             {showModal && (
               <AddCardModal
                 isOpen={showModal}
-                onConfirm={handleConfirmAdd}
+                // onConfirm={handleConfirmAdd}
                 onClose={handleCloseModal}
+                podcastList={podcastList}
               />
             )}
           </div>
