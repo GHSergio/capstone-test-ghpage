@@ -1,24 +1,35 @@
 import React, { useState } from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
-import AddCardModal from "./AddCardModal";
+import AddCardModal from "./Modal/AddCardModal";
 import { useListContent } from "../../contexts/ListContentContext";
+import { usePodcastList } from "../../contexts/PodcastListContext";
 
 const CardList = () => {
   const [showModal, setShowModal] = useState(false);
-  const { activeList, listContent } = useListContent();
+  const { activeList, listContent, addPodcastToListContent } = useListContent();
+  const { setSelectedPodcasts } = usePodcastList();
 
-  console.log(activeList, listContent);
-  console.log(listContent[activeList]);
-  const activeListContent = listContent[activeList];
+  const activeListContent = listContent[activeList][0];
+
   const handleOpenModal = () => {
     setShowModal(true);
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setSelectedPodcasts([]);
   };
 
+  const handleConfirmModal = (selectedPodcast) => {
+    if (selectedPodcast) {
+      addPodcastToListContent(activeList, selectedPodcast);
+      setShowModal(false);
+      setSelectedPodcasts([]);
+    }
+  };
+
+  // console.log(activeListContent && activeListContent[0].title);
   //根據List名稱 渲染emptyList
   const renderEmptyList = () => {
     if (activeList === "myFavoriteList") {
@@ -48,7 +59,7 @@ const CardList = () => {
             {showModal && (
               <AddCardModal
                 isOpen={showModal}
-                // onConfirm={handleConfirmAdd}
+                onConfirm={handleConfirmModal}
                 onClose={handleCloseModal}
               />
             )}
@@ -70,6 +81,7 @@ const CardList = () => {
             {activeListContent &&
               activeListContent.map((item, index) => (
                 <Card
+                  // id={item.id}
                   key={index}
                   title={item.title}
                   type={item.type}
@@ -81,8 +93,6 @@ const CardList = () => {
       );
     }
   };
-
-  // console.log(activeList, activeListContent);
 
   return (
     <>

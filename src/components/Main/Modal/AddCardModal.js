@@ -1,25 +1,42 @@
 import React, { useState } from "react";
-import Card from "./Card";
-import { usePodcastList } from "../../contexts/PodcastListContext";
+import Card from "../Card";
+import { usePodcastList } from "../../../contexts/PodcastListContext";
+// import { useListContent } from "../../../contexts/ListContentContext";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const {
-    podcastList,
-    selectedPodcast,
-    setSelectedPodcast,
-    handlePodcastClick,
-  } = usePodcastList();
+  const [searchInput, setSearchInput] = useState("");
+  const [isAnyCardClicked, setIsAnyCardClicked] = useState(false);
+
+  const { podcastList, selectedPodcasts, setSelectedPodcasts } =
+    usePodcastList();
 
   const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
+    setSearchInput(event.target.value);
   };
 
+  //篩選List內 title 包含 searchInput 的 item
   const filteredPodcasts = podcastList.filter((podcast) =>
-    podcast.title.toLowerCase().includes(searchTerm.toLowerCase())
+    podcast.title.toLowerCase().includes(searchInput.toLowerCase())
   );
 
-  // console.log(podcastList);
+  const handlePodcastClick = (podcast) => {
+    // 重複:傳入的id 已存在selectedPodcasts
+    const isSelected = selectedPodcasts.some((item) => item.id === podcast.id);
+    let updatedPodcasts = [...selectedPodcasts];
+    //重複則 篩選出 除了傳入的podcast以外的項目
+    if (isSelected) {
+      updatedPodcasts = selectedPodcasts.filter(
+        (item) => item.id !== podcast.id
+      );
+    } else {
+      // 沒重複則 該項目更新isSelected
+      updatedPodcasts = [...selectedPodcasts, { ...podcast, active: true }];
+    }
+    setSelectedPodcasts(updatedPodcasts);
+    setIsAnyCardClicked(!isSelected || updatedPodcasts.length > 0);
+  };
+
+  console.log(selectedPodcasts);
 
   return (
     <>
@@ -78,7 +95,7 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                     className="search-input"
                     type="text"
                     placeholder="開始搜尋..."
-                    value={searchTerm}
+                    value={searchInput}
                     onChange={handleSearch}
                   />
                 </div>
@@ -91,6 +108,10 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                         title={podcast.title}
                         type={podcast.type}
                         imageUrl={podcast.imageUrl}
+                        onClick={() => handlePodcastClick(podcast)}
+                        active={selectedPodcasts.some(
+                          (item) => item.id === podcast.id
+                        )}
                       />
                     ))}
                   </div>
@@ -100,7 +121,15 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                 <button className="modal-button-close" onClick={onClose}>
                   <p>取消</p>
                 </button>
-                <button className="modal-button-add" onClick={onConfirm}>
+                <button
+                  className={
+                    !isAnyCardClicked
+                      ? "modal-button-add"
+                      : "modal-button-add usable"
+                  }
+                  disabled={!isAnyCardClicked}
+                  onClick={() => onConfirm(selectedPodcasts)}
+                >
                   <p>確認新增</p>
                 </button>
               </div>

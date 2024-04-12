@@ -1,9 +1,11 @@
 import React from "react";
 
-const Card = ({ title, type, imageUrl }) => {
-  // console.log(title, type, imageUrl);
+const Card = ({ title, type, imageUrl, onClick, active }) => {
   return (
-    <div className="card-container">
+    <div
+      className={`card-container ${active ? "active" : ""}`}
+      onClick={onClick}
+    >
       <div className="card-wrapper">
         <div className="card-cover">
           <img className="card-cover-img" src={imageUrl} alt="" />
