@@ -1,10 +1,12 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
 import Player from "../components/Footer/Player";
+import ListItem from "../components/Main/ListItem";
 import { useListContent } from "../contexts/ListContentContext";
+import { usePodcastList } from "../contexts/PodcastListContext";
 
 import {
   BusIcon,
@@ -14,12 +16,12 @@ import {
   Favorite,
   AddIcon,
 } from "../components/FontAwesome/FontAwesome";
-import Hamburger from "../components/Main/Hamburger";
 
 const Main = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+
   const {
-    // listContent,
+    listContent,
     // setListContent,
 
     activeList,
@@ -29,7 +31,29 @@ const Main = () => {
     activeDropdown,
     // setActiveDropdown,
     handleClickDropdown,
+    addPodcastToListContent,
   } = useListContent();
+
+  const { setSelectedPodcasts } = usePodcastList();
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedPodcasts([]);
+  };
+
+  const handleConfirmModal = (selectedPodcast) => {
+    if (selectedPodcast.length > 0) {
+      addPodcastToListContent(activeList, selectedPodcast);
+      setShowModal(false);
+      setSelectedPodcasts([]);
+    }
+  };
 
   return (
     <div className="main-container">
@@ -107,107 +131,22 @@ const Main = () => {
         </div>
 
         <ul className="list-container">
-          <li
-            className={
-              activeList === "commuteList" ? "list-item active" : "list-item"
-            }
-            onClick={() => {
-              handleClickList("commuteList");
-              navigate("/main/commuteList");
-            }}
-          >
-            <div className="list-item-content">
-              <BusIcon />
-              <p className="list-item-title">通勤清單</p>
-            </div>
-            <div className="hamburger-container">
-              <Hamburger
-                isActive={activeDropdown === "commuteList"}
-                onClick={() => handleClickDropdown("commuteList")}
-              />
-            </div>
-          </li>
-
-          <li
-            className={
-              activeList === "learnList" ? "list-item active" : "list-item"
-            }
-            onClick={() => {
-              handleClickList("learnList");
-              navigate("/main/learnList");
-            }}
-          >
-            <div className="list-item-content">
-              <LearnIcon />
-              <p className="list-item-title">學習清單</p>
-            </div>
-            <div className="hamburger-container">
-              <Hamburger
-                isActive={activeDropdown === "learnList"}
-                onClick={() => handleClickDropdown("learnList")}
-              />
-            </div>
-          </li>
-          <li
-            className={
-              activeList === "preSleepList" ? "list-item active" : "list-item"
-            }
-            onClick={() => {
-              handleClickList("preSleepList");
-              navigate("/main/preSleepList");
-            }}
-          >
-            <div className="list-item-content">
-              <PreSleep />
-              <p className="list-item-title">睡前清單</p>
-            </div>
-            <div className="hamburger-container">
-              <Hamburger
-                isActive={activeDropdown === "preSleepList"}
-                onClick={() => handleClickDropdown("preSleepList")}
-              />
-            </div>
-          </li>
-          <li
-            className={
-              activeList === "myPodcastList" ? "list-item active" : "list-item"
-            }
-            onClick={() => {
-              handleClickList("myPodcastList");
-              navigate("/main/myPodcastList");
-            }}
-          >
-            <div className="list-item-content">
-              <PodcastIcon />
-              <p className="list-item-title">我的Podcast</p>
-            </div>
-            <div className="hamburger-container">
-              <Hamburger
-                isActive={activeDropdown === "myPodcastList"}
-                onClick={() => handleClickDropdown("myPodcastList")}
-              />
-            </div>
-          </li>
-          <li
-            className={
-              activeList === "myFavoriteList" ? "list-item active" : "list-item"
-            }
-            onClick={() => {
-              handleClickList("myFavoriteList");
-              navigate("/main/myFavoriteList");
-            }}
-          >
-            <div className="list-item-content">
-              <Favorite />
-              <p className="list-item-title">收藏清單</p>
-            </div>
-            <div className="hamburger-container">
-              <Hamburger
-                isActive={activeDropdown === "myFavoriteList"}
-                onClick={() => handleClickDropdown("myFavoriteList")}
-              />
-            </div>
-          </li>
+          {listContent.map((list, index) => (
+            <ListItem
+              showModal={showModal}
+              handleOpenModal={handleOpenModal}
+              handleCloseModal={handleCloseModal}
+              handleConfirmModal={handleConfirmModal}
+              key={index}
+              listType={listContent[activeList].type}
+              emoji={list.emoji}
+              title={list.title}
+              isActive={index === activeList}
+              onClick={() => handleClickList(index)}
+              dropdownActive={index === activeDropdown}
+              handleDropdownClick={() => handleClickDropdown(index)}
+            />
+          ))}
 
           {/* addCategory */}
           <li className="list-item addCategory">
@@ -220,7 +159,12 @@ const Main = () => {
       </nav>
 
       <div className="content-container">
-        <CardList />
+        <CardList
+          showModal={showModal}
+          handleOpenModal={handleOpenModal}
+          handleCloseModal={handleCloseModal}
+          handleConfirmModal={handleConfirmModal}
+        />
       </div>
 
       <div className="footer">

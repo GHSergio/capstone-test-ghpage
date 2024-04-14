@@ -1,10 +1,123 @@
-現在我新增了podcastList的內容,我預期在content-container 內,
-activeListContent為空 onClick "新增Podcast"button時,可以跑出overlay + modal,
-overlay涵蓋整個view,
-modal最外層是container,
-最上面div  header內有"新增Podcast"文字 以及 "x" icon  採用justify:spaceBetween 分散於左右邊,
-然後是line;
-再來中間 main 預設是一個search bar , 裡面有search icon & "開始搜尋..." text,
-如果輸入內容,則會從podcastList filter出匹配的項目,顯示podcast card在中間區塊內;
-最後footer 則是 "取消"  "確認新增"  ,
-"確認新增"button 預設是disable, 除非有filter出現,並且選定一個podcast card才會取消disable狀態;
+
+      {/* <li
+            className={
+              activeList === "commuteList" ? "list-item active" : "list-item"
+            }
+            onClick={() => {
+              handleClickList("commuteList");
+              navigate("/main/commuteList");
+            }}
+          >
+            <div className="list-item-content">
+              <BusIcon />
+              <p className="list-item-title">通勤清單</p>
+            </div>
+            <div className="hamburger-container">
+              <Hamburger
+                isActive={activeDropdown === "commuteList"}
+                onClick={() => handleClickDropdown("commuteList")}
+              />
+            </div>
+          </li>
+          <li
+            className={
+              activeList === "learnList" ? "list-item active" : "list-item"
+            }
+            onClick={() => {
+              handleClickList("learnList");
+              navigate("/main/learnList");
+            }}
+          >
+            <div className="list-item-content">
+              <LearnIcon />
+              <p className="list-item-title">學習清單</p>
+            </div>
+            <div className="hamburger-container">
+              <Hamburger
+                isActive={activeDropdown === "learnList"}
+                onClick={() => handleClickDropdown("learnList")}
+              />
+            </div>
+          </li>
+          <li
+            className={
+              activeList === "preSleepList" ? "list-item active" : "list-item"
+            }
+            onClick={() => {
+              handleClickList("preSleepList");
+              navigate("/main/preSleepList");
+            }}
+          >
+            <div className="list-item-content">
+              <PreSleep />
+              <p className="list-item-title">睡前清單</p>
+            </div>
+            <div className="hamburger-container">
+              <Hamburger
+                isActive={activeDropdown === "preSleepList"}
+                onClick={() => handleClickDropdown("preSleepList")}
+              />
+            </div>
+          </li>
+          <li
+            className={
+              activeList === "myPodcastList" ? "list-item active" : "list-item"
+            }
+            onClick={() => {
+              handleClickList("myPodcastList");
+              navigate("/main/myPodcastList");
+            }}
+          >
+            <div className="list-item-content">
+              <PodcastIcon />
+              <p className="list-item-title">我的Podcast</p>
+            </div>
+            <div className="hamburger-container">
+              <Hamburger
+                isActive={activeDropdown === "myPodcastList"}
+                onClick={() => handleClickDropdown("myPodcastList")}
+              />
+            </div>
+          </li>
+          <li
+            className={
+              activeList === "myFavoriteList" ? "list-item active" : "list-item"
+            }
+            onClick={() => {
+              handleClickList("myFavoriteList");
+              navigate("/main/myFavoriteList");
+            }}
+          >
+            <div className="list-item-content">
+              <Favorite />
+              <p className="list-item-title">收藏清單</p>
+            </div>
+            <div className="hamburger-container">
+              <Hamburger
+                isActive={activeDropdown === "myFavoriteList"}
+                onClick={() => handleClickDropdown("myFavoriteList")}
+              />
+            </div>
+          </li> */}
+
+
+          // {
+/* <li
+  className={activeList === "commuteList" ? "list-item active" : "list-item"}
+  onClick={() => {
+    handleClickList("commuteList");
+    navigate("/main/commuteList");
+  }}
+>
+  <div className="list-item-content">
+    <BusIcon />
+    <p className="list-item-title">通勤清單</p>
+  </div>
+  <div className="hamburger-container">
+    <Hamburger
+      isActive={activeDropdown === "commuteList"}
+      onClick={() => handleClickDropdown("commuteList")}
+    />
+  </div>
+</li>; */
+// }

@@ -1,6 +1,7 @@
 import React from "react";
 
 const Card = ({ title, type, imageUrl, onClick, active }) => {
+  // console.log(title);
   return (
     <div
       className={`card-container ${active ? "active" : ""}`}

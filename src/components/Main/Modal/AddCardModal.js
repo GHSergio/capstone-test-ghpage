@@ -36,8 +36,6 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
     setIsAnyCardClicked(!isSelected || updatedPodcasts.length > 0);
   };
 
-  console.log(selectedPodcasts);
-
   return (
     <>
       {isOpen && (

@@ -1,38 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
 import AddCardModal from "./Modal/AddCardModal";
 import { useListContent } from "../../contexts/ListContentContext";
-import { usePodcastList } from "../../contexts/PodcastListContext";
+// import { usePodcastList } from "../../contexts/PodcastListContext";
 
-const CardList = () => {
-  const [showModal, setShowModal] = useState(false);
-  const { activeList, listContent, addPodcastToListContent } = useListContent();
-  const { setSelectedPodcasts } = usePodcastList();
+const CardList = ({
+  showModal,
+  handleOpenModal,
+  handleCloseModal,
+  handleConfirmModal,
+}) => {
+  const { activeList, listContent } = useListContent();
 
-  const activeListContent = listContent[activeList][0];
+  const activeListContent = listContent[activeList].list;
+  console.log(activeListContent);
 
-  const handleOpenModal = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setSelectedPodcasts([]);
-  };
-
-  const handleConfirmModal = (selectedPodcast) => {
-    if (selectedPodcast) {
-      addPodcastToListContent(activeList, selectedPodcast);
-      setShowModal(false);
-      setSelectedPodcasts([]);
-    }
-  };
-
-  // console.log(activeListContent && activeListContent[0].title);
   //根據List名稱 渲染emptyList
   const renderEmptyList = () => {
-    if (activeList === "myFavoriteList") {
+    if (activeList && listContent[activeList].type === "favorite") {
       return (
         <>
           <div className="default">
@@ -81,13 +67,21 @@ const CardList = () => {
             {activeListContent &&
               activeListContent.map((item, index) => (
                 <Card
-                  // id={item.id}
                   key={index}
                   title={item.title}
                   type={item.type}
                   imageUrl={item.imageUrl}
                 />
               ))}
+
+            {/* showModal */}
+            {showModal && (
+              <AddCardModal
+                isOpen={showModal}
+                onConfirm={handleConfirmModal}
+                onClose={handleCloseModal}
+              />
+            )}
           </div>
         </>
       );

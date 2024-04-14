@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
+import { useListContent } from "./ListContentContext";
 
 const PodcastListContext = createContext();
 export const usePodcastList = () => useContext(PodcastListContext);
@@ -104,12 +105,12 @@ const PodcastListProvider = ({ children }) => {
     },
   ]);
   const [selectedPodcasts, setSelectedPodcasts] = useState([]);
+  // const [showModal, setShowModal] = useState(false);
+  // const { activeList, addPodcastToListContent } = useListContent();
 
   const handlePodcastClick = (podcast) => {
     setSelectedPodcasts(podcast);
   };
-
-  console.log(selectedPodcasts);
 
   return (
     <PodcastListContext.Provider
@@ -120,6 +121,9 @@ const PodcastListProvider = ({ children }) => {
         selectedPodcasts,
         setSelectedPodcasts,
         handlePodcastClick,
+
+        // showModal,
+        // setShowModal,
       }}
     >
       {children}
