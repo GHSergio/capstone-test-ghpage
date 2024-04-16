@@ -19,9 +19,6 @@ const Hamburger = ({
 
     currentAction,
     handleActionClick,
-
-    editInput,
-    newItemInput,
   } = useListContent();
 
   const classNames = isActive
@@ -40,7 +37,6 @@ const Hamburger = ({
             onClose={handleCloseListActionModal}
             index={activeList}
             currentAction={currentAction}
-            newTitle={editInput}
           />
         );
 
@@ -54,7 +50,6 @@ const Hamburger = ({
             onClose={handleCloseListActionModal}
             index={activeList}
             currentAction={currentAction}
-            newTitle={newItemInput}
           />
         );
 
@@ -75,8 +70,6 @@ const Hamburger = ({
         return null;
     }
   };
-
-  // console.log(currentAction);
 
   return (
     <div className="hamburger-wrapper" onClick={disabled ? null : onClick}>

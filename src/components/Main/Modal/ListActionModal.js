@@ -12,43 +12,35 @@ const ListActionModal = ({
 
   index,
   currentAction,
-
-  newTitle,
 }) => {
   const {
-    manageListItem,
-    // listContent,
-    // currentAction,
-
     editInput,
     setEditInput,
     handleEditInput,
 
-    newItemInput,
-    setNewItemInput,
-    handleNewItemInput,
+    editListItem,
+    deleteListItem,
+    addListItem,
   } = useListContent();
 
   const handleConfirmAction = () => {
     switch (currentAction) {
       case "edit":
         // 執行編輯操作
-        manageListItem("edit", index, newTitle);
-        console.log("newTitle:", [newTitle], " editInput:", [editInput]);
+        editListItem(index, editInput);
 
         onClose();
         break;
       case "delete":
         // 執行刪除操作
-        manageListItem("delete", index);
+        deleteListItem(index);
         onClose();
         break;
 
       case "add":
         // 執行添加操作
-        manageListItem("add", newTitle);
-        setNewItemInput("");
-        console.log("newTitle:", [newTitle], "newItemInput", [newItemInput]);
+        addListItem(editInput);
+        setEditInput("");
 
         onClose();
         break;
@@ -57,11 +49,7 @@ const ListActionModal = ({
         console.error("Invalid action");
     }
   };
-  // console.log(activeAction, isOpen, title, text, confirmText);
-  // console.log(listContent[index].title, searchInput);
-  // console.log(currentAction);
-  // console.log(index);
-  // console.log(listContent[index], searchInput);
+
   return (
     <>
       {isOpen && (
@@ -103,12 +91,8 @@ const ListActionModal = ({
                       className="search-input"
                       type="text"
                       placeholder={placeholder}
-                      value={newTitle}
-                      onChange={
-                        currentAction === "edit"
-                          ? handleEditInput
-                          : handleNewItemInput
-                      }
+                      value={editInput}
+                      onChange={handleEditInput}
                     />
                   </div>
                 )}
@@ -125,18 +109,11 @@ const ListActionModal = ({
                 {currentAction !== "delete" ? (
                   <button
                     className={
-                      currentAction === "edit"
-                        ? editInput.length !== 0
-                          ? "modal-button-add usable"
-                          : "modal-button-add"
-                        : newItemInput.length !== 0
+                      editInput.length !== 0
                         ? "modal-button-add usable"
                         : "modal-button-add"
                     }
-                    disabled={
-                      (currentAction === "edit" && editInput.length === 0) ||
-                      (currentAction === "add" && newItemInput.length === 0)
-                    }
+                    disabled={editInput.length === 0}
                     onClick={handleConfirmAction}
                   >
                     <p>{confirmText}</p>
@@ -149,26 +126,6 @@ const ListActionModal = ({
                     <p>{confirmText}</p>
                   </button>
                 )}
-                {/* {currentAction !== "delete" ? (
-                  <button
-                    className={
-                      searchInput.length !== 0
-                        ? "modal-button-add usable"
-                        : "modal-button-add"
-                    }
-                    disabled={searchInput.length === 0}
-                    onClick={handleConfirmAction}
-                  >
-                    <p>{confirmText}</p>
-                  </button>
-                ) : (
-                  <button
-                    className="modal-button-add usable"
-                    onClick={handleConfirmAction}
-                  >
-                    <p>{confirmText}</p>
-                  </button>
-                )} */}
               </div>
             </div>
           </div>

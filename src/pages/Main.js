@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
@@ -7,20 +6,9 @@ import Player from "../components/Footer/Player";
 import ListItem from "../components/Main/ListItem";
 import { useListContent } from "../contexts/ListContentContext";
 import { usePodcastList } from "../contexts/PodcastListContext";
-// import ListActionModal from "../components/Main/Modal/ListActionModal";
-
-import {
-  BusIcon,
-  LearnIcon,
-  PreSleep,
-  PodcastIcon,
-  Favorite,
-  AddIcon,
-} from "../components/FontAwesome/FontAwesome";
+import { AddIcon } from "../components/FontAwesome/FontAwesome";
 
 const Main = () => {
-  // const navigate = useNavigate();
-
   const {
     listContent,
 

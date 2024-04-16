@@ -34,7 +34,6 @@ const ListContentProvider = ({ children }) => {
   const [listActionModal, setListActionModal] = useState(false);
   const [currentAction, setCurrentAction] = useState(null);
   const [editInput, setEditInput] = useState("");
-  const [newItemInput, setNewItemInput] = useState("");
 
   const handleClickList = (index) => {
     setActiveList(index);
@@ -54,7 +53,6 @@ const ListContentProvider = ({ children }) => {
   };
 
   // 將 Podcast 添加到指定的列表中
-
   const addPodcastToListContent = (index, podcast) => {
     setListContent((prevListContent) => {
       const updatedListContent = [...prevListContent];
@@ -80,58 +78,37 @@ const ListContentProvider = ({ children }) => {
     setEditInput(event.target.value);
   };
 
-  const handleNewItemInput = (event) => {
-    setNewItemInput(event.target.value);
-  };
-
-  //currentAction
+  //設置action為setCurrentAction & openModal
   const handleActionClick = (action) => {
     setCurrentAction(action);
     handleOpenListActionModal();
   };
 
-  // console.log("editInput:", editInput, "newItemInput:", newItemInput);
-  //action  add接收不到newTitle
-  const manageListItem = (action, index, newTitle, editInput, newItemInput) => {
-    console.log(
-      "action:",
-      [action],
-      "newTitle:",
-      [newTitle],
-      "editInput:",
-      [editInput],
-      "newItemInput",
-      [newItemInput]
-    );
-
+  //List action
+  const editListItem = (index, newTitle) => {
     setListContent((prevListContent) => {
       const updatedListContent = [...prevListContent];
-      switch (action) {
-        case "edit":
-          updatedListContent[index].title = newTitle;
-          // updatedListContent[index].title = editInput;
-          console.log("newTitle:", [newTitle], "editInput:", [editInput]);
-          break;
-
-        case "delete":
-          updatedListContent.splice(index, 1);
-          break;
-
-        case "add":
-          const newListItem = {
-            emoji: null,
-            title: newItemInput,
-            list: [],
-          };
-
-          updatedListContent.push(newListItem);
-          console.log("newListItem:", [newListItem], "newTitle:", [newTitle]);
-          break;
-
-        default:
-          console.error("Invalid action");
-      }
+      updatedListContent[index].title = newTitle;
       return updatedListContent;
+    });
+  };
+
+  const deleteListItem = (index) => {
+    setListContent((prevListContent) => {
+      const updatedListContent = [...prevListContent];
+      updatedListContent.splice(index, 1);
+      return updatedListContent;
+    });
+  };
+
+  const addListItem = (newTitle) => {
+    setListContent((prevListContent) => {
+      const newListItem = {
+        emoji: null,
+        title: newTitle,
+        list: [],
+      };
+      return [...prevListContent, newListItem];
     });
   };
 
@@ -154,7 +131,6 @@ const ListContentProvider = ({ children }) => {
         listActionModal,
         handleOpenListActionModal,
         handleCloseListActionModal,
-        manageListItem,
 
         currentAction,
         handleActionClick,
@@ -163,9 +139,9 @@ const ListContentProvider = ({ children }) => {
         setEditInput,
         handleEditInput,
 
-        newItemInput,
-        setNewItemInput,
-        handleNewItemInput,
+        editListItem,
+        deleteListItem,
+        addListItem,
       }}
     >
       {children}
