@@ -14,7 +14,8 @@ const CardList = ({
   const { activeList, listContent } = useListContent();
 
   const activeListContent = listContent[activeList].list;
-  console.log(activeListContent);
+
+  // console.log(activeListContent);
 
   //根據List名稱 渲染emptyList
   const renderEmptyList = () => {

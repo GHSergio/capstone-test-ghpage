@@ -1,7 +1,8 @@
 // 引入其他的 SCSS 文件
 @import "footer";
 @import "content";
-@import "showModal";
+@import "addCardModal";
+@import "listActionModal";
 body {
   margin: 0;
   padding: 0;

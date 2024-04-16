@@ -19,7 +19,7 @@ const ListItem = ({
     >
       <div className="list-item-content">
         <span className="emoji">{emoji}</span>
-        <p className="list-item-title">{title}</p>
+        <p className="list-item-title">{title && title}</p>
       </div>
       <div className="hamburger-container">
         <Hamburger

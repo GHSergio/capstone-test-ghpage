@@ -7,6 +7,7 @@ import Player from "../components/Footer/Player";
 import ListItem from "../components/Main/ListItem";
 import { useListContent } from "../contexts/ListContentContext";
 import { usePodcastList } from "../contexts/PodcastListContext";
+// import ListActionModal from "../components/Main/Modal/ListActionModal";
 
 import {
   BusIcon,
@@ -22,35 +23,35 @@ const Main = () => {
 
   const {
     listContent,
-    // setListContent,
 
     activeList,
-    // setActiveList,
     handleClickList,
 
     activeDropdown,
-    // setActiveDropdown,
+
     handleClickDropdown,
     addPodcastToListContent,
+
+    handleActionClick,
   } = useListContent();
 
   const { setSelectedPodcasts } = usePodcastList();
 
-  const [showModal, setShowModal] = useState(false);
+  const [addCardModal, setAddCardModal] = useState(false);
 
   const handleOpenModal = () => {
-    setShowModal(true);
+    setAddCardModal(true);
   };
 
   const handleCloseModal = () => {
-    setShowModal(false);
+    setAddCardModal(false);
     setSelectedPodcasts([]);
   };
 
   const handleConfirmModal = (selectedPodcast) => {
     if (selectedPodcast.length > 0) {
       addPodcastToListContent(activeList, selectedPodcast);
-      setShowModal(false);
+      setAddCardModal(false);
       setSelectedPodcasts([]);
     }
   };
@@ -129,11 +130,10 @@ const Main = () => {
           </svg>
           <hr />
         </div>
-
         <ul className="list-container">
           {listContent.map((list, index) => (
             <ListItem
-              showModal={showModal}
+              showModal={addCardModal}
               handleOpenModal={handleOpenModal}
               handleCloseModal={handleCloseModal}
               handleConfirmModal={handleConfirmModal}
@@ -149,7 +149,10 @@ const Main = () => {
           ))}
 
           {/* addCategory */}
-          <li className="list-item addCategory">
+          <li
+            className="list-item addCategory"
+            onClick={() => handleActionClick("add")}
+          >
             <div className="list-item-content">
               <AddIcon />
               <p className="list-item-title">新增分類</p>
@@ -160,7 +163,7 @@ const Main = () => {
 
       <div className="content-container">
         <CardList
-          showModal={showModal}
+          showModal={addCardModal}
           handleOpenModal={handleOpenModal}
           handleCloseModal={handleCloseModal}
           handleConfirmModal={handleConfirmModal}
