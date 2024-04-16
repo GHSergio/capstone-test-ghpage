@@ -111,8 +111,6 @@ hr {
     overflow: hidden;
     text-overflow: ellipsis;
 
-    font-family: "Noto Sans TC";
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
@@ -127,8 +125,6 @@ hr {
     overflow: hidden;
     text-overflow: ellipsis;
 
-    font-family: "Noto Sans TC";
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 17px;
@@ -163,7 +159,6 @@ hr {
   img {
     width: 184px;
     height: 184px;
-    // margin: 48px 32px 116px 32px;
     border-radius: 8px;
     filter: drop-shadow(4px 8px 16px rgba(0, 0, 0, 0.12));
   }

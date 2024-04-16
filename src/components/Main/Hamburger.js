@@ -1,4 +1,3 @@
-import React from "react";
 import { useListContent } from "../../contexts/ListContentContext";
 import ListActionModal from "./Modal/ListActionModal";
 

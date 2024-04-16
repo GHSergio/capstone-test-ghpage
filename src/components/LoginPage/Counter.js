@@ -1,5 +1,3 @@
-import React from "react";
-
 const Counter = ({ active }) => {
   return <div className={`counter ${active ? "active" : ""}`}></div>;
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
@@ -7,6 +7,7 @@ import ListItem from "../components/Main/ListItem";
 import { useListContent } from "../contexts/ListContentContext";
 import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
+// import EmojiPicker from "emoji-picker-react";
 
 const Main = () => {
   const {
@@ -46,6 +47,9 @@ const Main = () => {
 
   return (
     <div className="main-container">
+      {/* <div>
+        <EmojiPicker />
+      </div> */}
       <nav className="navigation">
         <div className="logo-container">
           <svg
@@ -148,7 +152,6 @@ const Main = () => {
           </li>
         </ul>
       </nav>
-
       <div className="content-container">
         <CardList
           showModal={addCardModal}
@@ -157,7 +160,6 @@ const Main = () => {
           handleConfirmModal={handleConfirmModal}
         />
       </div>
-
       <div className="footer">
         <User />
         <Player />

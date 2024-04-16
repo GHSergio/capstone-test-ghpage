@@ -1,7 +1,10 @@
-import React from "react";
-
+import { usePodcastList } from "../../contexts/PodcastListContext";
+import ShowMoreModal from "./Modal/ShowMoreModal";
 const Card = ({ title, type, imageUrl, onClick, active }) => {
-  // console.log(title);
+  const { showMoreModal, handleOpenShowMoreModal, handleCloseShowMoreModal } =
+    usePodcastList();
+
+  console.log("showMoreModal:", showMoreModal);
   return (
     <div
       className={`card-container ${active ? "active" : ""}`}
@@ -15,8 +18,18 @@ const Card = ({ title, type, imageUrl, onClick, active }) => {
           <h2 className="card-content-title">{title}</h2>
           <p className="card-content-type">{type}</p>
         </div>
-        <button className="button-more">更多</button>
+        <button className="button-more" onClick={handleOpenShowMoreModal}>
+          更多
+        </button>
       </div>
+
+      <ShowMoreModal
+        isOpen={showMoreModal}
+        onClose={handleCloseShowMoreModal}
+        imageUrl={imageUrl}
+        title={title}
+        type={type}
+      />
     </div>
   );
 };

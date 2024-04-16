@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
 import AddCardModal from "./Modal/AddCardModal";

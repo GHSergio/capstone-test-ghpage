@@ -1,4 +1,3 @@
-import React from "react";
 import { BookmarkIcon } from "../FontAwesome/FontAwesome";
 import "../../styles/footer.scss";
 
