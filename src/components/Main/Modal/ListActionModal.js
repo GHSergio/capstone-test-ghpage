@@ -3,7 +3,6 @@ import { useListContent } from "../../../contexts/ListContentContext";
 const ListActionModal = ({
   isOpen,
   onClose,
-  onConfirm,
   title,
   text,
   confirmText,

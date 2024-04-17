@@ -1,10 +1,17 @@
 import { usePodcastList } from "../../contexts/PodcastListContext";
 import ShowMoreModal from "./Modal/ShowMoreModal";
-const Card = ({ title, type, imageUrl, onClick, active }) => {
+const Card = ({
+  title,
+  type,
+  imageUrl,
+  description,
+  videoList,
+  onClick,
+  active,
+}) => {
   const { showMoreModal, handleOpenShowMoreModal, handleCloseShowMoreModal } =
     usePodcastList();
 
-  console.log("showMoreModal:", showMoreModal);
   return (
     <div
       className={`card-container ${active ? "active" : ""}`}
@@ -29,6 +36,8 @@ const Card = ({ title, type, imageUrl, onClick, active }) => {
         imageUrl={imageUrl}
         title={title}
         type={type}
+        description={description}
+        videoList={videoList}
       />
     </div>
   );

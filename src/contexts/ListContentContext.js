@@ -1,5 +1,6 @@
 // 新增 ListContentContext
 import React, { createContext, useState, useContext } from "react";
+import { usePodcastList } from "./PodcastListContext";
 
 const ListContentContext = createContext();
 export const useListContent = () => useContext(ListContentContext);
@@ -26,7 +27,7 @@ const ListContentProvider = ({ children }) => {
       title: "我的Podcast",
       list: [],
     },
-    { type: "favorite", emoji: "❤️", title: "已收藏", list: [] },
+    { type: "favorite", emoji: "❤️", title: "已收藏video", list: [] },
   ]);
 
   const [activeList, setActiveList] = useState(0);
@@ -34,6 +35,8 @@ const ListContentProvider = ({ children }) => {
   const [listActionModal, setListActionModal] = useState(false);
   const [currentAction, setCurrentAction] = useState(null);
   const [editInput, setEditInput] = useState("");
+
+  const { podcastList, setPodcastList } = usePodcastList();
 
   const handleClickList = (index) => {
     setActiveList(index);
@@ -112,6 +115,56 @@ const ListContentProvider = ({ children }) => {
     });
   };
 
+  //更新  videoList 的 isFavorite屬性
+  const updatePodcastList = (prevPodcastList, videoTitle) => {
+    return prevPodcastList.map((podcast) => {
+      if (
+        podcast.videoList &&
+        podcast.videoList.some((video) => video.title === videoTitle)
+      ) {
+        return {
+          ...podcast,
+          videoList: podcast.videoList.map((video) =>
+            video.title === videoTitle ? { ...video, isFavorite: true } : video
+          ),
+        };
+      }
+      return podcast;
+    });
+  };
+
+  // console.log(podcastList[0].videoList[0].isFavorite);
+  // console.log(podcastList[0].videoList[1].isFavorite);
+  // console.log(podcastList[0].videoList[2].isFavorite);
+
+  // 添加一個新的參數，以便向已收藏清單中添加 video
+  const addFavoriteItem = (video) => {
+    setListContent((prevListContent) => {
+      const isAlreadyFavorite = prevListContent[4].list.some(
+        (item) => item.title === video.title
+      );
+      // 將 video 添加到已收藏清單的 list 中
+      if (!isAlreadyFavorite) {
+        const updatedListContent = [...prevListContent];
+        updatedListContent[4].list = [
+          ...updatedListContent[4].list,
+          { ...video, isFavorite: true },
+        ];
+        // 同時更新 PodcastList 中的狀態
+        setPodcastList((prevPodcastList) =>
+          updatePodcastList(prevPodcastList, video.title)
+        );
+
+        return updatedListContent;
+      } else {
+        // 如果video已經在已收藏清單中，則不執行任何操作
+        return prevListContent;
+      }
+    });
+  };
+
+  console.log(listContent[4].list);
+
   return (
     <ListContentContext.Provider
       value={{
@@ -142,6 +195,8 @@ const ListContentProvider = ({ children }) => {
         editListItem,
         deleteListItem,
         addListItem,
+
+        addFavoriteItem,
       }}
     >
       {children}

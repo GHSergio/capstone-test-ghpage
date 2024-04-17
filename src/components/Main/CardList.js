@@ -14,8 +14,6 @@ const CardList = ({
 
   const activeListContent = listContent[activeList].list;
 
-  // console.log(activeListContent);
-
   //根據List名稱 渲染emptyList
   const renderEmptyList = () => {
     if (activeList && listContent[activeList].type === "favorite") {
@@ -71,6 +69,8 @@ const CardList = ({
                   title={item.title}
                   type={item.type}
                   imageUrl={item.imageUrl}
+                  description={item.description}
+                  videoList={item.videoList}
                 />
               ))}
 
