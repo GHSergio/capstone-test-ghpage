@@ -1,20 +1,19 @@
 import "../../../styles/showMoreModal.scss";
-import { useListContent } from "../../../contexts/ListContentContext";
+import { usePodcastList } from "../../../contexts/PodcastListContext";
+import ListItem from "../ListItem";
 
-const ShowMoreModal = ({
-  isOpen,
-  onClose,
-  imageUrl,
-  title,
-  type,
-  description,
-  videoList,
-}) => {
-  const { addFavoriteItem } = useListContent();
-  // console.log(videoList);
+const ShowMoreModal = ({ isOpen, onClose, card }) => {
+  const { handleDeleteChannel, activeList } = usePodcastList();
+
+  // console.log(card);
+  const handleDelete = (card) => {
+    handleDeleteChannel(activeList, card);
+    onClose();
+  };
+
   return (
     <>
-      {isOpen && (
+      {isOpen && card && (
         <div className="modal-overlay" onClick={onClose}>
           <div
             className="more-modal-container"
@@ -23,12 +22,12 @@ const ShowMoreModal = ({
             <div className="more-modal-wrapper">
               <div className="more-modal-header">
                 <div className="more-modal-header-img">
-                  <img src={imageUrl} alt="" />
+                  <img src={card.imageUrl} alt="" />
                 </div>
                 <div className="more-modal-header-content">
-                  <span className="content-title">{title}</span>
-                  <span className="content-type">{type}</span>
-                  <span className="content-text">{description}</span>
+                  <span className="content-title">{card.title}</span>
+                  <span className="content-type">{card.type}</span>
+                  <span className="content-text">{card.description}</span>
                 </div>
 
                 <svg
@@ -52,66 +51,16 @@ const ShowMoreModal = ({
                     </clipPath>
                   </defs>
                 </svg>
-                <button className="button-delete">
+                <button className="button-delete" onClick={handleDelete}>
                   <p>刪除</p>
                 </button>
               </div>
 
-              {videoList.map((item, index) => {
-                return (
-                  <>
-                    <div className="video-container" key={index}>
-                      <div className="video-wrapper">
-                        <div className="video-image">
-                          <img src={item.imageUrl} alt="" />
-                        </div>
-                        <div className="video-content">
-                          <span className="title">{item.title}</span>
-                          <span className="description">
-                            {item.description}
-                          </span>
-                          <div className="switch-wrapper">
-                            <div className="player">
-                              <svg
-                                width="34"
-                                height="34"
-                                viewBox="0 0 34 34"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M17 0.333374C7.80004 0.333374 0.333374 7.80004 0.333374 17C0.333374 26.2 7.80004 33.6667 17 33.6667C26.2 33.6667 33.6667 26.2 33.6667 17C33.6667 7.80004 26.2 0.333374 17 0.333374ZM13.6667 24.5V9.50004L23.6667 17L13.6667 24.5Z"
-                                  fill="#FF7F50"
-                                />
-                              </svg>
-                            </div>
-                            <p className="date">
-                              {item.date} - {item.duration}
-                            </p>
-                          </div>
-                          <div
-                            className="bookmark"
-                            onClick={() => addFavoriteItem(item)}
-                          >
-                            <svg
-                              width="12"
-                              height="16"
-                              viewBox="0 0 12 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M10.1666 0.5H1.83329C0.916626 0.5 0.166626 1.25 0.166626 2.16667V15.5L5.99996 13L11.8333 15.5V2.16667C11.8333 1.25 11.0833 0.5 10.1666 0.5ZM10.1666 13L5.99996 11.1833L1.83329 13V2.16667H10.1666V13Z"
-                                fill="#FF7F50"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                );
-              })}
+              {/* videoList */}
+              {card.videoList &&
+                card.videoList.map((item, index) => (
+                  <ListItem key={index} item={item} />
+                ))}
             </div>
           </div>
         </div>

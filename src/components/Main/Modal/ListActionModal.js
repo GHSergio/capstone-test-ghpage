@@ -1,4 +1,4 @@
-import { useListContent } from "../../../contexts/ListContentContext";
+import { usePodcastList } from "../../../contexts/PodcastListContext";
 
 const ListActionModal = ({
   isOpen,
@@ -19,13 +19,14 @@ const ListActionModal = ({
     editListItem,
     deleteListItem,
     addListItem,
-  } = useListContent();
-
+  } = usePodcastList();
+  console.log(editInput);
   const handleConfirmAction = () => {
-    switch (currentAction) {
+    switch ((index, currentAction)) {
       case "edit":
         // 執行編輯操作
         editListItem(index, editInput);
+        setEditInput("");
 
         onClose();
         break;
@@ -83,6 +84,7 @@ const ListActionModal = ({
               </div>
               <hr />
               <div className="list-modal-main">
+                {/* 刪除分類不用input */}
                 {title !== "刪除分類" && (
                   <div className="list-modal-search-container">
                     <input
@@ -103,7 +105,7 @@ const ListActionModal = ({
                 <button className="modal-button-close" onClick={onClose}>
                   <p>取消</p>
                 </button>
-
+                {/* 有input的actionModal input不能空白 */}
                 {currentAction !== "delete" ? (
                   <button
                     className={

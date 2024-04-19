@@ -1,24 +1,19 @@
-import { useListContent } from "../../contexts/ListContentContext";
+import { usePodcastList } from "../../contexts/PodcastListContext";
 import ListActionModal from "./Modal/ListActionModal";
 
-const Hamburger = ({
-  isActive,
-  onClick,
-  disabled,
-  listType,
-
-  handleOpenModal,
-}) => {
+const Hamburger = ({ isActive, onClick, disabled }) => {
   const {
     listActionModal,
     handleCloseListActionModal,
 
-    listContent,
+    categoryContent,
     activeList,
 
     currentAction,
     handleActionClick,
-  } = useListContent();
+
+    handleOpenAddCardModal,
+  } = usePodcastList();
 
   const classNames = isActive
     ? "dropdown-container active"
@@ -31,7 +26,7 @@ const Hamburger = ({
           <ListActionModal
             isOpen={listActionModal}
             title="編輯名稱"
-            placeholder={`${listContent[activeList].emoji} ${listContent[activeList].title}`}
+            placeholder={`${categoryContent[activeList]?.emoji} ${categoryContent[activeList]?.title}`}
             confirmText="儲存"
             onClose={handleCloseListActionModal}
             index={activeList}
@@ -57,7 +52,9 @@ const Hamburger = ({
           <ListActionModal
             isOpen={listActionModal}
             title="刪除分類"
-            text={`您確定要繼續刪除  [${listContent[activeList].emoji}  ${listContent[activeList].title}]  分類嗎？`}
+            text={`您確定要繼續刪除
+              ${categoryContent[activeList]?.emoji}
+             ${categoryContent[activeList]?.title} 分類嗎？`}
             confirmText="刪除"
             onClose={handleCloseListActionModal}
             index={activeList}
@@ -71,39 +68,33 @@ const Hamburger = ({
   };
 
   return (
-    <div className="hamburger-wrapper" onClick={disabled ? null : onClick}>
-      <div className="hamburger-dot"></div>
-      <div className="hamburger-dot"></div>
-      <div className="hamburger-dot"></div>
+    <>
+      <div className="hamburger-wrapper" onClick={disabled ? null : onClick}>
+        <div className="hamburger-dot"></div>
+        <div className="hamburger-dot"></div>
+        <div className="hamburger-dot"></div>
 
-      {
-        <div className={classNames}>
-          <div className="dropdown-item">
-            <p onClick={() => handleActionClick("edit")}>編輯名稱</p>
-          </div>
-
-          <hr />
-
-          <div className="dropdown-item">
-            <p onClick={handleOpenModal}>新增Podcast</p>
-          </div>
-          <hr />
-
-          {listType !== "favorite" ? (
-            <>
-              <div className="dropdown-item">
-                <p onClick={() => handleActionClick("delete")}>刪除分類</p>
-              </div>
-            </>
-          ) : (
-            <div className="dropdown-item none">
-              <p>無法刪除</p>
+        {
+          <div className={classNames}>
+            <div className="dropdown-item">
+              <p onClick={() => handleActionClick("edit")}>編輯名稱</p>
             </div>
-          )}
-        </div>
-      }
-      {renderActionModal()}
-    </div>
+
+            <hr />
+
+            <div className="dropdown-item">
+              <p onClick={handleOpenAddCardModal}>新增Podcast</p>
+            </div>
+            <hr />
+
+            <div className="dropdown-item">
+              <p onClick={() => handleActionClick("delete")}>刪除分類</p>
+            </div>
+          </div>
+        }
+        {renderActionModal()}
+      </div>
+    </>
   );
 };
 

@@ -1,39 +1,35 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
-// import { useListContent } from "../../../contexts/ListContentContext";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const [searchInput, setSearchInput] = useState("");
   const [isAnyCardClicked, setIsAnyCardClicked] = useState(false);
 
-  const { podcastList, selectedPodcasts, setSelectedPodcasts } =
-    usePodcastList();
+  const { channelList, selectedChannel, setSelectedChannel } = usePodcastList();
 
   const handleSearch = (event) => {
     setSearchInput(event.target.value);
   };
 
   //篩選List內 title 包含 searchInput 的 item
-  const filteredPodcasts = podcastList.filter((podcast) =>
-    podcast.title.toLowerCase().includes(searchInput.toLowerCase())
+  const filteredChannel = channelList.filter((channel) =>
+    channel.title.toLowerCase().includes(searchInput.toLowerCase())
   );
 
-  const handlePodcastClick = (podcast) => {
-    // 重複:傳入的id 已存在selectedPodcasts
-    const isSelected = selectedPodcasts.some((item) => item.id === podcast.id);
-    let updatedPodcasts = [...selectedPodcasts];
+  const handleChannelClick = (channel) => {
+    // 重複:傳入的id 已存在selectedChannel
+    const isSelected = selectedChannel.some((item) => item.id === channel.id);
+    let updatedChannel = [...selectedChannel];
     //重複則 篩選出 除了傳入的podcast以外的項目
     if (isSelected) {
-      updatedPodcasts = selectedPodcasts.filter(
-        (item) => item.id !== podcast.id
-      );
+      updatedChannel = selectedChannel.filter((item) => item.id !== channel.id);
     } else {
       // 沒重複則 該項目更新isSelected
-      updatedPodcasts = [...selectedPodcasts, { ...podcast, active: true }];
+      updatedChannel = [...selectedChannel, { ...channel, active: true }];
     }
-    setSelectedPodcasts(updatedPodcasts);
-    setIsAnyCardClicked(!isSelected || updatedPodcasts.length > 0);
+    setSelectedChannel(updatedChannel);
+    setIsAnyCardClicked(!isSelected || updatedChannel.length > 0);
   };
 
   return (
@@ -100,15 +96,15 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                 <div className="search-result">
                   <p className="search-result-header">搜尋結果</p>
                   <div className="card-list-container">
-                    {filteredPodcasts.map((podcast) => (
+                    {filteredChannel.map((channel) => (
                       <Card
-                        key={podcast.id}
-                        title={podcast.title}
-                        type={podcast.type}
-                        imageUrl={podcast.imageUrl}
-                        onClick={() => handlePodcastClick(podcast)}
-                        active={selectedPodcasts.some(
-                          (item) => item.id === podcast.id
+                        key={channel.id}
+                        title={channel.title}
+                        type={channel.type}
+                        imageUrl={channel.imageUrl}
+                        onClick={() => handleChannelClick(channel)}
+                        active={selectedChannel.some(
+                          (item) => item.id === channel.id
                         )}
                       />
                     ))}
@@ -126,7 +122,7 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                       : "modal-button-add usable"
                   }
                   disabled={!isAnyCardClicked}
-                  onClick={() => onConfirm(selectedPodcasts)}
+                  onClick={() => onConfirm(selectedChannel)}
                 >
                   <p>確認新增</p>
                 </button>

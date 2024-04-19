@@ -4,7 +4,7 @@ const PodcastListContext = createContext();
 export const usePodcastList = () => useContext(PodcastListContext);
 
 const PodcastListProvider = ({ children }) => {
-  const [podcastList, setPodcastList] = useState([
+  const [channelList, setChannelList] = useState([
     {
       id: 1,
       title: "Siddhartha",
@@ -24,7 +24,6 @@ const PodcastListProvider = ({ children }) => {
             "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
           date: "2023-04-06",
           duration: "1 小時 20 分",
-          isFavorite: false,
         },
         {
           imageUrl:
@@ -35,7 +34,6 @@ const PodcastListProvider = ({ children }) => {
             "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
           date: "2023-04-07",
           duration: "1 小時 30 分",
-          isFavorite: false,
         },
         {
           imageUrl:
@@ -46,7 +44,36 @@ const PodcastListProvider = ({ children }) => {
             "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
           date: "2023-04-08",
           duration: "1 小時 40 分",
-          isFavorite: false,
+        },
+        {
+          imageUrl:
+            "https://s3-alpha-sig.figma.com/img/22ed/573d/f24340ce94b8f0e31079a53749fa8175?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YejBJ1zeSjOZK5jIV4aqjEn-iNKT8voFZcrMX~mdpcS9iqLED57a4ix2uaXRPWzn5R0PCMJE9ZLgGkz25OnPNCOtY49LAmmVXSDsGcN1YsXPktzviOwE1HxjW28wSFikXOZ55W1sH9O3buSeWSKFRhyp2lkZg2Br1pz8seB4ldR6YFnYFN~g0x6WEfFs5ieQO8DW4~smTvzJleEUFCz60cShtlrFl1bqfJvDEN8c2IWgOIksh00uFnoLUosCM9SFTU9Pkq1eD2Luoskjv6L3KSe3OpnLRgEoC2uZbn~ZywUXQ-~Kb7bUj3BDt216SPJKdo35QUITlgnXhTYUTbnaNA__",
+          title:
+            "D Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+          description:
+            "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+          date: "2023-04-06",
+          duration: "1 小時 20 分",
+        },
+        {
+          imageUrl:
+            "https://s3-alpha-sig.figma.com/img/a3e6/56f1/29cb67ae3e0f5ddacdccc345caf736f1?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XuBk4n~Vnk1729Op0aCjHLiAx0s3buH9UFz5sSIxVgBjG7pIrJRSChfHXyhvPtdITfZ3kOK3O8gxfgNPBMGardLEKOlzAV3zURuHLXLoRhMLHsFYmJUpJAaCDd8RvLJ1jMfcKJTHknCDYd44Pif9YEl54zoho--Rkk1glDOqUoyJ00whyqBLHuCjY3WUrM52KbtERjLiRHhwIWA6yyUjSzWY~4Ne8VTDLh3SEfTEKqBRvgDsrXWJcOcK71LeVwIhYj1wCfFwg9WjoY-bfdaPujjqtve5DJ5k2ktXGr3dXm5peM4QVptKmoPlvAyfECJEcH3iJZijKIAFrJa~MjzbyA__",
+          title:
+            "E Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+          description:
+            "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+          date: "2023-04-07",
+          duration: "1 小時 30 分",
+        },
+        {
+          imageUrl:
+            "https://s3-alpha-sig.figma.com/img/119a/8489/79edaadc3bd08a903a2a69ec323f624f?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GqbeUz8HSjEFYB2gBVxTiid1U39eRynjybuzGcJ4WroTHl8VBXEKWy6fQnuWy3Ksst7ezaQBi1NZSHKpiyq6-hMfxYWyzMPWNqcozppGO-yUc6gSs5ybBv6bTBD5WuYnLJeIlldstujWC-7oTjnEx3dojisZ5IYDTj1UYO-aNZ6XFNMq6JPAf6EeY3XQagPQWi1Z3lmb7qAOGFH1ZFGylFlY1Hp4HChtBgsP-Ce7pkZDMwE-eph2zp1vsdkOv53oCMP7QUJnb-YZIV1sLRsF23COM3RR2yl0F2lG~e8kXfKbhhcenCYQl0V3-7UIHo7VQmyyUkm8ByPgRSVwHnzrig__",
+          title:
+            "F Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+          description:
+            "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+          date: "2023-04-08",
+          duration: "1 小時 40 分",
         },
       ],
     },
@@ -141,13 +168,249 @@ const PodcastListProvider = ({ children }) => {
       active: false,
     },
   ]);
-  const [selectedPodcasts, setSelectedPodcasts] = useState([]);
-  const [showMoreModal, setShowMoreModal] = useState(false);
+  const [selectedChannel, setSelectedChannel] = useState([]);
+  const [categoryContent, setCategoryContent] = useState([
+    {
+      emoji: "🚌",
+      title: "通勤清單",
+      channelList: [],
+    },
+    {
+      emoji: "📚",
+      title: "學習清單",
+      channelList: [],
+    },
+    {
+      emoji: "💤",
+      title: "睡前清單",
+      channelList: [],
+    },
+    {
+      emoji: "🏘️",
+      title: "我的Podcast",
+      channelList: [],
+    },
+    // {
+    //   type: "favorite",
+    //   emoji: "❤️",
+    //   title: "已收藏video",
+    //   channelList: [
+    //     {
+    //       imageUrl:
+    //         "https://s3-alpha-sig.figma.com/img/6061/c90b/b239aa208ff9d16f9f1dd09f391760e7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od6GalLLgkhuEhRxrxO7YNpyslof0TgEH5VWKmANasXjULkJ-ly6irl0dguFlqUQSQxzgM04kyLFCPFgKH0O1--R0MRgmN7yVtCxQjvVVezzmXuq6D~RBMwl02VQmjjrzbQ~OwtHSSESAM~Q98FUJTuJIe05baqvE8fbfPlNNit3n~ERuNsmE~yaBbUGt6ux-~xrTNrN0l5rJDAZTpfmEO~UVn7f9DqYxnJy5tDoBB5oqX~9g7UxqqIg~aerXw~tz~4r3f2ShJctGfj0gOuKuSVguKuAXD2B9lA0vWNzZ7SEGt00ET3NDyGbj47P~NMkgms3955lV80~jjmn8jadeQ__",
+    //       title:
+    //         "A Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    //       description:
+    //         "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+    //       date: "2023-04-06",
+    //       duration: "1 小時 20 分",
+    //     },
+    //     {
+    //       imageUrl:
+    //         "https://s3-alpha-sig.figma.com/img/a6cb/eee7/31add6e3e5e02f69f231753932b79b9b?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hF9uORM7n1wL3JQlFlrbmrPlpCseaBBPzByWUG1BWr-~JmBreyW1HlkWESIrdgRtAs5-vB9rCV1UetTV~jHfTbqVwFJcSM7222GSxz9s3KOAH~783ZRwduf8~eKIDS5scBNDBBhCV2XGeTtydqdFDNcqqHeNNFdyRWtywp~nwPfg6klm~9Fa1MeAqvAj1U7x-eTrDjW1rSsKVHLo9msdgv~8DQhXwCKaanYsmzPNZvUUwaS~BK8nVUNBTF4w~TV6E-6ggGsWg-poNJ2AqpVhe9ml8lxBDqwHOxHGBSZNGxO4hSTjP4tEV7CfhjW2FPmg~NYRuSGqFpxL9NCIX8dYJA__",
+    //       title:
+    //         "B Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    //       description:
+    //         "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+    //       date: "2023-04-07",
+    //       duration: "1 小時 30 分",
+    //     },
+    //     {
+    //       imageUrl:
+    //         "https://s3-alpha-sig.figma.com/img/5aa1/4d41/4a9b4213651cc1dbfbadd29c1e864258?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WlJ8jEm8VthMMEIuERDMzA8YWW~fviRoeYPCpRaGkj7gPOf~~aTObI3bTCKd8~kkHx~WfS4~2fwCjqCH~5LfzhuO5C8gEdqN9t5EY8hZskZxP72C4EPwb3AwpGImkilcL3end3q1tWL-DIHHMdklEeZ4HnD9d2t-NKJqOv8c6OuEMmZHVR3cLsuuUiCOwm5VHjsv0JBEfgpOA~PAtnIzLuVRYOB0C5hvLw-GWVnMcRbBWIWITJdKRUQGRHSogYgrxJ4Us~fXRHtPR3r6l2chXNUqooShgC0YQ5EP9GfU6MPafXi1YE5RkPmheSXLm56LeUd92N9R8XqNX-HNm05ltQ__",
+    //       title:
+    //         "C Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    //       description:
+    //         "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+    //       date: "2023-04-08",
+    //       duration: "1 小時 40 分",
+    //     },
+    //     {
+    //       imageUrl:
+    //         "https://s3-alpha-sig.figma.com/img/22ed/573d/f24340ce94b8f0e31079a53749fa8175?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YejBJ1zeSjOZK5jIV4aqjEn-iNKT8voFZcrMX~mdpcS9iqLED57a4ix2uaXRPWzn5R0PCMJE9ZLgGkz25OnPNCOtY49LAmmVXSDsGcN1YsXPktzviOwE1HxjW28wSFikXOZ55W1sH9O3buSeWSKFRhyp2lkZg2Br1pz8seB4ldR6YFnYFN~g0x6WEfFs5ieQO8DW4~smTvzJleEUFCz60cShtlrFl1bqfJvDEN8c2IWgOIksh00uFnoLUosCM9SFTU9Pkq1eD2Luoskjv6L3KSe3OpnLRgEoC2uZbn~ZywUXQ-~Kb7bUj3BDt216SPJKdo35QUITlgnXhTYUTbnaNA__",
+    //       title:
+    //         "D Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    //       description:
+    //         "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+    //       date: "2023-04-06",
+    //       duration: "1 小時 20 分",
+    //     },
+    //     {
+    //       imageUrl:
+    //         "https://s3-alpha-sig.figma.com/img/a3e6/56f1/29cb67ae3e0f5ddacdccc345caf736f1?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XuBk4n~Vnk1729Op0aCjHLiAx0s3buH9UFz5sSIxVgBjG7pIrJRSChfHXyhvPtdITfZ3kOK3O8gxfgNPBMGardLEKOlzAV3zURuHLXLoRhMLHsFYmJUpJAaCDd8RvLJ1jMfcKJTHknCDYd44Pif9YEl54zoho--Rkk1glDOqUoyJ00whyqBLHuCjY3WUrM52KbtERjLiRHhwIWA6yyUjSzWY~4Ne8VTDLh3SEfTEKqBRvgDsrXWJcOcK71LeVwIhYj1wCfFwg9WjoY-bfdaPujjqtve5DJ5k2ktXGr3dXm5peM4QVptKmoPlvAyfECJEcH3iJZijKIAFrJa~MjzbyA__",
+    //       title:
+    //         "E Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    //       description:
+    //         "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+    //       date: "2023-04-07",
+    //       duration: "1 小時 30 分",
+    //     },
+    //     {
+    //       imageUrl:
+    //         "https://s3-alpha-sig.figma.com/img/119a/8489/79edaadc3bd08a903a2a69ec323f624f?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GqbeUz8HSjEFYB2gBVxTiid1U39eRynjybuzGcJ4WroTHl8VBXEKWy6fQnuWy3Ksst7ezaQBi1NZSHKpiyq6-hMfxYWyzMPWNqcozppGO-yUc6gSs5ybBv6bTBD5WuYnLJeIlldstujWC-7oTjnEx3dojisZ5IYDTj1UYO-aNZ6XFNMq6JPAf6EeY3XQagPQWi1Z3lmb7qAOGFH1ZFGylFlY1Hp4HChtBgsP-Ce7pkZDMwE-eph2zp1vsdkOv53oCMP7QUJnb-YZIV1sLRsF23COM3RR2yl0F2lG~e8kXfKbhhcenCYQl0V3-7UIHo7VQmyyUkm8ByPgRSVwHnzrig__",
+    //       title:
+    //         "F Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+    //       description:
+    //         "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+    //       date: "2023-04-08",
+    //       duration: "1 小時 40 分",
+    //     },
+    //   ],
+    // },
+  ]);
+  const [favoriteList, setFavoriteList] = useState({
+    index: 99,
+    emoji: "❤️",
+    title: "已收藏video",
+    channelList: [
+      {
+        imageUrl:
+          "https://s3-alpha-sig.figma.com/img/6061/c90b/b239aa208ff9d16f9f1dd09f391760e7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od6GalLLgkhuEhRxrxO7YNpyslof0TgEH5VWKmANasXjULkJ-ly6irl0dguFlqUQSQxzgM04kyLFCPFgKH0O1--R0MRgmN7yVtCxQjvVVezzmXuq6D~RBMwl02VQmjjrzbQ~OwtHSSESAM~Q98FUJTuJIe05baqvE8fbfPlNNit3n~ERuNsmE~yaBbUGt6ux-~xrTNrN0l5rJDAZTpfmEO~UVn7f9DqYxnJy5tDoBB5oqX~9g7UxqqIg~aerXw~tz~4r3f2ShJctGfj0gOuKuSVguKuAXD2B9lA0vWNzZ7SEGt00ET3NDyGbj47P~NMkgms3955lV80~jjmn8jadeQ__",
+        title:
+          "A Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+        description:
+          "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+        date: "2023-04-06",
+        duration: "1 小時 20 分",
+      },
+      {
+        imageUrl:
+          "https://s3-alpha-sig.figma.com/img/a6cb/eee7/31add6e3e5e02f69f231753932b79b9b?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hF9uORM7n1wL3JQlFlrbmrPlpCseaBBPzByWUG1BWr-~JmBreyW1HlkWESIrdgRtAs5-vB9rCV1UetTV~jHfTbqVwFJcSM7222GSxz9s3KOAH~783ZRwduf8~eKIDS5scBNDBBhCV2XGeTtydqdFDNcqqHeNNFdyRWtywp~nwPfg6klm~9Fa1MeAqvAj1U7x-eTrDjW1rSsKVHLo9msdgv~8DQhXwCKaanYsmzPNZvUUwaS~BK8nVUNBTF4w~TV6E-6ggGsWg-poNJ2AqpVhe9ml8lxBDqwHOxHGBSZNGxO4hSTjP4tEV7CfhjW2FPmg~NYRuSGqFpxL9NCIX8dYJA__",
+        title:
+          "B Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+        description:
+          "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+        date: "2023-04-07",
+        duration: "1 小時 30 分",
+      },
+      {
+        imageUrl:
+          "https://s3-alpha-sig.figma.com/img/5aa1/4d41/4a9b4213651cc1dbfbadd29c1e864258?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WlJ8jEm8VthMMEIuERDMzA8YWW~fviRoeYPCpRaGkj7gPOf~~aTObI3bTCKd8~kkHx~WfS4~2fwCjqCH~5LfzhuO5C8gEdqN9t5EY8hZskZxP72C4EPwb3AwpGImkilcL3end3q1tWL-DIHHMdklEeZ4HnD9d2t-NKJqOv8c6OuEMmZHVR3cLsuuUiCOwm5VHjsv0JBEfgpOA~PAtnIzLuVRYOB0C5hvLw-GWVnMcRbBWIWITJdKRUQGRHSogYgrxJ4Us~fXRHtPR3r6l2chXNUqooShgC0YQ5EP9GfU6MPafXi1YE5RkPmheSXLm56LeUd92N9R8XqNX-HNm05ltQ__",
+        title:
+          "C Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+        description:
+          "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+        date: "2023-04-08",
+        duration: "1 小時 40 分",
+      },
+      {
+        imageUrl:
+          "https://s3-alpha-sig.figma.com/img/22ed/573d/f24340ce94b8f0e31079a53749fa8175?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YejBJ1zeSjOZK5jIV4aqjEn-iNKT8voFZcrMX~mdpcS9iqLED57a4ix2uaXRPWzn5R0PCMJE9ZLgGkz25OnPNCOtY49LAmmVXSDsGcN1YsXPktzviOwE1HxjW28wSFikXOZ55W1sH9O3buSeWSKFRhyp2lkZg2Br1pz8seB4ldR6YFnYFN~g0x6WEfFs5ieQO8DW4~smTvzJleEUFCz60cShtlrFl1bqfJvDEN8c2IWgOIksh00uFnoLUosCM9SFTU9Pkq1eD2Luoskjv6L3KSe3OpnLRgEoC2uZbn~ZywUXQ-~Kb7bUj3BDt216SPJKdo35QUITlgnXhTYUTbnaNA__",
+        title:
+          "D Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+        description:
+          "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+        date: "2023-04-06",
+        duration: "1 小時 20 分",
+      },
+      {
+        imageUrl:
+          "https://s3-alpha-sig.figma.com/img/a3e6/56f1/29cb67ae3e0f5ddacdccc345caf736f1?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XuBk4n~Vnk1729Op0aCjHLiAx0s3buH9UFz5sSIxVgBjG7pIrJRSChfHXyhvPtdITfZ3kOK3O8gxfgNPBMGardLEKOlzAV3zURuHLXLoRhMLHsFYmJUpJAaCDd8RvLJ1jMfcKJTHknCDYd44Pif9YEl54zoho--Rkk1glDOqUoyJ00whyqBLHuCjY3WUrM52KbtERjLiRHhwIWA6yyUjSzWY~4Ne8VTDLh3SEfTEKqBRvgDsrXWJcOcK71LeVwIhYj1wCfFwg9WjoY-bfdaPujjqtve5DJ5k2ktXGr3dXm5peM4QVptKmoPlvAyfECJEcH3iJZijKIAFrJa~MjzbyA__",
+        title:
+          "E Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+        description:
+          "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+        date: "2023-04-07",
+        duration: "1 小時 30 分",
+      },
+      {
+        imageUrl:
+          "https://s3-alpha-sig.figma.com/img/119a/8489/79edaadc3bd08a903a2a69ec323f624f?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GqbeUz8HSjEFYB2gBVxTiid1U39eRynjybuzGcJ4WroTHl8VBXEKWy6fQnuWy3Ksst7ezaQBi1NZSHKpiyq6-hMfxYWyzMPWNqcozppGO-yUc6gSs5ybBv6bTBD5WuYnLJeIlldstujWC-7oTjnEx3dojisZ5IYDTj1UYO-aNZ6XFNMq6JPAf6EeY3XQagPQWi1Z3lmb7qAOGFH1ZFGylFlY1Hp4HChtBgsP-Ce7pkZDMwE-eph2zp1vsdkOv53oCMP7QUJnb-YZIV1sLRsF23COM3RR2yl0F2lG~e8kXfKbhhcenCYQl0V3-7UIHo7VQmyyUkm8ByPgRSVwHnzrig__",
+        title:
+          "F Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
+        description:
+          "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
+        date: "2023-04-08",
+        duration: "1 小時 40 分",
+      },
+    ],
+  });
 
-  const handlePodcastClick = (podcast) => {
-    setSelectedPodcasts(podcast);
+  const [activeList, setActiveList] = useState(0);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const [showMoreModal, setShowMoreModal] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const [addCardModal, setAddCardModal] = useState(false);
+  const [listActionModal, setListActionModal] = useState(false);
+
+  const [currentAction, setCurrentAction] = useState(null);
+  const [editInput, setEditInput] = useState("");
+
+  const handleSelectedChannelClick = (podcast) => {
+    setSelectedChannel(podcast);
   };
 
+  const handleClickList = (index) => {
+    setActiveList(index);
+  };
+
+  const handleClickDropdown = (index) => {
+    setActiveDropdown((prevDropdown) =>
+      prevDropdown === index ? null : index
+    );
+  };
+
+  // 將 Podcast 添加到指定的列表中
+  const addChannelToCategoryContent = (index, channel) => {
+    setCategoryContent((prevCategoryContent) => {
+      const updatedCategoryContent = [...prevCategoryContent];
+
+      updatedCategoryContent[index].channelList = [
+        ...updatedCategoryContent[index].channelList,
+        ...channel,
+      ];
+
+      return updatedCategoryContent;
+    });
+  };
+
+  // console.log(
+  //   categoryContent[activeList] && categoryContent[activeList].channelList
+  // );
+
+  const handleDeleteChannel = (index, channelToDelete) => {
+    console.log(index, channelToDelete);
+    setCategoryContent((prevCategoryContent) => {
+      // 創建一個新的陣列來保存更新後的 categoryContent
+      const updatedCategoryContent = prevCategoryContent.map((category, i) => {
+        // 如果當前項目的索引與要刪除的頻道的索引相同
+        if (i === index) {
+          // 創建一個新的 channelList，不包含要刪除的頻道
+          const updatedChannelList = category.channelList.filter(
+            (item) => item.id !== channelToDelete.id
+          );
+          console.log(updatedChannelList);
+          // 將更新後的 channelList 放回到 category 物件中
+          return { ...category, channelList: updatedChannelList };
+        }
+        // 如果不是要刪除的頻道，則直接返回原來的 category
+        return category;
+      });
+      return updatedCategoryContent;
+    });
+  };
+
+  // addCardModal
+  const handleOpenAddCardModal = () => {
+    setAddCardModal(true);
+  };
+
+  const handleCloseAddCardModal = () => {
+    setAddCardModal(false);
+    setSelectedChannel([]);
+  };
+
+  const handleConfirmAddCardModal = (selectedChannel) => {
+    if (selectedChannel.length > 0) {
+      addChannelToCategoryContent(activeList, selectedChannel);
+      setAddCardModal(false);
+      setSelectedChannel([]);
+    }
+  };
+
+  //showMoreModal
   const handleOpenShowMoreModal = () => {
     setShowMoreModal(true);
   };
@@ -156,20 +419,153 @@ const PodcastListProvider = ({ children }) => {
     setShowMoreModal(false);
   };
 
+  // listActionModal
+  const handleOpenListActionModal = () => {
+    setListActionModal(true);
+  };
+
+  const handleCloseListActionModal = () => {
+    setListActionModal(false);
+  };
+
+  const handleEditInput = (event) => {
+    setEditInput(event.target.value);
+  };
+
+  //設置action為setCurrentAction & openModal
+  const handleActionClick = (action) => {
+    setCurrentAction(action);
+    handleOpenListActionModal();
+  };
+
+  //List action
+  const editListItem = (index, newTitle) => {
+    setCategoryContent((prevListContent) => {
+      const updatedListContent = [...prevListContent];
+      updatedListContent[index].title = newTitle;
+      return updatedListContent;
+    });
+  };
+
+  const deleteListItem = (index) => {
+    setCategoryContent((prevListContent) => {
+      const updatedListContent = [...prevListContent];
+      updatedListContent.splice(index, 1);
+      return updatedListContent;
+    });
+  };
+
+  const addListItem = (newTitle) => {
+    setCategoryContent((prevListContent) => {
+      const newListItem = {
+        emoji: "",
+        title: newTitle,
+        channelList: [],
+      };
+      return [...prevListContent, newListItem];
+    });
+  };
+
+  // const handleClickBookmark = (video) => {
+  //   // 檢查最愛清單中是否有與點擊的影片相同的標題
+  //   const isFavorite =
+  //     categoryContent[4].channelList.length !== 0 &&
+  //     categoryContent[4].channelList.some((item) => item.title === video.title);
+
+  //   // 如果該影片已經在最愛清單中，則將其移除
+  //   if (isFavorite) {
+  //     const updatedList =
+  //       categoryContent[4].channelList.length !== 0 &&
+  //       categoryContent[4].channelList.filter(
+  //         (item) => item.title !== video.title
+  //       );
+  //     setCategoryContent(updatedList);
+  //   } else {
+  //     // 如果該影片不在最愛清單中，則將其添加
+  //     setCategoryContent((prevList) => [...prevList, video]);
+  //   }
+  // };
+  const handleClickBookmark = (video) => {
+    // 檢查最愛清單中是否有與點擊的影片相同的標題
+    const isFavorite =
+      favoriteList.channelList &&
+      favoriteList.channelList.some((item) => item.title === video.title);
+
+    // 如果該影片已經在最愛清單中，則將其移除
+    if (isFavorite) {
+      const updatedList =
+        favoriteList.channelList &&
+        favoriteList.channelList.filter((item) => item.title !== video.title);
+      setFavoriteList((prevList) => ({
+        ...prevList,
+        channelList: updatedList,
+      }));
+    } else {
+      // 如果該影片不在最愛清單中，則將其添加
+      setFavoriteList((prevList) => ({
+        ...prevList,
+        channelList: [...prevList.channelList, video],
+      }));
+    }
+  };
+
   return (
     <PodcastListContext.Provider
       value={{
-        podcastList,
-        setPodcastList,
+        channelList,
+        setChannelList,
 
-        selectedPodcasts,
-        setSelectedPodcasts,
-        handlePodcastClick,
+        selectedChannel,
+        setSelectedChannel,
+        handleSelectedChannelClick,
+
+        categoryContent,
+        setCategoryContent,
+
+        favoriteList,
+        setFavoriteList,
+
+        activeList,
+        setActiveList,
+        handleClickList,
+
+        activeDropdown,
+        setActiveDropdown,
+        handleClickDropdown,
+
+        listActionModal,
+        handleOpenListActionModal,
+        handleCloseListActionModal,
+
+        addCardModal,
+        setAddCardModal,
+        handleOpenAddCardModal,
+        handleCloseAddCardModal,
+        handleConfirmAddCardModal,
+
+        addChannelToCategoryContent,
+        handleDeleteChannel,
 
         showMoreModal,
         setShowMoreModal,
         handleOpenShowMoreModal,
         handleCloseShowMoreModal,
+
+        selectedCard,
+        setSelectedCard,
+
+        currentAction,
+        handleActionClick,
+
+        editInput,
+        setEditInput,
+        handleEditInput,
+
+        editListItem,
+        deleteListItem,
+        addListItem,
+
+        handleClickBookmark,
       }}
     >
       {children}

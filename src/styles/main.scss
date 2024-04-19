@@ -4,7 +4,7 @@
 @import "addCardModal";
 @import "listActionModal";
 @import "showMoreModal";
-
+@import "favoriteList";
 body {
   margin: 0;
   padding: 0;
@@ -26,6 +26,16 @@ button {
   // border-style: none; //邊框
   border: none; //邊框的樣式、寬度和顏色
   cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .main-container {

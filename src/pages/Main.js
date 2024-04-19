@@ -1,55 +1,35 @@
-import { useState } from "react";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
 import Player from "../components/Footer/Player";
-import ListItem from "../components/Main/ListItem";
-import { useListContent } from "../contexts/ListContentContext";
+import NavigationItem from "../components/Main/NavigationItem";
+// import Hamburger from "../components/Main/Hamburger";
 import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
 // import EmojiPicker from "emoji-picker-react";
 
 const Main = () => {
   const {
-    listContent,
+    categoryContent,
+    favoriteList,
 
-    activeList,
     handleClickList,
 
     activeDropdown,
-
     handleClickDropdown,
-    addPodcastToListContent,
+
+    handleOpenListActionModal,
 
     handleActionClick,
-  } = useListContent();
+    addCardModal,
 
-  const { setSelectedPodcasts } = usePodcastList();
-
-  const [addCardModal, setAddCardModal] = useState(false);
-
-  const handleOpenModal = () => {
-    setAddCardModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setAddCardModal(false);
-    setSelectedPodcasts([]);
-  };
-
-  const handleConfirmModal = (selectedPodcast) => {
-    if (selectedPodcast.length > 0) {
-      addPodcastToListContent(activeList, selectedPodcast);
-      setAddCardModal(false);
-      setSelectedPodcasts([]);
-    }
-  };
+    handleOpenAddCardModal,
+    handleCloseAddCardModal,
+    handleConfirmAddCardModal,
+  } = usePodcastList();
 
   return (
     <div className="main-container">
-      {/* <div>
-        <EmojiPicker />
-      </div> */}
       <nav className="navigation">
         <div className="logo-container">
           <svg
@@ -123,22 +103,33 @@ const Main = () => {
           <hr />
         </div>
         <ul className="list-container">
-          {listContent.map((list, index) => (
-            <ListItem
-              showModal={addCardModal}
-              handleOpenModal={handleOpenModal}
-              handleCloseModal={handleCloseModal}
-              handleConfirmModal={handleConfirmModal}
-              key={index}
-              listType={listContent[activeList].type}
-              emoji={list.emoji}
-              title={list.title}
-              isActive={index === activeList}
-              onClick={() => handleClickList(index)}
-              dropdownActive={index === activeDropdown}
-              handleDropdownClick={() => handleClickDropdown(index)}
-            />
-          ))}
+          {categoryContent &&
+            categoryContent.map((category, index) => {
+              return (
+                <>
+                  <NavigationItem
+                    key={index}
+                    index={index}
+                    emoji={category.emoji}
+                    title={category.title}
+                    handleClickList={handleClickList}
+                    activeDropdown={activeDropdown === index}
+                    handleDropdownClick={() => handleClickDropdown(index)}
+                    handleOpenModal={handleOpenListActionModal}
+                  />
+                </>
+              );
+            })}
+
+          <NavigationItem
+            index={favoriteList.index}
+            emoji={favoriteList.emoji}
+            title={favoriteList.title}
+            handleClickList={handleClickList}
+            // activeDropdown={activeDropdown === favoriteList.index}
+            // handleDropdownClick={() => handleClickDropdown(favoriteList.index)}
+            // handleOpenModal={handleOpenListActionModal}
+          />
 
           {/* addCategory */}
           <li
@@ -155,9 +146,9 @@ const Main = () => {
       <div className="content-container">
         <CardList
           showModal={addCardModal}
-          handleOpenModal={handleOpenModal}
-          handleCloseModal={handleCloseModal}
-          handleConfirmModal={handleConfirmModal}
+          handleOpenModal={handleOpenAddCardModal}
+          handleCloseModal={handleCloseAddCardModal}
+          handleConfirmModal={handleConfirmAddCardModal}
         />
       </div>
       <div className="footer">

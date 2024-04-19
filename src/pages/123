@@ -1,9 +1,152 @@
-// // 調用 PodcastContext 中的 setPodcastList 函式更新 PodcastList 中的狀態
-// setPodcastList((prevPodcastList) => {
-//   return prevPodcastList.map((podcast) => {
-//     if (podcast.title === video.title) {
-//       return { ...podcast, isFavorite: true };
-//     }
-//     return podcast;
-//   });
-// });
+  <li>
+            <Link to="/main/commuteList">
+              {categoryContent[0].emoji}
+              {categoryContent[0].title}
+            </Link>
+          </li>
+          <li>
+            <Link to="/main/learnList">
+              {" "}
+              {categoryContent[1].emoji}
+              {categoryContent[1].title}
+            </Link>
+          </li>
+          <li>
+            <Link to="/main/preSleepList">
+              {" "}
+              {categoryContent[2].emoji}
+              {categoryContent[2].title}
+            </Link>
+          </li>
+          <li>
+            <Link to="/main/myPodcastList">
+              {" "}
+              {categoryContent[3].emoji}
+              {categoryContent[3].title}
+            </Link>
+          </li>
+          <li>
+            <Link to="/main/myFavoriteList">
+              {" "}
+              {categoryContent[4].emoji}
+              {categoryContent[4].title}
+            </Link>
+          </li>
+
+
+
+          // 更新  videoList 的 isFavorite屬性
+  const updateChannelListFavorite = (videoTitle) => {
+    const updatedChannelList = channelList?.map((channel) => {
+      const updatedVideoList =
+        channel.videoList?.map((video) => {
+          if (video.title === videoTitle) {
+            return { ...video, isFavorite: !video.isFavorite };
+          }
+          return video;
+        }) || [];
+      return { ...channel, videoList: updatedVideoList };
+    });
+    setChannelList(updatedChannelList);
+  };
+
+  const updateCategoryContentFavorite = (videoTitle) => {
+    const updatedCategoryContent = categoryContent.map((category) => {
+      if (category.type === "favorite") {
+        const updatedChannelList = category.channelList.map((channel) => {
+          const updatedVideoList = channel.videoList.map((video) => {
+            if (video.title === videoTitle) {
+              return { ...video, isFavorite: !video.isFavorite };
+            }
+            return video;
+          });
+          return { ...channel, videoList: updatedVideoList };
+        });
+        return { ...category, channelList: updatedChannelList };
+      }
+      return category;
+    });
+    setCategoryContent(updatedCategoryContent);
+  };
+
+  // toggleFavorite
+  const toggleFavoriteItem = (videoTitle) => {
+    updateChannelListFavorite(videoTitle);
+    updateCategoryContentFavorite(videoTitle);
+  };
+
+
+
+
+
+
+
+   // 判斷影片是否在最愛清單中
+                  const isFavorite =
+                    favoriteList &&
+                    favoriteList.some(
+                      (favorite) => favorite.title === item.title
+                    );
+                  return (
+                    <>
+                      <div className="video-container" key={index}>
+                        <div className="video-wrapper">
+                          <div className="video-image">
+                            <img src={item.imageUrl} alt="" />
+                          </div>
+                          <div className="video-content">
+                            <span className="title">{item.title}</span>
+                            <span className="description">
+                              {item.description}
+                            </span>
+                            <div className="switch-wrapper">
+                              <div className="player">
+                                <svg
+                                  width="34"
+                                  height="34"
+                                  viewBox="0 0 34 34"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M17 0.333374C7.80004 0.333374 0.333374 7.80004 0.333374 17C0.333374 26.2 7.80004 33.6667 17 33.6667C26.2 33.6667 33.6667 26.2 33.6667 17C33.6667 7.80004 26.2 0.333374 17 0.333374ZM13.6667 24.5V9.50004L23.6667 17L13.6667 24.5Z"
+                                    fill="#FF7F50"
+                                  />
+                                </svg>
+                              </div>
+                              <p className="date">
+                                {item.date} - {item.duration}
+                              </p>
+                            </div>
+
+                            <div
+                              className="bookmark"
+                              onClick={() => handleClickBookmark(item)}
+                            >
+                              <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g clipPath="url(#clip0_38_14)">
+                                  <path
+                                    d="M14.1667 2.5H5.83341C4.91675 2.5 4.16675 3.25 4.16675 4.16667V17.5L10.0001 15L15.8334 17.5V4.16667C15.8334 3.25 15.0834 2.5 14.1667 2.5Z"
+                                    fill={isFavorite ? "#FF7F50" : "#FFFFFF"}
+                                    stroke="#FF7F50"
+                                    strokeWidth="1.5"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_38_14">
+                                    <rect width="20" height="20" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  );
