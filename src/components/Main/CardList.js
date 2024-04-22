@@ -10,7 +10,14 @@ const CardList = ({
   handleCloseModal,
   handleConfirmModal,
 }) => {
-  const { activeList, categoryContent, favoriteList } = usePodcastList();
+  const {
+    activeList,
+    categoryContent,
+    favoriteList,
+    currentPlayingTitle,
+    handleClickListItem,
+    handleClickPlayer,
+  } = usePodcastList();
 
   const activeCategoryContent =
     categoryContent[activeList] && categoryContent[activeList].channelList;
@@ -47,6 +54,7 @@ const CardList = ({
               activeCategoryContent.map((item) => (
                 <Card
                   key={item.id}
+                  id={item.id}
                   title={item.title}
                   type={item.type}
                   imageUrl={item.imageUrl}
@@ -67,7 +75,7 @@ const CardList = ({
   };
 
   const getFavoriteContent = () => {
-    if (!favoriteList.channelList || favoriteList.channelList.length === 0) {
+    if (!favoriteList.videoList || favoriteList.videoList.length === 0) {
       return (
         <>
           <div className="default">
@@ -84,8 +92,15 @@ const CardList = ({
       return (
         <>
           <div className="favorite-list-container">
-            {favoriteList.channelList &&
-              favoriteList.channelList.map((item) => <ListItem item={item} />)}
+            {favoriteList.videoList &&
+              favoriteList.videoList.map((item) => (
+                <ListItem
+                  item={item}
+                  currentPlaying={currentPlayingTitle === item.title}
+                  handleClickListItem={() => handleClickListItem(item.title)}
+                  handleClickPlayer={() => handleClickPlayer(item.title)}
+                />
+              ))}
 
             {/* {showModal && (
               <AddCardModal
@@ -99,7 +114,7 @@ const CardList = ({
       );
     }
   };
-
+  // console.log(currentPlayingIndex);
   return (
     <>
       <div className="content-container">

@@ -1,6 +1,7 @@
 import { usePodcastList } from "../../contexts/PodcastListContext";
 import ShowMoreModal from "./Modal/ShowMoreModal";
 const Card = ({
+  id,
   title,
   type,
   imageUrl,
@@ -20,11 +21,9 @@ const Card = ({
 
   //傳遞參數給setSelectedCard
   const handleClickMore = () => {
-    setSelectedCard({ title, type, imageUrl, description, videoList });
+    setSelectedCard({ id, title, type, imageUrl, description, videoList });
     handleOpenShowMoreModal();
   };
-
-  // console.log(selectedCard);
 
   return (
     <>
@@ -40,11 +39,7 @@ const Card = ({
             <h2 className="card-content-title">{title}</h2>
             <p className="card-content-type">{type}</p>
           </div>
-          <button
-            className="button-more"
-            onClick={handleClickMore}
-            // onClick={handleOpenShowMoreModal}
-          >
+          <button className="button-more" onClick={handleClickMore}>
             更多
           </button>
         </div>

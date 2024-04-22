@@ -1,7 +1,71 @@
-// import { BookmarkIcon } from "../FontAwesome/FontAwesome";
+import { useState, useEffect } from "react";
 import "../../styles/footer.scss";
-
+import { usePodcastList } from "../../contexts/PodcastListContext";
 const Player = () => {
+  const { favoriteList, currentPlayingTitle, channelList } = usePodcastList();
+  const [currentVideo, setCurrentVideo] = useState(null);
+
+  const isFavorite =
+    currentVideo &&
+    favoriteList &&
+    favoriteList.videoList &&
+    favoriteList.videoList.some((item) => item.title === currentVideo.title);
+
+  console.log(
+    "videoList:",
+    favoriteList && favoriteList.videoList[0].title,
+    "currentVideo:",
+    currentVideo && currentVideo.title,
+    "isFavorite:",
+    isFavorite
+  );
+
+  // console.log(
+  //   "channelList:",
+  //   channelList,
+  //   "currentPlayingTitle:",
+  //   currentPlayingTitle && currentPlayingTitle,
+  //   "currentVideo:",
+  //   currentVideo && currentVideo,
+  //   "isFavorite:"
+  //   // isFavorite && isFavorite
+  // );
+
+  // useEffect(() => {
+  //   if (currentPlayingTitle && channelList) {
+  //     let foundVideo = null;
+  //     for (const channel of channelList) {
+  //       const filteredItem = channel.videoList.find(
+  //         (item) => item.title === currentPlayingTitle
+  //       );
+  //       if (filteredItem) {
+  //         foundVideo = filteredItem;
+  //         break;
+  //       }
+  //     }
+  //     setCurrentVideo(foundVideo);
+  //   } else {
+  //     setCurrentVideo(null);
+  //   }
+  // }, [currentPlayingTitle, channelList]);
+
+  useEffect(() => {
+    if (currentPlayingTitle && channelList) {
+      const foundVideo = channelList
+        .filter((channel) => channel && channel.videoList) // 確保 channelList 中的每個項目不為 undefined，並且有 videoList 屬性
+        .map((channel) =>
+          channel.videoList.find(
+            (item) => item && item.title === currentPlayingTitle
+          )
+        ) // 確保 videoList 不為 undefined
+        .find((video) => video !== undefined); // 找到第一個不為 undefined 的影片
+
+      setCurrentVideo(foundVideo || null); // 如果找不到影片，設置為 null
+    } else {
+      setCurrentVideo(null);
+    }
+  }, [currentPlayingTitle, channelList]);
+
   return (
     <div className="player-container">
       <div className="player-wrapper">
@@ -18,8 +82,7 @@ const Player = () => {
               <g clipPath="url(#clip0_38_14)">
                 <path
                   d="M14.1667 2.5H5.83341C4.91675 2.5 4.16675 3.25 4.16675 4.16667V17.5L10.0001 15L15.8334 17.5V4.16667C15.8334 3.25 15.0834 2.5 14.1667 2.5Z"
-                  // fill={item.isFavorite ? "#FF7F50" : "#FFFFFF"}
-                  fill="#FFFFFF"
+                  fill={isFavorite ? "#FF7F50" : "#FFFFFF"}
                   stroke="#FF7F50"
                   strokeWidth="1.5"
                 />
@@ -35,8 +98,7 @@ const Player = () => {
         <hr />
         <div className="player-content">
           <h2 className="player-content-title">
-            Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor
-            Creators
+            {currentVideo && currentVideo.title}
           </h2>
           <p className="player-content-text">
             A Spotify podcast sharing fresh insights on important topics of the
@@ -63,14 +125,26 @@ const Player = () => {
               </svg>
             </div>
             <div className="spotify-img">
-              <img
-                src="https://s3-alpha-sig.figma.com/img/22ed/573d/f24340ce94b8f0e31079a53749fa8175?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JLnwLu1i4-k46nmJF0B-sNJ9GebORpnvPoSTO-daOP5qb9I~Qacoo43Ih4BNTh~asJmZpZuZGh4o5e6zsrh75ob-9Bm9H8sHG4508WdoXVGW6maSwyjd3I7hcRblB-UXmgWW3pkRofDX7-NKuCtZV9X7D9B96qnsW~fvR7-mglZXWfxKA18bSMdQ54XhIEM7jC7I~fqTdX44U9g6aNd0OrN8yoYJbpR7wbXSZ~vR1X3fHtgUIZIS5yvsQHbRdCmWXN1qlJ7ckSUwZPly5f~676mQ0niKXjDvfAfwvZd~Sim8inaZOtagPyTau7-u3mu84Y0fCrwO2OUFMVABycyc~g__"
-                alt=""
-              />
+              {currentVideo && currentVideo ? (
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/22ed/573d/f24340ce94b8f0e31079a53749fa8175?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JLnwLu1i4-k46nmJF0B-sNJ9GebORpnvPoSTO-daOP5qb9I~Qacoo43Ih4BNTh~asJmZpZuZGh4o5e6zsrh75ob-9Bm9H8sHG4508WdoXVGW6maSwyjd3I7hcRblB-UXmgWW3pkRofDX7-NKuCtZV9X7D9B96qnsW~fvR7-mglZXWfxKA18bSMdQ54XhIEM7jC7I~fqTdX44U9g6aNd0OrN8yoYJbpR7wbXSZ~vR1X3fHtgUIZIS5yvsQHbRdCmWXN1qlJ7ckSUwZPly5f~676mQ0niKXjDvfAfwvZd~Sim8inaZOtagPyTau7-u3mu84Y0fCrwO2OUFMVABycyc~g__"
+                  alt=""
+                />
+              ) : (
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/5dd4/51a2/cee37a4e1c59c120458b2f5371cc9e69?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WxZgDjPTsRkP~yTuyX8pdTfyxkzS~l-vVQ7UG469I-Oz7xYBjxfgeoa2rxbdTzbyeLofXxpyTcrUxAcnW4R4t6HMIw5f0qavOU5~W~2kOwVCfn9TbWVv3o60SPAabHHv1Nf~SULNjojQvMYyMXd0IXHchbhDSRulGrEcy3bCan8e1y6vz3sLd0mJ0BvVBLi0VnI9lx4AEy0OLEBSfLYGxg76mt7laLg2jaPv4E1d8Mi5TsQHb0etbHJju9pn4J-WAFhElEsXQxDQp6YUaLDZR8MG0oSB8EmhxObpQIr2UnHd8Lurgts2W~wslNsBooZXlv1U5JqgJYPL1tXY-cUb4A__"
+                  alt=""
+                />
+              )}
             </div>
             <div className="spotify-content">
-              <p className="spotify-content-title">Starting Your Own ...</p>
-              <p className="spotify-content-date">4月18日・Seinabo Sey</p>
+              <p className="spotify-content-title">
+                {currentVideo && currentVideo.title}
+              </p>
+              <p className="spotify-content-date">
+                {currentVideo && currentVideo.date}・
+                {currentVideo && currentVideo.duration}
+              </p>
             </div>
             <div className="spotify-controller-container">
               <div className="controller-back">

@@ -43,6 +43,7 @@
     border: 1px solid #edf2f7;
     border-radius: 16px;
     margin: 16px 16px 0px 16px;
+    cursor: pointer;
     .video-wrapper {
       display: flex;
       justify-content: space-between;
@@ -117,4 +118,8 @@
       }
     }
   }
+}
+
+.video-container.active {
+  border: 1px solid #ff7f50;
 }

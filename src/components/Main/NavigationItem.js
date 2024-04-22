@@ -8,9 +8,8 @@ const NavigationItem = ({
   handleClickList,
 
   handleDropdownClick,
-  handleOpenModal,
 }) => {
-  const { activeList } = usePodcastList();
+  const { activeList, handleOpenListActionModal } = usePodcastList();
 
   return (
     <li
@@ -26,7 +25,7 @@ const NavigationItem = ({
         <Hamburger
           isActive={activeDropdown}
           onClick={handleDropdownClick}
-          handleOpenModal={handleOpenModal}
+          handleOpenModal={handleOpenListActionModal}
         />
       </div>
     </li>

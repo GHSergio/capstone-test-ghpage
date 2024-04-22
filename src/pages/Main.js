@@ -18,8 +18,6 @@ const Main = () => {
     activeDropdown,
     handleClickDropdown,
 
-    handleOpenListActionModal,
-
     handleActionClick,
     addCardModal,
 
@@ -27,6 +25,7 @@ const Main = () => {
     handleCloseAddCardModal,
     handleConfirmAddCardModal,
   } = usePodcastList();
+  const categoryList = Object.values(categoryContent);
 
   return (
     <div className="main-container">
@@ -103,19 +102,18 @@ const Main = () => {
           <hr />
         </div>
         <ul className="list-container">
-          {categoryContent &&
-            categoryContent.map((category, index) => {
+          {categoryList &&
+            categoryList.map((category, index) => {
               return (
                 <>
                   <NavigationItem
-                    key={index}
+                    key={category.id}
                     index={index}
                     emoji={category.emoji}
                     title={category.title}
                     handleClickList={handleClickList}
                     activeDropdown={activeDropdown === index}
                     handleDropdownClick={() => handleClickDropdown(index)}
-                    handleOpenModal={handleOpenListActionModal}
                   />
                 </>
               );

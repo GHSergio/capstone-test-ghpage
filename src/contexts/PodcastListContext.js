@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
+import Swal from "sweetalert2";
 
 const PodcastListContext = createContext();
 export const usePodcastList = () => useContext(PodcastListContext);
@@ -262,7 +263,7 @@ const PodcastListProvider = ({ children }) => {
     index: 99,
     emoji: "❤️",
     title: "已收藏video",
-    channelList: [
+    videoList: [
       {
         imageUrl:
           "https://s3-alpha-sig.figma.com/img/6061/c90b/b239aa208ff9d16f9f1dd09f391760e7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od6GalLLgkhuEhRxrxO7YNpyslof0TgEH5VWKmANasXjULkJ-ly6irl0dguFlqUQSQxzgM04kyLFCPFgKH0O1--R0MRgmN7yVtCxQjvVVezzmXuq6D~RBMwl02VQmjjrzbQ~OwtHSSESAM~Q98FUJTuJIe05baqvE8fbfPlNNit3n~ERuNsmE~yaBbUGt6ux-~xrTNrN0l5rJDAZTpfmEO~UVn7f9DqYxnJy5tDoBB5oqX~9g7UxqqIg~aerXw~tz~4r3f2ShJctGfj0gOuKuSVguKuAXD2B9lA0vWNzZ7SEGt00ET3NDyGbj47P~NMkgms3955lV80~jjmn8jadeQ__",
@@ -338,6 +339,18 @@ const PodcastListProvider = ({ children }) => {
   const [currentAction, setCurrentAction] = useState(null);
   const [editInput, setEditInput] = useState("");
 
+  const [currentPlayingTitle, setCurrentPlayingTitle] = useState(null);
+
+  const handleClickListItem = (title) => {
+    setCurrentPlayingTitle(currentPlayingTitle === title ? null : title);
+  };
+
+  const handleClickPlayer = (title) => {
+    setCurrentPlayingTitle(currentPlayingTitle === title ? null : title);
+    console.log("currentPlayingTitle:" + currentPlayingTitle);
+    console.log("title:" + title);
+  };
+
   const handleSelectedChannelClick = (podcast) => {
     setSelectedChannel(podcast);
   };
@@ -352,44 +365,76 @@ const PodcastListProvider = ({ children }) => {
     );
   };
 
-  // 將 Podcast 添加到指定的列表中
-  const addChannelToCategoryContent = (index, channel) => {
+  // // 將 Podcast 添加到指定的列表中
+
+  const addChannelToCategoryContent = () => {
     setCategoryContent((prevCategoryContent) => {
       const updatedCategoryContent = [...prevCategoryContent];
 
-      updatedCategoryContent[index].channelList = [
-        ...updatedCategoryContent[index].channelList,
-        ...channel,
+      // 確認目標類別存在並擁有 channelList 屬性
+      const targetCategory = updatedCategoryContent[activeList];
+      console.log(
+        targetCategory &&
+          targetCategory.channelList &&
+          targetCategory.channelList
+      );
+      if (!targetCategory) {
+        console.error("目標類別不存在");
+        return updatedCategoryContent;
+      }
+
+      // 如果 channelList 不存在，則初始化為空陣列
+      const currentChannelList = targetCategory.channelList || [];
+      console.log("currentChannelList:", currentChannelList);
+
+      // 檢查選取的頻道是否已經存在於目標類別的 channelList 中
+      const uniqueSelectedChannel = selectedChannel.filter((channel) => {
+        return !currentChannelList.some((existingChannel) => {
+          return existingChannel.id === channel.id;
+        });
+      });
+
+      // 將唯一的選取頻道添加到目標類別的 channelList 中
+      const updatedChannelList = [
+        ...currentChannelList,
+        ...uniqueSelectedChannel,
       ];
+
+      updatedCategoryContent[activeList] = {
+        ...targetCategory,
+        channelList: updatedChannelList,
+      };
+
+      // const updatedChannelList = [...currentChannelList, ...selectedChannel];
+
+      // updatedCategoryContent[activeList] = {
+      //   ...targetCategory,
+      //   channelList: updatedChannelList,
+      // };
 
       return updatedCategoryContent;
     });
   };
 
-  // console.log(
-  //   categoryContent[activeList] && categoryContent[activeList].channelList
-  // );
-
-  const handleDeleteChannel = (index, channelToDelete) => {
-    console.log(index, channelToDelete);
-    setCategoryContent((prevCategoryContent) => {
-      // 創建一個新的陣列來保存更新後的 categoryContent
-      const updatedCategoryContent = prevCategoryContent.map((category, i) => {
-        // 如果當前項目的索引與要刪除的頻道的索引相同
-        if (i === index) {
-          // 創建一個新的 channelList，不包含要刪除的頻道
-          const updatedChannelList = category.channelList.filter(
-            (item) => item.id !== channelToDelete.id
-          );
-          console.log(updatedChannelList);
-          // 將更新後的 channelList 放回到 category 物件中
-          return { ...category, channelList: updatedChannelList };
-        }
-        // 如果不是要刪除的頻道，則直接返回原來的 category
-        return category;
-      });
-      return updatedCategoryContent;
-    });
+  //待修正
+  const handleDeleteChannel = (videoId) => {
+    console.log(videoId);
+    const updatedChannelList = categoryContent[activeList].channelList.filter(
+      (item) => item.id !== videoId
+    ); //從channelList內 篩選出 id!==video.id的item
+    console.log(
+      "這是activeList的channelList",
+      categoryContent[activeList].channelList,
+      "這是filter後的chanelList",
+      updatedChannelList
+    );
+    setCategoryContent((prevCategoryContent) => ({
+      ...prevCategoryContent,
+      [activeList]: {
+        ...prevCategoryContent[activeList],
+        channelList: updatedChannelList,
+      },
+    }));
   };
 
   // addCardModal
@@ -466,46 +511,78 @@ const PodcastListProvider = ({ children }) => {
     });
   };
 
-  // const handleClickBookmark = (video) => {
-  //   // 檢查最愛清單中是否有與點擊的影片相同的標題
-  //   const isFavorite =
-  //     categoryContent[4].channelList.length !== 0 &&
-  //     categoryContent[4].channelList.some((item) => item.title === video.title);
+  // Swal
+  function addFavoriteSuccess() {
+    Swal.fire({
+      icon: "success",
+      width: "250px",
+      text: "成功加入收藏  😊",
+      heightAuto: false,
+      position: "bottom-end",
+      timer: 1000,
+      showConfirmButton: false,
+    });
+  }
+  function removeFavoriteSuccess() {
+    Swal.fire({
+      icon: "success",
+      width: "250px",
+      text: "成功移除收藏  😊",
+      heightAuto: false,
+      position: "bottom-end",
+      timer: 1000,
+      showConfirmButton: false,
+    });
+  }
+  function addFavoriteFail() {
+    Swal.fire({
+      icon: "error",
+      width: "250px",
+      text: "加入收藏失敗  😢",
+      heightAuto: false,
+      position: "bottom-end",
+      timer: 1000,
+      showConfirmButton: false,
+    });
+  }
+  function addFavoriteError() {
+    Swal.fire({
+      icon: "warning",
+      width: "250px",
+      text: "發生未知錯誤  🤔",
+      heightAuto: false,
+      position: "bottom-end",
+      timer: 1000,
+      showConfirmButton: false,
+    });
+  }
 
-  //   // 如果該影片已經在最愛清單中，則將其移除
-  //   if (isFavorite) {
-  //     const updatedList =
-  //       categoryContent[4].channelList.length !== 0 &&
-  //       categoryContent[4].channelList.filter(
-  //         (item) => item.title !== video.title
-  //       );
-  //     setCategoryContent(updatedList);
-  //   } else {
-  //     // 如果該影片不在最愛清單中，則將其添加
-  //     setCategoryContent((prevList) => [...prevList, video]);
-  //   }
-  // };
   const handleClickBookmark = (video) => {
     // 檢查最愛清單中是否有與點擊的影片相同的標題
     const isFavorite =
-      favoriteList.channelList &&
-      favoriteList.channelList.some((item) => item.title === video.title);
+      favoriteList.videoList &&
+      favoriteList.videoList.some((item) => item.title === video.title);
 
     // 如果該影片已經在最愛清單中，則將其移除
     if (isFavorite) {
       const updatedList =
-        favoriteList.channelList &&
-        favoriteList.channelList.filter((item) => item.title !== video.title);
+        favoriteList.videoList &&
+        favoriteList.videoList.filter((item) => item.title !== video.title);
       setFavoriteList((prevList) => ({
         ...prevList,
-        channelList: updatedList,
+        videoList: updatedList,
       }));
+      removeFavoriteSuccess();
     } else {
       // 如果該影片不在最愛清單中，則將其添加
       setFavoriteList((prevList) => ({
         ...prevList,
-        channelList: [...prevList.channelList, video],
+        videoList: [...prevList.videoList, video],
       }));
+
+      addFavoriteSuccess();
+      // addFavoriteFail();
+      // addFavoriteError();
     }
   };
 
@@ -566,6 +643,10 @@ const PodcastListProvider = ({ children }) => {
         addListItem,
 
         handleClickBookmark,
+
+        currentPlayingTitle,
+        handleClickListItem,
+        handleClickPlayer,
       }}
     >
       {children}

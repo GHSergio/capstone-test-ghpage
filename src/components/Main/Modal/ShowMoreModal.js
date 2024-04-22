@@ -3,13 +3,21 @@ import { usePodcastList } from "../../../contexts/PodcastListContext";
 import ListItem from "../ListItem";
 
 const ShowMoreModal = ({ isOpen, onClose, card }) => {
-  const { handleDeleteChannel, activeList } = usePodcastList();
+  const {
+    handleDeleteChannel,
+    setSelectedCard,
+    currentPlayingTitle,
+    handleClickListItem,
+    handleClickPlayer,
+  } = usePodcastList();
 
-  // console.log(card);
-  const handleDelete = (card) => {
-    handleDeleteChannel(activeList, card);
+  const handleDelete = (id) => {
+    handleDeleteChannel(id);
+    setSelectedCard(null);
     onClose();
   };
+
+  // console.log(card && card, selectedCard && selectedCard);
 
   return (
     <>
@@ -51,7 +59,10 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
                     </clipPath>
                   </defs>
                 </svg>
-                <button className="button-delete" onClick={handleDelete}>
+                <button
+                  className="button-delete"
+                  onClick={() => handleDelete(card.id)}
+                >
                   <p>刪除</p>
                 </button>
               </div>
@@ -59,7 +70,13 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
               {/* videoList */}
               {card.videoList &&
                 card.videoList.map((item, index) => (
-                  <ListItem key={index} item={item} />
+                  <ListItem
+                    key={index}
+                    item={item}
+                    currentPlaying={currentPlayingTitle === item.title}
+                    handleClickListItem={() => handleClickListItem(item.title)}
+                    handleClickPlayer={() => handleClickPlayer(item.title)}
+                  />
                 ))}
             </div>
           </div>
