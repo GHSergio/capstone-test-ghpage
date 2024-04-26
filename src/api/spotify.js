@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const accessToken =
-  "BQAXx4Epsu3pF02VGw13Iiu-tWW7DO45H88PYMwT43QfWt24TpX-CaGoN7c0K5ieorl2raQwSttMDPtEh0anCeemIvyoutTBHprLbBsCh1FLOd1cIyZkiA6PUwLwtlF2WK5iQ17hj9qktOrASJQK2nNAu9gDBluUqLBCfB0PtTh9IQXZEVMDe7ydZff-WbkLm3XsP78XH9lGnfO42qfDH1AmemfySrFLqg";
+// 從 localStorage 中獲取 accessToken
+const accessToken = localStorage.getItem("access_token");
 
 export const getChannelList = async () => {
   const channelListEndpoint = "https://api.spotify.com/v1/channels";

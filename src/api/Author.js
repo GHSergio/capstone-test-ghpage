@@ -1,9 +1,10 @@
-const clientId = "yourClientIDGoesHere"; // your clientId
-const redirectUrl = "eg:http://localhost:8080"; // your redirect URL - must be localhost URL and/or HTTPS
+const clientId = process.env.REACT_APP_CLIENT_ID;
+const redirectUrl = "http://localhost:3000";
 
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const tokenEndpoint = "https://accounts.spotify.com/api/token";
-const scope = "user-read-private user-read-email";
+const scope =
+  "streaming user-read-playback-position user-modify-playback-state user-read-playback-state user-read-private user-read-email";
 
 // Data structure that manages the current active token, caching it in localStorage
 const currentToken = {
@@ -114,7 +115,6 @@ async function getToken(code) {
       code_verifier: code_verifier,
     }),
   });
-
   return await response.json();
 }
 
@@ -157,11 +157,16 @@ async function refreshTokenClick() {
   const token = await refreshToken();
   currentToken.save(token);
   renderTemplate("oauth", "oauth-template", currentToken);
+  console.log(currentToken);
 }
 
 // HTML Template Rendering with basic data binding - demoware only.
 function renderTemplate(targetId, templateId, data = null) {
   const template = document.getElementById(templateId);
+  if (!template) {
+    console.error(`Template with ID "${templateId}" not found.`);
+    return;
+  }
   const clone = template.content.cloneNode(true);
 
   const elements = clone.querySelectorAll("*");
@@ -199,3 +204,12 @@ function renderTemplate(targetId, templateId, data = null) {
   target.innerHTML = "";
   target.appendChild(clone);
 }
+
+export {
+  redirectToSpotifyAuthorize,
+  getToken,
+  refreshToken,
+  loginWithSpotifyClick,
+  logoutClick,
+  refreshTokenClick,
+};

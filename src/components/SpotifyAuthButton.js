@@ -1,44 +1,27 @@
-import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useCallback } from "react";
+import { getUserProfile } from "../api/spotify";
 import {
-  getAuthorizationCode,
-  getAccessToken,
-  // refreshAccessToken,
-} from "../api/Auth";
-import { getChannelList, getUserProfile } from "../api/spotify";
+  loginWithSpotifyClick,
+  // logoutClick,
+  refreshTokenClick,
+} from "../api/Author";
 
 const SpotifyAuthButton = () => {
-  const location = useLocation();
-  // const navigate = useNavigate();
-  const queryParams = new URLSearchParams(location.search);
-  const authCode = queryParams.get("code");
-
-  //先取得授權碼
-  const handleAuthClick = async () => {
+  const handleAuthClick = useCallback(async () => {
     try {
-      getAuthorizationCode();
+      await loginWithSpotifyClick();
     } catch (error) {
       console.error("Error:", error);
     }
-  };
-
-  //有授權碼後執行獲取令牌
-  useEffect(() => {
-    if (authCode) {
-      console.log(`授權碼: ${authCode}`);
-      getAccessToken(authCode);
-    }
-    // navigate("/main");
-  }, [authCode]);
+  }, []);
 
   return (
     <div>
       <button className="login-button" onClick={handleAuthClick}>
         <p className="button-content"> 使用 SPOTIFY 帳號登入</p>
       </button>
-      <button onClick={() => getChannelList()}>getChannelList</button>
       <button onClick={() => getUserProfile()}>getArtist</button>
-      {/* <button onClick={() => refreshAccessToken()}>refreshAccessToken</button> */}
+      <button onClick={() => refreshTokenClick()}>refreshAccessToken</button>
     </div>
   );
 };
