@@ -1,14 +1,18 @@
+import { useEffect } from "react";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
 import Player from "../components/Footer/Player";
 import NavigationItem from "../components/Main/NavigationItem";
-// import Hamburger from "../components/Main/Hamburger";
 import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
 // import EmojiPicker from "emoji-picker-react";
+import { useUser } from "../contexts/UserContext";
+import { getUserProfile, getArtistProfile } from "../api/spotify";
 
 const Main = () => {
+  const { userData, setUserData, token, setToken } = useUser();
+
   const {
     categoryContent,
     favoriteList,
@@ -26,6 +30,26 @@ const Main = () => {
     handleConfirmAddCardModal,
   } = usePodcastList();
   const categoryList = Object.values(categoryContent);
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("access_token");
+    console.log(accessToken);
+
+    const fetchUserProfile = async () => {
+      try {
+        const userProfileData = await getUserProfile();
+        setUserData(userProfileData);
+        console.log("User Profile Data:", userProfileData);
+      } catch (error) {
+        console.error("Failed to fetch user profile:", error);
+      }
+    };
+
+    if (accessToken) {
+      setToken(accessToken);
+      fetchUserProfile();
+    }
+  }, [setToken, setUserData]);
 
   return (
     <div className="main-container">

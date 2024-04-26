@@ -48,29 +48,29 @@ const PodcastListProvider = ({ children }) => {
   //   }
   // };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const channelList = await axios.get(
-          "http://localhost:3333/channelList"
-        );
-        const categoryContent = await axios.get(
-          "http://localhost:3333/categoryContent"
-        );
-        const favoriteList = await axios.get(
-          "http://localhost:3333/favoriteList"
-        );
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const channelList = await axios.get(
+  //         "http://localhost:3333/channelList"
+  //       );
+  //       const categoryContent = await axios.get(
+  //         "http://localhost:3333/categoryContent"
+  //       );
+  //       const favoriteList = await axios.get(
+  //         "http://localhost:3333/favoriteList"
+  //       );
 
-        setChannelList(channelList.data);
-        setCategoryContent(categoryContent.data);
-        setFavoriteList(favoriteList.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  //       setChannelList(channelList.data);
+  //       setCategoryContent(categoryContent.data);
+  //       setFavoriteList(favoriteList.data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const handleClickListItem = (title) => {
     setCurrentPlayingTitle(currentPlayingTitle === title ? null : title);
