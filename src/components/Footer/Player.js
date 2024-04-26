@@ -11,14 +11,14 @@ const Player = () => {
     favoriteList.videoList &&
     favoriteList.videoList.some((item) => item.title === currentVideo.title);
 
-  console.log(
-    "videoList:",
-    favoriteList && favoriteList.videoList[0].title,
-    "currentVideo:",
-    currentVideo && currentVideo.title,
-    "isFavorite:",
-    isFavorite
-  );
+  // console.log(
+  //   "videoList:",
+  //   favoriteList && favoriteList.videoList[0].title,
+  //   "currentVideo:",
+  //   currentVideo && currentVideo.title,
+  //   "isFavorite:",
+  //   isFavorite
+  // );
 
   // console.log(
   //   "channelList:",

@@ -1,3 +1,4 @@
+import SpotifyAuthButton from "../SpotifyAuthButton";
 const LoginWrapper = () => {
   return (
     <>
@@ -74,10 +75,9 @@ const LoginWrapper = () => {
             />
           </svg>
         </div>
+
         <span>Connecting Stories That Matter</span>
-        <button className="login-button">
-          <p className="button-content"> 使用 SPOTIFY 帳號登入</p>
-        </button>
+        <SpotifyAuthButton />
         <p>
           沒有帳號嗎？<b>註冊帳號</b>
         </p>
