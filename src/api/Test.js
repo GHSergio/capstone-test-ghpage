@@ -1,14 +1,33 @@
-import { handleAuthorizationCode } from "./Auth";
+import axios from "axios";
 
-// 在測試文件中呼叫函式並提供有效的授權碼
-const testAuthorizationCode =
-  "AQA1nBXONRLxf6cgpRp0l_azWq4Knf6hzpfv5Qsx2K42ZfGOyrSJlZrNxpFmcisRzSCvw2Vdua7SmZEllaACEWWCTA_tPqi4Ye13XpIbGRNbBlkRhtjxoxI0_IxzqP_TfsFqxbWsWa6R1hsRTKzsx_zH1-vqi1MNb5NPRF0kim2QluZigflA7OTbKRuZMwhH-OjEUvGSEG3gpvJVJ0bEGufNlhw4WWnmYGO4AYR__2IRxJXREFS2RomSbpnZntm5ZkxITglIK2EqUaP4Qf9tvZCD-Wj6tAlWSp9LrSpFPpoikFaWTxa4c4y0ALCAMjSumaVXLjcnkcwLmCI";
+export const addChannel = async (data) => {
+  try {
+    const response = await axios.post("http://localhost:3333/addChannel", data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// 呼叫函式並處理異步操作
-handleAuthorizationCode(testAuthorizationCode)
-  .then(() => {
-    console.log("Token obtained successfully.");
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+export const deleteChannel = async (channelId) => {
+  try {
+    const response = await axios.delete(
+      `http://localhost:3333/deleteChannel/${channelId}`
+    );
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const updateChannel = async (channelId, newData) => {
+  try {
+    const response = await axios.put(
+      `http://localhost:3333/updateChannel/${channelId}`,
+      newData
+    );
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};

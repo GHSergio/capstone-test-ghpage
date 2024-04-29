@@ -6,15 +6,35 @@ import Player from "../components/Footer/Player";
 import NavigationItem from "../components/Main/NavigationItem";
 import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
-// import EmojiPicker from "emoji-picker-react";
 import { useUser } from "../contexts/UserContext";
-import { getUserProfile, getArtistProfile } from "../api/spotify";
+import {
+  getUserProfile,
+  getUserPlaylists,
+  // getPlaylistTracks,
+  // getShowEpisodes,
+  // getUserShowList,
+  // getArtistProfile,
+  // searchShows,
+} from "../api/spotify";
+
+import {
+  GetFavoriteIds,
+  CreateAccount,
+  PostFavorite,
+  RemoveFavorite,
+  GetCategory,
+  AddCategory,
+  deleteCategory,
+  putCategory,
+  addShowToCategory,
+} from "../api/acApi";
 
 const Main = () => {
   const { userData, setUserData, token, setToken } = useUser();
 
   const {
     categoryContent,
+    setCategoryContent,
     favoriteList,
 
     handleClickList,
@@ -29,27 +49,40 @@ const Main = () => {
     handleCloseAddCardModal,
     handleConfirmAddCardModal,
   } = usePodcastList();
+
   const categoryList = Object.values(categoryContent);
 
   useEffect(() => {
-    const accessToken = localStorage.getItem("access_token");
-    console.log(accessToken);
+    const spotifyToken = localStorage.getItem("access_token");
 
     const fetchUserProfile = async () => {
       try {
-        const userProfileData = await getUserProfile();
-        setUserData(userProfileData);
-        console.log("User Profile Data:", userProfileData);
+        // const userProfileData = await getUserProfile();
+        // setUserData(userProfileData);
+        // const userUserPlaylists = await getUserPlaylists();
+        // setCategoryContent(userUserPlaylists);
+        // const categoryListContent = await getPlaylistTracks(
+        //   "3cqpCncJumPeyXrW7F5ncn"
+        // );
+        // console.log("categoryListContent:", categoryListContent);
+        // const userPlaylistTracks = await getPlaylistTracks(1);
+        // console.log("User Profile Data:", userProfileData);
+        // console.log("User Playlists:", userUserPlaylists[0].id);
+        // console.log("User PlaylistTracks:", userPlaylistTracks);
       } catch (error) {
         console.error("Failed to fetch user profile:", error);
       }
     };
-
-    if (accessToken) {
-      setToken(accessToken);
+    if (spotifyToken) {
+      setToken(spotifyToken);
       fetchUserProfile();
+      CreateAccount();
+      const acToken = localStorage.getItem("acToken");
+      console.log(acToken);
+      GetFavoriteIds();
+      GetCategory();
     }
-  }, [setToken, setUserData]);
+  }, [setToken, setUserData, setCategoryContent]);
 
   return (
     <div className="main-container">
@@ -134,7 +167,7 @@ const Main = () => {
                     key={category.id}
                     index={index}
                     emoji={category.emoji}
-                    title={category.title}
+                    title={category.name}
                     handleClickList={handleClickList}
                     activeDropdown={activeDropdown === index}
                     handleDropdownClick={() => handleClickDropdown(index)}

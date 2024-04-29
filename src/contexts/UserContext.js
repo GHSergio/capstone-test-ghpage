@@ -12,7 +12,7 @@ const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState(null);
   const [token, setToken] = useState(null);
 
-  console.log(token, userData);
+  // console.log(token, userData);
 
   return (
     <UserContext.Provider value={{ userData, setUserData, token, setToken }}>

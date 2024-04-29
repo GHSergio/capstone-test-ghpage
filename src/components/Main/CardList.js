@@ -115,10 +115,26 @@ const CardList = ({
     }
   };
   // console.log(currentPlayingIndex);
+
+  //Greeting
+  const now = new Date();
+  const getGreeting = () => {
+    const hours = now.getHours();
+
+    if (hours >= 5 && hours <= 12) {
+      return "早安";
+    } else if (hours >= 12 && hours <= 17) {
+      return "午安";
+    } else if (hours >= 17 || hours <= 5) {
+      return "晚安";
+    }
+  };
+  const greeting = getGreeting();
+
   return (
     <>
       <div className="content-container">
-        <h1>早安</h1>
+        <h1>{greeting}</h1>
         {activeList === 99 ? getFavoriteContent() : getCategoryContent()}
       </div>
     </>

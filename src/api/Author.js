@@ -4,7 +4,7 @@ const redirectUrl = "http://localhost:3000/main";
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const tokenEndpoint = "https://accounts.spotify.com/api/token";
 const scope =
-  "streaming user-read-playback-position user-modify-playback-state user-read-playback-state user-read-private user-read-email";
+  "streaming user-read-playback-position user-library-read user-modify-playback-state user-read-playback-state user-read-private user-read-email";
 
 // Data structure that manages the current active token, caching it in localStorage
 const currentToken = {

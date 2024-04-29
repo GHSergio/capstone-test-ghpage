@@ -1,7 +1,17 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-// import { addChannel, deleteChannel, updateChannel } from "../api/crud";
+import {
+  GetFavoriteIds,
+  CreateAccount,
+  PostFavorite,
+  RemoveFavorite,
+  GetCategory,
+  AddCategory,
+  deleteCategory,
+  putCategory,
+  addShowToCategory,
+} from "../api/acApi";
 
 const PodcastListContext = createContext();
 export const usePodcastList = () => useContext(PodcastListContext);
@@ -25,52 +35,6 @@ const PodcastListProvider = ({ children }) => {
   const [editInput, setEditInput] = useState("");
 
   const [currentPlayingTitle, setCurrentPlayingTitle] = useState(null);
-
-  // 假設這個函數名為 fetchSpotifyAccessToken
-  // const fetchSpotifyAccessToken = async () => {
-  //   try {
-  //     const response = await axios.post("YOUR_TOKEN_ENDPOINT_URL", {
-  //       // 在這裡傳遞你的客戶端 ID、客戶端密鑰、授權碼和回調 URI
-  //       client_id: "YOUR_CLIENT_ID",
-  //       client_secret: "YOUR_CLIENT_SECRET",
-  //       code: "AUTHORIZATION_CODE",
-  //       redirect_uri: "YOUR_REDIRECT_URI",
-  //       grant_type: "authorization_code",
-  //     });
-
-  //     // 從響應中獲取訪問令牌
-  //     const accessToken = response.data.access_token;
-  //     return accessToken;
-  //   } catch (error) {
-  //     // 處理錯誤
-  //     console.error("Error fetching Spotify access token:", error);
-  //     throw error;
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const channelList = await axios.get(
-  //         "http://localhost:3333/channelList"
-  //       );
-  //       const categoryContent = await axios.get(
-  //         "http://localhost:3333/categoryContent"
-  //       );
-  //       const favoriteList = await axios.get(
-  //         "http://localhost:3333/favoriteList"
-  //       );
-
-  //       setChannelList(channelList.data);
-  //       setCategoryContent(categoryContent.data);
-  //       setFavoriteList(favoriteList.data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   const handleClickListItem = (title) => {
     setCurrentPlayingTitle(currentPlayingTitle === title ? null : title);
@@ -225,6 +189,7 @@ const PodcastListProvider = ({ children }) => {
 
   const handleEditInput = (event) => {
     setEditInput(event.target.value);
+    console.log("input:", event.target.value);
   };
 
   //設置action為setCurrentAction & openModal
@@ -233,11 +198,11 @@ const PodcastListProvider = ({ children }) => {
     handleOpenListActionModal();
   };
 
-  //List action
+  //category action
   const editListItem = (index, newTitle) => {
     setCategoryContent((prevListContent) => {
       const updatedListContent = [...prevListContent];
-      updatedListContent[index].title = newTitle;
+      updatedListContent[index].name = newTitle;
       return updatedListContent;
     });
   };
@@ -251,14 +216,15 @@ const PodcastListProvider = ({ children }) => {
   };
 
   const addListItem = (newTitle) => {
-    setCategoryContent((prevListContent) => {
-      const newListItem = {
-        emoji: "",
-        title: newTitle,
-        channelList: [],
-      };
-      return [...prevListContent, newListItem];
-    });
+    AddCategory(newTitle);
+    // setCategoryContent((prevListContent) => {
+    //   const newListItem = {
+    //     emoji: "",
+    //     name: newTitle,
+    //     channelList: [],
+    //   };
+    //   return [...prevListContent, newListItem];
+    // });
   };
 
   // Swal

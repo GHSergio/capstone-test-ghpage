@@ -79,7 +79,15 @@ const LoginWrapper = () => {
         <span>Connecting Stories That Matter</span>
         <SpotifyAuthButton />
         <p>
-          沒有帳號嗎？<b>註冊帳號</b>
+          沒有帳號嗎？{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.spotify.com/hk-zh/signup"
+            style={{ textDecoration: "underline", color: "black" }}
+          >
+            註冊帳號
+          </a>
         </p>
       </div>
 
