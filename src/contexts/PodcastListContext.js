@@ -12,6 +12,15 @@ import {
   putCategory,
   addShowToCategory,
 } from "../api/acApi";
+import {
+  getUserProfile,
+  getUserPlaylists,
+  getPlaylistTracks,
+  getShowEpisodes,
+  // getUserShowList,
+  // getArtistProfile,
+  // searchShows,
+} from "../api/spotify";
 
 const PodcastListContext = createContext();
 export const usePodcastList = () => useContext(PodcastListContext);
@@ -35,6 +44,16 @@ const PodcastListProvider = ({ children }) => {
   const [editInput, setEditInput] = useState("");
 
   const [currentPlayingTitle, setCurrentPlayingTitle] = useState(null);
+
+  const handleGetShowEpisodes = async (id) => {
+    try {
+      const episodes = await getShowEpisodes(id);
+      setChannelList((prevList) => [...prevList, episodes]);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+  console.log(channelList);
 
   const handleClickListItem = (title) => {
     setCurrentPlayingTitle(currentPlayingTitle === title ? null : title);
@@ -363,6 +382,8 @@ const PodcastListProvider = ({ children }) => {
         currentPlayingTitle,
         handleClickListItem,
         handleClickPlayer,
+
+        handleGetShowEpisodes,
       }}
     >
       {children}

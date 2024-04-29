@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
+import { searchShows } from "../../../api/spotify";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -10,6 +11,8 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
 
   const handleSearch = (event) => {
     setSearchInput(event.target.value);
+    console.log(event.target.value);
+    searchShows(event.target.value);
   };
 
   //篩選List內 title 包含 searchInput 的 item

@@ -1,5 +1,5 @@
 import axios from "axios";
-
+const corsURL = "https://cors-anywhere.herokuapp.com/";
 const baseUri = "https://spotify-backend.alphacamp.io/";
 // console.log(baseUri);
 
@@ -36,7 +36,7 @@ export const CreateAccount = async () => {
   axios
     .post(uri, bodyParameters)
     .then((data) => {
-      console.log("帳戶創建成功");
+      // console.log("帳戶創建成功");
       const token = data.data.token;
       localStorage.setItem("acToken", token);
     })
@@ -114,7 +114,7 @@ export const GetCategory = async () => {
   return response;
 };
 
-export const AddCategory = async ({ bookmark }) => {
+export const AddCategory = async ({ newTitle }) => {
   const uri = baseUri + "api/categories";
   const acToken = localStorage.getItem("acToken");
 
@@ -125,12 +125,13 @@ export const AddCategory = async ({ bookmark }) => {
   };
 
   const bodyParameters = {
-    name: bookmark,
+    name: newTitle,
   };
 
   const response = await axios
     .post(uri, bodyParameters, config)
     .then((res) => {
+      console.log(res);
       return "success";
     })
     .catch((err) => console.log(err));

@@ -20,7 +20,7 @@ const ListActionModal = ({
     deleteListItem,
     addListItem,
   } = usePodcastList();
-  console.log("editInput:", editInput);
+  // console.log("editInput:", editInput);
 
   const handleConfirmAction = () => {
     switch ((index, currentAction)) {

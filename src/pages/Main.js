@@ -10,8 +10,8 @@ import { useUser } from "../contexts/UserContext";
 import {
   getUserProfile,
   getUserPlaylists,
-  // getPlaylistTracks,
-  // getShowEpisodes,
+  getPlaylistTracks,
+  getShowEpisodes,
   // getUserShowList,
   // getArtistProfile,
   // searchShows,
@@ -48,22 +48,29 @@ const Main = () => {
     handleOpenAddCardModal,
     handleCloseAddCardModal,
     handleConfirmAddCardModal,
+
+    handleGetShowEpisodes,
   } = usePodcastList();
 
   const categoryList = Object.values(categoryContent);
 
   useEffect(() => {
     const spotifyToken = localStorage.getItem("access_token");
-
+    console.log("spotifyToken:", spotifyToken);
     const fetchUserProfile = async () => {
       try {
-        // const userProfileData = await getUserProfile();
-        // setUserData(userProfileData);
-        // const userUserPlaylists = await getUserPlaylists();
-        // setCategoryContent(userUserPlaylists);
+        const userProfileData = await getUserProfile();
+        setUserData(userProfileData);
+        const userUserPlaylists = await getUserPlaylists();
+        setCategoryContent(userUserPlaylists);
         // const categoryListContent = await getPlaylistTracks(
         //   "3cqpCncJumPeyXrW7F5ncn"
+        // // );
+        // const searchShow = await searchShows(
+        //   "1UMD24QF04ivrjyzJhZisE?si=bc17b91f7c8a4917"
         // );
+        // console.log(searchShow);
+        handleGetShowEpisodes("2l2rRYeI9vuvvIFtzhzoQ0?si=a64acf404e6c4e26");
         // console.log("categoryListContent:", categoryListContent);
         // const userPlaylistTracks = await getPlaylistTracks(1);
         // console.log("User Profile Data:", userProfileData);
@@ -77,10 +84,11 @@ const Main = () => {
       setToken(spotifyToken);
       fetchUserProfile();
       CreateAccount();
-      const acToken = localStorage.getItem("acToken");
-      console.log(acToken);
-      GetFavoriteIds();
-      GetCategory();
+
+      // const acToken = localStorage.getItem("acToken");
+      // console.log(acToken);
+      // GetFavoriteIds();
+      // GetCategory();
     }
   }, [setToken, setUserData, setCategoryContent]);
 
