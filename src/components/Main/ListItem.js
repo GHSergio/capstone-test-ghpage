@@ -15,20 +15,17 @@ const ListItem = ({
   } = usePodcastList();
   // 提取item內的屬性
   const { id, title, imgSrc, description, date, videoLength } = item;
-  // console.log("listitem", item);
   // 判斷影片是否在最愛清單中
   const isFavorite =
     favoriteList.episodes &&
     favoriteList.episodes.some((favorite) => favorite.title === item.title);
-  // 判斷是否為當前選中的項目
-  // const isActive = currentPlaying && currentPlaying.index === item.index;
 
   const formattedVideoLength = () => {
     const { hours, minutes } = convertMsToHoursAndMinutes(videoLength);
     return `${hours}小時${minutes}分鐘`;
   };
 
-  console.log(currentPlayer);
+  // console.log(currentPlayer);
   return (
     <>
       <div

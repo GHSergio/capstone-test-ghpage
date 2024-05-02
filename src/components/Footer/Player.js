@@ -1,14 +1,14 @@
 import "../../styles/footer.scss";
-import { useEffect } from "react";
 import { usePodcastList } from "../../contexts/PodcastListContext";
-import { getEpisode } from "../../api/spotify";
 const Player = () => {
   const {
+    channelList,
     favoriteList,
-    activeEpisode,
+    // activeEpisode,
     currentPlayer,
-    setCurrentPlayer,
+    // setCurrentPlayer,
     convertMsToHoursAndMinutes,
+    handleClickBookmark,
   } = usePodcastList();
 
   const isFavorite =
@@ -24,13 +24,30 @@ const Player = () => {
     return `${hours}小時${minutes}分鐘`;
   };
 
+  //從player bookmark 增刪入收藏
+  const handleClickBookmarkPlayer = (title) => {
+    // 在 channelList 中查找匹配的 episode
+    channelList.forEach((channel) => {
+      const selectedEpisode = channel.episodes.find(
+        (episode) => episode.title === title
+      );
+      if (selectedEpisode) {
+        handleClickBookmark(selectedEpisode);
+        return;
+      }
+    });
+  };
+
   return (
     <div className="player-container">
       <div className="player-wrapper">
         <div className="player-bookmark">
           <h2 className="playing">正在播放</h2>
 
-          <div className="bookmark">
+          <div
+            className="bookmark"
+            onClick={() => handleClickBookmarkPlayer(currentPlayer.title)}
+          >
             <svg
               width="20"
               height="20"

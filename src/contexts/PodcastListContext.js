@@ -152,27 +152,41 @@ const PodcastListProvider = ({ children }) => {
 
   //Episode 添加 active
 
+  //符合 episodeId 則 active
   const handleClickListItem = (episodeId) => {
     setActiveEpisode(activeEpisode === episodeId ? null : episodeId);
-    console.log("currentPlayer:" + activeEpisode);
   };
 
-  //代入id 取得 episode data 並 setCurrentPlayer
-  const handleClickPlayer = async (Episode) => {
-    try {
-      const spotifyToken = localStorage.getItem("access_token");
-      // console.log("spotifyToken:", spotifyToken);
-      if (!spotifyToken) {
-        console.error("Access token not found in localStorage");
+  // //代入id 取得 episode data 並 setCurrentPlayer
+  // const handleClickPlayer = async (Episode) => {
+  //   try {
+  //     const spotifyToken = localStorage.getItem("access_token");
+  //     // console.log("spotifyToken:", spotifyToken);
+  //     if (!spotifyToken) {
+  //       console.error("Access token not found in localStorage");
+  //       return;
+  //     }
+
+  //     const selectedEpisodeData = await getEpisode(Episode);
+  //     setCurrentPlayer(selectedEpisodeData);
+  //   } catch (error) {
+  //     console.error("Error fetching episode:", error);
+  //   }
+  // };
+
+  //在 channelList 中查找id匹配的 episode
+  const handleClickPlayer = (id) => {
+    channelList.forEach((channel) => {
+      const selectedEpisode = channel.episodes.find(
+        (episode) => episode.id === id
+      );
+      if (selectedEpisode) {
+        setCurrentPlayer(selectedEpisode);
         return;
       }
-
-      const selectedEpisodeData = await getEpisode(Episode);
-      setCurrentPlayer(selectedEpisodeData);
-    } catch (error) {
-      console.error("Error fetching episode:", error);
-    }
+    });
   };
+
   // console.log("currentPlayer:", currentPlayer);
   // console.log("activeEpisode:", activeEpisode);
 
@@ -403,6 +417,7 @@ const PodcastListProvider = ({ children }) => {
   // }
 
   const handleClickBookmark = (episode) => {
+    console.log(episode);
     // 檢查最愛清單中是否有與點擊的影片相同的標題
     const isFavorite =
       favoriteList.episodes &&

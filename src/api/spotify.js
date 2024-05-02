@@ -145,34 +145,34 @@ export const getShowEpisodes = async (id) => {
   }
 };
 
-//取得 episode data
-export const getEpisode = async (episodeId) => {
-  console.log(episodeId);
-  const endpoint = `${baseUri}/v1/episodes/${episodeId}`;
-  try {
-    const response = await axios.get(endpoint, {
-      headers: {
-        Authorization: `Bearer ${spotifyToken}`,
-      },
-    });
+// //取得 episode data
+// export const getEpisode = async (episodeId) => {
+//   console.log(episodeId);
+//   const endpoint = `${baseUri}/v1/episodes/${episodeId}`;
+//   try {
+//     const response = await axios.get(endpoint, {
+//       headers: {
+//         Authorization: `Bearer ${spotifyToken}`,
+//       },
+//     });
 
-    const rawData = response.data;
-    // console.log(rawData);
-    // 構建需要的屬性;
-    const formattedEpisodes = {
-      title: rawData.name,
-      imgSrc: rawData.images[0].url,
-      date: rawData.release_date,
-      videoLength: rawData.duration_ms,
-    };
-    // console.log(formattedEpisodes);
+//     const rawData = response.data;
+//     // console.log(rawData);
+//     // 構建需要的屬性;
+//     const formattedEpisodes = {
+//       title: rawData.name,
+//       imgSrc: rawData.images[0].url,
+//       date: rawData.release_date,
+//       videoLength: rawData.duration_ms,
+//     };
+//     // console.log(formattedEpisodes);
 
-    return formattedEpisodes;
-  } catch (error) {
-    console.error("Error:", error);
-    throw error;
-  }
-};
+//     return formattedEpisodes;
+//   } catch (error) {
+//     console.error("Error:", error);
+//     throw error;
+//   }
+// };
 
 // 4. Search Shows Info
 
