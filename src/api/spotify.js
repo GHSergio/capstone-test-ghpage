@@ -1,10 +1,10 @@
-import { refreshToken } from "./Author";
+import { refreshToken, refreshTokenClick } from "./Author";
 import axios from "axios";
 
 const baseUri = "https://api.spotify.com";
 // 從 localStorage 中獲取 accessToken
 const spotifyToken = localStorage.getItem("access_token");
-console.log(spotifyToken);
+// console.log(spotifyToken);
 
 //獲取使用者資訊
 export const getUserProfile = async () => {

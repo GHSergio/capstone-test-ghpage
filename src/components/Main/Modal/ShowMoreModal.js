@@ -73,9 +73,9 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
                   <ListItem
                     key={index}
                     item={item}
-                    currentPlayer={activeEpisode === item.id}
+                    activeEpisode={activeEpisode === item.id}
                     handleClickListItem={() => handleClickListItem(item.id)}
-                    handleClickPlayer={() => handleClickPlayer(item.id)}
+                    handleClickPlayer={() => handleClickPlayer(activeEpisode)}
                   />
                 ))}
             </div>

@@ -19,15 +19,15 @@ import {
 } from "../api/spotify";
 
 import {
-  GetFavoriteIds,
   CreateAccount,
-  PostFavorite,
-  RemoveFavorite,
-  GetCategory,
-  AddCategory,
-  deleteCategory,
-  putCategory,
-  addShowToCategory,
+  // GetFavoriteIds,
+  // PostFavorite,
+  // RemoveFavorite,
+  // GetCategory,
+  // AddCategory,
+  // deleteCategory,
+  // putCategory,
+  // addShowToCategory,
 } from "../api/acApi";
 
 const Main = () => {
@@ -70,14 +70,6 @@ const Main = () => {
         //取得spotify使用者分類清單(?)
         // const userUserPlaylists = await getUserPlaylists();
         // setCategoryContent(userUserPlaylists);
-
-        // console.log(searchShow);
-
-        // console.log("categoryListContent:", categoryListContent);
-        // const userPlaylistTracks = await getPlaylistTracks(1);
-        // console.log("User Profile Data:", userProfileData);
-        // console.log("User Playlists:", userUserPlaylists[0].id);
-        // console.log("User PlaylistTracks:", userPlaylistTracks);
       } catch (error) {
         console.error("Failed to fetch user profile:", error);
       }

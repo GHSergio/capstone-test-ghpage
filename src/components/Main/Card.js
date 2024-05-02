@@ -24,7 +24,6 @@ const Card = ({
     setSelectedCard({ id, title, publisher, imageUrl, description, episodes });
     handleOpenShowMoreModal();
   };
-  console.log(selectedCard && selectedCard.episodes);
   return (
     <>
       <div

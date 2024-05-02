@@ -3,33 +3,26 @@ import { useEffect } from "react";
 import { usePodcastList } from "../../contexts/PodcastListContext";
 import { getEpisode } from "../../api/spotify";
 const Player = () => {
-  const { favoriteList, activeEpisode, currentPlayer, setCurrentPlayer } =
-    usePodcastList();
+  const {
+    favoriteList,
+    activeEpisode,
+    currentPlayer,
+    setCurrentPlayer,
+    convertMsToHoursAndMinutes,
+  } = usePodcastList();
 
   const isFavorite =
     currentPlayer &&
     favoriteList &&
     favoriteList.episodes &&
     favoriteList.episodes.some((item) => item.title === currentPlayer.title);
-  console.log(currentPlayer);
 
-  useEffect(() => {
-    const spotifyToken = localStorage.getItem("access_token");
-    console.log("spotifyToken:", spotifyToken);
-    const fetchPlayer = async () => {
-      try {
-        //將選取的episode setCurrentPlayer
-        const selectedEpisodeDate = await getEpisode(activeEpisode);
-        setCurrentPlayer(selectedEpisodeDate);
-      } catch (error) {
-        console.error("Failed to fetch user profile:", error);
-      }
-    };
-
-    if (spotifyToken) {
-      fetchPlayer();
-    }
-  }, [activeEpisode, setCurrentPlayer]);
+  const formattedVideoLength = () => {
+    const { hours, minutes } = convertMsToHoursAndMinutes(
+      currentPlayer.videoLength
+    );
+    return `${hours}小時${minutes}分鐘`;
+  };
 
   return (
     <div className="player-container">
@@ -104,8 +97,7 @@ const Player = () => {
                 {currentPlayer && currentPlayer.title}
               </p>
               <p className="spotify-content-date">
-                {currentPlayer && currentPlayer.date}・
-                {currentPlayer && currentPlayer.duration}
+                {currentPlayer && currentPlayer.date}・{formattedVideoLength()}
               </p>
             </div>
             <div className="spotify-controller-container">

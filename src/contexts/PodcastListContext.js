@@ -2,23 +2,23 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import {
-  GetFavoriteIds,
-  CreateAccount,
-  PostFavorite,
-  RemoveFavorite,
-  GetCategory,
+  // GetFavoriteIds,
+  // CreateAccount,
+  // PostFavorite,
+  // RemoveFavorite,
+  // GetCategory,
+  // deleteCategory,
+  // putCategory,
+  // addShowToCategory,
   AddCategory,
-  deleteCategory,
-  putCategory,
-  addShowToCategory,
 } from "../api/acApi";
 import {
-  getUserProfile,
-  getUserPlaylists,
-  getPlaylistTracks,
+  // getUserProfile,
+  // getUserPlaylists,
+  // getPlaylistTracks,
   getShowWithEpisodes,
   getShowEpisodes,
-  // getEpisode,
+  getEpisode,
   // getUserShowList,
   // getArtistProfile,
   // searchShows,
@@ -80,7 +80,25 @@ const PodcastListProvider = ({ children }) => {
       .catch((error) => console.error("Error fetching favorite list:", error));
   }, []);
 
-  // console.log(favoriteList);
+  // console.log(
+  //   channelList && channelList[0] && channelList[0].episodes[0].videoLength
+  // );
+
+  //轉換時長單位
+  const convertMsToHoursAndMinutes = (milliseconds) => {
+    // 將毫秒數轉換為秒數
+    const seconds = Math.floor(milliseconds / 1000);
+    // 將秒數轉換為分鐘數
+    const minutes = Math.floor(seconds / 60);
+    // 計算剩餘的秒數
+    const remainingSeconds = seconds % 60;
+    // 將分鐘數轉換為小時數
+    const hours = Math.floor(minutes / 60);
+    // 計算剩餘的分鐘數
+    const remainingMinutes = minutes % 60;
+
+    return { hours, minutes: remainingMinutes, seconds: remainingSeconds };
+  };
 
   //添加Shows & Episode 到 channelList (get spotify data)
   const handleGetShowEpisodes = async (id) => {
@@ -132,16 +150,31 @@ const PodcastListProvider = ({ children }) => {
   // console.log("showOriginalObj:", showOriginalObj);
   // console.log("episodesOriginalObj:", episodesOriginalObj);
 
+  //Episode 添加 active
+
   const handleClickListItem = (episodeId) => {
     setActiveEpisode(activeEpisode === episodeId ? null : episodeId);
     console.log("currentPlayer:" + activeEpisode);
-    // console.log("當前episode:" + episodeTitle);
   };
 
-  // const handleClickPlayer = (episodeId) => {
-  //   setActiveEpisodes(activeEpisodes === episodeId ? null : episodeId);
-  //   console.log({ "當前episodeId:": episodeId });
-  // };
+  //代入id 取得 episode data 並 setCurrentPlayer
+  const handleClickPlayer = async (Episode) => {
+    try {
+      const spotifyToken = localStorage.getItem("access_token");
+      // console.log("spotifyToken:", spotifyToken);
+      if (!spotifyToken) {
+        console.error("Access token not found in localStorage");
+        return;
+      }
+
+      const selectedEpisodeData = await getEpisode(Episode);
+      setCurrentPlayer(selectedEpisodeData);
+    } catch (error) {
+      console.error("Error fetching episode:", error);
+    }
+  };
+  // console.log("currentPlayer:", currentPlayer);
+  // console.log("activeEpisode:", activeEpisode);
 
   const handleSelectedChannelClick = (podcast) => {
     setSelectedChannel(podcast);
@@ -346,28 +379,28 @@ const PodcastListProvider = ({ children }) => {
       showConfirmButton: false,
     });
   }
-  function addFavoriteFail() {
-    Swal.fire({
-      icon: "error",
-      width: "250px",
-      text: "加入收藏失敗  😢",
-      heightAuto: false,
-      position: "bottom-end",
-      timer: 1000,
-      showConfirmButton: false,
-    });
-  }
-  function addFavoriteError() {
-    Swal.fire({
-      icon: "warning",
-      width: "250px",
-      text: "發生未知錯誤  🤔",
-      heightAuto: false,
-      position: "bottom-end",
-      timer: 1000,
-      showConfirmButton: false,
-    });
-  }
+  // function addFavoriteFail() {
+  //   Swal.fire({
+  //     icon: "error",
+  //     width: "250px",
+  //     text: "加入收藏失敗  😢",
+  //     heightAuto: false,
+  //     position: "bottom-end",
+  //     timer: 1000,
+  //     showConfirmButton: false,
+  //   });
+  // }
+  // function addFavoriteError() {
+  //   Swal.fire({
+  //     icon: "warning",
+  //     width: "250px",
+  //     text: "發生未知錯誤  🤔",
+  //     heightAuto: false,
+  //     position: "bottom-end",
+  //     timer: 1000,
+  //     showConfirmButton: false,
+  //   });
+  // }
 
   const handleClickBookmark = (episode) => {
     // 檢查最愛清單中是否有與點擊的影片相同的標題
@@ -458,12 +491,15 @@ const PodcastListProvider = ({ children }) => {
 
         activeEpisode,
         setActiveEpisode,
+        handleClickListItem,
+
         currentPlayer,
         setCurrentPlayer,
-        handleClickListItem,
-        // handleClickPlayer,
+        handleClickPlayer,
 
         handleGetShowEpisodes,
+
+        convertMsToHoursAndMinutes,
       }}
     >
       {children}

@@ -3,11 +3,16 @@ import { usePodcastList } from "../../contexts/PodcastListContext";
 import "../../styles/favoriteList.scss";
 const ListItem = ({
   item,
-  currentPlayer,
+  activeEpisode,
   handleClickListItem,
   handleClickPlayer,
 }) => {
-  const { favoriteList, handleClickBookmark } = usePodcastList();
+  const {
+    favoriteList,
+    handleClickBookmark,
+    currentPlayer,
+    convertMsToHoursAndMinutes,
+  } = usePodcastList();
   // 提取item內的屬性
   const { id, title, imgSrc, description, date, videoLength } = item;
   // console.log("listitem", item);
@@ -18,11 +23,17 @@ const ListItem = ({
   // 判斷是否為當前選中的項目
   // const isActive = currentPlaying && currentPlaying.index === item.index;
 
+  const formattedVideoLength = () => {
+    const { hours, minutes } = convertMsToHoursAndMinutes(videoLength);
+    return `${hours}小時${minutes}分鐘`;
+  };
+
+  console.log(currentPlayer);
   return (
     <>
       <div
-        className={`video-container ${currentPlayer ? "active" : ""}`}
-        onClick={() => handleClickListItem(title)}
+        className={`video-container ${activeEpisode ? "active" : ""}`}
+        onClick={() => handleClickListItem(id)}
       >
         <div className="video-wrapper">
           <div className="video-image">
@@ -32,8 +43,11 @@ const ListItem = ({
             <span className="title">{title}</span>
             <span className="description">{description}</span>
             <div className="switch-wrapper">
-              <div className="player" onClick={() => handleClickPlayer(id)}>
-                {currentPlayer ? (
+              <div
+                className="player"
+                onClick={() => handleClickPlayer(activeEpisode)}
+              >
+                {currentPlayer.title === title ? (
                   <svg
                     width="34"
                     height="34"
@@ -62,7 +76,7 @@ const ListItem = ({
                 )}
               </div>
               <p className="date">
-                {date} - {videoLength}
+                {date} - {formattedVideoLength()}
               </p>
             </div>
 
