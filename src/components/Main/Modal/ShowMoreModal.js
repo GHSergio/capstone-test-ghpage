@@ -5,8 +5,9 @@ import ListItem from "../ListItem";
 const ShowMoreModal = ({ isOpen, onClose, card }) => {
   const {
     handleDeleteChannel,
+    selectedCard,
     setSelectedCard,
-    currentPlayingTitle,
+    activeEpisode,
     handleClickListItem,
     handleClickPlayer,
   } = usePodcastList();
@@ -18,7 +19,6 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
   };
 
   // console.log(card && card, selectedCard && selectedCard);
-
   return (
     <>
       {isOpen && card && (
@@ -34,7 +34,7 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
                 </div>
                 <div className="more-modal-header-content">
                   <span className="content-title">{card.title}</span>
-                  <span className="content-type">{card.type}</span>
+                  <span className="content-type">{card.publisher}</span>
                   <span className="content-text">{card.description}</span>
                 </div>
 
@@ -68,14 +68,14 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
               </div>
 
               {/* videoList */}
-              {card.videoList &&
-                card.videoList.map((item, index) => (
+              {card.episodes &&
+                card.episodes.map((item, index) => (
                   <ListItem
                     key={index}
                     item={item}
-                    currentPlaying={currentPlayingTitle === item.title}
-                    handleClickListItem={() => handleClickListItem(item.title)}
-                    handleClickPlayer={() => handleClickPlayer(item.title)}
+                    currentPlayer={activeEpisode === item.id}
+                    handleClickListItem={() => handleClickListItem(item.id)}
+                    handleClickPlayer={() => handleClickPlayer(item.id)}
                   />
                 ))}
             </div>

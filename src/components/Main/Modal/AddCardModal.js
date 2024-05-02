@@ -12,21 +12,29 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const handleSearch = (event) => {
     setSearchInput(event.target.value);
     console.log(event.target.value);
-    searchShows(event.target.value);
+    // searchShows(event.target.value);
   };
 
+  // console.log("channelList:", channelList);
   //篩選List內 title 包含 searchInput 的 item
-  const filteredChannel = channelList.filter((channel) =>
-    channel.title.toLowerCase().includes(searchInput.toLowerCase())
-  );
+  const filteredChannel =
+    channelList &&
+    channelList.filter((channel) =>
+      channel.title.toLowerCase().includes(searchInput.toLowerCase())
+    );
 
   const handleChannelClick = (channel) => {
     // 重複:傳入的id 已存在selectedChannel
-    const isSelected = selectedChannel.some((item) => item.id === channel.id);
+    const isSelected = selectedChannel.some(
+      (item) => item.title === channel.title
+    );
+    console.log(channel.title);
     let updatedChannel = [...selectedChannel];
     //重複則 篩選出 除了傳入的podcast以外的項目
     if (isSelected) {
-      updatedChannel = selectedChannel.filter((item) => item.id !== channel.id);
+      updatedChannel = selectedChannel.filter(
+        (item) => item.title !== channel.title
+      );
     } else {
       // 沒重複則 該項目更新isSelected
       updatedChannel = [...selectedChannel, { ...channel, active: true }];
@@ -103,11 +111,11 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                       <Card
                         key={channel.id}
                         title={channel.title}
-                        type={channel.type}
+                        publisher={channel.publisher}
                         imageUrl={channel.imageUrl}
                         onClick={() => handleChannelClick(channel)}
                         active={selectedChannel.some(
-                          (item) => item.id === channel.id
+                          (item) => item.title === channel.title
                         )}
                       />
                     ))}

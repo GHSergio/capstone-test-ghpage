@@ -1,142 +1,1774 @@
 {
   "channelList": [
     {
-      "id": 1,
-      "title": "Siddhartha",
-      "type": "BBC World Service",
-      "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/0c4c/9aa3/8072fb4d1b5309a90e03380e149fa83d?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EGB8GdkQghiKUY5LBwe3PMZCEcWcB3h8TF8McEgqlN1pgkRuxlxXfNuUEAeSE6kuLDWK7zRbUxdRAeE73YIeS1KY5EtgZd62SJLPWjNZ7aenaRA6mZdfaJyLWCbYekKF0~UsT0Dcr30VDxcg6eY0P6tBnCaBj~ceb19bn7OMNL~~9jem0jKnckhqsWSZtSTlYel8gPKqdcNWxtpc5rfDsRgOOqbdtS6tKeLCO~MrZkMGqp4zSW7V6IG1lrcZYWb2KzVSu02dI8SCu7jTA4jR~QDWtyUrDk-9UsW-Oqhsc0FnaEd0R2cEYY3IlfGXS3cNuVGTMujaMcjPZHY5P~FmFQ__",
-      "active": false,
-      "videoList": [
+      "description": "名字有夠長  合作邀約｜ladyflavor.pet@gmail.com  -- Hosting provided by SoundOn",
+      "imageUrl": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+      "publisher": "好味小姐",
+      "title": "好味小姐開束縛我還你原形",
+      "episodes": [
         {
-          "id": 1,
-          "imageUrl": "https://s3-alpha-sig.figma.com/img/6061/c90b/b239aa208ff9d16f9f1dd09f391760e7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od6GalLLgkhuEhRxrxO7YNpyslof0TgEH5VWKmANasXjULkJ-ly6irl0dguFlqUQSQxzgM04kyLFCPFgKH0O1--R0MRgmN7yVtCxQjvVVezzmXuq6D~RBMwl02VQmjjrzbQ~OwtHSSESAM~Q98FUJTuJIe05baqvE8fbfPlNNit3n~ERuNsmE~yaBbUGt6ux-~xrTNrN0l5rJDAZTpfmEO~UVn7f9DqYxnJy5tDoBB5oqX~9g7UxqqIg~aerXw~tz~4r3f2ShJctGfj0gOuKuSVguKuAXD2B9lA0vWNzZ7SEGt00ET3NDyGbj47P~NMkgms3955lV80~jjmn8jadeQ__",
-          "title": "A Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-          "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-          "date": "2023-04-06",
-          "duration": "1 小時 20 分"
+          "id": "6pcsEJ87l6CjoZkycHdW0H",
+          "title": "EP208 末日遊戲區與鬧鐘之敵與你過他媽的生日？？",
+          "description": "✨ 光茵樂活-機能銀耳飲 ✨ 光茵樂活的銀耳可厲害了🤩由國師 #唐綺陽 超強代言⭐ 每一口都吃得到整朵鮮銀耳，不只有料！還有內涵😍😍😍 （偷偷跟你們說 唐老師最愛膠原奶茶鮮銀耳！） 母親節安心送禮的好選擇 ❤️ 📍 市場唯一添加機能銀耳飲讓你喝得更有感！ 📍 環控栽培銀耳 營養價值高於市售銀耳70% 📍 屏棄透明包裝堅持選用安全性最高的鐵罐包裝 📍 獨家特殊塗層絕無傳統鐵罐味 📍 即開即飲常溫保存，不佔冰箱空間 🔥新口味「双纖鮮銀耳」一次解決消化、體質、排便3大問題，飲控路上好幫手！ 《母親節專屬優惠💕 》 ⏱️限時 纖潤買箱送盒(4/29-5/5) 🎁新朋友激推！任選銀耳1盒就免運(本島) 🎁老朋友全品項任選第2箱半價 🎁聽眾專屬優惠：5/12前結帳滿$1500輸入折扣碼：「好味」再贈3罐人氣鮮銀耳(有機、纖潤、益菌) 市值＄450 ➡️ https://nanobiolight.us/dxHX1 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-04-29",
+          "videoLength": 3873168
         },
         {
-          "id": 2,
-          "imageUrl": "https://s3-alpha-sig.figma.com/img/a6cb/eee7/31add6e3e5e02f69f231753932b79b9b?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hF9uORM7n1wL3JQlFlrbmrPlpCseaBBPzByWUG1BWr-~JmBreyW1HlkWESIrdgRtAs5-vB9rCV1UetTV~jHfTbqVwFJcSM7222GSxz9s3KOAH~783ZRwduf8~eKIDS5scBNDBBhCV2XGeTtydqdFDNcqqHeNNFdyRWtywp~nwPfg6klm~9Fa1MeAqvAj1U7x-eTrDjW1rSsKVHLo9msdgv~8DQhXwCKaanYsmzPNZvUUwaS~BK8nVUNBTF4w~TV6E-6ggGsWg-poNJ2AqpVhe9ml8lxBDqwHOxHGBSZNGxO4hSTjP4tEV7CfhjW2FPmg~NYRuSGqFpxL9NCIX8dYJA__",
-          "title": "B Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-          "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-          "date": "2023-04-07",
-          "duration": "1 小時 30 分"
+          "id": "2l2rRYeI9vuvvIFtzhzoQ0",
+          "title": "EP207 入魔眼藥水與社恐校友與可悲夜市",
+          "description": "✨好味聽眾專屬的優惠✨ 長輩最愛，回購率超高👉 https://fun-s.cc/好味小姐專屬優惠 母親節快來寵愛自己的媽咪🎉芳茲滴雞精回饋聽眾朋友 4/22-5/12滿額好禮有機會抽萬元好禮！ 平常媽媽總是在家忙進忙出 時常忙到沒有運動時間 趁著這次返鄉過母親節 送上一份能增加代謝的健康補給品 #日月養生薑黃滴雞精 ✅熟齡族最愛，滋補保養聖品 ✅三色薑黃素，促進新陳代謝 ✅總支鏈胺基酸，為你提振精神 距離母親節大概還有四週的時間 ✨為最愛的媽媽，補好雙效營養✨4/22-5/12芳茲母親節優惠活動 👉🏻滿 3,800 送 三風製麵 見面幸福麵線 1 包(200 公克/2 人份) 👉🏻滿 8,800 抽 日本製虎牌 多功能電子鍋 (價值$20,000) 👉🏻滿 15,888 送 NHB游離型金盞花葉黃素 1 瓶 (價值$1,580) #芳茲生技#芳茲薑黃滴雞精 #芳茲雞魚饗宴 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-04-23",
+          "videoLength": 3837983
         },
         {
-          "id": 3,
-          "imageUrl": "https://s3-alpha-sig.figma.com/img/5aa1/4d41/4a9b4213651cc1dbfbadd29c1e864258?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WlJ8jEm8VthMMEIuERDMzA8YWW~fviRoeYPCpRaGkj7gPOf~~aTObI3bTCKd8~kkHx~WfS4~2fwCjqCH~5LfzhuO5C8gEdqN9t5EY8hZskZxP72C4EPwb3AwpGImkilcL3end3q1tWL-DIHHMdklEeZ4HnD9d2t-NKJqOv8c6OuEMmZHVR3cLsuuUiCOwm5VHjsv0JBEfgpOA~PAtnIzLuVRYOB0C5hvLw-GWVnMcRbBWIWITJdKRUQGRHSogYgrxJ4Us~fXRHtPR3r6l2chXNUqooShgC0YQ5EP9GfU6MPafXi1YE5RkPmheSXLm56LeUd92N9R8XqNX-HNm05ltQ__",
-          "title": "C Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-          "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-          "date": "2023-04-08",
-          "duration": "1 小時 40 分"
+          "id": "3s5fdEUNRlyMZABxmwQdKt",
+          "title": "EP206 雞與鼻毛與老婆與我？",
+          "description": "本集節目由【髮基因】贊助播出 使用髮基因保養頭皮，還你豐盈蓬鬆的秀髮 即使熬夜錄Podcast 即使熬夜剪Podcast也不再害怕出油扁塌 頭臭味！  好味聽眾專屬優惠連結 4/16(二)-4/22(一) https://scalprecovery.pse.is/lady2024  🔴48hr限時早鳥禮，滿額$3800贈清爽肌沐60ml 價值$200 🔴髮肌逆時專區 >單品優惠85折，只要$757 (原價$890) >髮肌逆時青春禮盒組 升質禮盒不加價！ 只要$1,960 82折直接帶回家 (原價$2,390) >購物車滿額$3800 還可享新品青春露單件79折加購優惠 🔴『好味小姐主打』豐盈育髮保養套組79折 🔴滿額2000 獨家85折加購 明星商品「4號頭皮調理精華露」$1,275元 (原價$1,500) 🔴滿額贈好禮最高門檻$4,800 贈品價值$1,120送給你  -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-04-15",
+          "videoLength": 4104096
         },
         {
-          "id": 4,
-          "imageUrl": "https://s3-alpha-sig.figma.com/img/22ed/573d/f24340ce94b8f0e31079a53749fa8175?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YejBJ1zeSjOZK5jIV4aqjEn-iNKT8voFZcrMX~mdpcS9iqLED57a4ix2uaXRPWzn5R0PCMJE9ZLgGkz25OnPNCOtY49LAmmVXSDsGcN1YsXPktzviOwE1HxjW28wSFikXOZ55W1sH9O3buSeWSKFRhyp2lkZg2Br1pz8seB4ldR6YFnYFN~g0x6WEfFs5ieQO8DW4~smTvzJleEUFCz60cShtlrFl1bqfJvDEN8c2IWgOIksh00uFnoLUosCM9SFTU9Pkq1eD2Luoskjv6L3KSe3OpnLRgEoC2uZbn~ZywUXQ-~Kb7bUj3BDt216SPJKdo35QUITlgnXhTYUTbnaNA__",
-          "title": "D Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-          "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-          "date": "2023-04-06",
-          "duration": "1 小時 20 分"
+          "id": "5116zAxudGB8EKCUvJ8zb7",
+          "title": "EP205 午餐邊緣可憐人拯救計畫！！",
+          "description": "本集節目由【Roichen正脊坐墊】贊助播出 好味小姐聽眾52折專屬優惠👉🏻 https://s.add.one/5b9bfg （品牌限定優惠，請使用 Fb、Line、手機號碼 登入，即可看到專屬優惠價）   👍🏻市售唯一依男女體型設計的正脊坐墊 男女體型骨盆角度不同，需要專屬尺寸設計， 市售唯一有男、女和兒童3種專屬尺寸可選購  👍🏻獨家支撐設計 坐墊不易滑動，即使不搭配椅子， 直接在地面或者平面使用，當作和室椅都可以。  👍🏻韓國第一入口網站NAVER家飾配件使用滿意高度認證 榮獲200多項專利、認證、設計以及系統認證的殊榮， 包括紅點設計大獎、Good Design、PIN UP等獎項。  👍🏻通過SGS檢測不含有毒物質與安全性測試 最大可承受220~350公斤都可維持平穩正確的坐姿，不會形成椅墊扭曲或晃動。  #Roichen #Roichen正脊坐墊 #市售唯一依男女體型設計 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-04-08",
+          "videoLength": 3831288
         },
         {
-          "id": 5,
-          "imageUrl": "https://s3-alpha-sig.figma.com/img/a3e6/56f1/29cb67ae3e0f5ddacdccc345caf736f1?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XuBk4n~Vnk1729Op0aCjHLiAx0s3buH9UFz5sSIxVgBjG7pIrJRSChfHXyhvPtdITfZ3kOK3O8gxfgNPBMGardLEKOlzAV3zURuHLXLoRhMLHsFYmJUpJAaCDd8RvLJ1jMfcKJTHknCDYd44Pif9YEl54zoho--Rkk1glDOqUoyJ00whyqBLHuCjY3WUrM52KbtERjLiRHhwIWA6yyUjSzWY~4Ne8VTDLh3SEfTEKqBRvgDsrXWJcOcK71LeVwIhYj1wCfFwg9WjoY-bfdaPujjqtve5DJ5k2ktXGr3dXm5peM4QVptKmoPlvAyfECJEcH3iJZijKIAFrJa~MjzbyA__",
-          "title": "E Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-          "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-          "date": "2023-04-07",
-          "duration": "1 小時 30 分"
+          "id": "12OILuildx17imcQMwHFTd",
+          "title": "EP204 辦公室玫瑰危機與家庭和諧模範生",
+          "description": "🔥好味鮮食化毛膏送給你啦🔥 👉 https://lf.ladyflavor.com/h5Un0  最近是季節交替的換毛季 貓咪會開始吐毛球啦啊啊啊 知道大家要清理吐毛真的很辛苦 貓咪們吐毛也會很不舒服 所以我們決定來辦一個化毛膏的活動！ 來當大家的一個及時雨～～  從4/1到4/30 只要在好味商店官網 滿1200就送『鮮食化毛膏』一罐 快去看看吧！ 👉 https://lf.ladyflavor.com/h5Un0 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-04-01",
+          "videoLength": 3460056
         },
         {
-          "id": 6,
-          "imageUrl": "https://s3-alpha-sig.figma.com/img/119a/8489/79edaadc3bd08a903a2a69ec323f624f?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GqbeUz8HSjEFYB2gBVxTiid1U39eRynjybuzGcJ4WroTHl8VBXEKWy6fQnuWy3Ksst7ezaQBi1NZSHKpiyq6-hMfxYWyzMPWNqcozppGO-yUc6gSs5ybBv6bTBD5WuYnLJeIlldstujWC-7oTjnEx3dojisZ5IYDTj1UYO-aNZ6XFNMq6JPAf6EeY3XQagPQWi1Z3lmb7qAOGFH1ZFGylFlY1Hp4HChtBgsP-Ce7pkZDMwE-eph2zp1vsdkOv53oCMP7QUJnb-YZIV1sLRsF23COM3RR2yl0F2lG~e8kXfKbhhcenCYQl0V3-7UIHo7VQmyyUkm8ByPgRSVwHnzrig__",
-          "title": "F Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-          "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-          "date": "2023-04-08",
-          "duration": "1 小時 40 分"
+          "id": "6r9JwwSmOgBtB3x5IT7SNp",
+          "title": "EP203 累得跟狗一樣！",
+          "description": "秋葵特輯  -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-03-25",
+          "videoLength": 3144528
+        },
+        {
+          "id": "6IPZkt07c7C9s5EeUpCxCS",
+          "title": "EP202 我好想睡覺就先不想標題了...",
+          "description": "本集節目由【zZsleeper 忘憂枕】贊助播出 https://s.add.one/5nrsyr 你知道睡不好跟枕頭有很大的關係嗎？ 一顆好的枕頭必須滿足4大要素：支撐、柔軟、透氣、形狀， 由專業的物理治療師與醫師團隊設計製作的忘憂枕！ 💤 涼感親水棉聚氨酯材質 💤 集合支撐、柔軟、透氣度3大優點 💤 通過最嚴格歐盟檢驗標準197項 💤 兼顧男女不同體型設計的枕頭 好味小姐聽眾52折專屬優惠 ： https://s.add.one/5nrsyr （品牌限定優惠，請使用 Fb、Line、手機號碼 登入，即可看到專屬優惠價） -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-03-18",
+          "videoLength": 2940048
+        },
+        {
+          "id": "2UHBj1ExNHYrRicNkd66Jd",
+          "title": "EP201 太空人掰與沙灘遺跡與難道都是陰謀！？",
+          "description": "❤️好味小姐專屬優惠：https://pse.is/5np6cb  蘭蔻母親節開跑啦！！！ 3/12 – 3/14小黑瓶＋2024全新升級超級極光水獨家優惠，組合最低52折！！  ⚫️小黑瓶入坑組(買1送4)，價值$ 5,431 售價$ 3,100 （57折） 買超未來肌因賦活露 30ml，贈➡️超未來肌因賦活露5ml*2＋New!超極光活粹晶露10ml *1＋超未來肌因活性安瓶 4ml  ⚪2024全新上市超級極光水新客組(買1送4)，價值$6,590，售價$3,950（6折） 買超極光活粹晶露150ml，贈➡️超未來肌因賦活露 7ml＋New!超極光活粹晶露10ML＋超極光亮白保濕精華乳15ml＋超極光淨亮淡斑激萃5ml (極光精華)  ⚫️+⚪2組一起買，預購會期間再輸碼「LOVEMD24」滿$6500折$300 好味小姐粉絲再獨家贈明星兩件禮➡️亮眼冰珠5ml+極光水10ml (價值$1083)相當於52折!!!! 最後，輸入專屬折扣碼『好味開光』再送超極光淨緻毛孔洗面乳30ml  #蘭蔻週年慶 #小黑瓶 #極光水 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-03-11",
+          "videoLength": 3933888
+        },
+        {
+          "id": "1HHWhcMIpfRDF6xXc3UaeC",
+          "title": "EP200 溝通無效！！！",
+          "description": "-本集由「森歐黎漾SAHOLEA」贊助播出- 連續三年榮獲多項國際美妝大獎肯定 【淨平衡洋甘菊系列】銷售NO.1的控油洗髮精🥇  使用後頭皮清爽不易出油，搭配護髮素髮根蓬鬆髮質柔順 全新淨化液讓控油效果更好更👍🏻 夏天來臨前快來囤貨吧  即日起至2024/4/5限時優惠 點選連結，專屬好味小姐聽眾的獨家入手價只要$990 (原價$1099) 淨平衡洋甘菊洗護組 >> https://mwf.one/ty4DU MOMO、蝦皮也可購買，實際優惠以商品頁為主 森歐黎漾蝦皮旗艦店 請至我的-優惠券輸入折扣碼【SAHOLA109】最高現折$109 >> https://mwf.one/4R9vb MOMO購物網>> https://mwf.one/1qbSn -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-03-04",
+          "videoLength": 3302400
+        },
+        {
+          "id": "7J4PO5N8N3D4MdCnkz0LPp",
+          "title": "EP199 哎呀我跟你拼了！",
+          "description": "【今年開始幫貓咪好好保養】 好味貓日常保養系列｜限時免運優惠中！ 點這裡 👉 https://lf.ladyflavor.com/WSKZE -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-02-26",
+          "videoLength": 3406560
+        },
+        {
+          "id": "1c6WzCrHlsKuf0y9Qr8WNt",
+          "title": "EP198 如何惹怒老婆",
+          "description": "🎉 意外的折扣來啦 🎉 在好味小姐＆營養師品瑄官網 結帳輸入優惠碼『EYDGC』(意外的折扣) 就無條件【 現折６６元 】 限時２天而已喔！！！！ 好味小姐官網👉 https://www.ladyflavor.com/ 營養師品瑄官網👉 https://pinky.ladyflavor.com/ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-02-19",
+          "videoLength": 2879136
+        },
+        {
+          "id": "46gYUp5kvW3V6yBc4ObAqb",
+          "title": "EP197 焦慮演唱會與末日蒼蠅王！？",
+          "description": "大家新年快樂啦！！！ 放假囉！！！ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-02-05",
+          "videoLength": 4083623
+        },
+        {
+          "id": "2ZwBNU7dnXZEE6pc3OmI1a",
+          "title": "EP196 我去收驚了！？",
+          "description": "平衡生活的同時，也記得維持「內在」的平衡⚖️ 女性私密保養精品Relove，有感分解私密處異味， 酵母菌和蔓越莓還能增加私密防護力！  購買私密洗＋手洗精組合 👉 https://relove.tw/VSEjr 結帳輸入『FLAVOR』（全部大寫）即享$100折扣💓  IG: @relove_care FB: Relove ＃Relove ＃女性私密保養精品 ＃私密洗 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-01-29",
+          "videoLength": 3600911
+        },
+        {
+          "id": "7nkeC4r76eWkENTqsPNYi2",
+          "title": "EP195 中年男子冒險團",
+          "description": "✨好味聽眾專屬的優惠✨  點擊賣場連結👉🏻 https://fun-s.cc/好味小姐專屬優惠 龍年新春獻上健康養生禮🎉芳茲滴雞精回饋聽眾朋友 1/23-4/22 買多再享滿額好禮及抽獎機會，新年龍吼哩發發發！ 新春期間113.01.15～113.02.14下單再抽金條！  精品級滋補養生品 芳茲滴雞精 ✅最適合愛喝雞湯的大小朋友！ ✅低鈉、0脂肪、0膽固醇，補充營養無負擔 ✅快速補充身體所需營養，好喝到無法自拔！  全方位守護養生品 芳茲滴魚精 ✅最適合喜歡走春的長輩 ！ ✅深海魚軟骨素 提供關鍵行動力 ✅省去繁瑣處理工序，簡單補充雙魚營養精華！  距離農曆新年大概還有兩週的時間 ✨為家人補充營養與活力，健康迎接每一天✨ 大家記得提前準備，以免物流塞車呀！💨  #芳茲雞魚饗宴禮盒 #芳茲滴雞精 #芳茲滴魚精  ---以上為FMTaiwan Podcast代理--- -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-01-22",
+          "videoLength": 3237743
+        },
+        {
+          "id": "65oEtTaoPsjy1AQvUlRlK2",
+          "title": "EP194 再見了樹枝表哥電動手機皮鞋高中的愛店",
+          "description": "官網連結 https://pse.is/4l7w65 即日起到2/18輸入折扣碼『lady』享88折優惠 快來提升睡眠品質哦!  <> 消費滿6,000元送『保暖羽絨圍巾』 ＃十月被 ＃山山枕 ＃EASYLIFE -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-01-15",
+          "videoLength": 4286231
+        },
+        {
+          "id": "3wg19dJx3jhOZo9Zgpm3kN",
+          "title": "EP193 法國城堡廁所與我要怎麼教小孩？？",
+          "description": "本集歡迎自然科學小天才補充說明 ＃營養師品瑄春節禮盒熱賣中🧨 👉 https://pk.ladyflavor.com/Wl1f5 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-01-08",
+          "videoLength": 3897600
+        },
+        {
+          "id": "7Fn1sHG91N6BRYm8GSW6El",
+          "title": "EP192 黑暗跨年探險！？",
+          "description": "🎁好味新年凍乾貓丸糖盒🎁 上架囉～～🎉 https://lf.ladyflavor.com/20iQZ  今年新年貓糖盒升級啦🙌🏻 精選貓咪最愛的凍乾食材 做成五道貓丸凍乾小球🍡 真的超可愛的啦～～～  還有要送給大家的新年禮 好味貓春聯＋貓紅包組合🧧 🌟滿$690🌟就送給大家啦 買貓糖盒就會有囉！  👇🏻快到好味商店看看吧👇🏻 https://lf.ladyflavor.com/20iQZ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2024-01-03",
+          "videoLength": 4034903
+        },
+        {
+          "id": "6wp7OuXvJpS7rEjalgvoXl",
+          "title": "EP191 新年新希望檢討大會",
+          "description": "本集節目由【美亞鍋具 Circulon全新系列A1】贊助播出  好味小姐聽眾5折起專屬優惠 https://s.add.one/5ej5wy （品牌限定優惠，請使用 Fb、Line、手機號碼 登入，即可看到專屬優惠價）  持久耐用度 ScratchDefense技術應用，耐用度是它牌130倍, 能承受金屬刮擦35萬次 IH全覆蓋感應導磁 厚實、邊對邊的包覆式不鏽鋼感應爐底座，提供均勻加熱並預防捲翹變形 專利不沾系統 專利高低表面的不沾系統，極致不沾又減油 極致便利 配備瀝水蓋、傾倒口的鍋型(湯鍋)  #美亞鍋具 #CirculonA1 #鎧甲 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-12-25",
+          "videoLength": 4249728
+        },
+        {
+          "id": "6t0uWTb6riDPfvUYmhH8Ne",
+          "title": "EP190 妳也太想嫁給王子了吧!!!",
+          "description": "希望未來可以在早上錄完早上剪完 ＱＡＱ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-12-18",
+          "videoLength": 3678600
+        },
+        {
+          "id": "4rPfZ85t5d6camL3hbmsgv",
+          "title": "EP189 上課真開心？😨😨😨",
+          "description": "本集節目由【Roichen正脊坐墊】贊助播出  全新女用款粉色&坐墊清潔去污棒，搶先預購中 https://s.add.one/5b9bfg 好味小姐聽眾52折專屬優惠 （請使用 Fb或 Line 或手機登入，即可看到專屬優惠價）  市售唯一依男女體型設計的正脊坐墊 它牌只有分大人和小孩的尺寸，但男女體型骨盆角度不同，需要專屬尺寸設計  獨家支撐設計 坐墊不易滑動，可直接在平面使用，當作和室椅都可以  韓國第一入口網站NAVER家飾配件使用滿意高度認證 榮獲200多項專利、認證、設計以及系統認證的殊榮  通過SGS檢測不含有毒物質與安全性測試 最大可承受220~350公斤都可維持平穩正確的坐姿，不會形成椅墊扭曲或晃動  #Roichen #Roichen正脊坐墊 #市售唯一依男女體型設計 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-12-11",
+          "videoLength": 4193496
+        },
+        {
+          "id": "2Nw0PueUNBjKjMg9gwBemv",
+          "title": "EP188 都跟我想的不一樣啊!!!",
+          "description": "營養師品瑄雪中送炭優惠！ 瑄春雨🍜和微微奶茶🍵 ＃第二件五折🎉 👉https://pk.ladyflavor.com/KqMKV  活動只到12/17 數量有限，賣完就截止啦 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-12-04",
+          "videoLength": 4036391
+        },
+        {
+          "id": "1tdH28OEToiTXWWYAQsLVa",
+          "title": "EP187 老爸失調症候群與升天直排輪與神存在的證明",
+          "description": "脆脆新品牌『小時脆脆』首支商品 🎄小紅帽與餅乾｜薑餅屋故事禮盒🏠 就在這裡啦 👉 https://tt.trytwo.com.tw/9FJDI -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-11-27",
+          "videoLength": 3618311
+        },
+        {
+          "id": "6KTNVQ0MtYxbnuPqXSKQif",
+          "title": "EP186 冷到得糖尿病！？",
+          "description": "FOREO LUNA 4洗好之後真的有去角質感！摸臉的時候覺得好療癒～ 刷頭跟震動在洗的時候感覺還算輕柔，不太會有拉扯感或是不舒服的感覺 有興趣的人快點開連結看看吧！  FOREO黑五優惠中，全年最低五折起！ 🔗使用折扣碼 BLACK再折5% 官網連結：https://foreo.se/LadyBF  @foreo_offical #BlackFridaySale #foreoluna -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-11-20",
+          "videoLength": 4324200
+        },
+        {
+          "id": "4rvxNodCjtIfMShKI4xQ0b",
+          "title": "EP185 愛才沒這麼簡單阿杰倫！！",
+          "description": "【好味貓懶骨頭新上架啦！！！】 就在這裡👉 https://lf.ladyflavor.com/Zou6e  感謝大家的支持！！ 去年兩天完售～今年不要再錯過啦！ 出貨已經排隊到12/15日，越晚要等越久囉😱 天氣轉涼～幫貓咪準備最棒的過冬貓床吧！ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-11-13",
+          "videoLength": 3854520
+        },
+        {
+          "id": "5CCcTW4b68D59Zlc4H6s7M",
+          "title": "EP184 歌后誕生之路",
+          "description": "這次分享的TAKAMI用起來真的很舒服而很溫和 所有膚質都適用，完全沒有黏膩感 保養一段時間後肌膚代謝會更穩，有感嫩透亮✨ 好味獨家優惠組合👉🏻 https://bit.ly/3snffua 優惠只到11/10~~~ 🔵TAKAMI角質全套護養組 買3送8 🔵 售價4,090(價值4,653) 買：小藍瓶30ml＋潔顏乳80g＋肌亮露 I 120ml 送：潔顏乳5gx3＋小藍瓶 1.2mlx4＋TAKAMI 氣墊潔顏起泡網 ⚪️TAKAMI小藍瓶超值組 買2送6⚪️ 售價：3,560(價值3,992) 買：小藍瓶30mlx2 送：潔顏乳5gx2＋小藍瓶 1.2mlx3＋TAKAMI 氣墊潔顏起泡網 #TAKAMI #TAKAMITW #角質道小藍瓶 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-11-07",
+          "videoLength": 2895528
+        },
+        {
+          "id": "58RkM4XrNV2OCs1q5HAluH",
+          "title": "EP183 可憐的牛與我的蔥啊與你要幹嘛？？",
+          "description": "阿嬤的配方 打造沉浸輕柔呵護的美好儀式 ✨10/30-12/3 Reborn 升級新上市✨  這次推出新升級的「妳的‧桑拿沐足袋」外 還有新品「月悅暖薑足浴鹽」，呵護女孩月事來的不舒服  阿嬤的配方官網👉🏻 https://dr-grandma.com/lggLl 下單記得輸入好味小姐專屬折扣碼『lady2023new』 結帳滿1200元贈賦活潤白腿膜1雙🦵🏻🦵🏻 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-10-30",
+          "videoLength": 4090223
+        },
+        {
+          "id": "6P7WhXHNhqooNJ7MJoqarF",
+          "title": "EP182 說走就走真的走去日月潭!?",
+          "description": "本集由「大安工研食品 果酢日和」贊助播出  「果酢日和」水果醋4口味，好喝不分 晴天雨天4月天！ ✅紅石榴 ✅蘋果 ✅梅子 ✅百香果 酸甜又清爽，我看看還有哪裡厲害！ ✅日常保養飲品 ✅果寡糖 ✅幫助消化  👉 我立刻要去店裡搬回家 🛒 紅石榴 水果醋-全聯/工研官網 百香果/梅子/蘋果 水果醋-大潤發、愛買/工研官網  👉 我立刻要去官網下單 📱 果酢日和水果醋590ml*3瓶(口味任選) + 無糖蘋果醋600ml*2瓶 原價950元 送 特濃咖哩-甘味125g*1盒 輸入專屬折扣碼【ladyflavor】，再折150元！ https://bit.ly/3PtkrWa #工研酢 #果酢日和 #水果醋  ---以上為FMTaiwan Podcast代理--- -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-10-23",
+          "videoLength": 4011288
+        },
+        {
+          "id": "291fpqVRmCXyJ4BEqWha2R",
+          "title": "EP181 買不到就死定了😱😱😱",
+          "description": "應該是全世界CP值最高主食罐了啦～～～ 好味小姐『1+1益生菌｜半濕食主食罐』 在這裡👉 https://lf.ladyflavor.com/wFJn3 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-10-16",
+          "videoLength": 3668040
+        },
+        {
+          "id": "1fs9UCf0d6NfAHSBMVIVAg",
+          "title": "EP180 十賭九百九十九輸",
+          "description": "✨日本獅王趣淨抗菌洗手慕斯～專屬優惠又來啦✨ #IPMP抗菌成份 #日本認證抗菌壓頭 #補充包減塑又划算 即日起至2023年10月31日止 獅王全館滿799結帳輸入優惠碼【ladyflavorx100】折100元！ 加入日本獅王的LINE官方帳號再領其他優惠碼喔！(*注意優惠碼不能疊加使用) ◎獅王官網：https://bit.ly/47Tvjno ◎獅王官方LINE帳號：https://lin.ee/4Qw9smw －網路通路：獅王官網、momo、YAHOO!、PChome、博客來 －實體通路：全聯、家樂福、大潤發、屈臣氏、康是美、寶雅、松本清、Tomod’s、Don Don Donki、日藥本舖、札幌藥妝 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-10-09",
+          "videoLength": 3791303
+        },
+        {
+          "id": "6IfGqRbMi6gjJr2hoX9bKt",
+          "title": "EP179 洗面乳＋髮蠟＝國中生",
+          "description": "大家好我們回來啦 感謝大家的鼓勵與等待 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-10-02",
+          "videoLength": 3096480
+        },
+        {
+          "id": "0Og9xb0kywQW708l7VPMiQ",
+          "title": "EP178 體檢抱佛腳與跳繩MAX與百善孝為先",
+          "description": "官網連結 https://pse.is/4l7w65 即日起到10/19輸入折扣碼『lady』享88折優惠 快來提升睡眠品質哦!  <> 慶祝新站開幕，加入會員送100元購物金， 消費滿3,000元再送『60ml羽絨專用清潔劑』 ＃十月被 ＃山山枕 ＃EASYLIFE -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-09-18",
+          "videoLength": 3558480
+        },
+        {
+          "id": "4Hb4QOcks51N0ARv3lPC39",
+          "title": "EP177 診所炫富與嫁女兒與夢想被前滾翻打敗",
+          "description": "德國製造的Bioniq® 貝歐尼修復牙膏 含20%仿天然琺瑯質微粒(BioHAP)， BioHAP成分已經科學實證，在每次刷牙時透過再礦化修補受損牙齒、填補琺瑯質外露的細微小孔，舒緩敏感牙齒。同時形成保護層，保護牙齒免受酸蝕及侵蝕，預防蛀牙*。  下週 9/20就是『世界愛牙日』啦～ Bioniq特別為大家帶來超殺優惠  9/25前，在Momo和蝦皮購買購買Bioniq® 修復牙膏 四入只需777元 添加護齦成分的修復牙膏四入888元！  Momo: https://is.gd/z4muTg Shopee: https://is.gd/HyPRb7 *需搭配正確刷牙習慣使用 ＃Bioniq貝歐尼 ＃修復牙膏 ＃世界愛牙日 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-09-11",
+          "videoLength": 3443856
+        },
+        {
+          "id": "73uL5VwDWDP2vCilNNyJMF",
+          "title": "EP176 新兵蜜豆奶與溯溪上學與野放量販店",
+          "description": "讓今年中秋更圓滿🎉芳茲滴雞精回饋聽眾朋友 9/5-10/4 限時推出👉 https://fun-s.cc/好味小姐專屬優惠 還有多項滿額好禮及抽獎機會，千萬別錯過！  滴雞精界的愛馬仕 芳茲日月養生滴雞精 ✅各大媒體口碑推薦香醇無腥味 ✅產地直送、全雞新鮮滴煉，真正不加一滴水 ✅低鈉、0脂肪、0膽固醇，補充營養無負擔 ✅常溫保存，入菜超方便，輕鬆享受高級日料感！ 每天只要3-5分鐘，隔水溫熱就能補充  搭配匠人手工打造「天目釉品茗杯」送禮質感再升級 今年中秋節，送上連老饕都愛的滋味 讓你瞬間成為親朋好友間的送禮達人🙌  #芳茲生技#芳茲滴雞精#常溫滴雞精 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-09-04",
+          "videoLength": 3924168
+        },
+        {
+          "id": "1cyA9anm9pG4baj4B9gy4s",
+          "title": "EP175 差點就掛啦！！！",
+          "description": "大武山牧場專門提供營養AA級鮮蛋，全台通路全聯、全家、7-ELEVEN、家樂福皆有販售！ 鮮蛋專家以好蛋製成的好蛋捲，中秋禮盒限量熱賣中！  9/30 前至大武山牧場官網：https://dan-loo.tw/ladyflavor 消費輸入折扣碼【lady88】（全小寫）全站不限盒數即享 88 折優惠！  9/30前至大武山牧場官網購買『蛋入蛋捲』再享更多中秋限定優惠 禮盒/單盒多入任選最低75折起！！滿499還可享免運優惠  #大武山牧場 #AA級鮮蛋 #蛋入蛋捲 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-08-28",
+          "videoLength": 4087991
+        },
+        {
+          "id": "1LMDmH6LnhzbX2KkhuomJW",
+          "title": "EP174 國小就達到人生頂點了！",
+          "description": "－本集節目與 台灣樂作創益協會 公益合作－ 台灣樂作創益協會是以「成年心智障礙者輔導照顧」、「身障家庭支持」 以及「改善獨居老人生活環境」為主的公益團體 用快樂工作、創新公益的方式，打造身障樂兒專業學習場域♥️  幫助樂作家務隊 👉🏻 https://www.happyworks.com.tw/8ubr4q -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-08-14",
+          "videoLength": 4348631
+        },
+        {
+          "id": "1kRr7qQt3giuwz8LmOkmsp",
+          "title": "EP173 我不要去上學！！！",
+          "description": "VANA x 好味小姐 專屬優惠 8/31前官網 https://www.vanaliving.com 下單 輸入【lady】(全小寫)立享全站最低88折優惠 浪漫七夕就從北歐純淨自然生活開始 ✨品牌加碼活動✨  丹麥溫和身體洗沐禮盒組(四入) 63折起 #還可lady優惠碼折上折 #七夕期間限定優惠 訂單單筆滿2000台灣免運 訂單單筆滿3500送丹麥純淨洗面露125ml一條   ＃VANA -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-08-07",
+          "videoLength": 3186240
+        },
+        {
+          "id": "0qJGOHlU32bMkc4pbMCnTP",
+          "title": "EP172 啊啊啊今天要上幼稚園啦！！！！",
+          "description": "本集由「頂級私密保養 賽吉兒」贊助播出 使用天然植萃分解女生最害怕的異味、搔癢等私密問題 質地很溫和不刺激，草本香味聞起來清新舒服！  ✅悶熱異味OUT ✅清新淨味✅防護力UP  即日起至9/30， 賽吉兒官網結帳輸入好味專屬優惠碼【LADY150】最高現折$150🌟 👉 https://saugellatw.com/z9d74 ▎康是美、寶雅、屈臣氏各大連鎖藥妝♡好評熱賣中 ▎ #賽吉兒 #國際專業藥廠研製 #私密保養 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-07-31",
+          "videoLength": 3730703
+        },
+        {
+          "id": "0ry45LAyEkpNPxRYpVKRAY",
+          "title": "EP171 起床上學與蛤蜊戰爭與守夜人的血脈",
+          "description": "【子有你ISUNEED】專為寶寶肌膚親研 無藥性植物修復X SGS認證 X金點設計  🔴官網全館優惠中 https://isuneed.co/AUGlimited  🎁好味聽眾專屬｜結帳輸入「FLAVOR」 不限金額現抵$100，數量有限兌完即止 ────────────────── 擦在孩子與孕期肌膚的用品， 就是要選擇 #專為寶寶與媽咪需求 所研發創立的品牌。  【ISUNEED子有你－臺灣親子保養】 嚴選在地紅藜與有機植物高修復力，100%安心純淨 好味推薦Top「哺育護理油」、「修護霜」 針對母乳期肌膚與敏弱膚況問題精準調理 陪伴您與孩子從容應對各個生命階段  👩‍👦母乳媽咪Ｘ寶寶護唇 ▶#哺育護理油 「質地滑順，讓4小時擠奶一次的乳牛媽媽輕鬆了許多。」  👶隨身舒緩Ｘ穩定膚況 ▶#修護霜 「不管蚊蟲叮咬或小疹子，頻繁幫小朋友擦也很放心！」   #子有你ISUNEED #臺灣親子保養 #專為寶寶敏弱肌膚親研 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-07-24",
+          "videoLength": 4185720
+        },
+        {
+          "id": "4gNqjyTvXrc4IJXKTm2FDw",
+          "title": "EP170 秘密基地大崩壞！",
+          "description": "『好好果乾水』夏日優惠開始！！ 連結👉 https://pk.ladyflavor.com/PQET5  👇『夏日果乾水季』雙重優惠👇  💧好好喝水組合 七折 果乾水x1＋好好水瓶x1  💧好好果乾水 第一件8折，第二件6折  活動只到7/31喔！快到營養師品瑄官網看看吧！ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-07-17",
+          "videoLength": 3995063
+        },
+        {
+          "id": "0SbGbk7O8rexXs7cddd0po",
+          "title": "EP169 減肥簡單啦，我減好幾次了～",
+          "description": "好味貓凍乾折扣來啦～～ ➡️ https://lf.ladyflavor.com/EkLoA 輸入優惠碼『SOHOT60』直接折60喔！  我要睡了掰！  -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-07-10",
+          "videoLength": 3189383
+        },
+        {
+          "id": "6kSohwz899HEy2NWCpSQPh",
+          "title": "EP168 史上最嚇人廚房！！！",
+          "description": "添加足量膠原蛋白的純煉膠原熬雞精💪 滿足你的每日活力與美麗🥰 👉🏻https://w.cllab.tw/ihc6z  7/1-7/31膠原熬雞精30入 8折起！ 現在只要$3,780！  純煉滴雞精 ⭐ 顧客好評：「第一次喝到這麼好喝不腥的滴雞精！」 ⭐ 南投爽健雞飼養全程０用藥 ⭐ HACCP認證、ISO 22000國際級製造規格 ⭐ SGS定期自主送檢 ⭐ 7種口味滴雞精、熬雞精滿足全家的需求  ＃純煉 ＃膠原熬雞精 ＃滴雞精 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-07-03",
+          "videoLength": 4037160
+        },
+        {
+          "id": "2RLs9ZimIL86k9j0HrQRAK",
+          "title": "EP167 我小時候的第一個記憶...",
+          "description": "＃瑄pasta上架啦🎉 👉 https://pk.ladyflavor.com/MvDZc ✅ 100%杜蘭小麥製成的義大利麵 ✅ 非油炸的蒸煮麵體，口感Ｑ彈有嚼勁 ✅ 嚴選天然配料，美味少負擔  新上市有８折優惠還有兩件７７折喔！！ https://pk.ladyflavor.com/MvDZc -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-06-26",
+          "videoLength": 3537983
+        },
+        {
+          "id": "0WmW2oc7ZNStEhlJkLzCNj",
+          "title": "EP166 這算是超能力嗎！？",
+          "description": "foodpanda目前在全台灣已和上萬家餐廳合作，真不愧是全臺最大的外送平臺！  即日起首次訂閱pandapro，無論是月費/半年/年費制， 只要在訂閱時輸入好味小姐專屬訂閱制折價券「lady」，即可享有首月免費優惠！！  訂閱pandapro不管是美食外送，還是生鮮雜貨， 不限次數只要單筆消費超過179元都不用外送服務費！ 在特定店家外帶自取還有5%折扣，最低只要64折！ 除了外送外，憑pandapro會員資格在精選店家內用還可享75折起優惠， 沒有平假日限制，１人有會員，全桌都打折！，真的又省又方便！  連結：https://reurl.cc/WG3A1D #foodpandataiwan #叫foodpanda送 #pandapro首月免費 @foodpanda_taiwan -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-06-19",
+          "videoLength": 2610048
+        },
+        {
+          "id": "41u379Zly7xTgHMNQtYcN5",
+          "title": "EP165 散步與狗與擄人暴力事件！！！",
+          "description": "國民法官上路囉！ 不需要特定的身份或法律知識背景 只要是年滿23歲的國民都有機會擔任國民法官 註： 112年起國民法官會參與「因故意犯罪發生死亡結果(如酒駕致死)」的案件， 115年起才會納入「最輕本刑10年以上有期徒刑之罪」的案件喔。  更多資訊請參考： https://social.judicial.gov.tw/CJlandingpage/ 在FB貼文底下留言就可以抽這次司法院送的限定好禮唷！ 即日起至6/20日前在底下留言，就會抽出一位送出我們的小禮包 裡面有國民法官手提袋、鑰匙圈等限定商品 歡迎大家一起來幫助司法正義  #國民法官 #司法院 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-06-12",
+          "videoLength": 2078016
+        },
+        {
+          "id": "0ldQlDM69xUknYYAQhzWWC",
+          "title": "EP164 抖音的正確用法！？",
+          "description": "我第一個放進待產包裡的東西！ 媽媽們也安心的好品質×超強防呆機制 新朋友首購推薦組合，再把見面禮『美頸乳霜』、『全效8點三日份』 以及日本人心目中的毛巾界愛馬仕『今治毛巾手帕組』搜刮回家！！  👉🏻 https://reurl.cc/jD1lbD #朵茉麗蔻 #剛剛好的半份量 #新客首購禮 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-06-05",
+          "videoLength": 1990656
+        },
+        {
+          "id": "4SibFdVCkRwOTM9FmfjvN0",
+          "title": "EP163 嗚嗚...早上人還好好的..嗚嗚嗚",
+          "description": "本集與『兒福聯盟』公益合作  『愛Ｔ恤』是兒福聯盟是**兒福聯盟 **每年５～７月都會推出的台灣製T-shir  現在只要買一件『愛Ｔ恤』送價值350元的愛心折抵券餐券 乙張！ 5/31日前認購還有機會抽中Bii畢書盡親筆簽名拍立得呦！！  囝仔Yina👉🏻 https://pse.is/4ycxhd #兒福聯盟 ＃囝仔Yina ＃一人衣愛助兒盟 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-05-29",
+          "videoLength": 2500728
+        },
+        {
+          "id": "1Z0KA0izqOrG1lDJ3YtZSu",
+          "title": "EP162 要帶進墳墓的一集！？",
+          "description": "這個奇蹟般的更新，配合意外的折扣！ 到好味小姐的好味商店 https://www.ladyflavor.com/ 或營養師品瑄官網 https://pinky.ladyflavor.com/ 輸入『LSDGC523』 (臨時的折扣523) 無條件直接折60元喔～～～ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-05-22",
+          "videoLength": 2140896
+        },
+        {
+          "id": "1yqdIl3fc2Cd51YN4xxvXS",
+          "title": "EP161 一回生二回熟三回卡到頭",
+          "description": "這個標題直接飄進腦海 ㊗️微微奶茶送纖纖，買一送一㊗️ 贊助播出 ➡️ https://pk.ladyflavor.com/6ELu2 感覺快要送完啦！！！ 大家趕快去看看吧！！！ -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-05-15",
+          "videoLength": 2364888
+        },
+        {
+          "id": "4FCSEjOak0F3g7Hdk3IqVS",
+          "title": "EP160 按摩孤狼與戰鬥迎娶與天堂鼻屎",
+          "description": "🎉好味鮮食營養膏上架啦🎉 快去看看👉 https://lf.ladyflavor.com/3A6DK -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-05-08",
+          "videoLength": 3940920
+        },
+        {
+          "id": "1Qmy0K1Pl8e1yrvCGm2XEc",
+          "title": "EP159 你是不是生理期啊？",
+          "description": "🥰歡慶母親節，芳茲滴雞精限時優惠比官網更便宜🥰 5/2-6/1 🔸全館免運 🔸 https://fun-s.cc/好味小姐專屬優惠  你也正面對人生備孕、懷孕、工作的種種挑戰? 日月養生滴雞精 ✅各大媒體口碑推薦香醇無腥味 ✅國內外各大標章認證營養精華 ✅嚴選具產銷履歷高規格食材，產地直送、新鮮滴煉 ✅真正不加一滴水的香醇美味  每天只要3-5分鐘，輕鬆照顧自己和心愛的人～  #芳茲生技#芳茲滴雞精#常溫滴雞精 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+          "date": "2023-05-01",
+          "videoLength": 4343736
         }
       ]
     },
     {
-      "id": 2,
-      "title": "The Little Prince",
-      "type": "Ferrari",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/979f/9988/5cda25d6699dc018a47ba0af45341a28?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FOJizmfNrcQpI2P1fqkuujn4jXuVgfx~PmuvGHBFR-J0AdxvlBeTcDbLkR9l78NDxbyaYcPuutJ67FSnp0XlySVnpSVEef1yhkOYlswge96fTq7Qg~uZ7o22iGKjIYnVMKVN5ZhH-RTS9l-XcbyTVGBxCCb2vZOd32mYYva9q2TEnwW2Fv7TZjDncS5RhiE~9HhsGeWrDSBWfY78ddMbR6sOAGq5tIRQGviV0M3QwdOQyQ0~24YPH3C64eXLmubDV3EGjArL6Ez4Pc~tLg6NZnixLHgoRpXi3HDOsz09rrL-lOH-SAeno4pm3Pg5KCtXoNLLV5ziV1Dn6UMmcDoIBw__",
-      "active": false,
-      "videoList": []
+      "title": "台灣通勤第一品牌",
+      "publisher": "台灣通勤第一品牌",
+      "description": "各類合作請丟commuteforme@gmail.com，目前臉書收件匣被各式聊天仔灌爆中。短期目標更動為錄音清晰音量宜人既往追究。本節目各大平台均有上架，感謝支持。",
+      "imageUrl": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+      "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+      "date": "2024-04-29",
+      "videoLength": 3135891,
+      "episodes": [
+        {
+          "id": "1mR2c18MTTDGrLHiFNmeIR",
+          "title": "EP367 我有欠你一個Type-C喔",
+          "description": "本集節目由【extra®無糖口香糖】贊助播出  腦中有無解的煩惱和困擾嗎？ 問問潛意識，也許有答案！ 跟著extra ®自嚼一下，喚醒你的潛意識 快來看看你的自嚼chew語錄是什麼！ https://reurl.cc/dLR386    extra ®10粒裝 新上市 輕巧好攜，隨時嚼出你的好狀態 即日起至5/14，於7-Eleven購買extra®10粒條裝口香糖單件只要17元！    快到extra TW粉專了解更多抽獎活動細節，讓我們一起嚼出自己的好狀態！    #extra® #益齒達 #嚼出你的好狀態  #自嚼chew語錄   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-04-29",
+          "videoLength": 3135891
+        },
+        {
+          "id": "2G2X1oxJO5rCgl8PJk2xmZ",
+          "title": "EP366 是不是沒看過喬瑟夫高登李維",
+          "description": "本集節目由【樂天Kobo 電子書】贊助播出 Kobo Libra Colour、Clara Colour 及 Clara BW 即日起 ~ 4/30 預購倒數中！ 🎁 預購購機登錄即贈 $800 購書金及 Kobo Colour 限量貼紙（共兩款隨機出貨） 立即入手：https://lihistatus.com/QATi8  🧧登錄通關碼 「台通」加碼送 $200購書金 ※於樂天市場、PChome 預購者，請於購書金表單中「通關碼備註」欄位填寫通關碼。誠品線上或門市預購者，請於通關碼登錄表單填寫。 *活動詳情請見上述連結說明，商品預計4/30起依序出貨    ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-04-26",
+          "videoLength": 3133110
+        },
+        {
+          "id": "1Z27tTf5cP11lmoE7MySj6",
+          "title": "EP365 這樣我算是大人了吧 ft.烏烏醫師",
+          "description": "本集節目由【NordVPN】贊助播出  現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買獨家優惠方案享贈送4個月 另有30天試用期，可以隨時取消  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-04-21",
+          "videoLength": 4672863
+        },
+        {
+          "id": "3C10cDOcJsTqjE3H4kpuRX",
+          "title": "EP364 三招教你拍出戀愛感",
+          "description": "本集節目由【光茵樂活 機能銀耳飲】贊助播出  超挺！任選銀耳1盒就免運！ (本島) 👉 https://nanobiolight.us/台通專屬  光茵樂活的銀耳可厲害了🤩由國師 #唐綺陽 超強代言⭐  每一口都吃得到整朵鮮銀耳，不只有料！還有內涵😍😍😍  （偷偷跟你們說 唐老師也最愛膠原奶茶鮮銀耳！）   \\🦐 這麼猛的銀耳，母親節肯定要讓大家安心蝦挺一波🦐 /  📍 市場唯一添加機能銀耳飲讓你喝得更有感！  📍 環控栽培銀耳 營養價值高於市售銀耳70%  📍 屏棄透明包裝堅持選用安全性最高的鐵罐包裝  📍 獨家特殊塗層絕無傳統鐵罐味  📍 即開即飲常溫保存，不佔冰箱空間  《母親節專屬優惠❤️》    🎁台通新朋友專屬 熱門綜合機能銀耳組（双纖、纖潤、益菌）三種口味一次滿足！  🎁新朋友激推！任選銀耳1盒就免運(本島)   🎁老朋友全品項任選第2箱半價    🎁聽眾專屬優惠：5/12前結帳滿$1500輸入折扣碼：「台通」再贈3罐誠誠最愛の膠原奶茶鮮銀耳(市值$450)➡️ https://nanobiolight.us/台通專屬     #光茵樂活 #有機鮮銀耳 #母親節禮盒  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-04-18",
+          "videoLength": 3161029
+        },
+        {
+          "id": "6woojTDjWHaFcB3MUp5pqQ",
+          "title": "EP363 演員的自我修養",
+          "description": "  本集節目由【全家人的健康守護者💪芳茲滴雞精】贊助播出 陪你疼惜媽媽無私的付出❤️🎉芳茲滴雞精回饋聽眾朋友 「雞魚饗宴母親節限定禮盒」👉https://fun-s.cc/台灣通勤第一品牌專屬優惠63折起  滿額還有價值上萬超值好禮，千萬別錯過！ 優惠只到：2024/5/13 23:59 媽媽總掛在嘴上：「以前少女時期，我也是...」 卻在結婚後為了給小孩最好 自己卻捨不得吃好用好 有時甚至為了家庭犧牲了夢想 芳茲「雞魚饗宴母親節限定禮盒」 讓媽媽再次感受被疼惜的感覺 日月養生滴雞精 ✅業界唯一榮獲七項大獎 ✅全雞新鮮滴煉、真正不加一滴水的精華 為媽媽補充營養無負擔 日月養生滴魚精 ✅百位護理師及骨科醫師推薦 ✅獨家添加深海魚軟骨素 守護媽媽關鍵行動力 👍可常溫保存、不佔冰箱空間 每天只要3-5分鐘，隔水加熱就能補充 搭配匠人手工打造「天目釉品茗杯」送禮質感再升級 2024母親節限定「雞魚饗宴禮盒」陪你輕鬆照顧媽咪 讓他用健康去完成更多想做的事❤️！ ＝＝母親節詳細優惠資訊＝＝ 🌷4/8-4/21 母親節早鳥活動 滿 3,800  送 三風製麵 見面幸福麵線 1 包(200 公克/2 人份) 滿 6,800  抽 日本製虎牌 多功能電子鍋(價值$20,000) 滿 13,888 送 NHB游離型金盞花葉黃素膠囊1 瓶(價值$1,580) 🌷 4/22-5/12 母親節 滿 3,800  送三風製麵 見面幸福麵線 1 包(200 公克/2 人份) 滿 8,800  抽 日本製虎牌多功能電子鍋(價值$20,000) 滿 15,888  送 NHB游離型金盞花葉黃素膠囊 1 瓶(價值$1,580) *日本製虎牌 IH 高火力多功能電子鍋兩檔活動共抽一台 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-04-13",
+          "videoLength": 3354934
+        },
+        {
+          "id": "5yKbbintUOaEDiVtAm4dvL",
+          "title": "EP362 是小阿姨也是大姐姐 ft.徐譽庭",
+          "description": "本集節目由【NordVPN】贊助播出  現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買獨家優惠方案享贈送4個月 另有30天試用期，可以隨時取消   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-04-07",
+          "videoLength": 4878595
+        },
+        {
+          "id": "1ij9Mwbtl5CGtBevc4GghK",
+          "title": "EP361 希望大家平安",
+          "description": "本集節目由【 TGI FRIDAYS Taiwan  】贊助播出 星期五就是要吃 TGI FRIDAYS啊！ TGIFRIDAYSTaiwan 首次聯名台通挺社畜！ 一定蝦挺！哪次不挺！ 3/26~4/15聯名期間還享以下兩大優惠 1. 聯名調飲買一送一 2. 任點三套「挺社畜組合餐」即贈南美醬醬好半雞 ※活動詳情以餐廳公告為準。 聯名菜單詳情 https://reurl.cc/A4Vgyd  立即訂位 https://reurl.cc/prlm9l  #tgifridays #TGIF挺社畜 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-04-03",
+          "videoLength": 3363673
+        },
+        {
+          "id": "1FtnaSdoCMuJKdQqgQ1Qs0",
+          "title": "EP360 火車叨位去",
+          "description": "本集節目由【Seagate 希捷科技】贊助播出 關於硬碟，多的是你不知道的事… 🦐 硬碟是用先進的奈米科技製成，磁頭與碟片只距離 5 萬分之一的頭髮徑長 🦐 硬碟在高速運轉時，磁頭和碟片之間就像時速破千的波音 747 與地面保持 10 公分距離 🦐 包含 Google、Facebook、iCloud 等全球資料中心，高達 90% 檔案存在硬碟中 🦐 選擇長達 10 年以上的儲存設備，你還敢用拆封整新過的二手硬碟嗎？ 為什麼大家都用全球最大硬碟品牌 #Seagate #希捷 ？ ✅ 出廠前通過 160 項嚴格的品質測試，長時間運轉也能安心無憂 ✅ 市面上唯一！提供保固+資料救援服務，為資料加一道保險 ✅ 包含內、外接硬碟與 SSD 等各式容量商品，滿足多元需求！ ✅ 擁有最領先的 Mozaic 3+ 技術，讓單一硬碟突破 30TB 容量 Seagate 揭櫫了大容量儲存硬碟的全新世代，重新定義未來讀寫 買硬碟趁這波專屬優惠！輩分很重要的世界備份日 💚 指定連結限時９折+最高現折 500 元！內外接硬碟一應俱全！ 💚 指定容量登錄送肯德基美食兌換券、抽 120 多項奢華豪禮！ momo購物 🛒 https://reurl.cc/370aMj  蝦皮購物 🛒 https://reurl.cc/13dYKD  PChome 🛒 https://reurl.cc/095jWA  登錄兌換 👉 https://reurl.cc/Z90G2a  登錄抽獎 👉 https://reurl.cc/370akM ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-03-28",
+          "videoLength": 3111459
+        },
+        {
+          "id": "550Ts17DzTTRVsGOI9RtRB",
+          "title": "EP359 UNCLE DOG",
+          "description": "本集節目由【國泰產險】贊助播出 國泰產險推出期間限定日本專屬「賞櫻限定型」海外旅遊險方案，給你最超值的旅遊保障。 加入國泰產險LINE官方帳號還能即時查詢保單，需要理賠也能馬上申請，非常方便！ 賞櫻選日本、旅遊險選國泰產險就對了！ 更多詳細說明可至國泰產險官方網站看更多：https://cathayins.tw/vVGQRgWdwk  ▼台通粉絲專屬活動！線上投保國泰產險海外旅遊險【賞櫻限定型】方案加碼抽好禮▼ 1.於2024/3/15~2024/5/15期間，透過專屬連結並輸入台通粉絲專屬活動碼【COMMUTE】成功線上投保海外旅遊險【賞櫻限定型】方案，就抽任天堂SWITCH電力加強版OLED主機一台。 2.國泰產險將於 2024/7/1 前抽出中獎者，並在國泰產險官方網站公布中獎名單。 3.活動專屬連結這邊走：https://cathayins.tw/vVGQRgWdwk  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-03-24",
+          "videoLength": 3039641
+        },
+        {
+          "id": "43POcXmB2w4bWvWTxmYCc1",
+          "title": "EP358 看什麼新聞",
+          "description": "本集節目由【HafH 赫夫】贊助播出  \\ HafH 赫夫 邀請你加入我們的行列 /  來自日本，HafH 赫夫™ 是世界最大的訂閱制旅宿服務 ✧ 嚴選世界 2000 間優質的旅宿，給你更穩定且合理的價格 ✧ ◍ 查詢當下 90 天內不分平假日均一價 → 訂完不用再對房價劇烈浮動而提心吊膽，把時間留給更需要的準備事項 ♡ ◍ 直到前一天都可以免費取消 → 免費取消的猶豫天數直接拉到最低！讓意外出現造成影響的風險降到最低 ♡ ◍ 三個月後自動成為 VIP 筆筆訂房 95 折，最高筆筆 9 折 → 要出門前才訂閱就太慢了，當然要把握好可以拿折扣的機制 ♡ ＼赫新春！即日起到3/31／ ❀ 使用 台灣通勤第一品牌 專屬邀請連結 https://supr.link/LOOSi ，完成付費註冊好友邀請禮遇翻倍送你 200 HafH Coins！（活動結束過後恢復 100 HafH Coins） ＼邀請活動再加碼／ ✸ 既存會員 → 感謝你一直以來的支持，同時間我們正在統計好友邀請競賽，邀請訂閱成功最多的前三名將分別依序獲得 1,000/800/500 的 HafH Coins 作為獎勵！現在就去邀請親朋好友一起加入拿新春好禮！ ✸ 全新會員  → 把握機會使用 台灣通勤第一品牌 專屬邀請連結完成付費註冊後，就有機會獲得額外的 500 HafH Coins 新手好禮包！（隨機抽選三名） ✸ HafH 保留隨時修改、變更、暫停或終止本活動內容之權利 ❀ 詳情請見邀請頁面的活動注意事項 ❀ 關於 HafH VIP：https://supr.link/QdcRP  ❀ HafH 赫夫官網：https://supr.link/8zRNZ  #HafH #HafHTaiwan #HafH赫夫 #赫夫 #HafHCoins #HafH赫新春 #HafH的交換旅行 #讓旅行成為我們的日常 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-03-21",
+          "videoLength": 3419476
+        },
+        {
+          "id": "1mmLtDMgz5hAsdEzb6ov7W",
+          "title": "EP357 力量，屬於你們！",
+          "description": "本集節目由【YODEE 優迪】與【L’Ange 棉之境】贊助播出！ 「L’Ange 棉之境」有成人感的莫蘭迪色系實在太好看啦！而且他們的好品質顛覆你對浴巾的想像！ 我們最愛他們的純棉紗布巾系列強勁的吸水力，洗完澡身體和頭髮上的水份能快速被吸乾，而且透氣又易乾，細菌不易滋生，就不易有臭霉味，觸感還越洗越柔軟，真的一用就會把家中毛巾類產品換成他們，全家大小都適合！ ✔️「抗菌包裝」使用前不需清洗，隨開即用 ✔️ 不含人造纖維、柔軟劑、甲醛、螢光劑等物質 ✔️ 通過SGS多項安全檢測 ✔️ 3種層數厚度、多種尺寸、用途超廣！ / ★新品登場 → 【嬰兒純棉柔濕巾】 除了採用EDI超純水之外，選擇100%天然純棉材質，並捨棄不必要的成分，遵循著\"純淨簡單\"的原則，讓大家都能擁有最細膩的呵護！ 點擊下方連結，前往台通聽眾專屬秘密限時優惠，滿額加贈超實用的9層紗布小方巾，把握機會唷！ 限時購買連結👉 https://yodee.tw/台通聽眾x棉之境   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-03-16",
+          "videoLength": 3140497
+        },
+        {
+          "id": "6KvGa15KHxAJ8HYntTt2zq",
+          "title": "EP356 遊樂園之星",
+          "description": "本集節目由【國家兩廳院】贊助播出 完售加開 .ᐟ.ᐟ  臺日編導、演員攜手合作感官異色舞臺劇 莎士比亞的妹妹們的劇團✕庭劇團PENINO《誠實浴池》 𝟰.𝟮𝟲 — 𝟰.𝟮𝟴 國家戲劇院 最後入浴機會 🛀 https://lihi1.me/1i31C    ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-03-12",
+          "videoLength": 3053477
+        },
+        {
+          "id": "0K3EKWAb3HdxgNfzb7HPXa",
+          "title": "EP355 說到這個",
+          "description": "本集節目由【NordVPN】贊助播出  現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案 `享贈送4個月及額外優惠好康` 另有30天試用期，可以隨時取消 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-03-07",
+          "videoLength": 3140030
+        },
+        {
+          "id": "2mCIKyCUPBXoHWCV929uRW",
+          "title": "EP354 努力的天才 ft. 郭泓志",
+          "description": "  本集節目由【Next Master】贊助播出 傳奇「不死鳥」郭泓志親自設計教學 郭泓志的大聯盟棒球課｜從投打訓練到自我體能強化🔥早鳥優惠中🔥 🔗 https://www.pressplay.cc/link/s/432E72F8  結帳輸入【COMMUTE56】再省150元！ 教你從基礎到進階，自主加強肌力、體能、投打技術 還有郭董旅外、從受傷到東山再起的心路歷程和面對挑戰的心法 除了提升運動表現，也來學習世界級選手的奮戰精神！   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-03-01",
+          "videoLength": 4702462
+        },
+        {
+          "id": "7m1HNKCbWwk2UcUEUhxZko",
+          "title": "EP353 怎麼可能拆完裝得回去啦",
+          "description": "本集節目由【NordVPN】贊助播出 現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案 `享贈送4個月及額外優惠好康` 另有30天試用期，可以隨時取消   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-02-28",
+          "videoLength": 3007741
+        },
+        {
+          "id": "1ZtkrRV3lommMuThjRIUoR",
+          "title": "EP352 不熟的同學派對",
+          "description": "  本集節目由【星展Everyday威士白金卡(一卡通)】贊助播出 台灣通勤第一品牌加碼專屬禮，Airpods3好禮抽獎方式： 點選連結：https://forms.gle/jiMqKRM1mPBkobxt9  Everyday威士白金卡特色及新戶首刷好禮： 新戶首刷享 NT$1,688 現金回饋等好禮四選一 活動期間：即日起～2024/2/29 https://www.dbs.com.tw/personal-zh/cards/everyday/index.html  完整的產品權益、活動期間與注意事項，請詳星展官網說明 新戶定義： 限申請人申請當日之前180天內未持有本行任一信用卡正卡 信用卡正卡包含符合資格的原花旗信用卡 星展好友大募集活動 活動期間：即日起～2024/02/29 完整的注意事項請詳星展官網說明： https://www.dbs.com.tw/personal-zh/cards/MGM/index.html  以上為優惠資訊分享，不代表星展銀行立場。 謹慎理財、信用至上 循環信用利率區間：5.99%~15% 循環信用利率基準日：民國112年6月28日 其他費用請上星展官網 www.dbs.com.tw 查詢詳情 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-02-25",
+          "videoLength": 3233011
+        },
+        {
+          "id": "5kQrPM40jpRGyeCxvoY2Lz",
+          "title": "EP351 計畫趕不上變化",
+          "description": "本集節目由【明華園總團】贊助播出 明華園總團今年跟綠光劇團有許多深度合作 👏👏雙強聯名👏👏 明華園總團《散戲》X綠光劇團《押解》 兩個劇團同一時間都在臺北連演兩週，只要2+2搭配購買，就有最好的優惠折扣聯名好康，敬請期待！ 購買《押解》或《散戲》任一齣戲輸入臺通專屬折扣代碼「commute9」享9折優惠 🔖 綠光劇團x明華園總團 雙強聯名 🔖 2.19 – 4.19 12:00 台灣經典文學《押解》、《散戲》2+2套票優惠8折開賣（※限前三高票價，不限地區場次，《押解》、《散戲》各2張，共4張票）👉 https://reurl.cc/E4WvO0  《散戲》 一部讓人笑到流淚、再流淚到笑 的感人劇作。明華園總團X編導黃致凱攜手打造洪醒夫同名短篇小說《散戲》的文學跨界作品，以喜劇元素重塑原著，藉由台上台下虛實交錯的戲中戲、一次比一次樓歪的「陳世美與秦香蓮」荒謬演出，帶出民國五、六○年代，台灣歌仔戲受到影視產業衝擊，從最風光的內台戲院流浪野台，在這個表演者與經營者都措手不及的年代，台上台下共同交織了一齣既悲催又可笑的時代大戲。 🎫購票連結 https://s.opentix.life/p/P311a3960  《押解 - 菜鳥警察 vs 老扒手》 時隔9年後火車上再度狹路相逢？！ 吳念真最有共鳴的原著之一，一節車廂就是一整個社會縮影！ 一段臺鐵平快火車的押解之旅，各路人馬各懷鬼胎。老扒手為什麼非逃不可？是為了辛苦拉拔他長大的阿嬤、難忘的初戀情人，還是義氣值千金的弟兄？菜鳥警察在情理法間猶豫徘徊，該無私執法完成任務，還是要暗地偷偷幫助老扒手？ 🎫購票連結 https://gdn.tw/THT   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-02-21",
+          "videoLength": 3004474
+        },
+        {
+          "id": "1XYCGtC90r6Git1jJ20Dfw",
+          "title": "EP350 這樣力道OK嗎",
+          "description": "本集節目由【Zenyum綻雅】贊助播出 Zenyum綻雅來自新加坡，除了專業之外，也是最為用戶著想的 隱形牙套 品牌  ✨Zenyum的隱形牙套方案分為三種方案，每一種方案都有固定均一價格 ✨Zenyum有超過250位的國考認證醫師，每一位用戶都由醫師個別設計專屬治療計畫 ✨Zenyum App隨時紀錄、提醒你的療程進度，回診時間也幫你記得一清二楚 ✨填寫基本資料及上傳照片！即可讓合作醫師初步評估適不適合使用隱形牙套 📢 即日起至3/31 使用下方【台通】專屬連結，進行免費線上評估，即可無條件獲得1,000元療程折扣！完成品牌社群互動分享小任務再享優惠，疊加折扣最高13,000元！ 五分鐘免費線上評估🔗 https://bit.ly/3urJ266   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-02-17",
+          "videoLength": 3125408
+        },
+        {
+          "id": "1klVllIj3CWxqrZ18ni9m9",
+          "title": "EP349 今年新氣象",
+          "description": "本集節目由【NordVPN】贊助播出  現在NordVPN 有週年優惠只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案還免費贈送四個月 另有30天試用期，可以隨時取消   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-02-14",
+          "videoLength": 3007209
+        },
+        {
+          "id": "00RVVvqSZNYb2eORH29uyx",
+          "title": "EP348 疑難雜症請找我 ft. 火鳥",
+          "description": "本集節目由【HARU】贊助播出  龍吼立啦！Let's HARU~~~  REJU大麻重生草舒緩按摩精油 晶透如羽毛，卻悄悄地在肌底漫開炙熱挑逗。 密羅木的清爽交織與麝香的深層 是甜美也是溫柔，內斂而性感 調和9款天然精油與5款天然植物基底優油獨家配方，  無論是伴侶的甜蜜時光，或是自己的me time～ 都將不再受意識束縛，只需沉浸在身心靈的滋潤… 卸下緊繃防備，任憑情慾隨指尖恣意流淌 自在抽離及綻放～～～！！！  -前調：甜橙、萊姆、茉莉 -中調：蜜桃、辛香料 -後調：廣藿香、麝香  2024 祝大家幸福滿液 合不龍嘴❤️ - 【台通聽眾專屬優惠】 3/14前 *輸入折扣碼「iwantulong」享全館原價商品九折優惠，即贈INDULGE大麻煙醯胺熱感煥白潤滑液隨身片x1 *折後滿千再贈 保險套四入(款式隨機) ，並享官網越南小法國來回機票等抽獎資格！ 這裡下單>>> https://letsharu.cc/wMYDd  情人禮盒在這裡>>> https://letsharu.cc/Yz0Rp  ***2/7~2/18僅提供超取出貨，2/19恢復正常出貨喔*** - 偷偷跟你說，點進下單連結還能發現更多好玩的喔！ 追蹤HARU官方IG @letsharu 還有更多玩法分享喔～ - 現在登入APP還可獲得50元購物金 下載網址： https://bmai.cc/3g77r6  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-02-06",
+          "videoLength": 5584303
+        },
+        {
+          "id": "2eLTp2URYXQY8aW5F46wo3",
+          "title": "EP347 問就是沒有",
+          "description": "本集節目由【共享機車 WeMo Scooter】贊助播出  ＼龍年好運，騎來有自！／ 有騎有保庇 🐲 https://wemoscooter.onelink.me/a864/9bqx6o5b   ⠀ 台灣通勤第一品牌 #龍年限定塗裝 正式上路 騎了讓你 2024 好運不斷、紅包領到手軟 ?! 這次三大主持人合體，為你加持新年強運 😍  ⠀ 🛵台灣通勤第一品牌 = 共享機車 WeMo Scooter 🛵 ⍟ 獨家台通聯名車款，騎到賺到、騎到帥到 ;) ⍟ 24 小時隨租隨還 #免預訂，一揪就走！ ⍟ 免押證件、免鑰匙，繁瑣流程通通沒有！  ⠀ 除此之外！台通親自監修的聯名好禮等你拿 現在使用優惠碼完成訂閱即贈對應好禮 【WEMO94台灣通勤第一品牌季】享季方案 139 元 #贈提袋 【WEMO94台灣通勤第一品牌年】享年方案 499 元 #贈提袋與抹布  ⠀ 新戶體驗輸入【台灣通勤第一品牌】即享 20 分鐘免費騎乘 首次訂閱 WeMo PASS 再享 #全方案半價，月月享 3 趟免費！ 想嚐鮮訂閱也可以輸入【WEMO94台灣通勤第一品牌】享月方案 49 元 台通粉不騎不行ㄅ？>>> https://wemoscooter.onelink.me/a864/9bqx6o5b   ⠀ ✶ 請勿騎 WeMo 燒胎，謝謝。✶ WeMo 本身為機車服務，註冊需請您提供身分證件以利查核駕駛資格。✶ WeMo 服務縣市主要為雙北及高雄，實際營運範圍請以 APP 顯示為準。 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-02-02",
+          "videoLength": 3002160
+        },
+        {
+          "id": "0Tslm8atsCSze45JnlXvRP",
+          "title": "EP346 解答之書",
+          "description": "  本集節目由【大武山牧場】贊助播出 來自五星級 #大武山牧場 的 #AA級鮮蛋，用一顆完美的蛋帶給人們完美的一天🍳 以自家牧場100%鮮蛋製成，將對雞蛋的用心傳遞在充滿幸福的甜點中✨ 蛋入蛋捲，鬆脆一捲入口！濃厚雞蛋布丁，幸福一口入魂！ 🎁大武山牧場官網手刀下單：https://dan-loo.tw/commuteforme  🧧蛋捲優惠：2/4前消費輸入【commute88】（全小寫）蛋捲產品不限件數即享 88 折優惠！ 🧧布丁優惠：2/14前消費輸入【commute92】（全小寫）布丁產品不限件數即享 92 折優惠！ #大武山牧場 #AA級鮮蛋 #蛋入蛋捲  #濃厚雞蛋布丁   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-31",
+          "videoLength": 3057974
+        },
+        {
+          "id": "0HbZSCBRf3SrNIdcDfqe4z",
+          "title": "EP345 難以啟齒",
+          "description": "本集節目由【New Balance】贊助播出  【New Balance 實體通路活動】 好運來店禮：2024/1/18 至 2024/2/14，凡在New Balance 實體據點憑消費，即贈龍年限定紅包袋一組。 好禮第一重：單筆消費滿NT$5,800 現抵 NT$500 好禮第二重：單筆消費滿NT$6,800 即可獲得 「NB兩用抱枕毯」 好禮第三重：凡至台北西門店、台中三民店消費任一雙NB鞋款，即可體驗造型拍貼機乙次 *數量有限、送完為止 *NB GREY 形象總店 和 NB 1906 潮流形象店之活動，請以FB官方粉絲團與現場門市公告為主 這次的1906R還有適合新年的喜氣紅色，還有男女都百搭的藍色   【New Balance 官網活動】 2024/1/18 至 2024/2/14，於New Balance官網全館消費滿NT$4,500現抵NT$450 NB官網這裡逛 >> https://reurl.cc/N4a9A5    ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-27",
+          "videoLength": 3000518
+        },
+        {
+          "id": "5quQuH5FPnDgslo8RVcq92",
+          "title": "EP344 三選一",
+          "description": "  本集節目由【文化部影視及流行音樂產業局】贊助播出 由文化部影視及流行音樂產業局主辦的「流行音樂拓展東南亞市場計畫」，月底將遠征東南亞華語最大音樂市場，馬來西亞！  臺灣嘻哈大軍一字排開都是時下炙手可熱的饒舌歌手，包含多次入圍金音創作獎的國蛋、《大嘻哈時代2》冠軍阿跨面、亞軍Gummy B以及wannasleep所組成的夜間限定，還有蛋頭、西屯純愛組、李紅、BAD STRAIT BOYZ、前TPE48成員林潔心等。 將在1/28參加由臺灣浮現音樂、馬來西亞嘻哈品牌「萬發」、日本場館品牌Zepp跨國共同主辦的活動【萬發巡演X浮現祭：攏總發啊！】演出。 除了音樂人參加馬來西亞當地的現場演出之外，同時也集結臺灣流行音樂相關產業業者組成商務團，前進馬來西亞，與當地唱片公司、音樂人、版權業者、策展單位等交流媒合，探索流行音樂國際合作更多可能性！ 詳情請見Taiwan Beats 臉書 https://www.facebook.com/taiwanbeats/   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-25",
+          "videoLength": 3154814
+        },
+        {
+          "id": "6xvebW574Z7F6MsEF8w2wW",
+          "title": "EP343 家 ft.阿跨面",
+          "description": "本集節目由【NordVPN】贊助播出 現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案還免費贈送四個月 另有30天試用期，可以隨時取消 #NordVPN   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-21",
+          "videoLength": 4193881
+        },
+        {
+          "id": "0QCDh2HeQMGIo44whvFdkF",
+          "title": "EP342 尊重、友善、包容！",
+          "description": " 本集節目由【宜得利家居】贊助播出   本節目提及櫥櫃系列名稱：RESUME、IM301、LIGARE  更多櫥櫃介紹 ➥ https://bit.ly/423PCfk   ❮ 龍來宜得利  #春節 𝗦𝗔𝗟𝗘 ❯   瞭解詳情 ➥ https://bit.ly/3HhOGdL   ⫽ 贈   滿一千送 100 點，滿二千送 200 點，以此類推，   贈點無上限 #1點抵1元     ⫽ 抽   滿千再抽萬元旅遊兌換券或會員點數   近 200 個獎項等你拿     ‣ 多款家具家飾品 On Sale  ‣ 廢棄下樓費免費實施中     活動期間：1/12 - 2/28   *限期點數使用期間：2/29 – 4/23*   #日本國民家居品牌  #宜得利春節SALE滿額點數加倍送無上限  #宜得利春節SALE滿額抽萬元旅遊兌換券  #宜得利NWARM吸濕發熱系列人氣發售中  #宜得利APP會員募集中1點可折抵1元  #ShareNitori   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-18",
+          "videoLength": 3247967
+        },
+        {
+          "id": "70lTRuOl0wsdtJH7BUD8O4",
+          "title": "EP341 家學淵源",
+          "description": "本集節目由【眠豆腐】贊助播出 眠⾖腐的清潔理念⼀向都是：「床墊／沙發，請直接清潔就可以。」搭配防水防蟎保潔墊與床包，⽇常換洗，每隔一陣子，⽤無刷⽑的吸塵器清潔即可。 BUT，若你想要極致的深層清潔服務：如真空抽洗設備，不傷布料與環境的天然酵素洗劑、以及獨家調製舒眠精油⋯各位眠友，為您介紹——眠到府！ 眠到府使⽤真空抽洗機，把添加天然酵素清潔劑的⽔分打進床墊與沙發，再⽤強勁吸⼒抽出，再搭配高速拍打，有效深度達 15cm，正反面施作可穿透整張眠豆腐！ 目前服務範圍為北北基桃，台中市，高雄市。詳情請洽官網或私訊粉專小編。  https://link.sleepytofu.com/commuteXcleanservice     ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-11",
+          "videoLength": 3067862
+        },
+        {
+          "id": "3wr4h6ij9iVVyoIcvhr2jk",
+          "title": "EP340 有要吃雞腿嗎",
+          "description": "本集節目由【谷溜谷溜】贊助播出 您的最佳伴手禮夥伴谷溜谷溜來嚕 為您「龍」重介紹本次春節禮盒 《錦鯉躍龍門》好運吉龍來 ▸ https://guliuguliu.tw/IJK02/20240103    ✦最健康：100%食材原型製作 ✦超堅持：零防腐劑、萃取液、加工品 ✦很方便：即開即飲滿足每個時刻 ✦易存放：常溫保存18個月 ✦不設限：送長輩、客戶、孕婦、閨蜜都ㄟ通 ✦多口味：8款家常飲品白木耳、黑木耳、純米湯通通有 ✦很真實：口感沒在騙真 #井裡月 白木耳該有的濃稠都是天然 ✦送禮佳：兩種入數禮盒，6瓶、8瓶可供選擇 健康值滿點，高纖高營養低熱量 過年送禮尚適合，喝過的都說真的會成主顧 貼心提醒，下單時千萬不要猶豫 即有可能下一秒「完售」，因為限量禮盒真的很、有、限 • 電話洽詢：0800529696 • 線上客服：谷溜粉絲團、LINE @guliuguliu   這次還有新品 #倒梅漢方烏梅汁 ，天然漢方中藥按照古法文火熬煮 酸甜清香，喉韻回甘又清爽配火鍋天生一對！ 不誇張，男同事天天喝一瓶解渴解膩超級愛喝 過年與跟親友們一起乾杯，趕走倒梅事迎好運 ❗️若有需要新年賀卡，可代寫祝福語，下單時請備註內容+張數 （張數最多提供數為購買數量） 限定版春節禮盒數量非常有限，年年真的搶到翻掉 出貨當下若無貨則會改以其他款式出貨 提早下訂最保險： https://guliuguliu.tw/IJK02/20240103  【加入官網會員】可累積點數，下次購買一點折抵一元！   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-06",
+          "videoLength": 3155048
+        },
+        {
+          "id": "7lURl6iGu9lwoJLgEWO29T",
+          "title": "EP339 刻在我心底的名字",
+          "description": "本集節目由【全家人的健康守護者💪芳茲滴雞精】贊助播出  今年新春送禮，一出手就有尊榮風采 🎉芳茲滴雞精回饋聽眾朋友  全台首創「黑鑽松露滴雞精禮盒」👉 https://fun-s.cc/台灣通勤第一品牌專屬優惠72折起  滿額不只有多項超值好禮，還有機會把黃金999金條帶回家！ 優惠只到：2024/2/6 23:59  你也是松露愛好者嗎？松露燉飯、松露薯條都愛不釋手？  滴雞精界的愛馬仕 #芳茲日月養生滴雞精 新鮮滴煉不加一滴水的香醇營養  以完美比例融合 #義大利黑松露 昇華新鮮松露的優雅高貴香氣 高奢滋補的口味 給味蕾全新想像  👍可常溫保存、不佔冰箱空間 每天只要3-5分鐘，隔水加熱就能補充  🥣總支鏈胺基酸、蛋白質、膠原蛋白、總多酚、鋅等多元營養素 2024新春獻上 全台唯一「黑鑽松露滴雞精」 讓重要的人享受尊榮級的營養！  🧧12/26-1/14 新春早鳥 下單送平安祝福紅包袋(5入/包)-限量 滿$4,000 送松露滴雞精1包 滿$6,800 抽龍光煥發金條1個 滿$12,000 送滴魚精2包  🐲 1/15-2/14 新春獻禮 下單送平安祝福紅包袋(5入/包)-限量 滿$4,200 送滴魚精1包 滿$7,800 抽龍光煥發金條1個 滿$12,000 送松露滴雞精2包   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2024-01-03",
+          "videoLength": 3073505
+        },
+        {
+          "id": "6gxLvoedizomvKY1zZAMmQ",
+          "title": "EP338 本集有跨年倒數......",
+          "description": "本集 51:20 時倒數到一，今晚 23:08:40 按下去剛剛好。  本集節目由【添糖】贊助播出 現在起至112/1/12專屬台通的指定優惠： 添糖官網👉 https://lihi.cc/aLRE3  🦐挺一波 三重送🎁 1.第一重：輸入『 c95 』即享有全系列產品95折優惠。 2.第二重：前20位下單龍年限定禮盒的朋友，再送品牌收納盤乙只（價值$199元）。 3.第三重：凡輸入折扣碼，消費任一品項，每張訂單額外贈送2024品牌限定龍年紅包袋乙只，數量有限，送完為止。 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-30",
+          "videoLength": 3251002
+        },
+        {
+          "id": "0bkristC3a13PwmtFdbuat",
+          "title": "EP337 多買一副眼鏡 ft. 曾玟學",
+          "description": " 本集節目由【NordVPN】贊助播出  現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案還免費贈送四個月 另有30天試用期，可以隨時取消  #NordVPN ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-27",
+          "videoLength": 5005393
+        },
+        {
+          "id": "26SydJp6K1eVLOblxM0FpY",
+          "title": "EP336 剛好經過啦",
+          "description": "本集節目由【米樂客】贊助播出 真的非常好吃！！ ✨✨✨米樂客熱銷過萬條鹹蛋糕✨✨✨ 即將迎來8周年了!!! ⚡️台通專屬優惠：買3條免運再送一條⚡️ ⚡️加入新會員現抵50購物金⚡️ 🛒購買連結：https://pse.is/5f8sdd  #宜蘭在地特色伴手禮 #年年入圍農糧署米糧烘焙精品 #使用天然食材 #減糖低鈉少油 #米穀粉取代麵粉 #好消化不易脹氣 //招牌鴨賞鹹蛋糕// ✅ 最有宜蘭風味伴手禮 ✅ 獨家宜蘭國宴煙燻鴨賞（古法煙燻百年技術）+宜蘭三星蔥（香甜清爽） //金莎巧克力鹹蛋糕// ✅ 老少都愛，口感特殊吃過都驚艷 ✅ 嚴選宜蘭壯圍沙地花生粒+無糖可可粉 //起司南瓜鹹蛋糕// ✅ 女性首選第一名，輕盈無負擔 ✅ 新鮮南瓜泥+德國切達起司+美國加州核桃 //經典香鹹蛋糕// ✅ 傳統古早風味，回憶中的味道 ✅ 嚴選南投筍角/杏鮑菇+自製紅蔥酥  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-23",
+          "videoLength": 3360347
+        },
+        {
+          "id": "2E1KDJ0J0KYTuW8XoC2hQm",
+          "title": "EP335 長男的大兒子",
+          "description": "本集節目由【BOOKWALKER電子書】贊助播出  日本正版授權 #漫畫 #輕小說 最豐富電子書城！ BOOK☆WALKER X 台灣通勤第一品牌！ 📣這些作品你還沒看過？ 📣鮮蝦挺就對了！超狂69折！ 👉https://bookwalker.tw/JMlx7  活動限定2023精選推薦書單，超狂69折！ 再送你 $50／$100 優惠券！ 💦史上最爆笑！女性約炮漫畫！《T子％％走》 💦第二彈跨出東京！震撼再出發！🔞🔞🔞 👉https://bookwalker.tw/oe2ZV  與BOOK☆WALKER獨家推出限定活動 #今晚你想約誰 #人氣約會票選 ABCDEFG君哪一位？未投先猜H君應該是匹黑馬 🏆#2023暢銷金榜 #TOP1 #無職轉生 🏆經典不敗的航海王竟然沒有TOP1嗎？ 猜猜前十名有哪些作品 👉https://bookwalker.tw/BeS6S  #BOOKWALKER #航海王 #化物語 #藍色巨星 #T子趴趴走 #T子的奇妙約炮旅程 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-20",
+          "videoLength": 3218191
+        },
+        {
+          "id": "7kyDJvYVMHBzMGOH44y9LN",
+          "title": "EP334 HO！HO！HO！",
+          "description": "  本集節目由【Haru】贊助播出 寒冷的冬天，最需要被愛溫暖包圍～ SLOW FXXK慢慢愛，正是愛最深遠的告白！ 深入時序拉長，讓自信充滿底氣。 全心專注並享受在情感交流， 讓彼此恣意沉浸在滿溢的愛與被愛之中… 慢慢愛吧！讓愛更有深度！！ 叮叮噹不只是聖誕佳節的歡樂， 更是前所未有的慾望樂章～ -延長享受時光：嚴選高濃度巴西千日菊及大麻籽萃取配方，讓你/妳欲罷不能 -威風順暢，愛潮不斷：添加咖啡因及丙胺酸，增加肌肉耐力及運動表現 -植萃草本乳膏質地，強化吸收效率：富含維他命A.D.E.，完美滋潤 -易清洗水溶性配方 酥麻感從裡到外快速震盪，愉悅顫抖到失去控制 SLOW FXXK欲罷不能絕對超越你想像 你們，準備好了嗎？ - 12/31前 *凡購買台通專屬組合，即贈HYPER 儂情巧克力 口味潤滑液一瓶！ *輸入折扣碼「iwantuslow」享全館原價商品九折優惠，再抽「Marshall Emberton II 藍牙喇叭－古銅黑(原價6960)」！ 台通專屬組合只在這邊有喔>>>https://letsharu.cc/o7xqS  讓各位能在今年聖誕，盡情享受快樂啪啪啪～ - 偷偷跟你說，點進下單連結還能發現更多好玩的喔！ 追蹤HARU官方IG @letsharu 還有更多玩法分享喔～ - 現在登入APP還可獲得50元購物金 下載網址：https://bmai.cc/3g77r6  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-16",
+          "videoLength": 3109881
+        },
+        {
+          "id": "6qrl55LEQlCu8MAUC0jNHi",
+          "title": "EP333 這輩子沒聽過那麼多青蛙的事 ft.POPO",
+          "description": "本集節目由【NordVPN】贊助播出 現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案還免費贈送四個月 另有30天試用期，可以隨時取消 #NordVPN   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-11",
+          "videoLength": 5114349
+        },
+        {
+          "id": "6JB0htQixIQqIO7myFQ9Lt",
+          "title": "EP332 天公疼憨人",
+          "description": "本集節目由【 Whoscall 】贊助播出 還沒有下載 Whoscall ？立即免費安裝：https://pse.is/5d6rqp  下載過了來升級！📢 1000組進階版序號 台通聽眾限定免費領取  📢  》 Whoscall 進階版《 4大亮點： ✨自動封鎖騷擾號碼，別怕又被一接就掛 ✨資料庫自動更新，詐騙號碼再新也免操心 ✨智慧簡訊管家，自動分類瞬間揪出垃圾簡訊 ✨沒有廣告，介面更清爽 ✋ 如何獲得？ 【1】進到兌換網站：https://redeem.whoscall.com  （瀏覽器請使用Google Chrome/Safari/Firefox/Microsoft Edge）  【2】登入 Whoscall 帳號，輸入專屬兌換代碼『COMMUTE1000』即完成 【溫馨小提醒】 *序號可兌換 Whoscall 進階版免費使用90天，數量有限，額滿為止，請立即兌換！ *如已是訂閱版用戶，恕無法使用免費序號延長訂閱時間 💥防詐3點不漏，當你遇到：📞 陌生來電  ✉️ 可疑簡訊  🔗 不明連結 查證就用 Whoscall ！ 立即免費安裝：https://pse.is/5d6rqp  #Whoscall #進階版 #免費 #限量 #防詐 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-06",
+          "videoLength": 3068686
+        },
+        {
+          "id": "3jhuuRh1DHexLtbEVRSjAp",
+          "title": "EP331 現在提醒朋友聖誕節不要告白還來得及",
+          "description": "  本集節目由【Unipapa】贊助播出 這才是延長線該有的樣子！ 專治充電焦慮症、豆腐頭囤積症、凹線恐懼症 自帶 65Ｗ 快充豆腐頭＋4 個 AC 插座的延長線 ⚡️輸入折扣碼『 台灣快充第一品牌 』有序快充延長線 85 折優惠！ 🛒購買連結：https://unipapa.co/j2Vk0  65W 快充有多快?  30 分鐘充電速度大概是 35W 的 3 倍。 5 分鐘刷個牙，手機可以從 0 充到 15%， 60 分鐘可以充飽 84% iPhone14 pro 電量。 加大孔距、180 轉軸、貼合牆面， 使用大變壓器不會相撞、遇到邊角時不必凹線、 且可以貼合固定於牆面，解放桌面！ 從今以後，延長線不只是延長接電的插座， 更是提升你生活效率的好幫手！ ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-12-02",
+          "videoLength": 3086626
+        },
+        {
+          "id": "1tVAoInZnGb4i1yaD4lRg2",
+          "title": "EP330 回禮時要算通膨嗎",
+          "description": "本集節目由【共享機車 WeMo Scooter】贊助播出 ❝ 騎 WeMo，讓台通為你擦汗？！ 什麼？！ 😍 https://wemoscooter.onelink.me/a864/9bqx6o5b  ⠀ #超狂合作第二彈 💣 繼誠誠龜の電、何 A 狂天狗後，緊接而來的肯定是 最近春風滿面ㄉ『張家倫・爆蝶 🦋』款新上路！ 皆已陸續投車，現在打開 APP 就能看哪台離你最近 ⠀ 除此之外！台通親自監修的聯名好禮等你拿 現在使用優惠碼完成訂閱即贈對應好禮 【WEMO94台灣通勤第一品牌季】享季方案 139 元 #贈提袋 【WEMO94台灣通勤第一品牌年】享年方案 499 元 #贈提袋與抹布 ⠀ 台灣通勤第一品牌 … 那不就是 … WeMo Scooter !!! ϟ 24 小時隨租隨還共享機車，在外野多晚都能騎 ϟ 台通獨家塗裝車款，讓你騎起來又酷又勁ㄦ！ ϟ 免押證件、免鑰匙，APP 在手，說走就走！ ⠀ 新戶體驗輸入【台灣通勤第一品牌】即享 20 分鐘免費騎乘 首次訂閱 WeMo PASS 再享 #全方案半價，月月更有 3 趟免費！ 想嚐鮮訂閱也可以輸入【WEMO94台灣通勤第一品牌】享月方案 49 元 身為台通粉不可能沒騎過吧？ 👺 https://wemoscooter.onelink.me/a864/9bqx6o5b  ⠀ ✶ 請勿騎 WeMo 燒胎，謝謝。✶ WeMo 本身為機車服務，註冊需請您提供身分證件以利查核駕駛資格。✶ WeMo 服務縣市主要為雙北及高雄，實際營運範圍請以 APP 顯示為準。   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-11-28",
+          "videoLength": 3506049
+        },
+        {
+          "id": "53EPXO8DlJ1rexEimNXBs0",
+          "title": "EP329 🐯🐯🐯🐯🐯",
+          "description": "本集節目由【國際特赦組織】贊助播出  寫∞封信 改變生命  一封信的力量是無法衡量的，不只能改變一個人的命運，還能拯救無數個生命。從1到無限的正向循環，就從寫一封信聲援人權受害者開始。  什麼是寫信馬拉松？ 20幾年前有一小群人，舉辦了一場24小時的寫信馬拉松，用寫信聲援人權受害者。這個點子大獲好評，現在已是全球最大型的年度人權行動，也成功改變超過100人的生命。  加入寫信馬拉松！成為∞無限希望的一份子，捍衛人權不困難，每個人都可以。你可以參加我們在台北、台南、花蓮和台中的免費寫信活動，或是透過「線上連署」，就能為他們發聲！  ✦  2023寫信馬拉松亮點搶先看 ✦ 寫∞封信特展  //知名設計師廖小子，操刀活動主視覺：寫∞封信 //  // 沈浸式迷宮，帶大家踏上從某個人收到一封信，到為某個人寫一封信的旅程 // // 互動式體驗人權現場 // // 來到現場才有的限定紀念小物 //  ✦全台4場寫信馬拉松系列活動，邀請你來感受寫信的力量！ ✍️台北場｜12/2(六)-12/3(日)｜華山1914文化創意產業園區 中4A （紅酒作業場） ✍️台南場｜12/9(六)-12/10(日)｜臺南文化創意產業園區 茉莉工坊 ✍️花蓮場｜12/16(六)-12/17(日)｜花蓮文化創意產業園區 第17棟1F（米酒工廠） ✍️台中場｜12/23(六)-12/24(日)｜PARK2草悟廣場 B1  期待在當天現場看到你：https://lihi.cc/mtb9n   #2023寫信馬拉松 #寫∞封信 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-11-25",
+          "videoLength": 3068992
+        },
+        {
+          "id": "7jqhv1hMLGqcU4VWWzcWsE",
+          "title": "EP328 正宗約會電影",
+          "description": "  本集節目由【NordVPN】贊助播出 現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案還免費贈送四個月 另有30天試用期，可以隨時取消 #NordVPN ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-11-21",
+          "videoLength": 3118510
+        },
+        {
+          "id": "6ahzkpk1lRbp66PcA5QgrV",
+          "title": "EP327 沒想到有今天吧",
+          "description": "本集節目由【玩聚場藝術節】贊助播出 當藝術遇上嬉戲，靈感迸發！＃2023玩聚場藝術節 PLAY ARTS Festival——SHOW ME A PLATE！   以「遊戲」與「聚集」為核心的玩聚場藝術節6歲了⟢◌◜ 今年策展人藍貝芝以南漂生活所觀察之現象，聚焦在 #土地、 #慢活、 #未來性 ，融合音樂、舞蹈、劇場及影像元素，多元化藝術轉譯在地台味／全球化下的未來議題。 邀請來自東南亞的獨立樂團、舞團，帶來熱情洋溢的「南部人來玩」系列；感受「阮劇團」地方故事《子仔樹傳說》，「古舞團Ｘ古舞文創」的現場即興舞蹈，「闖劇場」的互動演出。 特別企劃「日夜聯名演出」將深入探討日常生活的喜怒愛恨，絕不容錯過！ 室內演出也精彩萬分，「夜夜生歌」專為兒童設計的電音派對、「野孩子」默劇肢體演出兼美味料理的《紅鶴主廚》，還有「測不準工作室」環保桌上遊戲和精選的女性影展「走走電影」系列放映。 藝同大手牽小手，2023年末最澎湃的藝術把費（buffet）等你來品嘗！ ◊✦◊✦◊✦◊✦◊✦◊✦◊✦◊✦◊✦◊✦◊✦◊✦◊✦◊✦ ／2023 玩聚場藝術節——SHOW ME A PLATE！／ 時間｜2023/12/9-10（Sat.-Sun.） 地點｜臺灣當代文化實驗場C-LAB 官網｜https://playarts.clab.org.tw/  #玩聚場藝術節 #表演藝術 #市集 #電影 #東南亞文化 #親子遊戲 *以上內容為「財團法人臺灣生活美學基金會」提供 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-11-16",
+          "videoLength": 3287277
+        },
+        {
+          "id": "4wSChuNa6lCtuVnICGjiQV",
+          "title": "EP326 How are you ? ft. 許傑",
+          "description": "本集節目由【@LUCIDO 倫士度】贊助播出 這集業配還沒聽，鮮🦐挺 倫士度 後頸就是弱點  https://lucidotw-event.com.tw/ 每個成功男人背後...... 都有一股味兒，熟男味兒！！！ 熟男如你，該怎麼避免這味道 Zer 一下就上來？ 日本Mandom 集團氣味研究團隊找出熟男味的成因  並研發出熟男專用的洗髮精和沐浴露，只要洗頭洗澡就能輕鬆除去油膩熟男味  洗後清爽不黏滑、7 天有感去味，各大電商與實體通路熱賣中！ *蔻仕麗股份有限公司委託利達管理顧問公司於 2020/10/14~10/26 針對 30 名試用者之調查結果 【經典有感去味洗沐組 】  Momo https://reurl.cc/RyYoen  PCHome https://reurl.cc/p5oe3d  想精準改善熟男味，踏上魅力熟男 Way？ 就交給日本 LUCIDO 倫士度去味洗沐系列！  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-11-07",
+          "videoLength": 3826741
+        },
+        {
+          "id": "4m8Hqvzs0G3ymDmsk0c6nC",
+          "title": "EP325 聽過最扯的是帶狙擊槍上學",
+          "description": "本集節目由【plain-me】贊助播出 plain-me 雙11開跑！ 11/13前全館滿兩件88折，滿三件79折 結帳單筆滿1000，輸入折扣碼「commute」加碼再抵100元 。PM旅行小包，買3送1(等於拿到4顆) 平均1顆只要640(一顆打5折的意思) 。防潑水立領連帽鋪棉外套，優惠價2988(原價4980) 一起全部買！(記得輸入折扣碼) = 4顆小包+1件外套只要4820 (現省3400) 一年一度最划算的就是這一檔：https://plain-me.life/ewqdK    ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-11-04",
+          "videoLength": 3075737
+        },
+        {
+          "id": "0b8U096RckaemCeVTif2r8",
+          "title": "EP324 滿月",
+          "description": "本集節目由【眾神曆】贊助播出 ＃全紙銀墨印刷，重本打造最美的神明圖鑑 ＃多道工序，層層印刷，無論開版、套準都是高成本印製，整本以進口「金屬銀墨」滿版印刷（366張紙都是銀色的意思） ＃「解鎖神明臉盲症」說起神明你會聯想到哪幾位？去廟裡總是記不清楚神明的長相，即將透過這一本「神明圖鑑日曆」揭開神秘面紗！ ＃集結漢傳佛教、藏傳佛教、道教、民間信仰裡共 200 位神明，收錄將近 150 個知識，包括神明生日、天界故事、專有名詞、與神明手上的法器，字數超過 5 萬字。 ＃內頁採用兩種不同亮度的紙張，以「凝雪歐采台灣紙」與「HUWAHUWA日本紙」兩種紙張印製而成，呈現更豐富的視覺質感。 ＃採用市售日曆少見的 24 cm x 16.5 cm 大尺寸設計，整本厚達 4.6 cm、幾乎是一般日曆的 1.5～2 倍，重到可以拿來當武器！ 募資上線5分鐘達標，10小時破百萬, 全銀眾神曆掀熱潮 「龍年眾神曆」早鳥募資熱賣中 https://www.flyingv.cc/projects/34394  ​ 早鳥預購只到10/31，1488元（68折）趕快下手！11/1募資價將變成1588元（73折），台通折扣碼commute，輸入即可享100元優惠 #設計師的仙界傳說 #眾神曆 ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-10-30",
+          "videoLength": 3115714
+        },
+        {
+          "id": "1o58ruPJqGEnlnwjt29g2L",
+          "title": "EP323 一個自由的人到底有多可怕 ft.藍亦明",
+          "description": "本集節目由【Unipapa】贊助播出 🦐固定班底 Unipapa 雙十一又來了！🦐 11/8-11/11 雙十一俗的力量！U 惠僅此一黨 卡位俗的力量，領取台通專屬優惠券： https://unipapa.co/0Nd85  不用研究了，熱門品重點如下： 快充延長線買大送小 Loop循環除濕盒買一送二 眾多商品5折起  已經買了也沒關係，年度囤貨區有超殺折扣 補充消耗品趁現在囤起來！  \\ 主委加碼 / 如果你很會搶演唱會的門票 立即加入 LINE 參加 11/7『省錢之夜』活動 超狂限量優惠包含 1 折商品、55 元延長線等你來卡位！ 立馬卡位，領取台通專屬優惠券： https://unipapa.co/0Nd85  ⠀⠀",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-10-28",
+          "videoLength": 5203426
+        },
+        {
+          "id": "3nG94rbodyD7fmzXhtiuJF",
+          "title": "EP322 網路如虎口 ",
+          "description": "本集節目由【長榮航空】贊助播出 溫馨提醒您， 搭乘五星級長榮航空的旅客， 請盡速前往 2023 長榮航空線上旅展進行購票。  本次旅展活動期間為 10 月 22 日 至 11 月 26 日，  除可享有全航線最低 72 折起的機票優惠外，  線上旅展期間於官網購票，還可再抽 #一年全球飛到飽機票！  為了確保您的荷包安全，購票時請不要猶豫閃神，  購票時輸入【台通專屬專案活動代碼：23GOGO】，還可享有最多 2%的優惠！ 2023 長榮航空線上旅展活動詳情：https://bit.ly/3ZEL9yi  台通專屬專案活動代碼購票：https://bit.ly/46AQBoh  本優惠即將起飛，請確定您的信用卡已備妥，  長榮航空祝您有趟愉快舒適的旅程，謝謝！   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-10-24",
+          "videoLength": 3216762
+        },
+        {
+          "id": "6plU1E58S47CBrg2H9f1o7",
+          "title": "EP321 談戀愛不如跳舞",
+          "description": "本集節目由【@Seagate】贊助播出 #全球最大硬碟品牌Seagate #用質感儲存生活 手機照片太多、電腦容量不夠🖥️ 還要忍痛刪除伴你已久的珍藏影片嗎？ 讓小何心花怒放的下載、心如止水的備份，全靠 Seagate 希捷💪   硬碟選希捷，超大容量、安心儲存、質感造型、資料救援都一手掌握🛫 ➡️ 行動硬碟輕巧纖薄，桌上型硬碟家庭號大容量，滿足全方位需求 ➡️ #OneTouch 金屬一體成型的質感美學，多款配色隨心選擇 ➡️ #UltraTouch 圓潤手感的極簡設計，採用 USB-C 介面MacBook隨插即用 ➡️ #SSD 輕薄如羽毛、急速如閃電，高達每秒 1030 MB 的頂規傳輸效能 ➡️ #業界唯一 全系列隨附原廠３年資料救援服務*，為資料加一道保險 ➡️ 相容於 Windows / MacOS 等多款作業系統，無縫轉檔、輕鬆備份   生活💎娛樂💎工作 全方位數位世界的硬碟神隊友 10月底前於指定連結享９折起🎉解放你的手機與電腦 ✅ 蝦皮官方旗艦店>> https://reurl.cc/WvA9rx ✅ momo 購物>> https://momo.dm/rfeZfJ ✅ PChome >> https://reurl.cc/GKne23  蝦皮官方旗艦店還有Logi羅技超優惠組合唷🖱️⌨️   *資料救援成功率經內部統計為 90% 以上，實際救援結果會依照硬碟損壞狀況以及損壞方式而有所不同。每入硬碟救援限乙次。   #Seagate #SeagateTaiwan ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-10-21",
+          "videoLength": 3088153
+        },
+        {
+          "id": "6beCEHEqSumcwZ4zOe6X0O",
+          "title": "EP320 等下輩子我們都變成貓再說吧",
+          "description": "本集節目由【Roichen正脊坐墊】再次贊助播出 #市售唯一依男女體型設計的正脊坐墊 它牌只有分大人和小孩的尺寸，但其實男女體型骨盆角度不同，需要專屬尺寸設計，市售唯一有男、女和兒童3種專屬尺寸可選購。 #獨家支撐設計 坐墊不易滑動，即使不搭配椅子，直接在地面或者平面使用，當作和室椅都可以。 #韓國第一入口網站NAVER家飾配件使用滿意高度認證 榮獲200多項專利、認證、設計以及系統認證的殊榮，其中包括紅點設計大獎、Good Design、PIN UP等獎項。 #通過SGS檢測不含有毒物質與安全性測試 最大可承受220~350公斤都可維持平穩正確的坐姿，不會形成椅墊扭曲或晃動，輕鬆維持體態。 #Roichen鍋具全天然陶瓷塗層製成 不含PFAS、PFOA、PFOS、鐵氟龍等有毒物質 ，專利認證多功能鍋具 本次重點整理： ．坐墊女用款粉色&坐墊清潔去污棒新品上市 ．Roichen正脊坐墊台通聽眾52折優惠  ．加碼Roichen陶瓷不沾鍋 20公分深炒鍋 33折優惠 沒搶到情何椅堪： http://s.add.one/5bq5nm  （品牌限定優惠，請使用 Fb、Line、手機號碼 登入，即可看到專屬優惠價）   ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-10-17",
+          "videoLength": 3349340
+        },
+        {
+          "id": "17UUGTZCZQ9GmGmijjdq8T",
+          "title": "EP319 揹著石頭看煙火",
+          "description": "本集節目由【犀牛盾】贊助播出 犀牛盾 AquaStand磁吸水壺 不只是水壺 獨特把手磁吸設計，吸上手機就可以變成拍攝腳架、追劇神器等… 不只讓你隨時補水，還隨時都可以便利生活！ 搭配犀牛盾手機殼擁有高於原廠2倍磁吸力不怕掉 記得搭配選購犀牛盾跟台通的聯名款，MagSafe殼＋水壺一起買享有加購優惠～ 或是只想買水壺點連結享有台通優惠折抵水壺100元 https://url.rhinoshield.tw/pdcom2310  *僅能折抵水壺訂單，一筆單折抵一次 *不可與其他加購優惠併用 *點連結自動帶入折扣 如果對於血肉果汁機X西屯純愛組演唱會有興趣的歡迎這邊請 https://url.rhinoshield.tw/comlive  ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-10-12",
+          "videoLength": 3025632
+        },
+        {
+          "id": "2OtK8Z9QH8Y2D3vdWBXaE3",
+          "title": "EP318 你知不知道甚麼是噹噹噹",
+          "description": "本集節目由【NordVPN】贊助播出  現在只要搜尋 nordvpn.com/commute 或到NordVPN官網輸入台通的專屬優惠碼【commute】 現在購買2年方案還免費贈送四個月 另有30天試用期，可以隨時取消  #NordVPN ",
+          "imgSrc": "https://i.scdn.co/image/7ce482cfe6424aa3b242236f168dc90eabe2c493",
+          "date": "2023-10-08",
+          "videoLength": 3173195
+        }
+      ]
     },
     {
-      "id": 3,
-      "title": "To Kill a Mockingbird",
-      "type": "Facebook",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/ca98/44a3/2d66d48f7b209451f874429e10b79f73?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B3sNkZCz0pZ2lZWflUAooWKe3MjERCbbxtw-84iZ0myXZvKmJb47Rr8I0nCG0HsPz7MGJIi5jW5R5ArTj0m358EHLfiE4cP2VMoSQt8GHE~hXFRr4VWpAdYRay-bm9umkZsVkcqMh36E~oTHAdVSz6m5fttDfMcuDfULSaG-D4Oq9vnP8d6m4DzEJS0XOhBIu-IoasuNvG-EyNop~Lv~VSRTyUa7Dno~QHdAIHlwaJ94utiMuFOWyoS6fv5p1pWOFuLlwqjtyOrGj8m37n~bHyi4kBUHg6-eSfM~gTm9KzXKWyfWOsJPlvngF1wQ01i4~LmxNVhkJBB31khWmw8OAw__",
-      "active": false
+      "title": "Peggy Fo Show",
+      "publisher": "Peggy Chen",
+      "description": "隨性分享生活中觀察到的事物 聊聊對各種議題的想法、意見  Podcast商業合作信箱：peggypeichichen@gmail.com  Powered by Firstory Hosting",
+      "imageUrl": "https://i.scdn.co/image/ab6765630000ba8a20207dec4e6e584ac10a7eef",
+      "date": "\"undefined\"",
+      "episodes": [
+        {
+          "id": "788U3r6EwXXdTaamapn1ja",
+          "title": "EP14｜文化撞擊 - 闈鴻",
+          "description": "【Peggy Fo Show's Podcast】 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast/peggy-fo-show/id1729749924 🎧Spotify: https://open.spotify.com/show/33BWml6B2xIMO2W94Sude4?si=ME5RxN6lQoS8R2JBmJC3Bw 🎧KKBOX: https://podcast.kkbox.com/sg/channel/TZdUlq6gXNADCWv598  【製作團隊】 ｜拍攝｜黃怡菱、袁義 ｜剪輯｜袁義    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs ●YouTube: @peggyfoshow  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a1a306d3ce70c956b81057a9a",
+          "date": "2024-04-23",
+          "videoLength": 2891208
+        },
+        {
+          "id": "0UImbmQTq2ahNPNcGdP6KK",
+          "title": "EP13｜越聊越歪 - 派翠克Patrick",
+          "description": "訪綱列一堆，一題都沒有問到 從還沒開始方向就走歪，可是又聊得好開心的一集  【Peggy Fo Show's Podcast】 🎧YouTube: https://www.youtube.com/@peggyfoshow 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast/peggy-fo-show/id1729749924 🎧Spotify: https://open.spotify.com/show/33BWml6B2xIMO2W94Sude4?si=ME5RxN6lQoS8R2JBmJC3Bw 🎧KKBOX: https://podcast.kkbox.com/sg/channel/TZdUlq6gXNADCWv598  【製作團隊】 ｜拍攝｜黃怡菱、袁義 ｜剪輯｜袁義    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●YouTube: @peggyfoshow ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad6cde8306b94a81f7dc74e80",
+          "date": "2024-04-17",
+          "videoLength": 3335736
+        },
+        {
+          "id": "19brYV7UGQLNCwHfq6AP1R",
+          "title": "EP12｜當Sugar Mama來敲門 - 李唯楓",
+          "description": "今天邀請到16歲就被唱片公司簽下，第一張專輯中的兩首歌就爆紅 後來加入「大學生了沒」當班底的李唯楓， 來聊聊在跟經紀公司打完官司之後，隻身到中國打拼的經歷  【Peggy Fo Show's Podcast】 🎧YouTube: https://www.youtube.com/channel/UC8z3uFxoqNMzdDt5vetTjNg 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast/peggy-fo-show/id1729749924 🎧Spotify: https://open.spotify.com/show/33BWml6B2xIMO2W94Sude4?si=ME5RxN6lQoS8R2JBmJC3Bw 🎧KKBOX: https://podcast.kkbox.com/sg/channel/TZdUlq6gXNADCWv598  【製作團隊】 ｜拍攝｜黃怡菱、袁義 ｜剪輯｜黃怡菱    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●YouTube: @peggyfoshow ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a0519ab4cfbca5129f096109a",
+          "date": "2024-04-10",
+          "videoLength": 3130488
+        },
+        {
+          "id": "19aU5jUvN1ZEpxymP7bnob",
+          "title": "EP11｜屎人",
+          "description": "ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●YouTube: @peggyfoshow ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs   Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a45889abb7500141832ba1b3f",
+          "date": "2024-04-04",
+          "videoLength": 2172525
+        },
+        {
+          "id": "6nXjaLZf5BZpwHQqtNTnkf",
+          "title": "EP10｜零到萬的社群經營秘密 - 電商人妻",
+          "description": "只要有在經營自媒體或者做社群行銷的人，一定都對電商人妻不陌生 電商人妻從2019年開始經營電商人妻這個IP，在88天內追蹤數從零到到萬 也成功的協助她的學員在18個月內從3萬多到10萬追蹤 今天邀請到電商人妻來跟我們聊聊在社群經營上面常見的一些迷思、她自己的一些經歷、 以及社群經營的一些小技巧  📖 【電商人妻線上課程】: ✨連結：https://go.hahow.in/ecwife-ig_kol/Peggy Peggy Fo Show專屬折扣碼：［Peggy］(優惠至2024/04/30)  【Peggy Fo Show's Podcast】 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast/peggy-fo-show/id1729749924 🎧Spotify: https://open.spotify.com/show/33BWml6B2xIMO2W94Sude4?si=ME5RxN6lQoS8R2JBmJC3Bw 🎧KKBOX: https://podcast.kkbox.com/sg/channel/TZdUlq6gXNADCWv598 🎧YouTube: https://www.youtube.com/channel/UC8z3uFxoqNMzdDt5vetTjNg  【製作團隊】 ｜拍攝｜袁義 ｜剪輯｜袁義    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●YouTube: @peggyfoshow ●TikTok: @peggy_pegs  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a222f339491b412752ff6120c",
+          "date": "2024-03-26",
+          "videoLength": 3505658
+        },
+        {
+          "id": "1dp0yduMpfkUXNWZcpqjBJ",
+          "title": "EP9｜百萬業績背後的血淚史 - 歐娜",
+          "description": "過去，一個上班第一天就睡在公司的苦命電視節目工作人員， 後來到了北京工作還要瞞著家人住在像荒廢工地的貧民窟。 現在是手上有兩個Podcast的Podcaster， 不但超會寫文案，一檔團購創下百萬業績也不是問題。  沒有什麼賣不出去，封號 - 「台中斯容」的歐娜，將她豐富的經歷寫成「苦瓜熬成哈密瓜」這本書， 和大家分享曾經因為身材被嘲笑、霸凌；在電視台沒日沒夜工作的日子；談了戀愛、瘦了50幾公斤的經歷。  今天邀請到歐娜來分享這些過程中的心境。  📖 【歐娜的書 - 「苦瓜熬成哈密瓜」】: ✨https://www.books.com.tw/products/0010978066?sloc=main_mb  【Peggy Fo Show's Podcast】 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast/peggy-fo-show/id1729749924 🎧Spotify: https://open.spotify.com/show/33BWml6B2xIMO2W94Sude4?si=ME5RxN6lQoS8R2JBmJC3Bw 🎧KKBOX: https://podcast.kkbox.com/sg/channel/TZdUlq6gXNADCWv598 🎧YouTube: https://www.youtube.com/channel/UC8z3uFxoqNMzdDt5vetTjNg  【製作團隊】 ｜拍攝｜袁義 ｜剪輯｜袁義    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8add2027e439dd67e68dd8bfd3",
+          "date": "2024-03-20",
+          "videoLength": 2537376
+        },
+        {
+          "id": "5ifNF8sgBJpX02qdcaqu06",
+          "title": "EP8｜內向人的真面目 - Ariel 蔡佩軒",
+          "description": "我們身邊可能充斥著內向的人，也可能我們自己其實就是那個為了社會認同而扮演著外向者的內向者 隨著時間和成長，我們都會越來越自在的接受並且很自在的做真正的自己 我和Ariel在這一集聊到的書，是我們兩個都很喜歡也都很有共鳴的  'Quiet：The Power of Introverts in a World That Can’t Stop Talking' 中文翻譯為：安靜，就是力量：內向者如何發揮積極的力量   【Ariel蔡佩軒線上課程優惠】 歌唱訓練課程連結：https://go.hahow.in/al/peggy ✨Peggy Fo Show 觀眾的專屬9 折折扣碼：peggy10off（只適用於這堂課程） ☀️課程募資優於 47 折，還可抽 #AirPodsPro (價值 $7,490) 3/12 ~ 4/25 使用 Peggy Fo Show專屬折扣碼「boni10off」可享募資優惠再打 9 折！  【Peggy Fo Show's Podcast】 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast/peggy-fo-show/id1729749924 🎧Spotify: https://open.spotify.com/show/33BWml6B2xIMO2W94Sude4?si=ME5RxN6lQoS8R2JBmJC3Bw 🎧KKBOX: https://podcast.kkbox.com/sg/channel/TZdUlq6gXNADCWv598  【製作團隊】 ｜拍攝｜黃怡菱、袁義 ｜剪輯｜袁義    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●YouTube: @peggyfoshow ●TikTok: @peggy_pegs  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8adb554b03d738a5868d3b75d0",
+          "date": "2024-03-12",
+          "videoLength": 3651623
+        },
+        {
+          "id": "1YS11WURt5iLxOML9vdAN2",
+          "title": "EP7｜到底是哪裡大支 - 大支",
+          "description": "大支不管是在音樂創作或者是為議題發聲的精神一直都是我非常欣賞的 今天聊了大支在堅持講自己想講的話背後遇到的挫折 之前敲碗要我錄完整一集台語Podcast的人，可以把這集當作入門。 滿滿的台語聽了就是song!  【Peggy Fo Show's Podcast】 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast/peggy-fo-show/id1729749924 🎧Spotify: https://open.spotify.com/show/33BWml6B2xIMO2W94Sude4?si=ME5RxN6lQoS8R2JBmJC3Bw 🎧KKBOX: https://podcast.kkbox.com/sg/channel/TZdUlq6gXNADCWv598  【製作團隊】 ｜拍攝｜黃怡菱、袁義 ｜剪輯｜黃怡菱    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●YouTube: @peggyfoshow ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs  小額贊助支持本節目： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7 留言告訴我你對這一集的想法： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a2038c1462f962d6aebb64c2f",
+          "date": "2024-03-06",
+          "videoLength": 3399143
+        },
+        {
+          "id": "66yzy44yESCEpdwIgRdQvu",
+          "title": "EP6｜左耳進右耳出，才是相處之道 - 中川秀美",
+          "description": "夫妻一起創業一直以來都是一大挑戰， 朝夕相處還要共事絕對不可能沒有摩擦 今天和中川秀美(阿美) 一起聊聊創業、夫妻相處、面對酸民的心情調適  【Peggy Fo Show's Podcast】 🎧Apple Podcast: https://podcasts.apple.com/tw/podcast... 🎧Spotify: https://open.spotify.com/show/33BWml6... 🎧KKBOX: https://podcast.kkbox.com/sg/channel/...  【製作團隊】 ｜拍攝｜黃怡菱、袁義 ｜剪輯｜黃怡菱    ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●YouTube: @peggyfoshow ●TikTok: @peggy_pegs  小額贊助支持本節目： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7 留言告訴我你對這一集的想法： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a53fc8706a4c9ab0b987614f3",
+          "date": "2024-02-26",
+          "videoLength": 2212310
+        },
+        {
+          "id": "0eRjhZsJOUokU5BVi3mVdj",
+          "title": "EP5｜誰要當什麼好媳婦 - 莎白",
+          "description": "好媳婦的定義是什麼？重要嗎？ 今天和莎白聊聊如何自在的做自己、撕掉\"好媳婦\"標籤 不需要刻意為了扮演大家既定印象中的角色而去改變自己，每個家庭都有自己舒服、自在的相處模式 如何在雙重文化、語言、和信仰的環境下教育孩子  【收聽平台】 🎧YouTube 🎧 Apple Podcast 🎧Spotify 🎧KKBOX  【製作團隊】 ｜剪輯｜袁義   ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs  小額贊助支持本節目： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7 留言告訴我你對這一集的想法： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a974022047e718295fd7defa2",
+          "date": "2024-02-21",
+          "videoLength": 3803454
+        },
+        {
+          "id": "4YopmGF3J5WZwRob1OhLJI",
+          "title": "EP4｜自找麻煩",
+          "description": "【製作團隊】 ｜剪輯｜袁義   ˉPodcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs 小額贊助支持本節目： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7 留言告訴我你對這一集的想法： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a20207dec4e6e584ac10a7eef",
+          "date": "2024-02-18",
+          "videoLength": 2979863
+        },
+        {
+          "id": "4lchQRJooBqVaEUQygG5hx",
+          "title": "EP3 | 交往與交配-七七老大",
+          "description": "本來是該我訪問七七老大的結果被反問了一堆問題 話題越走越歪 就這樣了吧  ｜攝影｜黃怡菱、袁義 ｜剪輯｜袁義     Podcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜   ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs  小額贊助支持本節目： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7 留言告訴我你對這一集的想法： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a89ae2ccf45bddd4fadca4e31",
+          "date": "2024-02-13",
+          "videoLength": 2671229
+        },
+        {
+          "id": "14WpUqGtjYScmQehRcnI6B",
+          "title": "EP2｜夜夜秀之後 - 賀瓏",
+          "description": "看完夜夜秀的最後一集，心裡滿滿的感動 很難想像這一集錄音的時候，坐在我面前的賀瓏是經歷了一大段情緒起伏的他 謝謝他願意來和我聊天，讓我問了很多我其實可以自己私下問他的問題。 賀瓏加油！期待第二季夜夜秀！  Podcast 合作&影片授權信箱：peggypeichichen@gmail.com ｜未經同意，請勿轉載｜  ●Instagram: @mandarinwithpeggy ●TikTok: @peggy_pegs   小額贊助支持本節目： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7 留言告訴我你對這一集的想法： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a6c660cf4a391b888ce1c52a7",
+          "date": "2024-02-08",
+          "videoLength": 3257155
+        },
+        {
+          "id": "1kryCzoUMC9lbrocgszoNE",
+          "title": "EP1｜媒體炒作",
+          "description": "聊聊媒體如何以偏概全、下煽動標題來吸眼球，澄清之前媒體上的偏頗報導  Podcast 提及攝影師周上：https://www.instagram.com/shang.chou.tw?igsh=eWxvanMweHdjdXl5 優墨Studio Instagram: https://www.instagram.com/umostudio_tw?igsh=cWhqMHhzNjR3cWp4  Podcast 合作信相： peggypeichichen@gmail.com   小額贊助支持本節目： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7 留言告訴我你對這一集的想法： https://open.firstory.me/user/clsbl44tc09l601utgv00hqo7/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8abc58f1f1d3d784fa9a0fa492",
+          "date": "2024-02-07",
+          "videoLength": 2534817
+        }
+      ]
     },
     {
-      "id": 4,
-      "title": "The Alchemist",
-      "type": "Gillette",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/953a/827c/2b112095494c4af2468fc4e5eb14cb45?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y0i-mb1JnQy8dEhXoJfGi5xzlbB7w1pSS8skWo~TX5Do5jsOazBz-yFopH85DgPFRFPciuDRHAhx5SDj6kuAIVQtqygC4F2MnGAZ7t97ivoOcxp4X7jY3bh-LUoXrxy3nglP5knCPKN6Pcc6RPG-jt4QbTb3vnfmAnma8Qr8MjCtTps4qiRvfLi1hgJgxrhHazeBocBzOQ31g6yAQw1dOKbl9qDmqbDV1XCHCMR8-b5sld2Z3DDffqu3Ci~PMt5OvsN3Dvryiiyjd1XyU7LwWM2Pv3p8yKReJLFnt3lw0aBA3AEMet4f-LiCWKjmRnf-q5FYExI4bv55iLiSP6Js1g__",
-      "active": false
+      "title": "志祺七七-Podcast",
+      "publisher": "志祺七七",
+      "description": "Hiho～大家好，我是志祺！你現在收聽的是志祺七七 Podcast！ 在這裡，你將會聽到⋯⋯  各種人們熱切關注的新聞時事議題，以及社會文化、心理健康、人際關係、環境、科學與科技、政治與法律、兩岸與國際關係等多樣化的主題與觀點 ✨✨  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點，那就趕快追蹤訂閱我們的頻道！  更新時間： 📅 週一～週五：  07:00 PM 　＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 　￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  🤝 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  Powered by Firstory Hosting",
+      "imageUrl": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+      "date": "\"undefined\"",
+      "episodes": [
+        {
+          "id": "0gaXBMRs50IsAkodDc18Wj",
+          "title": "EP 481 演唱會票房突破10億美元、創下歷史紀錄！各國還為了搶她而吵架！泰勒絲到底在紅什麼？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-29",
+          "videoLength": 612336
+        },
+        {
+          "id": "1EiGv8k01OLxa5szJgJmSn",
+          "title": "EP 480 30 年前震驚全台的悲劇，如何催生〈家暴防治法〉？家暴法上路至今，為何家暴案不減反增？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-26",
+          "videoLength": 675143
+        },
+        {
+          "id": "73euMZ0vl0WltpbtTgb99S",
+          "title": "EP 479 用千年卻放棄！韓國當年為何停用漢字、改用韓文？現在卻有漢字復興運動？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-25",
+          "videoLength": 588720
+        },
+        {
+          "id": "0dLlPkBnm2JPAuZqmqFcSE",
+          "title": "EP 478 以色列空襲伊朗，戰爭會擴大嗎？以哈戰爭回顧懶人包！",
+          "description": "\"Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 宇軒  本集 Podcast 剪輯 👉  憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫\"  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-24",
+          "videoLength": 765888
+        },
+        {
+          "id": "3A8HTbb4xkUWQboWmw1HPZ",
+          "title": "EP 477 苦無、隱身術、火遁都是真的？日本「忍者」是怎麼出現的？真實的忍術長什麼樣子？",
+          "description": "Hiho～大家好，我是志祺， 你現在收聽的是志祺七七 Podcast！  在這裡，你將會聽到⋯⋯  各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！ ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi 🎧 Spotify：https://spoti.fi/43lRbWJ 🎧 KKBOX：https://bit.ly/4akyy7B 🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-23",
+          "videoLength": 701903
+        },
+        {
+          "id": "43mwkxMFkJxyzsaGjiEPth",
+          "title": "EP 476 美國真的要禁TikTok了？禁了會怎樣？川普又為何改挺TikTok？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-22",
+          "videoLength": 811176
+        },
+        {
+          "id": "1dzTLYH4zDzP2FK4z5SiMM",
+          "title": "EP 475 暴力、血腥的《周處除三害》，是怎麼通過中國審查的？為什麼中國人這麼愛？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-19",
+          "videoLength": 560663
+        },
+        {
+          "id": "29A2cOaq3v6s3adtb5FcQD",
+          "title": "EP 474 社工怠忽職守？兒盟管理不善？中央地方互踢皮球？剴剴事件到底發生什麼事？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-18",
+          "videoLength": 821471
+        },
+        {
+          "id": "2fhazuCTABtMB86uXAhCys",
+          "title": "EP 473 2024俄羅斯總統大選，普丁又又又又又贏了！俄國人真的這麼愛普丁？俄烏戰爭還會繼續嗎？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-17",
+          "videoLength": 540000
+        },
+        {
+          "id": "0BwlL6MHJHbPIRxBfgH8d3",
+          "title": "EP 472 以前理髮師就是外科醫師？頭髮其實超營養？一夜白頭有科學依據嗎？盤點7個神奇的頭髮冷知識！",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-16",
+          "videoLength": 699168
+        },
+        {
+          "id": "6SzU5HdJjn3sWWPVmRt0mr",
+          "title": "EP 471 黑道攻陷監獄、3800名罪犯逃跑！警方瑟瑟發抖、總理還無法回國，海地到底發生什麼事？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-15",
+          "videoLength": 723911
+        },
+        {
+          "id": "2hNd0SdEsHUR3yo93grLZW",
+          "title": "EP 470 超百人死亡，俄羅斯遭到20年來最嚴重恐怖襲擊。襲擊的人是誰？為什麼要這麼做？",
+          "description": "Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-12",
+          "videoLength": 503256
+        },
+        {
+          "id": "5Ico91RoA7BhHgTqtbeDwa",
+          "title": "EP 469 習近平重視的政治大秀，都在演什麼？今年中國兩會有哪些看點，洩露了哪些訊息？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-11",
+          "videoLength": 670488
+        },
+        {
+          "id": "4Ip5Zn1KSTdrGhVW0j61TA",
+          "title": "EP 468 一年被退稿 500 件的漫畫家、如何靠一部作品征服全世界？傳奇漫畫家鳥山明，到底有多厲害？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-10",
+          "videoLength": 684216
+        },
+        {
+          "id": "6tglxiKDnJQ5w6ZNupvRVt",
+          "title": "EP 467 傳給你愛抱怨的朋友！抱怨其實也會傳染？一直抱怨，會有什麼問題嗎？",
+          "description": "留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉   憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫    Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-09",
+          "videoLength": 524016
+        },
+        {
+          "id": "44egIF4ZRM7gjm6AOwvHJp",
+          "title": "EP 466 日本爆發多起「長照弒親」人倫悲劇！「一輩子的照顧」究竟有多沉重？",
+          "description": "Hiho～大家好，我是志祺， 你現在收聽的是志祺七七 Podcast！  在這裡，你將會聽到⋯⋯  各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！ ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！ 📅 週六：07:00 PM，更新《強者我朋友》訪談完整版！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi 🎧 Spotify：https://spoti.fi/43lRbWJ 🎧 KKBOX：https://bit.ly/4akyy7B 🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-08",
+          "videoLength": 632496
+        },
+        {
+          "id": "4455fszxdxFCpmltbsn22N",
+          "title": "EP 465 香港黑幫害了港片？稱霸亞洲的香港電影業，為何一蹶不振？中國市場是救命仙丹嗎？",
+          "description": "🎉  Podcast 新頻道開張 🎉 🎉  趕快搶先訂閱起來吧！👉 https://apple.co/4ajjpUi   為了讓喜歡「時事議題」和喜歡聽「訪談」的聽眾，都能迅速找到自己喜愛的內容， 4 月起，純聲音版「時事議題」內容，將會搬家到全新頻道！  點擊上述連結，或在各大 podcast 平台搜尋「志祺七七-Podcast」，就能找到喔！  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-05",
+          "videoLength": 638303
+        },
+        {
+          "id": "3jd2qjmKnw6OCU2JrKXUVf",
+          "title": "EP 464 心情不好就不上課？高中職推動「身心調適假」，對學生真的有幫助嗎？",
+          "description": "🎉  Podcast 新頻道開張 🎉 🎉  趕快搶先訂閱起來吧！👉 https://apple.co/4ajjpUi   為了讓喜歡「時事議題」和喜歡聽「訪談」的聽眾，都能迅速找到自己喜愛的內容， 4 月起，純聲音版「時事議題」內容，將會搬家到全新頻道！  點擊上述連結，或在各大 podcast 平台搜尋「志祺七七-Podcast」，就能找到喔！  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-04",
+          "videoLength": 519742
+        },
+        {
+          "id": "4ZKt6bgLCmZGFsxcCWBScX",
+          "title": "EP 463 寵物共乘飛機爭議！寵物被托運，其實有危險？為何航空公司不讓寵物進客艙？",
+          "description": "🌟志祺私心推薦！視覺化筆記軟體 Heptabase！ 👉 在電腦開啟七天免費試用：https://bit.ly/3tYPGAp 👉 點這裡看更多說明：https://bit.ly/3u1r4XS  結合「白板」和「卡片」，全方位幫助你 快速學習📖  整理資訊 📊 腦力激盪 🧠  #Heptabase  #卡片盒筆記  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-03",
+          "videoLength": 577391
+        },
+        {
+          "id": "3KUp9n367owZ0PlPd32M9x",
+          "title": "EP 462 年輕人用簡體字，就會被文化統戰嗎？簡體字的幕後推手，其實是蔣介石？",
+          "description": "本集廣告與「芒狗狗素養繪本」合作播出 -   .ᐟ.ᐟ 全方位主題的學齡前繪本 .ᐟ.ᐟ  🎁 16 本全套組（含卡牌兩副、著色遊戲一冊） 6 折優惠輸入「podcast77」再 9 折，現省 $3,330 還加贈遊戲著色本！☛ https://reurl.cc/RvV37D  🎁 新書 3 本組 $820、募資經典任選 3 本 $999  ☛ 結帳輸入優惠碼再 9 折 https://mangopup.com/ - 本集節目內容由志祺七七團隊製作，不代表「芒狗狗」立場  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-02",
+          "videoLength": 688848
+        },
+        {
+          "id": "02nPmfSggNSwODkZhn2wZ1",
+          "title": "EP 461 放棄競爭、享受單身、走向滅亡......，經典的「老鼠烏托邦」實驗，早就預告了人類的未來？",
+          "description": "🎉 Podcast 新頻道開張 🎉 🎉 趕快搶先訂閱起來吧！👉 https://apple.co/4ajjpUi   為了讓喜歡「時事議題」和喜歡聽「訪談」的聽眾，都能迅速找到自己喜愛的內容， 4 月起，純聲音版「時事議題」內容，將會搬家到全新頻道！  點擊上述連結，或在各大 podcast 平台搜尋「志祺七七-Podcast」，就能找到喔！   ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-04-01",
+          "videoLength": 588408
+        },
+        {
+          "id": "5hrxtfuoc6pDOMsLL2rqaF",
+          "title": "EP 460 太陽花運動10年了！當初到底發生什麼事？運動對台灣造成了哪些影響？",
+          "description": "😍 人氣精選組・官網獨家68折 😍 19本全套組・全網最優惠6折 🎉 專屬優惠・再享九折｜結帳輸入【podcast77】 👉 立刻擁有：https://lihi3.cc/Zb2gQ #芒狗狗繪本  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-29",
+          "videoLength": 941711
+        },
+        {
+          "id": "4b596eMKyBV3xyaRGFV7xR",
+          "title": "EP 459 苦牢 26 年、灌食 3 千次、整型躲追捕...「施明德」一生有多傳奇？為何晚年評價兩極？",
+          "description": "🎉  Podcast 新頻道開張 🎉 🎉  趕快搶先訂閱起來吧！👉 https://apple.co/4ajjpUi   為了讓喜歡「時事議題」和喜歡聽「訪談」的聽眾，都能迅速找到自己喜愛的內容， 4 月起，純聲音版「時事議題」內容，將會搬家到全新頻道！  點擊上述連結，或在各大 podcast 平台搜尋「志祺七七-Podcast」，就能找到喔！  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫   Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-28",
+          "videoLength": 731256
+        },
+        {
+          "id": "6GSvKII8THzrpdv1MegDNj",
+          "title": "EP 458 史上只有4個人成功通過！日本《極限體能王》到底有多狂？",
+          "description": "歡迎各位厲害的朋朋來加入簡訊設計 / 志祺七七戰隊！ 職缺詳情請看官網說明 👉 https://lihi2.com/niU52  【全職】 ＊簡訊設計｜專案經理（設計領域、行銷領域） ＊簡訊設計｜課程產品企劃 ＊簡訊設計｜社群行銷執行企劃  【接案合作】 ＊志祺七七｜外稿特約作者 ＊志祺七七｜頻道第二主持人 ＊簡訊設計｜網頁專案企劃 ＊簡訊設計｜網頁前端工程師 ＊簡訊設計｜網頁 UI 設計師 ＊簡訊設計｜行銷企劃 ＊簡訊設計｜文案企劃  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-27",
+          "videoLength": 852911
+        },
+        {
+          "id": "1X3QaFDUpSfFtoTJNPMKij",
+          "title": "EP 457 人真的可以跟寵物溝通嗎？這到底是獨門的專業，還是一場詐騙？",
+          "description": "🎉  Podcast 新頻道開張 🎉 🎉  趕快搶先訂閱起來吧！👉 https://apple.co/4ajjpUi   為了讓喜歡「時事議題」和喜歡聽「訪談」的聽眾，都能迅速找到自己喜愛的內容， 4 月起，純聲音版「時事議題」內容，將會搬家到全新頻道！  點擊上述連結，或在各大 podcast 平台搜尋「志祺七七-Podcast」，就能找到喔！  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments   Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-26",
+          "videoLength": 659423
+        },
+        {
+          "id": "1fUv0paH2SZYfRUFukec9w",
+          "title": "EP 456 8 成住院醫生罷工，病患求醫無門⋯韓國醫生為何被罵爆也要罷工？",
+          "description": "❝ 志祺𝟰個月 -𝟭𝟰𝙠𝙜 秘訣大公開 ❞  志祺七七 × 宋晏仁醫師 ❰外食減重學❱  帶你根據體質・吃對美食・無痛瘦身✨  【外食減重學】線上課程 早鳥突破兩千人・開課確定🕊️ 輸入「77COFIT」再折 $200💰 越早賣越划算・最多激省 $2390👉 https://pse.is/5jukkj  #外食減重學 #不必挨餓節食_也能輕鬆瘦身  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-25",
+          "videoLength": 948936
+        },
+        {
+          "id": "6hNXxs0cSgPeGtE499TeH1",
+          "title": "EP 455 貨輪遭擊沈、美軍為「護航」疲於奔命...紅海危機持續升溫，會導致什麼結果？",
+          "description": "🇯🇵日本製【Munichi鮮封啵啵盒】🇯🇵 結帳輸入「shasha77」再折$60 👉 https://r.zecz.ec/5DV6  📌免開蓋微波，一視即透 📌無縫好洗淨、不卡異味 📌輕量耐摔，直接進微波  #鮮封啵啵盒 #日本製Munichi  本集廣告與「MUNICHI」合作播出； 本集節目內容由志祺七七團隊製作，不代表「MUNICHI」立場  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-22",
+          "videoLength": 686951
+        },
+        {
+          "id": "3Q3fCEKzHz89oC7TSJFPwf",
+          "title": "EP 454 為何地表生物越長越像螃蟹？人類也會演化成螃蟹嗎？",
+          "description": "【世界最強 180-in-1 JAKEMY 全制霸電動螺絲起子】 嘖嘖限定 2024 旗艦組合 🛠️ 現正熱賣中！ 立即搶購： https://r.zecz.ec/QJ9f 🔩 早鳥優惠六折起，現省千元 🔩 免費送「磁吸手環」  #嘖嘖 #螺絲起子 本集廣告與「JAKEMY Taiwan」合作播出； 本集節目內容由志祺七七團隊製作，不代表「JAKEMY Taiwan」立場  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca  志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-21",
+          "videoLength": 621551
+        },
+        {
+          "id": "44Gk09eNFHT9In7rAlUYp6",
+          "title": "EP 453 不管睡多久還是好睏、一躺下就秒睡！這樣就是得到「猝睡症」了嗎？人到底為什麼會一直嗜睡？",
+          "description": "🇯🇵日本製【Munichi鮮封啵啵盒】🇯🇵 結帳輸入「shasha77」再折$60 👉 https://r.zecz.ec/5DV6  📌免開蓋微波，一視即透 📌無縫好洗淨、不卡異味 📌輕量耐摔，直接進微波  #鮮封啵啵盒 #日本製Munichi  本集廣告與「MUNICHI」合作播出； 本集節目內容由志祺七七團隊製作，不代表「MUNICHI」立場  ￣￣ Hiho～大家好，我是志祺，  你現在收聽的是志祺七七 Podcast！   在這裡，你將會聽到⋯⋯   各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！  ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca   志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca   本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫  小額贊助支持本節目： https://open.firstory.me/user/ckks5eepbgcwl0815tfre8q3s 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-20",
+          "videoLength": 656208
+        },
+        {
+          "id": "1wr2bH59Q5AWH7R9yzpNJ4",
+          "title": "EP 452 從小漁村到亞洲金融中心，新加坡是怎麼辦到的？台灣有可能學習「新加坡模式」嗎？",
+          "description": "🐸 招財揪吉撲滿，讓願望咕溜入袋～ https://r.zecz.ec/i53P  💰【揪吉聚寶】 陶瓷撲滿，專利錢幣設計， 體驗投幣許願的儀式感，送禮的最佳祝福～  ✨ 地表最前衛的新時代招財蟾蜍 已累積超過５萬尊在各地祝福招財！  #曉創意 #招財揪吉 #揪吉聚寶  本集廣告與「曉創意-揪吉聚寶」合作播出； 本集節目內容由志祺七七團隊製作，不代表「曉創意-揪吉聚寶」立場  ￣￣ Hiho～大家好，我是志祺， 你現在收聽的是志祺七七 Podcast！  在這裡，你將會聽到⋯⋯  各種人們熱切關注的新聞、時事議題、社會文化、心理健康、人際關係、科學與科技、政治與法律、兩岸與國際關係等等，多樣化的主題與觀點 ！  如果你想要跟上社會時事的資訊、增加多面向的趣味知識觀點， 那就趕快訂閱我們的頻道吧！ ＿＿  更新時間： 📅 週一～週五：每天 07:00 PM，更新時事議題內容！  志祺七七時事議題內容： 🎧 Apple Podcast： https://apple.co/4ajjpUi  🎧 Spotify：https://spoti.fi/43lRbWJ  🎧 KKBOX：https://bit.ly/4akyy7B  🎧 YouTube：https://bit.ly/3PAd6Ca   志祺七七《強者我朋友》訪談完整版： 🎧 Apple Podcast：https://apple.co/3sQ7jyH 🎧 Spotify：https://spoti.fi/3Nu4jzH 🎧 KKBOX：https://bit.ly/3sSRJlL 🎧 YouTube：https://bit.ly/3PAd6Ca   ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿ 🌍 探索世界・現在就訂閱志祺七七吧 🌍 ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  本集 Podcast 編輯 👉 蘇菲、宇軒  本集 Podcast 剪輯 👉 憨ㄐ  ￣￣ 如果你想與志祺七七合作，歡迎寫信到：hi77@simpleinfo.cc 與我們聯繫   小額贊助支持本節目： https://open.firstory.me/user/ckks5eepbgcwl0815tfre8q3s 留言告訴我你對這一集的想法： https://open.firstory.me/user/cltmj9b0x12b201xh5pincmny/comments  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a9f88ecf2a5c2446eff3a1ddf",
+          "date": "2024-03-20",
+          "videoLength": 855720
+        }
+      ]
     },
     {
-      "id": 5,
-      "title": "A Game of Thrones",
-      "type": "eBay",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/6804/b0eb/cdeeb4f7103a19daf9115788f7245b5f?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F4EGth5-TAewPAKZdh2pvkyNEqezrjzxJhb4P7qpokg4sTBDpN5D0X6lYRjJTr3XSK9tISwgautIYsgVzP79XUzWF6y6SYZ2oo5YRwvj2wUkFV5xuhb6J5PXPJ~sl3oCc6f1cZY~N6wXV5qEoVIrXMYLycNgDfOFu3097PCqHHbIuNYnoBNNyzB-1NcYU7kyD~kWX5L6xNBjenM~228Q7ULnYNS02V2AMzq6uLCQTOU-EZNpS6a4XXVIZ3Ahm5boWYJxJte6PGh7qGM6POJanZ7O16cvBCWoLNA6hnZwVNkudVxFJlUwwt7pIrOHJ8vfcVscx5RraqMTFI60Rfghvg__",
-      "active": false
+      "title": "跳脫Do式圈",
+      "publisher": "The DoDo Men - 嘟嘟人",
+      "description": "【歡迎來到🥊跳脫Do式圈】  獨自跳脫舒適圈好困難啊！  我們會在這個節目分享，跳脫舒適圈背後的辛酸血淚和心路歷程！希望帶給想要勇敢嘗試、想要跳脫舒適圈的你們，得到一些勇氣與共鳴！  跟著我們一起跳脫舒適圈吧💪   📅 更新時間｜台灣時間每週一早上七點，陪你一起度過 Monday Blue 📩 合作邀約請來信｜Business@thedodomen.org  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出  -- Hosting provided by SoundOn",
+      "imageUrl": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+      "date": "\"undefined\"",
+      "episodes": [
+        {
+          "id": "1t8OQXWUBbOp0FCxOsDltO",
+          "title": "EP54｜來到適婚年齡，步入家庭前要做好哪些準備？ feat.百靈果",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Eric  本集重點：  ⛺ 從不想要有小孩到懷孕五個月，凱莉最近心境轉變如何？ ⛺ 幾乎同時想要有小孩，有討論過彼此有小孩後的合作關係嗎？ ⛺ Ken父愛噴發！視訊之餘，竟然還會當眾唱歌哄女兒 ⛺ 當父母永遠不會有準備好的這一天？ ⛺ 合作模式都Ken在想，有因為家庭和彼此產生分歧過嗎？ ⛺ 如果凱莉生完小孩要休息的話，Joeman要來代班？ ⛺ 要求婚千萬別這麼做！會建議該如何為下一個階段做準備？ ⛺ 想處像在鬥智鬥法，凱莉求婚當天反而被老公整  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8aa9a9ded468ab4ae846dcf8f8",
+          "date": "2024-04-28",
+          "videoLength": 2818920
+        },
+        {
+          "id": "4LxK0eTfIRrv4DeM2hg3c5",
+          "title": "EP53｜上班好同事、下班不認識！與職場夥伴該保持界線還是掏心掏肺？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric . 【Rococo Taiwan 洛可可地板 台灣總代理】 新式防水超耐磨地板 柔順踏感 全台展間鑑賞 https://reurl.cc/XqbYR7 . 本集重點： . ⛺「就是來上班的！」，Ian 把社交場合都當成工作的一部分？ ⛺ 為了要有話聊，被同事影響每週收看冰與火之歌！ ⛺ 往好處想，同事就是因為信任你願意抱怨講八卦 ⛺ 放假還要看到同事，覺得員工旅遊會幫到團隊嗎？ ⛺ 跟同事是一回事，那和主管保持距離是不是比較好？ ⛺ 主管當然會想刻意保持距離，和團隊出去玩反而會給下屬壓力 ⛺ 一起熬夜奮鬥，因為革命情感而和同事成為朋友 ⛺ 關係好複雜！兩人既是朋友又是同事又是創業夥伴 ⛺ 每年辦自己的生日趴，Eric 近兩年才真的意識到 Ian 是 I 人 . . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8adc10b2a16c40ab949c0354ab",
+          "date": "2024-04-21",
+          "videoLength": 2893248
+        },
+        {
+          "id": "6fC5yCNm1GZbTp2hBNSGrB",
+          "title": "EP52｜台灣人超愛送小孩出國！在美國留學就像玩海龜湯？ feat.小熱唱 彥之、虹之",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric . 本集重點： . ⛺ 從小就被業配要出國唸書，但遊學經驗才是申請出國的主因 ⛺ 「遊學」和「留學」差在哪？美國夢泡泡兩個禮拜就幻滅？ ⛺ 申請學校還有公式？在美國越好的大學越偏僻？ ⛺ 在美國找客服超麻煩！彥之分享必殺大絕招！ ⛺ 小費稅金不透明，在外面吃飯常被加一堆錢 ⛺ 護照要隨身帶著，亞洲人容易被誤認還未成年？ ⛺ 求生慾被激發！美國教育更鼓勵學生自己找答案！ ⛺ 如果想要出國唸書，那我需要考量哪些事情？ . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 🎁 感恩媽咪！來施舒雅美容世界挑禮物就對了🔥獻上日本上質美容SPA體驗💯，逾60年專業保養經驗，同步日本安心手技按摩，感受身心放鬆紓壓，擁抱療癒與美麗♥️一起成為最幸福的女人😍 新朋友享5折優惠 https://bit.ly/49O39tE 預約美好時刻 0800-049-888 -- 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a2e52553c8612431c1cbe0904",
+          "date": "2024-04-14",
+          "videoLength": 3677471
+        },
+        {
+          "id": "6XONwpHqx9DfmLApUXv9OR",
+          "title": "EP51｜帶芬蘭人回台灣！兩個 I 型人私下如何度過三天兩夜之旅？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric . 去趣App真的很好用耶！ 像我們不習慣把行程排得很滿的人，去趣的找附近功能可以直接搜尋附近的行程，還可以看到其他人的照片或影片！ 歡迎大家跟著這次的行程去旅行：https://ourl.tw/rkuET7 . 本集重點： . ⛺全程靠它安排行程，去趣 App 使用心得？ ⛺路人講話都很冷淡，一般芬蘭人都不覺得自己是最幸福國家！ ⛺原本已經答應 Ian 了，為什麼 Tim 最後沒來？ ⛺一直被人選們打槍，企劃差點無法成行 ⛺外國人意外的多！為什麼這次要帶 Niki 去台南玩？ ⛺整趟旅程最好玩的景點？關子嶺溫泉池竟然還會電人？ ⛺同是話少I型人，最怕空氣突然安靜 ⛺在歐洲不會這樣，Niki 覺得台灣招牌和電線桿超酷！ ⛺北歐國家語言超難！Let's Eat 的芬蘭語叫「嗚嘎拉嘎」？ ⛺下次再遇到I型人就帶他們去綠島潛水！ . . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8aeb3bcc255ae94233a04435c2",
+          "date": "2024-04-07",
+          "videoLength": 2936663
+        },
+        {
+          "id": "0Q3thuLxyPjG5OYr5yNkqo",
+          "title": "EP50｜盡力讓人生不留下遺憾，每個生命都在教你怎麼活著！feat.小冬瓜",
+          "description": "彰化銀行「馬偕認同卡」，申辦即享國內1%、海外3%、指定藥妝/藥局最高6%現金回饋。 刷卡同時，彰化銀行將回饋0.25%予馬偕醫療財團法人。 快來申辦一起做愛心! 了解更多：https://bit.ly/4avZBgV 謹慎理財 信用至上 -- 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy －－－－以上訊息由 SoundOn 動態廣告贊助商提供－－－－ 🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric . 本集重點： . ⛺ 幫忙家裡的殯葬事業，小冬瓜一開始就不怕嗎？ ⛺ 完成父親的後事，一直到他走後還是覺得好不真實 ⛺ 慶幸從事殯葬業，每一位往生者都在教人怎麼活著 ⛺ 大家像各自帶著一塊拼圖來，拼湊出父親傳奇的ㄧ生 ⛺ 舉辦生前追思派對，第一次收到客戶本人親自道謝 ⛺ 除了財產外，遺囑應該是更有溫度的東西 ⛺ 人生根本不會有「最後三通電話」，小冬瓜甚至早把遺照準備好了 ⛺ 害怕死亡也非壞事，你需要的是與遺憾、悲傷和平相處 ⛺ 如果今天就是人生最後一天，會想要做些什麼？ ⛺ 每個人都會遇到，會怎麼鼓勵聽眾面對離別的時刻 . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . ✨ GUEST：小冬瓜 Instagram｜https://www.instagram.com/dk.oneway/ Facebook｜https://www.facebook.com/dk0926555558 . . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a292b5db7a14972a8cea9c269",
+          "date": "2024-03-31",
+          "videoLength": 3868528
+        },
+        {
+          "id": "4PtlTTYL5134uIC487KZzd",
+          "title": "EP49｜去丹麥找Anton！原來這就是世界最快樂國家－丹麥的生活！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric . Travel Blue 頸枕真的是我們出國必備品 用我們的優惠碼 「DODOMEN10」，全面九折 https://bit.ly/3T4nvZc . 本集重點： . ⛺ 從沒想過會來丹麥，這趟真的是為 Anton 來的！ ⛺ 為Dodomen準備超豐富兩天一夜之旅！很多地方 Anton 也是第一次來！ ⛺ 全球最宜居城市！哥本哈根到處都是進階版 IKEA 樣品屋 ⛺ 在 Nyhavn 被粉絲認出來，Anton 要不要乾脆來台發展？ ⛺ 北歐人習慣吃冷食，但最好吃的是 Anton 媽做的料理！ ⛺ 丹麥最好喝的飲料，今晚要把這些酒和牛奶喝光 ⛺ 文化衝擊！回收不用壓扁、丹麥人不喝熱水！ ⛺ 所得近一半要繳給政府，但在丹麥念大學竟然是不用錢的！ ⛺ 雖被譽為是最快樂國家，但丹麥人好像都不這麼覺得？ . . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a28fa241906c54a072386c695",
+          "date": "2024-03-24",
+          "videoLength": 2808096
+        },
+        {
+          "id": "4T30ZdHp3ehfDAIEMbb7c9",
+          "title": "EP48｜打破你的慣性思維！就是因為舊方法沒用才需要「創新」！feat.陶韻智＆葉丙成教授",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric . 【創新商業思維實戰｜帶你發現問題、解決問題、創造商機 】  4/14前預購早鳥優於45折！ 結帳輸入專屬優惠碼「do350」，可以再折 $350 元！ 👉課程介紹：https://hi.sat.cool/ZmdJk  ✅ 對標史丹佛大學思維訓練｜從底層培養獨立思考的眼光 ✅ 大量知名企業案例｜貼近實際商業操作而非空談理論 ✅ 擺脫思維慣性，看見認知死角｜不再仰賴過往的成功經驗解決問題 ✅ 可操作的方法論｜練習不同的思維工具，掌握自己最擅長的策略組合 ✅ 超過10小時超豐富線上課程｜無限制觀看與練習，強化你的創新思維  💼上班族：不再仰賴過往經驗解決問題，透過思維提升個人競爭力 🗓管理者：使用可依循的方法論強化決策與管理品質 🖌經營者：拓展思考邊界，找出精準的商業機會  #4/14前 #預購早鳥優於4折 . . 本集重點： ⛺ 成功把 Sting 挖來兼課，為什麼要教創新商業思維這門課程？ ⛺ 不是天外飛來一筆，創新是有方法可循的 ⛺ 創新的關鍵要素：有沒有問對問題 ⛺ 要怎麼知道是不是「問對問題」？ ⛺ 原來 Line Pay 是這樣在全台流行起來的！ ⛺ 會被質疑是不是瘋了，但是經理人和創業家就是要「對抗慣性！」 ⛺ 現場教授幾招！日常也用得到的批判性思考！ ⛺ 把想法發散再收斂，有時創新也需要縮小搜尋範圍 ⛺ 工作兩年就想換跑道， Benson 不推薦的原因是..? . . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ae466d04ef8ec14928569be3c",
+          "date": "2024-03-17",
+          "videoLength": 3652776
+        },
+        {
+          "id": "5OhCn3R8zOAEMmSxkhw5DD",
+          "title": "EP47｜創業、生活都在一起，天底下哪有不吵架的情侶！feat.壹加壹",
+          "description": "城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- 彰化銀行「馬偕認同卡」，申辦即享國內1%、海外3%、指定藥妝/藥局最高6%現金回饋。 刷卡同時，彰化銀行將回饋0.25%予馬偕醫療財團法人。 快來申辦一起做愛心! 了解更多：https://bit.ly/4avZBgV 謹慎理財 信用至上 －－－－以上訊息由 SoundOn 動態廣告贊助商提供－－－－ 🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點：  ⛺ 放假會一起追劇打電動，但出去玩還是會忍不住拍片？ ⛺ 準備隨時都要拿出手機，甚至家人還會幫忙想題材 ⛺ 在一起11年了！一開始拍 YouTube 只是為累積作品集 ⛺ 前三年沒吵過架，但一起工作後就開始動搖了？ ⛺ 大吵後又大和好，多數時間是工作影響私人情緒 ⛺ 當創作者的職業病：就算在休息也會想著工作事 ⛺ 拍片也讓感情越來越好，遇到再大的困難都一起面對 ⛺ 如果流量變差，有想過還要繼續拍多久嗎？ ⛺ 雙人組一定會遇到的問題！在鏡頭前至少默契要夠好   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出  📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a1b4770cca66476c1dc3d86bf",
+          "date": "2024-03-10",
+          "videoLength": 3101711
+        },
+        {
+          "id": "5uDBcU8IJ2KDpgzTHbYH4I",
+          "title": "EP46｜兩人分開後，現在還好嗎？找到關係中的距離美！",
+          "description": "城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- 彰化銀行「馬偕認同卡」，申辦即享國內1%、海外3%、指定藥妝/藥局最高6%現金回饋。 刷卡同時，彰化銀行將回饋0.25%予馬偕醫療財團法人。 快來申辦一起做愛心! 了解更多：https://bit.ly/4avZBgV 謹慎理財 信用至上 －－－－以上訊息由 SoundOn 動態廣告贊助商提供－－－－ 🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點：  ⛺ 一個月沒見面，兩個人最近在忙什麼？ ⛺ 可能一週講不到一次話，第一次給彼此這麼多時間 ⛺ 距離產生美感，現在會更珍惜碰面的時間 ⛺ 回美國陪女友，感覺在感情和工作之間更能取得平衡了 ⛺ 自己拍片好不方便，Ian手機裡只剩自拍照？ ⛺ 創作和決策跟著變自由，Ian 的私生活有什麼改變？ ⛺ 情侶享受各自的 Me Time，相處起來會有更多話題和火花！  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a6a11322c99f79f589a67ed9b",
+          "date": "2024-03-03",
+          "videoLength": 2515919
+        },
+        {
+          "id": "0I0txb1ZhF4SY64IZ0DZVY",
+          "title": "EP45｜帶日本朋友來台灣玩！最驚豔的是台灣人的好客和人情味！",
+          "description": "城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- 彰化銀行「馬偕認同卡」，申辦即享國內1%、海外3%、指定藥妝/藥局最高6%現金回饋。 刷卡同時，彰化銀行將回饋0.25%予馬偕醫療財團法人。 快來申辦一起做愛心! 了解更多：https://bit.ly/4avZBgV 謹慎理財 信用至上 －－－－以上訊息由 SoundOn 動態廣告贊助商提供－－－－ 🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric   本集重點：  ⛺ 日本人天生就害羞，遇到「搭訕」更會加速走人！ ⛺ 在涉谷尋找近一個小時，終於有好奇的群眾願意接受街訪了 ⛺ 這個開來日本絕對大賣，日本人對薑母鴨特別有好感？ ⛺ 蛋餅加大、魷魚招待，台日友好不是講假的 ⛺ 指定要去買台灣高山茶，但對珍奶好像不是特別驚艷 ⛺ 體驗台灣夜生活，酒後感覺大家又更親近了 ⛺ 用心介紹自己的私房景點！鏡頭後才是真正交心的時間   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a23791e339d08192e4ada5cda",
+          "date": "2024-02-25",
+          "videoLength": 2765824
+        },
+        {
+          "id": "247UiLbD2EM18U5yBayjyv",
+          "title": "EP44｜與家人仍有未解心結，2024就是勇敢跨出舒適圈的一年！feat. 唐綺陽老師",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian . 📣2/19-2/28 官網指定期限內下單消費， 輸入指定優惠折扣碼：「dodomen95」 就能立即享有95折優惠哦！🎉🎉 詳情請上添糖﻿官網：https://lihi.cc/JaOsJ #Tientang #添糖黑糖磚 #買黑糖選添糖 #brownsugarcube #精品黑糖磚 . 本集重點： ⛺ 研究星盤只是興趣，原來唐老師本業曾是配音員！？ ⛺ 寧願每年進步一點也不要太躁進，勇敢之餘你還要有耐心！ ⛺ 一直碎念，為什麼爸媽老是要我過馬路小心？ ⛺ 晚年還是要靠自己顧，老師考慮成立「星座養老村」？ ⛺ 處理家庭問題，土象最務實、水象卻常把自己當超人？ ⛺ 華人社會常有的包袱，孩子們自願戴上金手銬以滿足父母的期待？ ⛺ 有財運不代表就能一蹴可幾！機會是給準備好的人！ ⛺ 給聽眾朋友們的來年建議？ . . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8abf1223bd3c30a6fc82d11f63",
+          "date": "2024-02-18",
+          "videoLength": 3183863
+        },
+        {
+          "id": "0SBxLM77BVgCwXoF18r8vl",
+          "title": "EP43｜迎接龍年新的一年！原來留在台灣過年這麼好玩！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric . 🫧 寶拉珍選 Paula's Choice 全新產品 8%雙重果酸精華液 新上市啦！ 想要有白拋拋幼咪咪的皮膚嗎？ . 趕快用起來，現在單品72折起：https://reurl.cc/pr5y5x . #寶拉珍選 #成分專家 #全球刷酸始祖 #雙重果酸精華液 #水楊酸精華液 #成分專家 . 本集重點： . ⛺ 龍年大家都想生龍子，Eric 現場想到關於生肖的笑話 ⛺ 搬到美國前最喜歡過年了，到現在都不知道紅包錢被收去哪 ⛺ 桌上差不多是一週的食量，年菜總是多到吃不完！ ⛺ 誰誰誰家的孩子也回來了！過年就是長輩們的比較大會？ ⛺ 第一次在過年期間被灌醉，長輩玩超嗨差點讓 Ian 招架不住 ⛺ 怕被問工作問感情，而且輪到自己要包紅包時就不想過年了！ ⛺ 這麼大了竟然還收到紅包，原來是 Eric 意外助攻 ⛺ 找個時間再聚一起吧！換個方式延續過年團聚的傳統！ . . 🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB . . 本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a6ce4cf7c79f05f5d6fc8f9e8",
+          "date": "2024-02-04",
+          "videoLength": 2455008
+        },
+        {
+          "id": "0cHMMLqKSjiaZbZv6Sa7Y8",
+          "title": "EP42｜英文不是拿來考試而已！在國外遇到詐騙，還能用語言能力解決問題！ feat. Howard",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點：  ⛺ 要即時翻譯人家在講什麼，這是一份考驗記憶力與專注力的工作！ ⛺ 在國外遇到歧視？要吵架時腦袋會浮現中文還是英文？ ⛺ 沒有刻意學口音，但口譯員一定要聽懂世界各地的英文 ⛺ 在西班牙街頭遇到詐騙！英文這個時候就派上用場了！ ⛺ 歐洲小偷扒手多，隨身物件一定要再三注意 ⛺ 想徒步走到迪士尼，第一次去美國卻不小心走上高速公路！ ⛺ 飯店超賣房間！逼得 Howard 去找櫃檯理論 ⛺ 台灣人不是英文不好，是太少有口說英文的機會 ⛺ 國中英文程度就能上手，這門課適合哪些人來上？  💎不再死背文法！跟金牌口譯員打造英文直覺腦💎  開口說英文前，你都在想什麼呢？ 💭 腦袋一片空白，完蛋了！ 💭 我這樣講文法會不會有錯？ 💭 每次開口前都要中翻英心好累  金牌口譯員浩爾 ，也是台積電等知名企業指定的英文老師，有以上這些症頭的你，其實並不孤單！  在【英文直覺腦】課程裡，統整了 「30 句高頻率直覺句型庫」，讓你學會怎麼在 12 種情境中活用，融入我獨創的「3C英文學習法」，再搭配 「課程學習 App」的聽力口說、角色扮演、AI 辨識評分等功能，不需要死背文法，也可以練出直覺腦！  【不再死背文法｜跟金牌口譯員打造英文直覺腦】 🎉DoDoMen 專屬優惠🎉 優惠碼：dodomen200 只到 2024/2/19，這次我們一起加入學習行列 👉🏻 https://url.wordup.com.tw/lUEgH  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a645ee53d9765c2899eb2ea81",
+          "date": "2024-01-28",
+          "videoLength": 3735048
+        },
+        {
+          "id": "4oAQ5fnhgKUv6Qpiyol6UY",
+          "title": "EP41｜受邀電影首映會，生平第一次採訪好萊塢巨星！在日本搭訕陌生人超挫折！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 不只首次和 Netflix 合作，更緊張的是要和好萊塢導演合作！ ⛺ Netflix 大手筆邀請創作者們！整趟旅程彷彿是「皇帝級體驗」！ ⛺ Netflix 把影集場景直接搬進首映會！排場大到讓人覺得荒唐？ ⛺ 查克史奈德就在旁邊！Rebel Moon 演員們都超Nice! ⛺ 來到行程的重頭戲，專訪導演和男女主角！ ⛺ 訪問時間根本不到五分鐘！緊張到連講「舒適圈」都吃螺絲 ⛺ 這題一定要問到！工作人員都舉牌了還繼續問下去！ ⛺ 順道看了幽遊白書首映會，Netflix竟把整座體育館包下來？ ⛺ 一次超棒的學習體驗，現場居然還遇到千萬等級的創作者  🔥❝ 志祺𝟰個月 -𝟭𝟰𝙠𝙜 秘訣大公開 ❞  志祺七七 × 宋晏仁醫師 ❰ 外食減重學 ❱ 帶你根據體質・吃對美食・無痛瘦身✨  外食減重學線上課程｜早鳥優惠中❗️ 輸入「DODOFIT」再折 $400💰 早鳥最高可省 $2,700 👉 https://pse.is/5hlnwd  #外食減重學 #不必挨餓節食_也能輕鬆瘦身   🔥春節出遊、疏運相關資訊請上觀光署網站查詢 https://reurl.cc/v061Xo 交通部觀光署 廣告   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org  -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a284c2763149b2004af68d09e",
+          "date": "2024-01-21",
+          "videoLength": 2826936
+        },
+        {
+          "id": "70aikhvMwUF9cwwZ0AeeaB",
+          "title": "EP40｜用蓋洛普找到你的天賦！原來我們的優勢有這些？！feat. Grace",
+          "description": "城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- 宏國德霖科技大學，有豐富獎學金就學補助、多元實習機會，讓你畢業即就業，實踐創業夢想人生！ 三大學院：餐旅學院、不動產學院及工程學院，緊密合作旗下凱撒飯店連鎖及宏國建設集團，宏國德霖科技大學是你最佳選擇！ https://bit.ly/442EUH4 －－－－以上訊息由 SoundOn 動態廣告贊助商提供－－－－ 🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 什麼是蓋洛普測驗？ ⛺ 每個人的天賦不同！簡單介紹蓋洛普的計分方式 ⛺ 分析測驗結果，Eric 的天賦都點在溝通分享能力上？ ⛺ 已經到有點會裝熟的地步？對外社交場合都交給 Eric Carry! ⛺ 不想讓別人失望，執行力天賦就是會把標準設的比別人高？ ⛺ Eric 先天重視和諧，面對衝突當下兩人思考邏輯也不同 ⛺ 解析測驗結果，最滿意自己與最欣賞對方的天賦？ ⛺ 上場前也要清點武器庫！設定目標，並活用你的天賦！  🌿職涯平台 BetweenGos 課程服務專屬優惠 🌿  深耕職涯領域 8 年多來，BetweenGos 在協助超過 5000 位學員找到職涯方向的路上，發現面對變動快速、資訊爆炸的市場，工作者們對未來的想像更為模糊、焦慮，反觀對自由的追求也越趨強烈，「只能這樣了嗎？」是學員普遍的心聲。  為探尋發展職涯可能性，找到「職涯定位」並培養「優勢思維」或許是你接下來可以努力的方向！  ►「優勢思維線上課」專屬 800 元優惠！2/14 前點擊課程頁面 https://bgs.pse.is/dodo800，結帳輸入 dodo800（全小寫），線上課現折 800 元！ ►「一對一優勢諮詢」專屬 300 元優惠！2/14 前點擊 https://bgs.pse.is/dodo300 加入 BetweenGos LINE 客服，輸入「嘟嘟人」，將可獲得優惠資訊並有專人協助！  BetweenGos IG：https://www.instagram.com/betweengos/  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a6636a18bacb8682ea293214e",
+          "date": "2024-01-14",
+          "videoLength": 3336863
+        },
+        {
+          "id": "3SSNRbfZskzArB8PxwFPMi",
+          "title": "EP39｜從書中汲取大師們的精華！閱讀就是一件超跨出舒適圈的事！feat.瓦基",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 斜槓了近三年，全職創作原來是受到DoDo Men的啟發！ ⛺ 前期收入一定比較少，但測試後發現這是一項極具發展潛力的工作 ⛺ 半年寫完一本書，瓦基的高效秘訣？ ⛺ 整本書都想記錄下來！做筆記成為我閱讀的障礙！ ⛺ 記憶需要被提取內化，什麼是卡片盒筆記法？ ⛺ 讀書為了累積知識量，文獻筆記和永久筆記如何相輔相成 ⛺ 經常遇到觀念上的衝突，方法沒有對錯，只有適用時機不同！ ⛺ 有責任將技巧分享給大家！哪些人適合上這門課？ ⛺ 覺得生活卡卡的，閱讀就是跨出生活框架的方法之一！  《卡片盒筆記實戰課》 👉https://go.newsveg.tw/5gnfmc ⚡️DODOMEN專屬優惠 使用折扣碼【DODOMEN500】專屬優惠【再折 500】 ！ （單人＆三人團購皆適用） 優惠碼領取後，須於 30 天內使用  閱讀前哨站IG：https://www.instagram.com/readingoutpost/ 生鮮時書IG：https://www.instagram.com/newsvegtw/   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ae656c8aaa2bc4f995adc80c1",
+          "date": "2024-01-07",
+          "videoLength": 3885143
+        },
+        {
+          "id": "7FkZJmhnoJzQgZsK1XfP0d",
+          "title": "EP38｜回顧2023年做了哪些冒險！2024一定要破百萬訂閱！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 2023第一個里程碑！跳脫Do式圈終於開播了！ ⛺ 完成人生第一場馬拉松賽事，衝破終點後超想報名下一場！ ⛺ 連三週體能大挑戰，美洲之旅最喜歡的部分是？ ⛺ 就像身邊多了同事們，2023和好多創作們合作拍片！ ⛺ 今年的遺珠：沒有抱走走鐘獎 ⛺ 和酷一起去韓國拍片！合作完就像交到了一個兄弟 ⛺ 挑戰喜劇圈！今年居然還站上夜夜秀舞台 ⛺ 對新年的期許，目標2024YT破百萬訂閱！  我們好朋友金魚腦的西班牙文課開始募資拉 ✨ 新的一年如果還沒想好明確目標，不如就先從學會一個通用21國的語言開始吧！ 保證新手友善，還會實際帶你去西班牙應用課程內容，超級適合完全不會西文的你！  金魚腦的旅遊西文課《一起去西班牙學西文｜金魚腦的旅遊實境會話課》 募資優惠5折起 🇪🇸 一起打造你的西文旅遊通行證吧 🌟 🔗 連結 https://www.pressplay.cc/link/s/E5B6ADF9 結帳輸入【dodo150】再省150元！  #史上第一堂 #語言教學 #實境旅遊 #西班牙文 #線上課程  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ac48241c04dd4aa0a045e258d",
+          "date": "2023-12-31",
+          "videoLength": 3144096
+        },
+        {
+          "id": "0jn2nETK6IrA6pH7q2LyGM",
+          "title": "EP37｜N 世代工作做不爽就離職？熱情跟興趣才是找工作重點！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 已經有 X\\Y\\Z 甚至是千禧世代了，那到底什麼是 N 世代？ ⛺ 生活選擇越來越多！N 世代的年輕人工作都做不久？ ⛺ 錢不是重點！Ian 第一份工作就選可以跳脫舒適圈的 ⛺ 八個月後就換第二份工作，即便不是完美，卻也是值得累積的經驗！ ⛺ 雖然職涯一直有進展，但卻在精算職業中懷疑起工作的意義 ⛺ 如果回到第一份工作，學習、興趣、理想、經驗你會怎麼選？ ⛺ 大部分台灣人畢業後工作和所學都不一樣？ ⛺ 想找到「完美」的工作，但其實大學畢業生根本不了解自己 ⛺ 福利不用看太重，第一份工作先挑可以幫助你學習的！  🌳國泰金融集團 招募中🌳  不管你是想要脫離現狀，還是想要追求更好的職涯發展，國泰金融集團提供八大職系多元豐富的實習、正職職缺，預計在2024年3月初舉辦國泰徵才說明會，對國泰的職缺及職場樣貌有興趣的朋友們，請立即關注FB & IG粉專唷！  👉國泰FB粉專：https://www.facebook.com/cathaycampus?locale=zh_TW  👉國泰IG粉專：https://www.instagram.com/careerschool_cathay/  👉國泰徵才招募網站：https://cathaybk.tw/23LKU35PR  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8a437386cfee3cc0834df38a8c",
+          "date": "2023-12-24",
+          "videoLength": 3111456
+        },
+        {
+          "id": "0ILlL74CNnKnuh43qJk8ru",
+          "title": "EP36｜全世界只有台灣有溫暖的創作者大家庭！YouTube 演算法內幕解密！feat. YouTube 大中華區策略合作夥伴副總經理陳容歆 (Sandy Chen)",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 從手機轉移到電視，Youtube 的收視習慣正在改變中？ ⛺ 每年都有熱門榜單，原來 Youtube 數據看的是這些東西 ⛺ 觀眾口味一直在變，點閱率經常和預期的不一樣！ ⛺ 訂閱數卡在60萬快一年，創作遇瓶頸可以嘗試用短影音找方向？ ⛺ 大家時間變得越來越零碎，做內容不一定選擇 Youtube 就好？ ⛺ 全世界只有台灣有，創作者社群簡直像溫暖的大家庭 ⛺ 短影音迅速崛起！但在 Youtube 瀏覽30秒才算一次點閱數！ ⛺ 營利、會員專屬、超級感謝….Youtube接下來還要幫創作者做線上課程！ ⛺ 每天約有8000萬人收看中文內容！做純英文內容反而競爭更激烈！  🎤粉絲贊助資格門檻為有效的公開影片觀看時數累計 3,000 小時，或過去 90 天內的 Shorts 觀看次數累計超過 300 萬次；廣告和 YouTube Premium 收益分潤啟動門檻則是累計 4,000 小時，或過去 90 天內的 Shorts 觀看次數累計超過 1,000 萬次。其他條件詳情可見：https://reurl.cc/nLK1Ov  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-12-17",
+          "videoLength": 3715176
+        },
+        {
+          "id": "6aFj0YAyC35VVDPNT3OB73",
+          "title": "EP35｜準到像是家裡被竊聽！從星盤看出感情發展！feat.占星專家 白瑜",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 占星觀察誰會獲獎，明星網紅最常命盤出現在這個宮位 ⛺ 事前沒有聽過 Podcast，兩人的星盤連老師都說合拍 ⛺ 事業、家庭都超好！老師看過最令人稱羨的命盤？ ⛺ 管小事不管大事，Ian 會是大男人主義的老公？ ⛺ 小霸王上身！Eric 可能比大男人還要大男人！ ⛺ Ian 女友情緒易受環境影響，時常為別人傷心？ ⛺ 對別人重要的事不一定對重要，女友總是替 Eric 消化完負面情緒？ ⛺ 如果我是工作狂，我可以如何和伴侶溝通？ ⛺ 工具就是要用來認識自己的，老師對於「巴納姆效應」的看法？  ✯ 白瑜的全方位占星學 ✯ \\ 感謝超過19000位學員支持 /  ☽ 10小時、79單元的課程內容帶你全方位解讀自我星盤 ☽ 學會合盤進階技巧，理解與他人的關係與未來走向 ☽ 透析流年流月的觀測，理解行星動態變化與個人運勢的關係 ☽ 流年表格、占星公式，讓占星學成為實用的人生決策工具  👉 限時低於45折，越早買越划算！ 👉 結帳輸入折扣碼「dodo300」即可再折300元！ 🔎 課程連結：https://hi.sat.cool/mjgj8  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org  -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-12-10",
+          "videoLength": 3766680
+        },
+        {
+          "id": "5hBXqGWtlziS2HiyxwTg2f",
+          "title": "EP34｜不是只有耍廢行程！員旅就是要帶大家跳脫舒適圈！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 邊出差邊旅行，同事一起出去玩感情會變更好！ ⛺ 突如其來的員工旅遊！第一次帶團隊去宜蘭玩！ ⛺ 玩到連自己也心跳漏拍，瀑布垂降比高空彈跳還可怕？ ⛺ 隔年員旅帶大家去越南， 一起體驗當地的文化衝擊！ ⛺ 去澎湖玩四天，發現團隊成員大家都成長了 ⛺ 每次都有特別行程！聽到要員旅反而大家會怕？ ⛺ 旅行途中還有競賽！結果 Eric 這隊都超會賴皮！ ⛺ 下一趟員旅要去哪？雖然花錢但員旅其實是必花的投資？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-12-03",
+          "videoLength": 2743560
+        },
+        {
+          "id": "5xcVVz0QjNDS52H5hhWUcm",
+          "title": "EP33｜超深刻初戀回憶！那些年我們的告白故事又酸又甜！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 幼稚園發現喜歡的女生，第一段戀情就是被爸爸摧毀的！ ⛺ 小時候都喜歡功課好、又有氣質的女生？ ⛺ 第一次告白是什麼時候？告白完下一步要幹嘛？ ⛺ 在舞會上大暈船，高中學姊卻建議不要在一起 ⛺ 把偶像劇招式用過一輪，下重本選情人節告白 ⛺ 學姊說「讓我想一下」，害 Eric 整整難過了一週 ⛺ Ian 告白做出最誇張的事情：直接在課堂上獻花！ ⛺ 暗戀長達三四年之久，會後悔當時沒說出口嗎   MAGEASY 8.3mm STRAP 掛繩組 讓出門更加便利和舒適！ 👉隨時解放雙手，手機不落地 👉薄掛片設計不頂殼、影響充電 👉iPhone/Android 手機都可以使用 👉多功能掛環扣設計，隨身小物輕鬆扣取 👉多色任選好穿搭  現在到 MAGEASY 官網輸入專屬折扣碼「Dodomen」，即享全站92折優惠喔！ MAGEASY 官網：https://mgz.link/SEt54P   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-11-26",
+          "videoLength": 3201023
+        },
+        {
+          "id": "3QZfSyyWGfJtWyib4bj160",
+          "title": "EP32｜回台工作反而有文化衝擊！留學加拿大好還是美國好？ feat. 百靈果 Kylie & Ken",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 加拿大小島和台灣一樣大，Ken 花兩年才適應加拿大社會 ⛺ 比起國家認同，性別才是凱莉曾陷入思考的問題 ⛺ 和老公步入婚姻，喜歡一個人就不在乎對方性別 ⛺ 加拿大生活太 Chill，回台發現台灣人工作節奏太快了！ ⛺ 這和我的工作內容有關嗎？回台求職還找HR吵架過？ ⛺ 美加留學怎麼選？現在去加拿大 CP 值更高？ ⛺ 只靠聲音不夠力了，想要讓 Podcast 快速曝光的訣竅？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 彰化銀行「馬偕認同卡」，申辦即享國內1%、海外3%、指定藥妝/藥局最高6%現金回饋。 刷卡同時，彰化銀行將回饋0.25%予馬偕醫療財團法人。 快來申辦一起做愛心! 了解更多：https://bit.ly/4avZBgV 謹慎理財 信用至上 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-11-19",
+          "videoLength": 3735965
+        },
+        {
+          "id": "3e3UiEijMH9vS0OEWgpagm",
+          "title": "EP31｜到哪裡都會被路人關注！公眾人物到底要不要公佈另一半？feat. Ivy Chao & 煮男",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 旅程意外的驚喜，夏天的芬蘭也超好玩！ ⛺ 一舉一動都被關注，當公眾人物幾乎沒有個人隱私？ ⛺ 原來我已經紅到有流量了？但被雜誌跟拍時還是覺得五味雜陳！ ⛺ 感覺隨時會被注意，當公眾人物的另一半壓力大嗎？ ⛺ 怕另一半日常生活被影響，因此沒有馬上公佈煮男的身份 ⛺ 遮遮掩掩好辛苦，乾脆主動露臉讓大家認識自己！ ⛺ 糾結要不要對外公開，有擔心過公布另外一半就掉粉嗎？ ⛺ 不排斥朝幕前發展，煮男原本就有歌手夢？ ⛺ 如果之後有小孩，會想讓小孩露臉嗎？ ⛺ 網路黑粉多，公眾人物的伴侶必須具備高 EQ、快速排解情緒的能力  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- 彰化銀行「馬偕認同卡」，申辦即享國內1%、海外3%、指定藥妝/藥局最高6%現金回饋。 刷卡同時，彰化銀行將回饋0.25%予馬偕醫療財團法人。 快來申辦一起做愛心! 了解更多：https://bit.ly/4avZBgV 謹慎理財 信用至上 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-11-12",
+          "videoLength": 3397031
+        },
+        {
+          "id": "3ffNkwNzb3gtHgHgjhswAY",
+          "title": "EP30｜開發過程超艱辛！全新週邊開始預購啦！feat.The DoDo Men 夥伴 Winnie",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 新產品開始預售啦！為什麼創作者會想開發自己的週邊？ ⛺ 上架日一直延宕，設計週邊期間碰到的困難？ ⛺ 老帽原廠方愛理不理，提出修改要求竟然還被對方罵了一頓！ ⛺ 廠商說的比做得多，讓 Ian 氣到直接越洋打電話罵人！ ⛺ 開會越開越火大，廠商完全沒有要解決問題的意思！ ⛺ 對方只想降低成本！受不了只好忍痛終止合作！ ⛺ 幾乎每個環節都遇過問題，Winnie 和 Ian 還曾跑到工廠親自驗貨！ ⛺ 開發產品一波多折，但最有成就感的就是看到有人穿我們週邊！ ⛺ 怕辛苦的成果沒有人支持！越接近開賣日越緊張！  🙌週邊商品已經開賣摟：https://www.thedodomenmerch.com/  👇預購資訊請看這！👇 🔥本次商品全採預購方式 🔥預購時間：台灣時間 11/1（三）-11/14（二） 🔥預購商品：帽T、短T、毛巾（帽T數量有限！售完為止！） 🔥YouTube 頻道會員享有9折優惠 🔥預購消費滿 1,600元免運費（限台灣地區） 🔥預購消費滿 2,500元可參加抽好禮活動（詳細資訊請參考官網）   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-11-05",
+          "videoLength": 3343463
+        },
+        {
+          "id": "5dUHQpusotNzz7sqoXQTqL",
+          "title": "EP29｜「自己沒注意到的缺點？」真正的好朋友才敢互相說真話！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 動輒半小時起跳！Eric 早上都佔用廁所超久！ ⛺ 半夜被驚醒！Eric 不但會說夢話，甚至還有肢體動作！ ⛺ 常常三四點還醒著，Ian 的壞習慣就是太晚睡了！ ⛺ 有飽足感就好，但 Ian 常常沒有把飯吃完？ ⛺ 每次都想倒抽一口氣，Eric 實在講太多幹話了！ ⛺ 介於優點與缺點之間，Ian 容易以高標準要求自己與別人？ ⛺ 以為 Ian 差不多時間該洗好澡了，想不到他竟然都在拉屎而已 ⛺ 腦波超弱，Eric 會因為別人點什麼就改變主意  了解更多無國界醫生互動體驗展：https://bit.ly/3M71Zka 無國界醫生Instagram：https://instagram.com/msf.tw?igshid=NzZlODBkYWE4Ng==  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-10-29",
+          "videoLength": 2572896
+        },
+        {
+          "id": "70iP5fV5KFU6yvoXBypwRC",
+          "title": "EP28｜不好笑絕對是表演者的問題！這集教你如何當一個喜劇演員！feat.博恩",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 南北喜劇演員大串聯！博恩最近在忙什麼？ ⛺ 東西一上傳網路就死了！有些段子只有鐵粉才聽得懂！ ⛺ 差不多可以跨行喜劇演員了！？點評Ian的喜劇初體驗！ ⛺ 原本準備要在走鐘獎上發表，但後來卻被刪減掉的段子 ⛺ 不要執著照稿演出！表演空間也有影響觀眾反應！ ⛺ 新手難免會緊張忘詞，就連博恩在走鐘獎時也失誤連連？ ⛺ 上台前頭都還在暈！巡迴演出中途遇到的趣事 ⛺ 台美觀眾的口味不同，美國人更寧願你專心講笑話就好！ ⛺ 做喜劇和做Youtube差不多，前五秒一定就要有爆點！  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-10-22",
+          "videoLength": 3127991
+        },
+        {
+          "id": "2ryOPjGArpmJAWZbOVbOZc",
+          "title": "EP27｜班機大誤點、異地生怪病，旅行途中發生超多意外！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 怎麼都沒有人在排隊？飛機飛走後才意識到原來換登機門了！ ⛺ 班機忽然急煞車！以為就要死在哥倫比亞了！ ⛺ 班級延誤超過十小時！就算給再多折扣下次一樣拒搭！ ⛺ 在緬甸第一天就水土不服，害 Ian 旅程都在病床上度過 ⛺ 出差全程在飯店躺了四天，Ian 傷口甚至到現在還會痛？ ⛺ 空拍機一直下不來！遭當地海軍直接開快艇來盤查！ ⛺ 路不平＋車輛老舊，秘魯當地居民卻說拋錨是正常的？ ⛺ 絕對可以避免的交通意外：開車先把油加滿就對了！  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-10-15",
+          "videoLength": 2608728
+        },
+        {
+          "id": "0deQyLP4qjAYoGv0rKGxis",
+          "title": "EP26｜最赤裸的一集！想要成長必先釐清自己的缺點！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 遇到沒效率的事情會受不了，Eric 的第一項缺點：沒耐心 ⛺ 相處過就知道，出現這個訊號代表 Eric 不耐煩了！ ⛺ 該如何和容易不耐煩的人溝通？他們需要快速理解動機！ ⛺ 沒難度的事情先擺著！Ian 卻總是把小事拖到最後一刻！ ⛺ 遲遲未去銀行處理房貸，拖著拖著利率竟暴增三倍！ ⛺ 有些價值是無法被量化的！太在乎 CP 值反而得到的就越少！ ⛺ Ian 正努力彌補的缺點：把心力過度投注在工作上 ⛺ 人總有盲點卻不自知！兩人眼中對方的缺點？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-10-08",
+          "videoLength": 3298871
+        },
+        {
+          "id": "4tnauPS1Cz28YArAT50hiH",
+          "title": "EP25｜旅行可以看透一個人？能共患難的才是好旅伴！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 患難見真情！總要出事了才知道對方是不是好旅伴？ ⛺ 行程安排太緊湊，Eric 還曾經當眾惹哭媽媽？ ⛺ 忙到沒時間安排行程，一提出問題就容易被視為在「出怪聲」？ ⛺ 大概一輩子只去希臘一次，結果行程滿到根本玩不完 ⛺ 旅遊是最容易看透人的時候！伴侶一起出門容易吵架？ ⛺ 幹嘛玩得那麼有壓力？但 Ian 有時候太 Chill 還是會被女友罵？ ⛺ 去哪都可以，太沒主見反而讓人覺得不投入旅程？ ⛺ 從希臘之旅學到的事，跟多組情侶出門時要這樣安排旅程 ⛺ 去哪都超隨便，一群男的出門比較不容易會吵架？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-10-01",
+          "videoLength": 3358488
+        },
+        {
+          "id": "0iIKPyQmnlhRnAMeEjPTar",
+          "title": "EP24｜錢不是萬能，但沒錢萬萬不能！分享我們的金錢觀！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 小時候理財的第一步，每週零用錢都拿多少？ ⛺ 想買四驅車！Ian 小時候做出的荒謬行徑 ⛺ 每月一號零用錢準時出現，Eric 小時候幾乎已經財富自由？ ⛺ 澆水、當助教，那些你想不到的打工方式？ ⛺ 生活開支家裡還是會幫忙，學生時期打工只是為了增加工作經驗？ ⛺ 證明自己可以經濟獨立了，畢業後第一份全交給爸媽！ ⛺ 剛畢業對財務規劃一竅不通，經幾年才抓出一個月可以存多少！ ⛺ 媽媽金錢觀太節儉，Eric 想換 iPad 時就趁機找母親節買？ ⛺ 在生活品質與 CP 值中找到平衡，和女友相處時會因為錢而爭執過嗎？  📣NordVPN超級大優惠！ 只要點下方專屬連結，或在結帳輸入我們的優惠碼「dolphins」就能獲得30天無條件退費，訂閱優惠方案還贈送免費四個月 👉https://nordvpn.com/dolphins  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-09-24",
+          "videoLength": 3325511
+        },
+        {
+          "id": "5wBYwdHFEzeBHn7KOFAuhV",
+          "title": "EP23｜探訪全球最浪漫的國家－希臘！但事實上是又熱又貴？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 好不容易放了個長假，出發前對希臘的第一印象是什麼？ ⛺ 適逢百年歐洲熱浪！Eric 一下飛機居然就中暑！ ⛺ 雅典旅遊亂象？計程車亂開價、用英文無法溝通？ ⛺ 港邊停了超豪華私人遊艇，幾乎整座米克諾斯島都是有錢人？ ⛺ 夕陽下享受全球前五十大餐廳！情侶必去愛之島聖托里尼 ⛺ 觀光客真的太多，想拍美照還得先早起避開人潮？ ⛺ 被譽為「長壽島」！實地一探伊卡利亞島上人民長壽的秘訣！ ⛺ 島上居民過得超隨性！想做什麼就做什麼！  📣2024 政大EMBA「智創新機 轉贏未來」  🔗詳細資訊：https://lihi2.com/eLhaE  🔸2024年班（2024年2月入學）招生說明會 報名連結：https://lihi2.com/HdDCx (1) 9/22(五) 13:30 台中場 (2) 9/23(六) 9:00 新竹場 / 14:30 桃園場 (3) 9/24(日) 8:30 台北場 (4) 10/2(一) 20:00線上Q&A任你問  🔸招生網路報名時間：10/3（二）-10/17（二） 洽詢電話：02-2938-7560   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-09-17",
+          "videoLength": 3097320
+        },
+        {
+          "id": "4hMVED15gBPQwho7SD3Uof",
+          "title": "EP22｜內向者難相處？外向者永遠高能量？你是哪種人？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  這次錄音有個雜訊的聲音在…影響各位的收聽體驗，實在很抱歉🙏  本集重點： ⛺ 幕前總是展示活潑的那面，兩人私下真正的性格如何？ ⛺ 內向者=難相處？就算話題有共鳴也不想開口？ ⛺ 只能被關在家裡，外向人與內向人是如何度過疫情的？ ⛺ 內向者不主動揪朋友見面，但會渴望被人揪出們嗎？ ⛺ 超會和人Social！內向者最羨慕外向者的地方 ⛺ 外向者能量都來自別人，那會比較不認識自己嗎？ ⛺ 人際關係比能力重要，內向者容易在職場吃虧的地方 ⛺ 一起吃還是留在原位？內外向者在午餐時段會作出的決定！ ⛺ 外向人隨時充滿高能量！內向者其實很怕他們？ ⛺ 亞洲人習慣默默做事，老外是不是真的都比較外向？   📣NordVPN超級大優惠！ 只要點下方專屬連結，或在結帳輸入我們的優惠碼「dolphins」就能獲得30天無條件退費，訂閱優惠方案還贈送免費四個月 👉https://nordvpn.com/dolphins   🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-09-10",
+          "videoLength": 3215640
+        },
+        {
+          "id": "45NQwKDnYpiyMf7EvdtaAk",
+          "title": "EP21｜遭當地人尾隨、情勒！那些旅途中遇到的怪人們！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 深夜遭五個男的尾隨！Eric第一反應竟是計算打不打得贏！？ ⛺ 當地人熱情過頭，想不到最終目的是為了要果汁喝？ ⛺ 哥倫比亞文化太特別！成年禮傳統讓Ian簡直嚇傻了眼！ ⛺ 無視排隊動線，保加利亞人就算被插隊也莫不吭聲 ⛺ 接近人生最生氣的時刻！就算大聲也制止不了中國人插隊！ ⛺ 錢包正準備掏出來了，泰國小販竟然還會自動殺價？ ⛺ 在英國街頭遇到扒手！光天化日下專找觀光客犯案！ ⛺ Ian多次和扒手對峙的經驗！犯案過程宛如拍電影！ ⛺ 主動幫Ian指路、剪頭髮，旅途中也是有好的陌生人！  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-09-03",
+          "videoLength": 3366503
+        },
+        {
+          "id": "7eYJQcy2mKh9bWflmVQxWX",
+          "title": "EP20｜不要花太多時間唸書？上美國大學就是要出去 Party 交朋友！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 才不是任你玩四年！高中時對於大學生活的想像？ ⛺ 美國大學是以讀書還是玩樂為主，全看學生造化！ ⛺ 以前總自以為要當美國人，多虧室友讓 Ian 中文進步超多！ ⛺ 交朋友一定要參加社團！「台灣同學會」居然還有派系之分？ ⛺ 社團種類五花八門，玩社團還能抵學分？ ⛺ 學制不一樣！UCLA 課程超級緊湊！ ⛺ 教授分組教創業，大學期間最令 Ian 印象深刻的一門課？ ⛺ 以前用腦袋想就能過關，直到大學教授教了 Eric 新的讀書技巧 ⛺ 每個禮拜都有酒局，兄弟會 Party 根本狂無極限！  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 📩 合作邀約請來信｜Business@thedodomen.org －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-08-27",
+          "videoLength": 3168671
+        },
+        {
+          "id": "1vdMosUUciYoZnIQDtYx89",
+          "title": "EP19｜要相信一切都是過程，遇到低潮時你可以這樣調適！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 頻道方向意見相左！The DoDo Men 前陣子共同面對的大低潮 ⛺ 想做卻無力感上身，低潮來自於不滿現狀的渴望 ⛺ 只差一點就能拿到精算證照，Eric 失落到花兩三個月才走出來 ⛺ 柏克萊落榜，讓 Ian 整個大一時間都只想擺爛 ⛺ 可能每個決定都是宇宙的旨意，樂觀＆悲觀決定落入低潮期的頻率 ⛺ 天生就是樂觀主義者，出車禍當下 Ian 竟在想不能打網球了？ ⛺ 越往悲觀想發展就越糟，想法也會決定事情的後果？ ⛺ 換個心態，把每次低潮都視為是學習的機會  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-08-20",
+          "videoLength": 3076223
+        },
+        {
+          "id": "2CI3ldBx2LrNHYpyaNhyDb",
+          "title": "EP18｜新世代的文明病－容貌焦慮！別為了別人改變外表！ft. 志祺",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 志祺最近遇到的 KB 事 ⛺ 世界說崩壞就崩壞，現在不做就來不及了 ⛺ 不避諱談整形，背後原因竟是怕嚇到觀眾！ ⛺ 全身幾乎刺好刺滿，志祺身上圖騰代表的涵意？ ⛺ 如果只能整一個部位，Eric 會想要整哪裡？ ⛺ 臉容易在銀幕上被放大！公眾人物會更有感容貌焦慮嗎？ ⛺ 主流美感一直在改變，你的自信不該只來自於外貌！ ⛺ 家族有禿頭 DNA！掉髮問題該怎麼解？ ⛺ 交往後才發現對方整型！遇到這樣的伴侶會怎麼反應？ ⛺ 給正面臨容貌焦慮的聽眾一些建議？ ⛺ 志祺近一年來做過最跨出舒適圈的事？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-08-13",
+          "videoLength": 3223776
+        },
+        {
+          "id": "0eF8lFI5e7Zq3b1PoBQjR0",
+          "title": "EP17 ｜你夠認識自己嗎？找出心目中信奉的核心價值！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  笑容真的有很多你意想不到的功用.ᐟ 而好的笑容來自於整齊的牙齒 選擇Zenyum綻雅，價格、專業、時間安排，不會再是你擁有完美笑容的阻礙！  ✨市場唯一均一價，價格完整說明，無隱藏收費 ✨線上即可「免費初步評估」 通過再到診所約診 ✨全台超過200位國考認證醫師合作，製作個人專屬治療計畫 ✨Zenyum App紀錄、提醒療程，與主治醫師線上購通，減少非必要回診  🐬 Dolphins 透過下方【跳脫Do式圈】專屬連結進行免費評估 🔗 https://bit.ly/45aUuQ7  5分鐘即可快速完成，後續再享療程優惠! 🦷ZenyumClear輕矯正定價7萬2，折扣7,000 🦷ZenyumPlus全口矯正定價12萬，折扣17,000  本集重點： ⛺ 本週小KB ⛺ Ian & Eric 小時候最想完成的夢幻職業？ ⛺ 夢想隨階段改變，最後找到精算師或許是個好選擇！ ⛺ 要如何找到自己真正的強項？ ⛺ 每個人成長環境不同，「核心價值」到底是什麼？ ⛺ Ian 分享自己的三大價值，Eric 覺得準嗎？ ⛺ 盡力想避免衝突，Eric 核心價值首重「和諧」 ⛺ 把「平衡」選入核心價值的原因？ ⛺ 幽默感完全匹配，Eric 下一步要進軍喜劇圈？ ⛺ 廠商無理取鬧，Ian 竟直接放棄業配機會！ ⛺ 隨著時間更遞，核心價值會永不改變嗎？ ⛺ 認識自己核心價值後對生活的影響？  #核心價值 #職業 #夢想 #Zenyum綻雅 #隱形牙套  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出  -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-08-06",
+          "videoLength": 3497256
+        },
+        {
+          "id": "7JIWR0CZuVpa5CflRq3C3W",
+          "title": "EP16 ｜突然喘不過氣來！壓力大時該怎麼辦？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 本週小 KB ⛺ 無論是外界或自己給的，壓力是成長的養分！ ⛺ 近期最讓 Ian 備感壓力的事情 ⛺ 該如何適度拿捏壓力之間的平衡點？ ⛺ 語言、環境都不熟，剛來美國天天壓力爆表？ ⛺ 大學反而是 Eric 壓力最大的求學階段 ⛺ Ian 的壓力源通常來自於社交場合? ⛺ 到現在都還夢到主管，遇到壓力時你可以試著寫下來 ⛺ 壓力大到破表，原來恐慌發作是這種感覺 ⛺ 冥想、運動，都是有效緩解當下壓力的方法！  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-07-30",
+          "videoLength": 3241440
+        },
+        {
+          "id": "50RV31PBsi24cvZAHJHKvx",
+          "title": "EP15 ｜沒有他們就沒有現在的我們！聊聊那些幫助我們成長的貴人們！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 本週小KB ⛺ Ian 學生階段的第一個貴人：Jason ⛺ 剛來灣區就有照應，Ian 的人脈幾乎都是透過 Jason 認識的 ⛺ 好還要更好！Jason 的拼勁也成為 Eric 進步的動力 ⛺ 除了課業外更重要的事，輔導員 Julia 教會 Eric 適時跨出舒適圈 ⛺ 永遠不要輕易氣餒，網球教練 Lieu 讓 Ian 學習正向面對挑戰 ⛺ 學會該如何包裝自己，Eric 感謝 Tina 協助提升面試技巧 ⛺ 到現在都還會夢到他！魔鬼主管竟也成 Ian 的貴人？ ⛺ 吸引貴人的不二法則，就是也要讓人先看到你的努力!  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-07-23",
+          "videoLength": 3404496
+        },
+        {
+          "id": "0jCq4zqT2daWYuJY5ElOkG",
+          "title": "EP14｜全球經濟不景氣！歷經矽谷大規模裁員後，工作超難找！應該換工作嗎？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  嗨！各位親愛的聽眾，跟大家說聲抱歉  本集在錄音時，因為電流聲的關係，部分片段有雜音無法消除，還請各位見諒   本集重點： ⛺ 疫情期間增聘太多人！矽谷罕見大規模裁員潮! ⛺ 一旦進入「PIP」名單，幾乎就得找工作了？ ⛺ 親身經歷過大規模裁員潮，同事可能下週就不見！ ⛺ 老早就想走了！Eric同事被裁員還爽拿半年薪水！ ⛺ 為縮減預算而裁，精算師不一定是鐵飯碗！ ⛺ 科技業景氣不佳，重新找工作時怎樣談薪才合理？ ⛺ 重視學習機會，DoDoMen會為哪些原因遞出辭呈？ ⛺ 離職原因百百種！美國企業還鼓勵員工留職停薪找自己 ⛺ 職場人和很重要，有時「工作」就也只是份「工作」？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-07-16",
+          "videoLength": 2549328
+        },
+        {
+          "id": "0bNM28PbAHYEIArJ3SU4cU",
+          "title": "EP13｜人生第一次挑戰全馬！就算腳斷掉也絕對不能停！？ feat.李智群教練",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 參賽者突然在賽道上大喊！Eric 本週小KB ⛺ 為什麼馬拉松賽事需要配速員？ ⛺ 白天是上班族！教練的成績居然這麼猛！ ⛺ 兩個半馬就等於全馬？一般人對馬拉松常見的迷思！ ⛺ 訓練進度大落後！教練還曾提議要不要「玩玩就好」！？ ⛺ 緩跑對於馬拉松訓練上的好處？ ⛺ 分隔兩地訓練，教練這樣幫忙解決訓練上遇到的問題！ ⛺ 擔心跑不到終點，上賽場要如何緩解緊張情緒？ ⛺ 無法達到預期目標，Eric整趟旅程下來的心得？ ⛺ 四小時完賽還不夠！Ian為什麼要把目標訂在三小時半？ ⛺ 當比賽遇到撞牆期時該怎麼辦？ ⛺ 以選手而言，該如何建立起好的心理素質？ ⛺ 教練在賽場上遇過最突發的狀況 ⛺ 推薦給聽眾朋友一定要參加的馬拉松賽事  📩 合作邀約請來信｜Business@thedodomen.org  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-07-09",
+          "videoLength": 3889656
+        },
+        {
+          "id": "6aRCx0Tzp3IydTwSsFz7os",
+          "title": "EP12｜槍擊案、闖空門、搶劫案件層出不窮！美國治安到底有多糟？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ Eric 本週小KB ⛺ Ian小時候印象中的美國比較安全？ ⛺ 警方衝進校園，才發現同學帶槍來上課！ ⛺ 校園充斥幫派份子，能活到今天真的是萬幸？ ⛺ 車子被偷是家常便飯，東西失竊只能自認倒霉？ ⛺ 在美國超速罰單超貴！甚至還會被警察刻意刁難？ ⛺ Eric家裡被闖空門，歹徒甚至還到處到醬油洩憤！ ⛺ 闖空門歹徒超惡劣！在美國一定要裝保全系統！ ⛺ 美國治安開倒車？大規模槍擊案越來越多！ ⛺ 在美國取得槍枝超容易，擁槍真能保障人身安全？ ⛺ 無家者變多，遇到流浪漢反而不該給他們錢？ ⛺ 沒比較沒傷害，台灣治安真的好到令人安心！  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-07-02",
+          "videoLength": 2915040
+        },
+        {
+          "id": "1Bhg7EKRWLSdMU78FoK4Ri",
+          "title": "EP11｜住家裡 VS. 搬出去！獨立生活後差點釀大禍！那些我們遇過的超雷室友？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 00:00 本集開場 ⛺ 00:58 Eric 本週小KB ⛺ 04:39 大學就嚐到自由的滋味，Eric畢業後為什麼又搬回家住？ ⛺ 07:50 全力準備考試，住家裡反而省掉很多時間 ⛺ 09:39 Ian其實花超多時間說服Eric搬出來一起住？ ⛺ 15:15 Eric、Ian平常和爸媽的相處之道 ⛺ 20:20 Ian會是喜歡和室友生活的人嗎？ ⛺ 21:10 有沒有遇過超雷的室友？ ⛺ 26:26 獨立生活凡事得靠自己！Ian做個菜差點釀禍！ ⛺ 31:37 住過才知道，Ian發現Eric其實是生活白癡？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-06-25",
+          "videoLength": 2841503
+        },
+        {
+          "id": "0gknl9lLByP00ON8kA8yAY",
+          "title": "EP10 ｜該Gap Year、出國唸書嗎？怎麼評估要不要跨出舒適圈？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 本週Ian的小KB ⛺ 工作一段時間了，現在適合做個Gap Year嗎？ ⛺ Gap Year回來工作會很難找嗎？是不是最多只能出去一年？ ⛺ 是否該換工作了？先考慮現階段的優先順序是什麼 ⛺ 畢業後換了四五份工作，Eric最大的考量點是？ ⛺ 工作太規律，反而會讓Ian待不下去？ ⛺ 明明待得很適應，Ian為什麼後來還是離開富士康？ ⛺ 在舒適圈內很爽，但是什麼原因會讓人想跨出舒適圈？ ⛺ 該為了出國唸書，放棄和台灣親友的相處時間嗎？ ⛺ 家人有穩定工作，無法一起出國該怎麼辦？ ⛺ 給正在跳脫舒適圈的人們建議？ ⛺ 跨出舒適圈有最佳時機嗎？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-06-18",
+          "videoLength": 3666816
+        },
+        {
+          "id": "371CPERNxDPE6Dd899cy2F",
+          "title": "EP9 ｜事情總是壓線趕完？這集幫你終結拖延症！feat.歐馬克",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 本週主題根本是在請鬼拿藥單？ ⛺ 都是拖延症害的！歐馬克遇過最慘痛的經驗？ ⛺ 拖延症和懶惰是一樣的嗎？ ⛺ 一日之初，該從簡單做起，還是先完成困難的事情？ ⛺ 沒動力達成長期目標？把你的夢想說出來！ ⛺ 拖延者常見的行為模式? ⛺ 提高機會成本有助於改善拖延症？ ⛺ 目標很大，但找不到動力該怎麼辦？ ⛺ 拖延症患者其實沒什麼儀式感可言？ ⛺ 歐馬克近期最跳脫舒適圈的事情？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出  -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-06-11",
+          "videoLength": 2862720
+        },
+        {
+          "id": "4ELMxAZOrPZM84aE6BuvG0",
+          "title": "EP8｜怕蛇、怕胖、怕沒朋友？ 遇到讓你恐懼的事該怎麼辦？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 想和大家聊聊恐懼這件事 ⛺ Eric 在Spotify上發現的新功能！ ⛺ 人為什麼會感到恐懼與害怕？ ⛺ 小時候很怕，但長大卻愛上的事情？ ⛺ 坐飛機曾經是Eric最大的罩門 ⛺ 容貌焦慮仍是Eric最害怕的事情之一？ ⛺ 找到屬於自己的標籤，才是擊敗恐懼的方法？ ⛺ 怕無法達到別人的期望，Ian是如何面對外界的流言蜚語？ ⛺ 遇到恐懼時Ian的反應？ ⛺ 該選擇與恐懼共存，還是盡力克服它？ ⛺ 克服恐懼的關鍵要素？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-06-04",
+          "videoLength": 3195431
+        },
+        {
+          "id": "7Ml81C4Lo0I6oj0xVHrJIq",
+          "title": "EP7｜白人和華人主管作風大不同？那些在跨文化職場上遇到的奇葩事情！",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點：  ⛺ Ian 本週的小KB ⛺ 企業主管傾向挑選種族相近的員工？ ⛺ 蘋果到處挖人才，就算英文講不好也沒差？ ⛺ 同事口音太重，Eric只能尷尬這樣回！ ⛺ 跨文化職場轉換語言的時機點？ ⛺ 和種族無關！受主管歡迎與否關鍵是找到共同興趣？ ⛺ 華人主管都比較在意面子問題？ ⛺ 為討好主管，Ian曾被迫上酒店？ ⛺ 要求默默耕耘VS給下屬機會，東西方企業主管的差異？ ⛺ 下班後會與同事互動嗎？亞洲人最喜歡做這檔事？ ⛺ 華人主管愛八卦？但白人主管界線都劃超開？ ⛺ 曾在職場上目睹同事最跳脫舒適圈的事情  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-05-28",
+          "videoLength": 3322800
+        },
+        {
+          "id": "7LiO86r91KiAw0zip6T18p",
+          "title": "EP6｜人總是生病了才懂的休息？生活過的好，才能成為一位好的創作者！feat. 阿滴",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點： ⛺ 歡迎YouTube里長伯 阿滴 ⛺ 近期令Eric 看不慣的事情 ⛺ 阿滴最近都在忙什麼 ⛺ Youtuber市場真的已經飽和了嗎？ ⛺ 阿滴最近有去哪裡玩嗎？ ⛺ 觀察到Youtube生態圈近年來的變化 ⛺ 當Youtuber這麼久，阿滴心態上的轉變 ⛺ 創作者反而不該把所有熱情投注在工作上? ⛺ 面臨低潮時創作者該如何調適心情？ ⛺ Youtuber的職涯歷程會長什麼樣子？ ⛺ 怎麼看待創作者自創品牌這件事？ ⛺ 會擔心自己有一天會過氣嗎？ ⛺ 流量越大的創作者越需要執行週休二日？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB   本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-05-21",
+          "videoLength": 3732983
+        },
+        {
+          "id": "5IzgCnsAegmdGqW2pWniCS",
+          "title": "EP5｜習慣接受新挑戰，跳脫舒適圈反而變成舒適圈！？",
+          "description": "🐬主持人：The DoDo Men 嘟嘟人 Ian & Eric  本集重點：  ⛺ Eric其實是個大路痴？ ⛺ 辭職前兩位的舒適圈長什麼樣子？ ⛺ Eric曾經覺得最遙不可及的人生清單 ⛺ 最讓Ian感到最意外已經達成的成就 ⛺ 提辭呈後最想完成的事 ⛺ 完成夢想清單時心裡會有什麼感覺？ ⛺ 為何拿到精算師執照反而讓Eric感到失落？ ⛺ 經營頻道後，對舒適圈的定義產生了變化 ⛺ Ian有辦法同時進行多項挑戰？ ⛺ 給想跳脫舒適圈的人建議 ⛺ 覺得觀眾的胃口有被養大嗎？  🏃The DoDo Men - 嘟嘟人 YouTube｜https://www.youtube.com/@TheDoDoMen Instagram｜https://instagram.com/thedodomen Facebook｜https://www.facebook.com/TheDoDoMen Discord | https://discord.gg/QYpaHq5nAB  本節目由【聲歷其境】團隊製作播出 －－－－以下訊息由 SoundOn 動態廣告贊助商提供－－－－ 城揚建設新推出的「陽明第一廳」 緊鄰三民區的明星學府-陽明國中  46~52坪，每層四戶兩部電梯  最適合有換屋與置產需求的你 讓生活中充滿書香、運動風，滿足食衣住行的消費需求 城揚建設 陽明第一廳 07-384-2888 https://bit.ly/4azoWGy -- Hosting provided by SoundOn",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8af0abfca4f1a602e61ed59131",
+          "date": "2023-05-14",
+          "videoLength": 3204671
+        }
+      ]
     },
     {
-      "id": 6,
-      "title": "The Count of Monte Cristo",
-      "type": "General Electric",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/979f/9988/5cda25d6699dc018a47ba0af45341a28?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FOJizmfNrcQpI2P1fqkuujn4jXuVgfx~PmuvGHBFR-J0AdxvlBeTcDbLkR9l78NDxbyaYcPuutJ67FSnp0XlySVnpSVEef1yhkOYlswge96fTq7Qg~uZ7o22iGKjIYnVMKVN5ZhH-RTS9l-XcbyTVGBxCCb2vZOd32mYYva9q2TEnwW2Fv7TZjDncS5RhiE~9HhsGeWrDSBWfY78ddMbR6sOAGq5tIRQGviV0M3QwdOQyQ0~24YPH3C64eXLmubDV3EGjArL6Ez4Pc~tLg6NZnixLHgoRpXi3HDOsz09rrL-lOH-SAeno4pm3Pg5KCtXoNLLV5ziV1Dn6UMmcDoIBw__",
-      "active": false
-    },
-    {
-      "id": 7,
-      "title": "Siddhartha",
-      "type": "BBC World Service",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/0c4c/9aa3/8072fb4d1b5309a90e03380e149fa83d?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EGB8GdkQghiKUY5LBwe3PMZCEcWcB3h8TF8McEgqlN1pgkRuxlxXfNuUEAeSE6kuLDWK7zRbUxdRAeE73YIeS1KY5EtgZd62SJLPWjNZ7aenaRA6mZdfaJyLWCbYekKF0~UsT0Dcr30VDxcg6eY0P6tBnCaBj~ceb19bn7OMNL~~9jem0jKnckhqsWSZtSTlYel8gPKqdcNWxtpc5rfDsRgOOqbdtS6tKeLCO~MrZkMGqp4zSW7V6IG1lrcZYWb2KzVSu02dI8SCu7jTA4jR~QDWtyUrDk-9UsW-Oqhsc0FnaEd0R2cEYY3IlfGXS3cNuVGTMujaMcjPZHY5P~FmFQ__",
-      "active": false
-    },
-    {
-      "id": 8,
-      "title": "The Little Prince",
-      "type": "Ferrari",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/979f/9988/5cda25d6699dc018a47ba0af45341a28?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FOJizmfNrcQpI2P1fqkuujn4jXuVgfx~PmuvGHBFR-J0AdxvlBeTcDbLkR9l78NDxbyaYcPuutJ67FSnp0XlySVnpSVEef1yhkOYlswge96fTq7Qg~uZ7o22iGKjIYnVMKVN5ZhH-RTS9l-XcbyTVGBxCCb2vZOd32mYYva9q2TEnwW2Fv7TZjDncS5RhiE~9HhsGeWrDSBWfY78ddMbR6sOAGq5tIRQGviV0M3QwdOQyQ0~24YPH3C64eXLmubDV3EGjArL6Ez4Pc~tLg6NZnixLHgoRpXi3HDOsz09rrL-lOH-SAeno4pm3Pg5KCtXoNLLV5ziV1Dn6UMmcDoIBw__",
-      "active": false
-    },
-    {
-      "id": 9,
-      "title": "To Kill a Mockingbird",
-      "type": "Facebook",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/ca98/44a3/2d66d48f7b209451f874429e10b79f73?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B3sNkZCz0pZ2lZWflUAooWKe3MjERCbbxtw-84iZ0myXZvKmJb47Rr8I0nCG0HsPz7MGJIi5jW5R5ArTj0m358EHLfiE4cP2VMoSQt8GHE~hXFRr4VWpAdYRay-bm9umkZsVkcqMh36E~oTHAdVSz6m5fttDfMcuDfULSaG-D4Oq9vnP8d6m4DzEJS0XOhBIu-IoasuNvG-EyNop~Lv~VSRTyUa7Dno~QHdAIHlwaJ94utiMuFOWyoS6fv5p1pWOFuLlwqjtyOrGj8m37n~bHyi4kBUHg6-eSfM~gTm9KzXKWyfWOsJPlvngF1wQ01i4~LmxNVhkJBB31khWmw8OAw__",
-      "active": false
-    },
-    {
-      "id": 10,
-      "title": "The Alchemist",
-      "type": "Gillette",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/953a/827c/2b112095494c4af2468fc4e5eb14cb45?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y0i-mb1JnQy8dEhXoJfGi5xzlbB7w1pSS8skWo~TX5Do5jsOazBz-yFopH85DgPFRFPciuDRHAhx5SDj6kuAIVQtqygC4F2MnGAZ7t97ivoOcxp4X7jY3bh-LUoXrxy3nglP5knCPKN6Pcc6RPG-jt4QbTb3vnfmAnma8Qr8MjCtTps4qiRvfLi1hgJgxrhHazeBocBzOQ31g6yAQw1dOKbl9qDmqbDV1XCHCMR8-b5sld2Z3DDffqu3Ci~PMt5OvsN3Dvryiiyjd1XyU7LwWM2Pv3p8yKReJLFnt3lw0aBA3AEMet4f-LiCWKjmRnf-q5FYExI4bv55iLiSP6Js1g__",
-      "active": false
-    },
-    {
-      "id": 11,
-      "title": "A Game of Thrones",
-      "type": "eBay",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/6804/b0eb/cdeeb4f7103a19daf9115788f7245b5f?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F4EGth5-TAewPAKZdh2pvkyNEqezrjzxJhb4P7qpokg4sTBDpN5D0X6lYRjJTr3XSK9tISwgautIYsgVzP79XUzWF6y6SYZ2oo5YRwvj2wUkFV5xuhb6J5PXPJ~sl3oCc6f1cZY~N6wXV5qEoVIrXMYLycNgDfOFu3097PCqHHbIuNYnoBNNyzB-1NcYU7kyD~kWX5L6xNBjenM~228Q7ULnYNS02V2AMzq6uLCQTOU-EZNpS6a4XXVIZ3Ahm5boWYJxJte6PGh7qGM6POJanZ7O16cvBCWoLNA6hnZwVNkudVxFJlUwwt7pIrOHJ8vfcVscx5RraqMTFI60Rfghvg__",
-      "active": false
-    },
-    {
-      "id": 12,
-      "title": "The Count of Monte Cristo",
-      "type": "General Electric",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/979f/9988/5cda25d6699dc018a47ba0af45341a28?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FOJizmfNrcQpI2P1fqkuujn4jXuVgfx~PmuvGHBFR-J0AdxvlBeTcDbLkR9l78NDxbyaYcPuutJ67FSnp0XlySVnpSVEef1yhkOYlswge96fTq7Qg~uZ7o22iGKjIYnVMKVN5ZhH-RTS9l-XcbyTVGBxCCb2vZOd32mYYva9q2TEnwW2Fv7TZjDncS5RhiE~9HhsGeWrDSBWfY78ddMbR6sOAGq5tIRQGviV0M3QwdOQyQ0~24YPH3C64eXLmubDV3EGjArL6Ez4Pc~tLg6NZnixLHgoRpXi3HDOsz09rrL-lOH-SAeno4pm3Pg5KCtXoNLLV5ziV1Dn6UMmcDoIBw__",
-      "active": false
+      "title": "小熱NOW",
+      "publisher": "小熱唱",
+      "description": "人生就需要， 一起吐苦水還順便幫你做好人生筆記的朋友  恭喜你！找到寶藏了。  厭世姐妹獨特的社會觀察 偶爾也有雞湯的反轉魅力   【每週一更新】  YT｜小熱唱  FB｜小熱唱 GFTS 合作邀約｜gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+      "imageUrl": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+      "date": "\"undefined\"",
+      "episodes": [
+        {
+          "id": "4S0e6RrFL7uRIH0sfYoFvI",
+          "title": "每天都覺得好累，我們是最焦慮的世代｜EP20",
+          "description": "統計顯示Y與Z世代是最焦慮的世代，你不孤單  今天來聊聊，讓我們快樂變難的原因是什麼呢？  本集 NOW 什麼？   🔥 20歲後開始不快樂的原因 🔥 用唸書考試心態去工作會撞牆 🔥 30歲的焦慮是不知道自己想要什麼 🔥 把過去成功的事寫下來成為你的自信充電站 🔥 停不下來的生產力病：連睡午覺都要規劃時間表 🔥 穿睡衣吃速食店是CP值最高的舒壓方式  🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com 本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-04-28",
+          "videoLength": 1908610
+        },
+        {
+          "id": "0xTXWIIjIFj7BVECdLvs38",
+          "title": "其實真的沒人想抽捧花 那些婚禮的尷尬時刻｜EP19",
+          "description": "第一次收到朋友喜帖好感動，現在參加婚禮只想零互動 剛去沖繩參加海外婚禮，今天就一起來聊聊婚禮上各種尬事  本集 NOW 什麼？   🔥 去參加海外婚禮，其實比想像中狼狽 🔥 婚禮要穿什麼才不失禮好苦惱 🔥 王虹之已經用ChatGPT寫好結婚誓詞 🔥 最尷尬的婚禮橋段：新人才藝表演、抽捧花、搶答互動 🔥 伴娘的真實功能是替死鬼 🔥 婚禮上最好的時間利用是喝酒跟商開 🔥 久違的冷笑話時間！  🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com 本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-04-21",
+          "videoLength": 2003617
+        },
+        {
+          "id": "0n6hgWjmmBR8dLPnBJqtDD",
+          "title": "沒想法和怕被討厭的人 不要去美商工作｜EP18 ft. The DoDo Men嘟嘟人",
+          "description": "在美商工作，呼吸的空氣會比較Chill嗎？ 來聊聊我們自身故事，什麼樣的人適合美商跟去美國工作  本集 NOW 什麼？   🔥 Eric和Ian單飛不解散的真實心情 🔥 台灣人不敢請假的文化很有事 🔥 美國人工作社交禮儀就是下班不聯絡 🔥 老外開會前一定要聊自己的事，主管還帶cheese來吃 🔥 遇到外國同事，叫不出名字尷尬怎麼辦 🔥 如何用美式作風替自己要求加薪   🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/   各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com 本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-04-14",
+          "videoLength": 2286184
+        },
+        {
+          "id": "3WMMnOxz8n4516Ol6L2WUd",
+          "title": "日本的禮貌 VS 台人的雞婆 去東京的大發現 ｜EP17",
+          "description": "每次去日本都在偷偷觀察，禮貌又壓抑的日本人，什麼時候要露出真面目呢？  本集 NOW 什麼？   🔥 東京搶看IU演唱會 日本歌迷的奇特行徑 🔥 令人又愛又恨的日本女廁設計 🔥 連葬禮跟遺書規劃都有圖文書好前衛  🔥 不打擾是日本人的溫柔  🔥 台灣人的禮貌是雞婆 🔥 將來會想搬去日本住嗎？  🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-04-07",
+          "videoLength": 1902837
+        },
+        {
+          "id": "0d5mwbQsYKl70gWmyarZ0w",
+          "title": "小時候學的才藝，現在剩下什麼灰燼｜EP16",
+          "description": "看了小學生兄妹爆忙行程表，想起了自己以前學才藝的日子。 20幾年後，對我們人生到底有什麼幫助呢？  本集 NOW 什麼？   🔥 朋友小孩不會講話就在背唐詩 數學超難 🔥 網傳『十大最沒用的兒時才藝排行』，你學了幾個？ 🔥 學鋼琴跟學CPR一樣，大家都不敢說自己會 🔥 小學被送去跆拳道 姐妹對打快哭出來 🔥 若將來有小孩，一定要讓他學什麼 🔥 至少要學講笑話吧！彥の冷笑話時間  💪首款多平台開放世界遊戲《原神》 點擊下方資訊欄了解更多 https://fstry.pse.is/5qvvbb   🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com 本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-03-31",
+          "videoLength": 1966994
+        },
+        {
+          "id": "39pydNSCTWr0bq46HeUJ2z",
+          "title": "不要過度聽信熱情，怎麼樣的人適合創業 ft. 敏迪 ｜EP15",
+          "description": "創業真的比較能延續工作熱情嗎？ 拉敏迪下水，今天一起來說實話 (平常說什麼)  本集 NOW 什麼？   🔥 從賣手機殼失敗到熱銷國際年曆 🔥 被炎上很受傷！自媒體最煎熬的地方 🔥 不要過度聽信自己的熱情，會出事 🔥 社畜好奇：創業的人是不是每天都很有熱情？ 🔥 有哪些特質的人才適合創業 🔥 專訪政治人物跟歌手需要多拐彎抹角 (訪問蔡英文總統的秘辛)  🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-03-24",
+          "videoLength": 2499552
+        },
+        {
+          "id": "7KQCvWh8jtyXGe3nb9P2ot",
+          "title": "原來我不善良！你也是討好型人格嗎？｜ EP14",
+          "description": "明明很累，卻還是習慣先替別人著想？ 別再假裝，所有會傷害自己的成全，都不是善良。  (這集是心靈療癒系，面紙請準備)   本集 NOW 什麼？   🔥 為什麼拒絕別人這麼難？ 🔥 我們都討好型人格中毒了，常見特質有哪些 🔥 壓抑到最後人格分裂！路怒症虹之 🔥 壓桿子的鴿子 vs. 討好上癮 🔥不要再鍛鍊讀心術，怎麼替自己解毒？ 🔥讓眼淚瞬間流回去，彥の冷笑話   🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-03-17",
+          "videoLength": 1960437
+        },
+        {
+          "id": "3cUPNlvMNC8Y7GP87E6Neg",
+          "title": "如何用面相找到真愛 feat.簡少年｜EP13",
+          "description": "走過看過，最怕擦肩而過。從面相告訴你，你的愛人貴人在哪？！   本集 NOW 什麼？   🔥 被問到爛！無論幾歲人都在找真愛 🔥 長得像兇猛動物的男生，可能會打人 (但通常有點帥) 🔥 問什麼問題，CP值最高？算命師沒公開的秘密 🔥 雙胞胎面相竟不同！如何從面相看真愛跟貴人 🔥 渣男渣女常有的面相特質！小狗眼的男生要小心？ 🔥 2024年哪些產業會最旺，趕快抄哦  🎤 主持人：「小熱唱」 彥之＆虹之   【從人生決策到創造好運｜簡少年的現代命運設計課】 ✔︎ 16 小時超完整內容，一次學習多種命理技術應用 (紫微/手相/面相/姓名學) ✔︎ 以現代價值觀白話講解，搭配情境案例加速理解  ✔︎ 特別設計的超易上手版課程，學會看流年運勢，做好趨吉避凶規劃 ✔︎ 找出人生卡關問題點，給予改善運勢的行為調整建議 ✔︎ 學員專屬命理討論區，課後可與老師提問、與學員討論，延伸交流學習  即日起～3/17(日) 今年首波限時優惠 #低於6折 #現省 4,000元起！ 結帳輸入優惠碼「GFTS」可以再折扣 500 元 課程詳細介紹 https://hi.sat.cool/0S6Kr   ►小熱唱 GFTShttps://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-03-10",
+          "videoLength": 2271843
+        },
+        {
+          "id": "2a5X6Sfm5SBVGPV8m3CUQL",
+          "title": "我們也成了無聊的大人了嗎？｜ EP12",
+          "description": "提醒：這集許多講古用語 ex: MSN / 家用電話  本集 NOW 什麼？  🔥 大學日記是言情小說！唸出來好尷尬癌 🔥 不跟兄弟姐妹打架冷戰是長大的象徵 🔥 越來越不想過生日？初老症狀中了哪幾條 🔥 長大內心變麻木的真正原因 🔥自己有成為理想中的大人嗎？   🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTShttps://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/   各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-03-03",
+          "videoLength": 2105547
+        },
+        {
+          "id": "7bwGAYAOYywxzGLRrm0Xxj",
+          "title": "能言善道在感情中是加分還是扣分？feat. 黃豪平｜EP11",
+          "description": "本集 NOW 什麼？ 🔥 台上能言善道，私下其實有社交恐懼 🔥『不然你想怎樣』戀愛中最禁忌台詞有哪些 🔥 跟另一半吵架，辯論大師の招數意外平凡 🔥 女生真的特別喜歡幽默的男生嗎？ 🔥 三人都患有主持病，私下聚會不自覺想炒熱氣氛 🔥 會怕自己哪一天變不好笑嗎   🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/   各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-02-25",
+          "videoLength": 2582230
+        },
+        {
+          "id": "1NdlUKYZZsEy4e795J55JS",
+          "title": "難道人生就這樣了嗎？怎麼決定要不要換工作｜EP10",
+          "description": "該轉職換新環境了嗎，到底什麼是適合自己的生活 會害怕中年失業嗎？20歲時沒想過的事 難得展現認真知性一面，可能會愛死或嚇死  ＿  ❝ 志祺𝟰個月 -𝟭𝟰𝙠𝙜 秘訣大公開 ❞  志祺七七 × 宋晏仁醫師 ❰ 外食減重學 ❱  帶你根據體質・吃對美食・無痛瘦身✨  【外食減重學】線上課程 早鳥突破三千人・開課確定🕊️ 輸入小熱NOW專屬優惠碼「GFTSFIT」再折 $600💰 越早賣越划算・最多激省 $2,600 👉 https://pse.is/5l2uzz  #外食減重學 #不必挨餓節食_也能輕鬆瘦身  ＿  本集 NOW 什麼？ 🔥 想轉職但又沒勇氣改變現狀的心情 🔥 理組人 VS 文組人，換工作心魔大不同 🔥 彥虹會害怕中年失業嗎？20歲時沒想過的事 🔥 融入新環境小絕招，先找一個人下手！ 🔥 回覆聽眾留言提問＆不能少彥の冷笑話   🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com   本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-02-18",
+          "videoLength": 2195931
+        },
+        {
+          "id": "1Lu7yBqkvPKxzzuZYeZVvQ",
+          "title": "財富自由快樂嗎？是天堂還是地獄｜EP9",
+          "description": "下週過年停更一次唷！   本集 NOW 什麼？ 🔥 3%台灣人已經「財富自由』？ 你走路都可能撞到富翁 🔥 偏財運是一種先天體質嗎? 為何我們仍不死心 🔥 虹若一夜致富要在大巨蛋辦專場 🔥為什麼新聞裡中樂透頭獎的人最後都不快樂 🔥 今天是虹の冷笑話時間！   🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/   各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-02-04",
+          "videoLength": 2039693
+        },
+        {
+          "id": "6sJOZQtxPDeQQvrybw7IQm",
+          "title": "分手需要好理由嗎？｜EP8",
+          "description": "告白需要勇氣，分手需要決心。 今天來和大家聊聊那些分手的爛理由！  本集 NOW 什麼？ 🔥 分手是見面直球派，還是電話訊息寫論文派 🔥 公認分手最爛理由排行！「我配不上你」背後潛台詞 🔥 前任送的東西該留嗎？虹の獨家判斷法則 🔥 勸離還勸合？該義氣相挺還是打醒夢中人 🔥 彥の冷笑話時間  🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-01-28",
+          "videoLength": 2167614
+        },
+        {
+          "id": "4rfUiiYmUoDbC6fXMawDXw",
+          "title": "好尾牙爛尾牙，我中獎就是讚尾牙｜EP7",
+          "description": "在尾牙這天盡情享受老闆跳舞跟同事喝醉糗態 這樣才能提醒我們，上班只是一場戲。  本集 NOW 什麼？ 🔥 大咖明星站台！尾牙快變企業的「軍備競賽」 🔥 尾牙表演是新人煉獄與老闆自肥  🔥 討厭同事喝酒糗態，建議大家先租好輪椅 🔥 加入福委會只會討罵？茶葉蛋也被投訴 🔥 彥老闆獎勵法則：就跟戀愛一樣，不能紀念日才送花  🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-01-21",
+          "videoLength": 2019657
+        },
+        {
+          "id": "15kYaR3wWFSwWugrVf3fru",
+          "title": "好想養貓咪，寵物是我們孤獨的解藥嗎？｜EP6",
+          "description": "貓狗要統治人類了嗎？  現代人想養隻萌寵究竟是什麼心態，今天就來聊聊！ 本集 NOW 什麼？ 🔥 寵物飼養登記已超過新生兒數量！ 🔥 貓派狗派算什麼，以前最潮是要養白文鳥和楓葉鼠 🔥 養小孩不如養寵物？至少它不會對我惡言相向 🔥 你願意養機器人寵物嗎？我們到底多孤獨又懶散 🔥 一聽就愛上的彥の冷笑話時間  🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-01-14",
+          "videoLength": 1967542
+        },
+        {
+          "id": "4h8AMc6804zAH1j0pQsX8o",
+          "title": "為了美，我們甚至把臉電小｜EP5",
+          "description": "為了變美做過的蠢事，比初戀還刻骨銘心 為了變好看，我們都曾鋼鐵意志又失去理智 今天來聊聊，到底帥哥美女人生贏在哪？  本集 NOW 什麼？ 🔥 以為瘦就是美！那些年try過的蠢事請各位小朋友不要嘗試！ 🔥 女大18變？帶給多少女性壓力的一句話 🔥 不只女性，現在男生也加入容貌焦慮戰局！ 🔥 長得好看比較容易被錄取？職場真的有「顏值紅利」？ 🔥 令人火大的彥の冷笑話時間  🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2024-01-07",
+          "videoLength": 1944868
+        },
+        {
+          "id": "5cJzsMB4VMerrSKMW3stTz",
+          "title": "你在寫新希望時，義大利人在摔盤子｜EP4",
+          "description": "2024來了！先別急著複製貼上沒做完的新年新希望 來聽聽即將35歲阿姨的內心話，現在就是你最年輕的時候了！  本集 NOW 什麼？ 🔥 爬樹、大哭、摔盤子！世界各國人都是如何迎接新年的？ 🔥 王虹之其實只需要買有1月-3月的日期的手帳 🔥 彥虹公開年初寫自己的信，意外溫暖和穿越時空的預言 🔥 七里香跟這些經典華語歌已經20歲了，一個孩子都長大成人！ 🔥 如何突破30而立魔咒？過來人35歲阿姨給你建議  🎤 主持人：「小熱唱」 彥之＆虹之 ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2023-12-31",
+          "videoLength": 1876610
+        },
+        {
+          "id": "2j9TyBI3bJwzpY7GMnMA3H",
+          "title": "想脫單衝告白前，請先聽聽這些爛招數｜EP3",
+          "description": "聖誕節一定要討論浪漫話題嗎？對，我們就是如此隨波逐流 文組 vs.理組的戀愛腦邏輯有多不一樣，決定這集跟大家聊一下！  本集 NOW 什麼？ 🔥 曖昧告白你是哪一種？主動派、被動派還是默默暗戀派？ 🔥 點同樣飲料、刻意移開視線，日本女生小心機招數真有用？ 🔥 虹完美示範 沒戀愛腦還理直氣壯的理組女 🔥 第一次約會女生腦袋裡如何打分數 🔥 你是真的想脫單嗎，還是你需要的只是Netflix  🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/ 各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2023-12-24",
+          "videoLength": 1986324
+        },
+        {
+          "id": "4xc0cL1Ax8dO7UQQLOrA7F",
+          "title": "錢包一直被強攻！到底誰搶走了我們的錢？｜EP2",
+          "description": "2023要過完了，來認真追朔誰是我們的荷包殺手！  🎉慶祝小熱NOW上線，本週加碼再送一集～～   (下週恢復每週一更新)  本集 NOW 什麼？ 🔥 2023年度回顧，AI、缺蛋，Metoo新聞 你還記得嗎 🔥 物價通膨3%~5%，發現外食與娛樂消費是2023荷包殺手 🔥 為了省錢想自己下廚，結果採買時都大失血 🔥 連鎖店開始偷偷使喚我們打工 🔥 國外歌手來台搶錢，門票交通隨便破萬！粉絲追星要堅強 🔥 王虹之省錢絕招就是「丐」 🔥 仍然令人火大的彥の冷笑話時間  🎤 主持人：「小熱唱」 彥之＆虹之   ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2023-12-20",
+          "videoLength": 2321580
+        },
+        {
+          "id": "1AyDFIFRsfWTlLGCVTIr4I",
+          "title": "來了！終於換我出國啦，選旅伴就是挑結婚對象｜EP1",
+          "description": "我們開Podcast了！來分享最近旅遊後最重要的心得  本集 NOW 什麼？ 🔥 浪漫過了頭，遇擦撞事故居然全法國人都不想處理！ 🔥 在釜山被當地違規嚇到，韓劇夢幻泡泡一夕破滅 🔥 旅行最忌諱沒有功能又愛抱怨的旅伴！ 🔥 一直被當攝影師，老外是不是都認為亞洲人比較會拍照？ 🔥 令人火大的彥の冷笑話時間  🎤 主持人：「小熱唱」 彥之＆虹之  ►小熱唱 GFTS https://www.facebook.com/gfts9595/ ►彥之IG https://www.instagram.com/janetwang0123/ ►虹之IG https://www.instagram.com/wasinancy/  各式合作，歡迎來信！  專訪合作、宣傳 ►yifang@allaroundyou.com.tw 商業合作►gfts9595@gmail.com  本節目由 熱點娛樂 與【聲歷其境】共同製作  Powered by Firstory Hosting",
+          "imgSrc": "https://i.scdn.co/image/ab6765630000ba8ad284cb917873f4ca7a10546d",
+          "date": "2023-12-17",
+          "videoLength": 2245067
+        }
+      ]
     }
   ],
+
   "categoryContent": [
     {
       "id": 1,
@@ -167,48 +1799,22 @@
     "index": 99,
     "emoji": "❤️",
     "title": "已收藏video",
-    "videoList": [
+    "episodes": [
       {
-        "imageUrl": "https://s3-alpha-sig.figma.com/img/6061/c90b/b239aa208ff9d16f9f1dd09f391760e7?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od6GalLLgkhuEhRxrxO7YNpyslof0TgEH5VWKmANasXjULkJ-ly6irl0dguFlqUQSQxzgM04kyLFCPFgKH0O1--R0MRgmN7yVtCxQjvVVezzmXuq6D~RBMwl02VQmjjrzbQ~OwtHSSESAM~Q98FUJTuJIe05baqvE8fbfPlNNit3n~ERuNsmE~yaBbUGt6ux-~xrTNrN0l5rJDAZTpfmEO~UVn7f9DqYxnJy5tDoBB5oqX~9g7UxqqIg~aerXw~tz~4r3f2ShJctGfj0gOuKuSVguKuAXD2B9lA0vWNzZ7SEGt00ET3NDyGbj47P~NMkgms3955lV80~jjmn8jadeQ__",
-        "title": "A Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-        "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-        "date": "2023-04-06",
-        "duration": "1 小時 20 分"
+        "id": "6pcsEJ87l6CjoZkycHdW0H",
+        "title": "EP208 末日遊戲區與鬧鐘之敵與你過他媽的生日？？",
+        "description": "✨ 光茵樂活-機能銀耳飲 ✨ 光茵樂活的銀耳可厲害了🤩由國師 #唐綺陽 超強代言⭐ 每一口都吃得到整朵鮮銀耳，不只有料！還有內涵😍😍😍 （偷偷跟你們說 唐老師最愛膠原奶茶鮮銀耳！） 母親節安心送禮的好選擇 ❤️ 📍 市場唯一添加機能銀耳飲讓你喝得更有感！ 📍 環控栽培銀耳 營養價值高於市售銀耳70% 📍 屏棄透明包裝堅持選用安全性最高的鐵罐包裝 📍 獨家特殊塗層絕無傳統鐵罐味 📍 即開即飲常溫保存，不佔冰箱空間 🔥新口味「双纖鮮銀耳」一次解決消化、體質、排便3大問題，飲控路上好幫手！ 《母親節專屬優惠💕 》 ⏱️限時 纖潤買箱送盒(4/29-5/5) 🎁新朋友激推！任選銀耳1盒就免運(本島) 🎁老朋友全品項任選第2箱半價 🎁聽眾專屬優惠：5/12前結帳滿$1500輸入折扣碼：「好味」再贈3罐人氣鮮銀耳(有機、纖潤、益菌) 市值＄450 ➡️ https://nanobiolight.us/dxHX1 -- Hosting provided by SoundOn",
+        "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+        "date": "2024-04-29",
+        "videoLength": 3873168
       },
       {
-        "imageUrl": "https://s3-alpha-sig.figma.com/img/a6cb/eee7/31add6e3e5e02f69f231753932b79b9b?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hF9uORM7n1wL3JQlFlrbmrPlpCseaBBPzByWUG1BWr-~JmBreyW1HlkWESIrdgRtAs5-vB9rCV1UetTV~jHfTbqVwFJcSM7222GSxz9s3KOAH~783ZRwduf8~eKIDS5scBNDBBhCV2XGeTtydqdFDNcqqHeNNFdyRWtywp~nwPfg6klm~9Fa1MeAqvAj1U7x-eTrDjW1rSsKVHLo9msdgv~8DQhXwCKaanYsmzPNZvUUwaS~BK8nVUNBTF4w~TV6E-6ggGsWg-poNJ2AqpVhe9ml8lxBDqwHOxHGBSZNGxO4hSTjP4tEV7CfhjW2FPmg~NYRuSGqFpxL9NCIX8dYJA__",
-        "title": "B Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-        "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-        "date": "2023-04-07",
-        "duration": "1 小時 30 分"
-      },
-      {
-        "imageUrl": "https://s3-alpha-sig.figma.com/img/5aa1/4d41/4a9b4213651cc1dbfbadd29c1e864258?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WlJ8jEm8VthMMEIuERDMzA8YWW~fviRoeYPCpRaGkj7gPOf~~aTObI3bTCKd8~kkHx~WfS4~2fwCjqCH~5LfzhuO5C8gEdqN9t5EY8hZskZxP72C4EPwb3AwpGImkilcL3end3q1tWL-DIHHMdklEeZ4HnD9d2t-NKJqOv8c6OuEMmZHVR3cLsuuUiCOwm5VHjsv0JBEfgpOA~PAtnIzLuVRYOB0C5hvLw-GWVnMcRbBWIWITJdKRUQGRHSogYgrxJ4Us~fXRHtPR3r6l2chXNUqooShgC0YQ5EP9GfU6MPafXi1YE5RkPmheSXLm56LeUd92N9R8XqNX-HNm05ltQ__",
-        "title": "C Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-        "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-        "date": "2023-04-08",
-        "duration": "1 小時 40 分"
-      },
-      {
-        "imageUrl": "https://s3-alpha-sig.figma.com/img/22ed/573d/f24340ce94b8f0e31079a53749fa8175?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YejBJ1zeSjOZK5jIV4aqjEn-iNKT8voFZcrMX~mdpcS9iqLED57a4ix2uaXRPWzn5R0PCMJE9ZLgGkz25OnPNCOtY49LAmmVXSDsGcN1YsXPktzviOwE1HxjW28wSFikXOZ55W1sH9O3buSeWSKFRhyp2lkZg2Br1pz8seB4ldR6YFnYFN~g0x6WEfFs5ieQO8DW4~smTvzJleEUFCz60cShtlrFl1bqfJvDEN8c2IWgOIksh00uFnoLUosCM9SFTU9Pkq1eD2Luoskjv6L3KSe3OpnLRgEoC2uZbn~ZywUXQ-~Kb7bUj3BDt216SPJKdo35QUITlgnXhTYUTbnaNA__",
-        "title": "D Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-        "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-        "date": "2023-04-06",
-        "duration": "1 小時 20 分"
-      },
-      {
-        "imageUrl": "https://s3-alpha-sig.figma.com/img/a3e6/56f1/29cb67ae3e0f5ddacdccc345caf736f1?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XuBk4n~Vnk1729Op0aCjHLiAx0s3buH9UFz5sSIxVgBjG7pIrJRSChfHXyhvPtdITfZ3kOK3O8gxfgNPBMGardLEKOlzAV3zURuHLXLoRhMLHsFYmJUpJAaCDd8RvLJ1jMfcKJTHknCDYd44Pif9YEl54zoho--Rkk1glDOqUoyJ00whyqBLHuCjY3WUrM52KbtERjLiRHhwIWA6yyUjSzWY~4Ne8VTDLh3SEfTEKqBRvgDsrXWJcOcK71LeVwIhYj1wCfFwg9WjoY-bfdaPujjqtve5DJ5k2ktXGr3dXm5peM4QVptKmoPlvAyfECJEcH3iJZijKIAFrJa~MjzbyA__",
-        "title": "E Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-        "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-        "date": "2023-04-07",
-        "duration": "1 小時 30 分"
-      },
-      {
-        "imageUrl": "https://s3-alpha-sig.figma.com/img/119a/8489/79edaadc3bd08a903a2a69ec323f624f?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GqbeUz8HSjEFYB2gBVxTiid1U39eRynjybuzGcJ4WroTHl8VBXEKWy6fQnuWy3Ksst7ezaQBi1NZSHKpiyq6-hMfxYWyzMPWNqcozppGO-yUc6gSs5ybBv6bTBD5WuYnLJeIlldstujWC-7oTjnEx3dojisZ5IYDTj1UYO-aNZ6XFNMq6JPAf6EeY3XQagPQWi1Z3lmb7qAOGFH1ZFGylFlY1Hp4HChtBgsP-Ce7pkZDMwE-eph2zp1vsdkOv53oCMP7QUJnb-YZIV1sLRsF23COM3RR2yl0F2lG~e8kXfKbhhcenCYQl0V3-7UIHo7VQmyyUkm8ByPgRSVwHnzrig__",
-        "title": "F Starting Your Own Podcast: Tips, Tricks, and Advice From Anchor Creators",
-        "description": "A Spotify podcast sharing fresh insights on important topics of the moment—in a way only Spotify can. You’ll hear from experts in the music, podcast and tech industries as we discover and uncover stories about our work and the world around us.",
-        "date": "2023-04-08",
-        "duration": "1 小時 40 分"
+        "id": "2l2rRYeI9vuvvIFtzhzoQ0",
+        "title": "EP207 入魔眼藥水與社恐校友與可悲夜市",
+        "description": "✨好味聽眾專屬的優惠✨ 長輩最愛，回購率超高👉 https://fun-s.cc/好味小姐專屬優惠 母親節快來寵愛自己的媽咪🎉芳茲滴雞精回饋聽眾朋友 4/22-5/12滿額好禮有機會抽萬元好禮！ 平常媽媽總是在家忙進忙出 時常忙到沒有運動時間 趁著這次返鄉過母親節 送上一份能增加代謝的健康補給品 #日月養生薑黃滴雞精 ✅熟齡族最愛，滋補保養聖品 ✅三色薑黃素，促進新陳代謝 ✅總支鏈胺基酸，為你提振精神 距離母親節大概還有四週的時間 ✨為最愛的媽媽，補好雙效營養✨4/22-5/12芳茲母親節優惠活動 👉🏻滿 3,800 送 三風製麵 見面幸福麵線 1 包(200 公克/2 人份) 👉🏻滿 8,800 抽 日本製虎牌 多功能電子鍋 (價值$20,000) 👉🏻滿 15,888 送 NHB游離型金盞花葉黃素 1 瓶 (價值$1,580) #芳茲生技#芳茲薑黃滴雞精 #芳茲雞魚饗宴 -- Hosting provided by SoundOn",
+        "imgSrc": "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+        "date": "2024-04-23",
+        "videoLength": 3837983
       }
     ]
   }

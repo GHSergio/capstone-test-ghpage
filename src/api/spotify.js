@@ -85,36 +85,70 @@ export const getPlaylistTracks = async (playlistId) => {
   }
 };
 
-// export const getShowEpisodes = async (id) => {
-//   const endpoint = `${baseUri}/v1/episodes/${id}`;
-//   try {
-//     const response = await axios.get(endpoint, {
-//       headers: {
-//         Authorization: `Bearer ${spotifyToken}`,
-//       },
-//     });
-//     console.log(response.data);
-//     const rawData = response.data;
-//     const filterData = rawData.map((item) => {
-//       const { id, name, description, images, release_date, duration_ms } = item;
-//       return {
-//         id: id,
-//         title: name,
-//         description: description,
-//         imgSrc: images[0]["url"],
-//         date: release_date,
-//         videoLength: duration_ms,
-//       };
-//     });
-//     return filterData;
-//   } catch (error) {
-//     console.error("Error:", error);
-//     throw error;
-//   }
-// };
+//取得shows & Episodes
+export const getShowWithEpisodes = async (id) => {
+  const endpoint = `${baseUri}/v1/shows/${id}`;
+  try {
+    const showResponse = await axios.get(endpoint, {
+      headers: {
+        Authorization: `Bearer ${spotifyToken}`,
+      },
+    });
+    const showData = showResponse.data;
+    // console.log(showData);
+    // 獲取show 的 episodes
+    const episodesResponse = await getShowEpisodes(id);
+    const episodesData = episodesResponse;
+    // console.log(episodesResponse);
+
+    // 構建需要的屬性
+    const showWithEpisodes = {
+      title: showData.name,
+      publisher: showData.publisher,
+      description: showData.description,
+      imageUrl: showData.images[0].url,
+      episodes: episodesData,
+    };
+
+    return showWithEpisodes;
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+};
 
 export const getShowEpisodes = async (id) => {
-  const endpoint = `${baseUri}/v1/episodes/${id}`;
+  const endpoint = `${baseUri}/v1/shows/${id}/episodes?limit=10`;
+  try {
+    const response = await axios.get(endpoint, {
+      headers: {
+        Authorization: `Bearer ${spotifyToken}`,
+      },
+    });
+
+    const rawData = response.data.episodes.items;
+    // 構建需要的屬性
+    const formattedEpisodes = rawData.map((item) => ({
+      id: item.id,
+      title: item.name,
+      description: item.description,
+      imgSrc: item.images[0].url,
+      date: item.release_date,
+      videoLength: item.duration_ms,
+    }));
+    // console.log(formattedEpisodes);
+
+    return formattedEpisodes;
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+};
+
+//取得 episode data
+export const getEpisode = async (episodeId) => {
+  console.log(episodeId);
+  const endpoint = `${baseUri}/v1/episodes/${episodeId}`;
   try {
     const response = await axios.get(endpoint, {
       headers: {
@@ -123,19 +157,17 @@ export const getShowEpisodes = async (id) => {
     });
 
     const rawData = response.data;
-
-    // 将 show 数据添加到 channelList 中
-    const formattedData = {
-      id: rawData.id,
+    // console.log(rawData);
+    // 構建需要的屬性;
+    const formattedEpisodes = {
       title: rawData.name,
-      description: rawData.description,
       imgSrc: rawData.images[0].url,
       date: rawData.release_date,
       videoLength: rawData.duration_ms,
     };
-    console.log(formattedData);
+    // console.log(formattedEpisodes);
 
-    return formattedData;
+    return formattedEpisodes;
   } catch (error) {
     console.error("Error:", error);
     throw error;

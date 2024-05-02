@@ -1,5 +1,5 @@
 import axios from "axios";
-const corsURL = "https://cors-anywhere.herokuapp.com/";
+// const corsURL = "https://cors-anywhere.herokuapp.com/";
 const baseUri = "https://spotify-backend.alphacamp.io/";
 // console.log(baseUri);
 

@@ -9,9 +9,10 @@ import { AddIcon } from "../components/FontAwesome/FontAwesome";
 import { useUser } from "../contexts/UserContext";
 import {
   getUserProfile,
-  getUserPlaylists,
-  getPlaylistTracks,
-  getShowEpisodes,
+  // getUserPlaylists,
+  getEpisode,
+
+  // getPlaylistTracks,
   // getUserShowList,
   // getArtistProfile,
   // searchShows,
@@ -49,7 +50,10 @@ const Main = () => {
     handleCloseAddCardModal,
     handleConfirmAddCardModal,
 
-    handleGetShowEpisodes,
+    activeEpisode,
+    setCurrentPlayer,
+
+    // handleGetShowEpisodes,
   } = usePodcastList();
 
   const categoryList = Object.values(categoryContent);
@@ -59,18 +63,16 @@ const Main = () => {
     console.log("spotifyToken:", spotifyToken);
     const fetchUserProfile = async () => {
       try {
+        //取得spotify使用者資訊
         const userProfileData = await getUserProfile();
         setUserData(userProfileData);
-        const userUserPlaylists = await getUserPlaylists();
-        setCategoryContent(userUserPlaylists);
-        // const categoryListContent = await getPlaylistTracks(
-        //   "3cqpCncJumPeyXrW7F5ncn"
-        // // );
-        // const searchShow = await searchShows(
-        //   "1UMD24QF04ivrjyzJhZisE?si=bc17b91f7c8a4917"
-        // );
+
+        //取得spotify使用者分類清單(?)
+        // const userUserPlaylists = await getUserPlaylists();
+        // setCategoryContent(userUserPlaylists);
+
         // console.log(searchShow);
-        handleGetShowEpisodes("2l2rRYeI9vuvvIFtzhzoQ0?si=a64acf404e6c4e26");
+
         // console.log("categoryListContent:", categoryListContent);
         // const userPlaylistTracks = await getPlaylistTracks(1);
         // console.log("User Profile Data:", userProfileData);
@@ -90,7 +92,13 @@ const Main = () => {
       // GetFavoriteIds();
       // GetCategory();
     }
-  }, [setToken, setUserData, setCategoryContent]);
+  }, [
+    setToken,
+    setUserData,
+    setCategoryContent,
+    activeEpisode,
+    setCurrentPlayer,
+  ]);
 
   return (
     <div className="main-container">
@@ -172,10 +180,10 @@ const Main = () => {
               return (
                 <>
                   <NavigationItem
-                    key={category.id}
                     index={index}
+                    key={category.id}
                     emoji={category.emoji}
-                    title={category.name}
+                    title={category.title}
                     handleClickList={handleClickList}
                     activeDropdown={activeDropdown === index}
                     handleDropdownClick={() => handleClickDropdown(index)}

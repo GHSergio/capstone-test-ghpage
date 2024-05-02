@@ -3,40 +3,37 @@ import { usePodcastList } from "../../contexts/PodcastListContext";
 import "../../styles/favoriteList.scss";
 const ListItem = ({
   item,
-  currentPlaying,
+  currentPlayer,
   handleClickListItem,
   handleClickPlayer,
 }) => {
   const { favoriteList, handleClickBookmark } = usePodcastList();
   // 提取item內的屬性
-  const { title, imageUrl, description, date, duration } = item;
-
+  const { id, title, imgSrc, description, date, videoLength } = item;
+  // console.log("listitem", item);
   // 判斷影片是否在最愛清單中
   const isFavorite =
-    favoriteList.videoList &&
-    favoriteList.videoList.some((favorite) => favorite.title === item.title);
-
+    favoriteList.episodes &&
+    favoriteList.episodes.some((favorite) => favorite.title === item.title);
   // 判斷是否為當前選中的項目
   // const isActive = currentPlaying && currentPlaying.index === item.index;
-
-  // console.log(currentPlaying);
 
   return (
     <>
       <div
-        className={`video-container ${currentPlaying ? "active" : ""}`}
-        onClick={() => handleClickListItem(item)}
+        className={`video-container ${currentPlayer ? "active" : ""}`}
+        onClick={() => handleClickListItem(title)}
       >
         <div className="video-wrapper">
           <div className="video-image">
-            <img src={imageUrl} alt="" />
+            <img src={imgSrc} alt="" />
           </div>
           <div className="video-content">
             <span className="title">{title}</span>
             <span className="description">{description}</span>
             <div className="switch-wrapper">
-              <div className="player" onClick={() => handleClickPlayer(item)}>
-                {currentPlaying ? (
+              <div className="player" onClick={() => handleClickPlayer(id)}>
+                {currentPlayer ? (
                   <svg
                     width="34"
                     height="34"
@@ -65,7 +62,7 @@ const ListItem = ({
                 )}
               </div>
               <p className="date">
-                {date} - {duration}
+                {date} - {videoLength}
               </p>
             </div>
 

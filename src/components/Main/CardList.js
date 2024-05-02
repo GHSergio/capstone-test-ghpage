@@ -14,14 +14,14 @@ const CardList = ({
     activeList,
     categoryContent,
     favoriteList,
-    currentPlayingTitle,
+    activeEpisode,
     handleClickListItem,
     handleClickPlayer,
   } = usePodcastList();
 
   const activeCategoryContent =
     categoryContent[activeList] && categoryContent[activeList].channelList;
-
+  //分類清單
   const getCategoryContent = () => {
     //當List沒有內容
     if (!activeCategoryContent || activeCategoryContent.length === 0) {
@@ -51,15 +51,15 @@ const CardList = ({
         <>
           <div className="card-list-container">
             {activeCategoryContent &&
-              activeCategoryContent.map((item) => (
+              activeCategoryContent.map((item, index) => (
                 <Card
-                  key={item.id}
+                  key={index}
                   id={item.id}
                   title={item.title}
-                  type={item.type}
+                  publisher={item.publisher}
                   imageUrl={item.imageUrl}
                   description={item.description}
-                  videoList={item.videoList}
+                  episodes={item.episodes}
                 />
               ))}
 
@@ -73,9 +73,9 @@ const CardList = ({
       );
     }
   };
-
+  //我的最愛
   const getFavoriteContent = () => {
-    if (!favoriteList.videoList || favoriteList.videoList.length === 0) {
+    if (!favoriteList.episodes || favoriteList.episodes.length === 0) {
       return (
         <>
           <div className="default">
@@ -92,13 +92,13 @@ const CardList = ({
       return (
         <>
           <div className="favorite-list-container">
-            {favoriteList.videoList &&
-              favoriteList.videoList.map((item) => (
+            {favoriteList.episodes &&
+              favoriteList.episodes.map((item) => (
                 <ListItem
                   item={item}
-                  currentPlaying={currentPlayingTitle === item.title}
-                  handleClickListItem={() => handleClickListItem(item.title)}
-                  handleClickPlayer={() => handleClickPlayer(item.title)}
+                  currentPlayer={activeEpisode === item.id}
+                  handleClickListItem={() => handleClickListItem(item.id)}
+                  handleClickPlayer={() => handleClickPlayer(item.id)}
                 />
               ))}
 
@@ -114,7 +114,6 @@ const CardList = ({
       );
     }
   };
-  // console.log(currentPlayingIndex);
 
   //Greeting
   const now = new Date();

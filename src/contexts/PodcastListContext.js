@@ -16,7 +16,9 @@ import {
   getUserProfile,
   getUserPlaylists,
   getPlaylistTracks,
+  getShowWithEpisodes,
   getShowEpisodes,
+  // getEpisode,
   // getUserShowList,
   // getArtistProfile,
   // searchShows,
@@ -43,27 +45,103 @@ const PodcastListProvider = ({ children }) => {
   const [currentAction, setCurrentAction] = useState(null);
   const [editInput, setEditInput] = useState("");
 
-  const [currentPlayingTitle, setCurrentPlayingTitle] = useState(null);
+  const [activeEpisode, setActiveEpisode] = useState(null);
+  const [currentPlayer, setCurrentPlayer] = useState({});
 
+  //獲取db.json data
+  useEffect(() => {
+    // 獲取 channelList data
+    axios
+      .get("http://localhost:3333/channelList")
+      .then((response) => {
+        // 設置 channelList 狀態
+        setChannelList(response.data);
+      })
+      .catch((error) => console.error("Error fetching channel list:", error));
+
+    // 獲取 categoryContent data
+    axios
+      .get("http://localhost:3333/categoryContent")
+      .then((response) => {
+        // 設置 categoryContent 狀態
+        setCategoryContent(response.data);
+      })
+      .catch((error) =>
+        console.error("Error fetching category content:", error)
+      );
+
+    // 獲取 favoriteList data
+    axios
+      .get("http://localhost:3333/favoriteList")
+      .then((response) => {
+        // 設置 favoriteList 狀態
+        setFavoriteList(response.data);
+      })
+      .catch((error) => console.error("Error fetching favorite list:", error));
+  }, []);
+
+  // console.log(favoriteList);
+
+  //添加Shows & Episode 到 channelList (get spotify data)
   const handleGetShowEpisodes = async (id) => {
     try {
+      const show = await getShowWithEpisodes(id);
       const episodes = await getShowEpisodes(id);
-      setChannelList((prevList) => [...prevList, episodes]);
+      // 將 episodes 添加到 show.episodes
+      show.episodes = episodes;
+      setChannelList((prevList) => [...prevList, show]);
     } catch (error) {
       console.error("Error:", error);
     }
   };
-  console.log(channelList);
 
-  const handleClickListItem = (title) => {
-    setCurrentPlayingTitle(currentPlayingTitle === title ? null : title);
+  //將channelListItem 轉換成JSON, key添加"" 句尾,
+  // console.log("channelList:", channelList[3] && channelList[3]);
+  // const showOriginalObj1 = channelList[1] && channelList[1];
+  // const showOriginalObj1 = channelList[3] && {
+  //   ...channelList[3],
+  //   episodes: undefined,
+  // };
+  // const episodesOriginalObj1 = channelList[3] && channelList[3].episodes;
+  // function processObject(obj) {
+  //   // 移除物件前面的"number:"
+  //   let newObj = {};
+  //   for (let key in obj) {
+  //     if (key.startsWith("number:")) {
+  //       let newKey = key.replace("number:", "");
+  //       newObj[newKey] = obj[key];
+  //     } else {
+  //       newObj[key] = obj[key];
+  //     }
+  //   }
+
+  //   // 將date, title, description等鍵值加上雙引號
+  //   newObj.date = `"${newObj.date}"`;
+  //   newObj.title = `"${newObj.title}"`;
+  //   newObj.description = `"${newObj.description}"`;
+
+  //   // 在物件後面添加一個逗號
+  //   newObj = JSON.stringify(newObj) + ",";
+
+  //   return newObj;
+  // }
+
+  // let showOriginalObj = processObject(showOriginalObj1);
+  // let episodesOriginalObj = processObject(episodesOriginalObj1);
+
+  // console.log("showOriginalObj:", showOriginalObj);
+  // console.log("episodesOriginalObj:", episodesOriginalObj);
+
+  const handleClickListItem = (episodeId) => {
+    setActiveEpisode(activeEpisode === episodeId ? null : episodeId);
+    console.log("currentPlayer:" + activeEpisode);
+    // console.log("當前episode:" + episodeTitle);
   };
 
-  const handleClickPlayer = (title) => {
-    setCurrentPlayingTitle(currentPlayingTitle === title ? null : title);
-    console.log("currentPlayingTitle:" + currentPlayingTitle);
-    console.log("title:" + title);
-  };
+  // const handleClickPlayer = (episodeId) => {
+  //   setActiveEpisodes(activeEpisodes === episodeId ? null : episodeId);
+  //   console.log({ "當前episodeId:": episodeId });
+  // };
 
   const handleSelectedChannelClick = (podcast) => {
     setSelectedChannel(podcast);
@@ -80,7 +158,6 @@ const PodcastListProvider = ({ children }) => {
   };
 
   // // 將 Podcast 添加到指定的列表中
-
   const addChannelToCategoryContent = () => {
     setCategoryContent((prevCategoryContent) => {
       const updatedCategoryContent = [...prevCategoryContent];
@@ -208,7 +285,7 @@ const PodcastListProvider = ({ children }) => {
 
   const handleEditInput = (event) => {
     setEditInput(event.target.value);
-    console.log("input:", event.target.value);
+    // console.log("input:", event.target.value);
   };
 
   //設置action為setCurrentAction & openModal
@@ -292,27 +369,27 @@ const PodcastListProvider = ({ children }) => {
     });
   }
 
-  const handleClickBookmark = (video) => {
+  const handleClickBookmark = (episode) => {
     // 檢查最愛清單中是否有與點擊的影片相同的標題
     const isFavorite =
-      favoriteList.videoList &&
-      favoriteList.videoList.some((item) => item.title === video.title);
+      favoriteList.episodes &&
+      favoriteList.episodes.some((item) => item.title === episode.title);
 
     // 如果該影片已經在最愛清單中，則將其移除
     if (isFavorite) {
       const updatedList =
-        favoriteList.videoList &&
-        favoriteList.videoList.filter((item) => item.title !== video.title);
+        favoriteList.episodes &&
+        favoriteList.episodes.filter((item) => item.title !== episode.title);
       setFavoriteList((prevList) => ({
         ...prevList,
-        videoList: updatedList,
+        episodes: updatedList,
       }));
       removeFavoriteSuccess();
     } else {
       // 如果該影片不在最愛清單中，則將其添加
       setFavoriteList((prevList) => ({
         ...prevList,
-        videoList: [...prevList.videoList, video],
+        episodes: [...prevList.episodes, episode],
       }));
 
       addFavoriteSuccess();
@@ -379,9 +456,12 @@ const PodcastListProvider = ({ children }) => {
 
         handleClickBookmark,
 
-        currentPlayingTitle,
+        activeEpisode,
+        setActiveEpisode,
+        currentPlayer,
+        setCurrentPlayer,
         handleClickListItem,
-        handleClickPlayer,
+        // handleClickPlayer,
 
         handleGetShowEpisodes,
       }}

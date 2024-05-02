@@ -3,10 +3,10 @@ import ShowMoreModal from "./Modal/ShowMoreModal";
 const Card = ({
   id,
   title,
-  type,
+  publisher,
   imageUrl,
   description,
-  videoList,
+  episodes,
   onClick,
   active,
 }) => {
@@ -21,10 +21,10 @@ const Card = ({
 
   //傳遞參數給setSelectedCard
   const handleClickMore = () => {
-    setSelectedCard({ id, title, type, imageUrl, description, videoList });
+    setSelectedCard({ id, title, publisher, imageUrl, description, episodes });
     handleOpenShowMoreModal();
   };
-
+  console.log(selectedCard && selectedCard.episodes);
   return (
     <>
       <div
@@ -37,7 +37,7 @@ const Card = ({
           </div>
           <div className="card-content">
             <h2 className="card-content-title">{title}</h2>
-            <p className="card-content-type">{type}</p>
+            <p className="card-content-type">{publisher}</p>
           </div>
           <button className="button-more" onClick={handleClickMore}>
             更多

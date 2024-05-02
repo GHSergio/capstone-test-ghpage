@@ -117,6 +117,9 @@
     font-size: 14px;
     color: #141416;
     margin: 0;
+    white-space: nowrap; /* 防止文本換行 */
+    overflow: hidden; /* 隱藏超出容器的文本 */
+    text-overflow: ellipsis; /* 顯示省略號 */
   }
   .card-content-type {
     font-weight: 400;
