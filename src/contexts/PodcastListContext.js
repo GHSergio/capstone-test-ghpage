@@ -417,7 +417,6 @@ const PodcastListProvider = ({ children }) => {
   // }
 
   const handleClickBookmark = (episode) => {
-    console.log(episode);
     // 檢查最愛清單中是否有與點擊的影片相同的標題
     const isFavorite =
       favoriteList.episodes &&

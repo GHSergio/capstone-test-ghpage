@@ -3,6 +3,7 @@ import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
 import Player from "../components/Footer/Player";
+import PlayerTest from "../components/Footer/PlayerTest";
 import NavigationItem from "../components/Main/NavigationItem";
 import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
@@ -11,7 +12,7 @@ import {
   getUserProfile,
   // getUserPlaylists,
   getEpisode,
-
+  getPlayerSrc,
   // getPlaylistTracks,
   // getUserShowList,
   // getArtistProfile,
@@ -66,7 +67,7 @@ const Main = () => {
         //取得spotify使用者資訊
         const userProfileData = await getUserProfile();
         setUserData(userProfileData);
-
+        // getPlayerSrc("6pcsEJ87l6CjoZkycHdW0H?si=ColzloynQ1SAXoDG0DQiXw");
         //取得spotify使用者分類清單(?)
         // const userUserPlaylists = await getUserPlaylists();
         // setCategoryContent(userUserPlaylists);
@@ -217,6 +218,7 @@ const Main = () => {
       <div className="footer">
         <User />
         <Player />
+        {/* <PlayerTest /> */}
       </div>
     </div>
   );

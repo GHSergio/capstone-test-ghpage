@@ -145,6 +145,25 @@ export const getShowEpisodes = async (id) => {
   }
 };
 
+//取得oEmbed
+export const getPlayerSrc = async (id) => {
+  const endpoint = `${baseUri}/embed/episode/${id}&_source=oembed`;
+  try {
+    const response = await axios.get(endpoint, {
+      headers: {
+        Authorization: `Bearer ${spotifyToken}`,
+      },
+    });
+    console.log(response);
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+};
+
+// _source=oembed
+// &utm_source=oembe
+
 // //取得 episode data
 // export const getEpisode = async (episodeId) => {
 //   console.log(episodeId);

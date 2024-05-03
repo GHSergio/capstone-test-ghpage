@@ -1,4 +1,5 @@
 import "../../styles/footer.scss";
+import React, { useEffect } from "react";
 import { usePodcastList } from "../../contexts/PodcastListContext";
 const Player = () => {
   const {
@@ -83,7 +84,27 @@ const Player = () => {
           </p>
         </div>
 
-        <div className="player-spotify-container">
+        <div id="spotify-player">
+          <iframe
+            src={
+              currentPlayer
+                ? `https://open.spotify.com/embed/episode/${currentPlayer.id}`
+                : ""
+            }
+            color="blue"
+            title="Spotify Player"
+            width="100%"
+            height="352px"
+            allow="autoplay;
+            clipboard - write;
+            picture-in-picture;
+            clipboard - write;
+            encrypted - media;
+            fullscreen"
+            loading="lazy"
+          ></iframe>
+        </div>
+        {/* <div className="player-spotify-container">
           <div className="player-spotify-wrapper">
             <div className="spotify-logo">
               <svg
@@ -117,7 +138,12 @@ const Player = () => {
                 {currentPlayer && currentPlayer.date}・{formattedVideoLength()}
               </p>
             </div>
-            <div className="spotify-controller-container">
+
+            <div
+              id="spotify-player"
+              className="spotify-controller-container"
+              src="https://open.spotify.com/embed/episode/2l2rRYeI9vuvvIFtzhzoQ0?si=0f89504426544688"
+            >
               <div className="controller-back">
                 <svg
                   width="12"
@@ -208,7 +234,7 @@ const Player = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -3,10 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>React practice</title>
+    <title>Alpha capstone</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <div id="spotify-player">
+      <div id="embed-iframe" style="background-color: blue"></div>
+      <script type="text/javascript">
+        window.onSpotifyIframeApiReady = (IFrameAPI) => {
+          const element = document.getElementById("embed-iframe");
+          const options = {
+            color: "white",
+            width: "248px",
+            height: "448px",
+            uri: "spotify:episode:2l2rRYeI9vuvvIFtzhzoQ0",
+          };
+          const callback = (EmbedController) => {
+            document.querySelectorAll(".episode").forEach((episode) => {
+              episode.addEventListener("click", () => {
+                EmbedController.loadUri(episode.dataset.spotifyId);
+              });
+            });
+          };
+          IFrameAPI.createController(element, options, callback);
+        };
+      </script>
+    </div>
   </body>
 </html>

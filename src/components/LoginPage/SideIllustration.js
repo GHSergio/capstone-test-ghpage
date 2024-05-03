@@ -1,23 +1,60 @@
+import { useEffect, useRef, useCallback } from "react";
 import Counter from "./Counter";
-
 const SideIllustration = ({
   title,
   text,
   activeCounter,
   background,
+  imgSrc,
   handleArrowLeftClick,
   handleArrowRightClick,
 }) => {
-  const images = [
-    "https://s3-alpha-sig.figma.com/img/42da/1823/a1eea6bcd7c4273c62160f93ba61216d?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YPJytL0YTqXUhMszeJ9ByEid48C3o~v~0uz6BbmRgON~YrN7OsGTB5J0DyrnwI5~~-bSa29YUjapKRze8nyz1Va0jNLJRT5VJ~78kIo5U8mmh7-GbgzOCOKkipXPziQw35XeiPo~~1fHSVZKkgqqSUEfNwc1imxhHJmx-Gcrc5sRBUk-7pAOMMr-7EGthLt~vxKQOofNh6ZVbWVKrd2ab6IcG8wgKEXJgXt6jcn1PlSAVD6OvNa-POEXz3aZ~QPCnpzBGljZV8kRBteTo7RuROibpYTZPZhhiVT63oIArq93jpPVcZmScyu~14GRWy5spGbHnVI8YaAYh8~-OahuwQ__",
-    "https://s3-alpha-sig.figma.com/img/7a12/1840/b37291fdf4d627ca1fea05b85bb5897f?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XCCDI07tSYtiuhny5cL~Bzx6lZsHeMRBLKOHIlmXIff7hzsKHfsn-ctTxFsrcpU-IVzbhmPHUgNGveNVG-pQC4dTlX2RcdZS~csawA6v9sRWH2fvhYbuQjn4bkZ0a8ieYi4J-UV6ClRZVQHnW38FbS3MvtaN1Ec0tWTzlvKdKqN4bcS5C0ELsd3nt7-CqVpQb8BjfhXBm1PzogdOOQNroh-nhNGresebvwdnLS6AXJNWSZ6xjaKIx0GOyom0M02RS53ztePt7Suy7zA4ADuRf4zuZmqiDMYr4WiGC0FMGnKg1-fPRVL43wkPcCu8dflVr77to2uUZ04PWSzIRJcsHQ__",
-    "https://s3-alpha-sig.figma.com/img/52e2/b677/a83b9345284d0f807954cb64eabc0537?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nTue4OdKrhfOqtnUsw83LyD3OUYc1v7eKacvkduEFQ0OLsFtbLPM0EpRKNdyIeN6MKEUkZFJ4J~7dxJC5d98ghf-VK2a8b61oxTCMOkmATpjPjvbsN4FF~vR-S3pRkq1r8CWjc7GSlU1kjmObEb~KL4w5RH68Mkvzl12urUo3jcl65N5C0jNb4X-SC8YjXFG0vxWp3LVPhpA4-MSuMOp5-HKLuxaAsQEuEKjLsWjdTkdsg62yuXX25kqZBzu4ZK1HjbjoXViOjthfLPZIoaedMRFqzvo1A-lvwvbNBDR5yUeTyqgh4cUnPA78VJDbWG6DZ00-1g1C6B5ugFRS02ESQ__",
-  ];
+  const timerRef = useRef(null); // 用來存儲計時器的引用
+
+  // 自動切換active & 圖片
+  useEffect(() => {
+    startAutoSwitch(); // 開始自動切換
+    return () => stopAutoSwitch(); // 組件卸載時停止計時器
+  }, []);
+
+  // 自動切換函數
+  const handleAutoSwitch = useCallback(() => {
+    // 餘數永遠都會在 0 到 (陣列長度 - 1) 的範圍內。
+    const nextCounter = (activeCounter % imgSrc.length) + 1;
+    handleArrowRightClick(nextCounter);
+  }, [activeCounter, imgSrc.length, handleArrowRightClick]);
+
+  // 停止自動切換
+  const stopAutoSwitch = useCallback(() => {
+    clearInterval(timerRef.current);
+  }, []);
+
+  // 啟動自動切換
+  const startAutoSwitch = useCallback(() => {
+    timerRef.current = setInterval(() => {
+      handleAutoSwitch();
+    }, 2000);
+  }, [handleAutoSwitch]);
+
+  // 滑鼠進入，停止自動切換
+  const handleMouseEnter = useCallback(() => {
+    stopAutoSwitch();
+  }, [stopAutoSwitch]);
+
+  // 滑鼠離開，啟動自動切換
+  const handleMouseLeave = useCallback(() => {
+    startAutoSwitch();
+  }, [startAutoSwitch]);
 
   return (
     <>
-      <div className="SideIllustration" style={{ background: background }}>
-        <img src={images[activeCounter - 1]} alt="" className="font" />
+      <div
+        className="SideIllustration"
+        style={{ background: background }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <img src={imgSrc} alt="" className="font" />
 
         <div className="controller">
           <div className="arrow-left" onClick={handleArrowLeftClick}>
