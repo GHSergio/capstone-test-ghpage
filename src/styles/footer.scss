@@ -60,14 +60,11 @@
   top: 104px;
   height: 596px;
   box-shadow: 16px 16px 40px rgba(199, 199, 199, 0.24);
-  // box-shadow: 16px 16px 40px rgba(7, 0, 0, 0.5);
   border-radius: 16px;
-  // padding: 16px 32px;
   .player-wrapper {
     display: flex;
     flex-direction: column;
     margin: 0px 32px 32px 32px;
-    // box-shadow: 0px 0px 3px 3px rgba(30, 28, 28, 0.5);
   }
 }
 
@@ -217,4 +214,10 @@ hr {
     line-height: 16px;
     cursor: pointer;
   }
+}
+
+#embed-iframe {
+  width: 248px;
+  height: 450px;
+  border-style: none;
 }

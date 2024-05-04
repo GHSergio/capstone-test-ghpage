@@ -46,7 +46,15 @@ const PodcastListProvider = ({ children }) => {
   const [editInput, setEditInput] = useState("");
 
   const [activeEpisode, setActiveEpisode] = useState(null);
-  const [currentPlayer, setCurrentPlayer] = useState({});
+  const [currentPlayer, setCurrentPlayer] = useState({
+    date: "2024-04-23",
+    description:
+      "✨好味聽眾專屬的優惠✨ 長輩最愛，回購率超高👉 https://fun-s.cc/好味小姐專屬優惠 母親節快來寵愛自己的媽咪🎉芳茲滴雞精回饋聽眾朋友 4/22-5/12滿額好禮有機會抽萬元好禮！ 平常媽媽總是在家忙進忙出 時常忙到沒有運動時間 趁著這次返鄉過母親節 送上一份能增加代謝的健康補給品 #日月養生薑黃滴雞精 ✅熟齡族最愛，滋補保養聖品 ✅三色薑黃素，促進新陳代謝 ✅總支鏈胺基酸，為你提振精神 距離母親節大概還有四週的時間 ✨為最愛的媽媽，補好雙效營養✨4/22-5/12芳茲母親節優惠活動 👉🏻滿 3,800 送 三風製麵 見面幸福麵線 1 包(200 公克/2 人份) 👉🏻滿 8,800 抽 日本製虎牌 多功能電子鍋 (價值$20,000) 👉🏻滿 15,888 送 NHB游離型金盞花葉黃素 1 瓶 (價值$1,580) #芳茲生技#芳茲薑黃滴雞精 #芳茲雞魚饗宴 -- Hosting provided by SoundOn",
+    id: "2l2rRYeI9vuvvIFtzhzoQ0",
+    imgSrc: "https://i.scdn.co/image/f40fdfa8f4162cf5cceba34373e0d52c36524b0e",
+    title: "EP207 入魔眼藥水與社恐校友與可悲夜市",
+    videoLength: 3837983,
+  });
 
   //獲取db.json data
   useEffect(() => {
@@ -182,6 +190,18 @@ const PodcastListProvider = ({ children }) => {
       );
       if (selectedEpisode) {
         setCurrentPlayer(selectedEpisode);
+
+        // 向父窗口發送消息以更新播放器
+        window.parent.postMessage(
+          {
+            type: "UPDATE_CURRENT_PLAYER",
+            payload: {
+              id: selectedEpisode.id,
+            },
+          },
+          "*"
+        );
+
         return;
       }
     });

@@ -6,29 +6,63 @@
     <title>Alpha capstone</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <!-- <div id="embed-iframe"></div> -->
     <div id="spotify-player">
-      <div id="embed-iframe" style="background-color: blue"></div>
       <script type="text/javascript">
-        window.onSpotifyIframeApiReady = (IFrameAPI) => {
-          const element = document.getElementById("embed-iframe");
-          const options = {
-            color: "white",
-            width: "248px",
-            height: "448px",
-            uri: "spotify:episode:2l2rRYeI9vuvvIFtzhzoQ0",
-          };
-          const callback = (EmbedController) => {
-            document.querySelectorAll(".episode").forEach((episode) => {
-              episode.addEventListener("click", () => {
-                EmbedController.loadUri(episode.dataset.spotifyId);
-              });
-            });
-          };
-          IFrameAPI.createController(element, options, callback);
-        };
+        // window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        //   //是一個 DOM 元素，它是播放器的容器。
+        //   const element = document.getElementById("embed-iframe");
+        //   // 包含了構建播放器時的配置選項，如顏色、寬度、高度和 URI
+        //   let options = {};
+
+        //   //從Player元件 json.stringify 取得currentPlayer 更新uri
+        //   const updateOptions = (currentPlayer) => {
+        //     options.uri = currentPlayer
+        //       ? `spotify:episode:${currentPlayer.id}`
+        //       : "";
+        //   };
+
+        //   //用於處理播放器控制器的事件，例如點擊事件等
+        //   const callback = (EmbedController) => {
+        //     document.querySelectorAll(".episode").forEach((episode) => {
+        //       episode.addEventListener("click", () => {
+        //         EmbedController.loadUri(episode.dataset.spotifyId);
+        //       });
+        //     });
+        //   };
+
+        //   //從embed-iframe 的 data-current-player 取出
+        //   const currentPlayer = JSON.parse(
+        //     document
+        //       .getElementById("embed-iframe")
+        //       .getAttribute("data-current-player")
+        //   );
+
+        //   // 初始化一次 options , 並構築出播放器
+        //   updateOptions(currentPlayer);
+        //   IFrameAPI.createController(element, options, callback);
+
+        //   window.addEventListener("message", (event) => {
+        //     if (event.data.type === "UPDATE_CURRENT_PLAYER") {
+        //       const { id } = event.data.payload;
+        //     }
+        //   });
+        //   // 監聽 currentPlayer 的變化，並根據需要更新檔案對象
+        //   window.addEventListener("message", (event) => {
+        //     if (event.data.type === "UPDATE_CURRENT_PLAYER") {
+        //       const { id } = event.data.payload;
+        //       // 解除舊的播放器
+        //       if (embedController) {
+        //         embedController.destroy();
+        //       }
+        //       updateOptions({ id });
+        //       //構建出播放器
+        //       IFrameAPI.createController(element, options, callback);
+        //     }
+        //   });
+        // };
       </script>
     </div>
   </body>

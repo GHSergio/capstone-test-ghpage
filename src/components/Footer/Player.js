@@ -1,6 +1,7 @@
 import "../../styles/footer.scss";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { usePodcastList } from "../../contexts/PodcastListContext";
+
 const Player = () => {
   const {
     channelList,
@@ -18,12 +19,12 @@ const Player = () => {
     favoriteList.episodes &&
     favoriteList.episodes.some((item) => item.title === currentPlayer.title);
 
-  const formattedVideoLength = () => {
-    const { hours, minutes } = convertMsToHoursAndMinutes(
-      currentPlayer.videoLength
-    );
-    return `${hours}小時${minutes}分鐘`;
-  };
+  // const formattedVideoLength = () => {
+  //   const { hours, minutes } = convertMsToHoursAndMinutes(
+  //     currentPlayer.videoLength
+  //   );
+  //   return `${hours}小時${minutes}分鐘`;
+  // };
 
   //從player bookmark 增刪入收藏
   const handleClickBookmarkPlayer = (title) => {
@@ -38,6 +39,46 @@ const Player = () => {
       }
     });
   };
+
+  // useEffect(() => {
+  //   window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  //     const element = document.getElementById("embed-iframe");
+  //     let options = {};
+
+  //     //取得id
+  //     const updateOptions = (currentPlayer) => {
+  //       options.uri = currentPlayer
+  //         ? `spotify:episode:${currentPlayer.id}`
+  //         : "";
+  //     };
+
+  //     const callback = (EmbedController) => {
+  //       document.querySelectorAll(".episode").forEach((episode) => {
+  //         episode.addEventListener("click", () => {
+  //           EmbedController.loadUri(episode.dataset.spotifyId);
+  //         });
+  //       });
+  //     };
+
+  //     updateOptions(currentPlayer);
+  //     IFrameAPI.createController(element, options, callback);
+  //     console.log("初次創建");
+  //   };
+  // }, [currentPlayer]);
+
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (iframe) {
+      const src = currentPlayer
+        ? `https://open.spotify.com/embed/episode/${currentPlayer.id}`
+        : "https://open.spotify.com/track/0Z0NuqK8ITGvhESAlbE7v9?si=23aa2606101c45cc";
+      iframe.src = src;
+    }
+  }, [currentPlayer]);
+
+  // console.log("stringify:", JSON.stringify(currentPlayer.id));
 
   return (
     <div className="player-container">
@@ -83,24 +124,23 @@ const Player = () => {
             stories about our work and the world around us.
           </p>
         </div>
-
         <div id="spotify-player">
           <iframe
             src={
               currentPlayer
                 ? `https://open.spotify.com/embed/episode/${currentPlayer.id}`
-                : ""
+                : "https://open.spotify.com/track/0Z0NuqK8ITGvhESAlbE7v9?si=23aa2606101c45cc"
             }
-            color="blue"
+            ref={iframeRef}
+            id="embed-iframe"
+            //傳遞currentPlayer給html
+            data-current-player={
+              currentPlayer ? JSON.stringify(currentPlayer) : ""
+            }
             title="Spotify Player"
             width="100%"
-            height="352px"
-            allow="autoplay;
-            clipboard - write;
-            picture-in-picture;
-            clipboard - write;
-            encrypted - media;
-            fullscreen"
+            height="100%"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
         </div>
