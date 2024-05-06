@@ -1,5 +1,4 @@
 import React, { createContext, useState, useContext } from "react";
-import axios from "axios";
 
 // 建立 UserContext
 const UserContext = createContext();
@@ -11,8 +10,6 @@ export const useUser = () => useContext(UserContext);
 const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState(null);
   const [token, setToken] = useState(null);
-
-  // console.log(token, userData);
 
   return (
     <UserContext.Provider value={{ userData, setUserData, token, setToken }}>

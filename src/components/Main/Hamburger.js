@@ -1,5 +1,6 @@
 import { usePodcastList } from "../../contexts/PodcastListContext";
 import ListActionModal from "./Modal/ListActionModal";
+import { useState } from "react";
 
 const Hamburger = ({ isActive, onClick, disabled }) => {
   const {
@@ -18,15 +19,19 @@ const Hamburger = ({ isActive, onClick, disabled }) => {
   const classNames = isActive
     ? "dropdown-container active"
     : "dropdown-container";
-
+  //渲染Modal
   const renderActionModal = () => {
     switch (currentAction) {
       case "edit":
         return (
           <ListActionModal
             isOpen={listActionModal}
-            title="編輯名稱"
-            placeholder={`${categoryContent[activeList]?.emoji} ${categoryContent[activeList]?.title}`}
+            header="編輯名稱"
+            defaultValue={{
+              emoji: categoryContent[activeList]?.emoji,
+              title: categoryContent[activeList]?.title,
+            }}
+            // defaultValue={`${categoryContent[activeList]?.emoji} ${categoryContent[activeList]?.title}`}
             confirmText="儲存"
             onClose={handleCloseListActionModal}
             index={activeList}
@@ -38,7 +43,10 @@ const Hamburger = ({ isActive, onClick, disabled }) => {
         return (
           <ListActionModal
             isOpen={listActionModal}
-            title="新增分類"
+            header="新增分類"
+            defaultValue={{
+              emoji: " 📚",
+            }}
             placeholder="請輸入分類名稱"
             confirmText="儲存"
             onClose={handleCloseListActionModal}
@@ -51,7 +59,7 @@ const Hamburger = ({ isActive, onClick, disabled }) => {
         return (
           <ListActionModal
             isOpen={listActionModal}
-            title="刪除分類"
+            header="刪除分類"
             text={`您確定要繼續刪除
               ${categoryContent[activeList]?.emoji}
              ${categoryContent[activeList]?.title} 分類嗎？`}

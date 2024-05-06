@@ -10,7 +10,6 @@ const NavigationItem = ({
   handleDropdownClick,
 }) => {
   const { activeList, handleOpenListActionModal } = usePodcastList();
-
   return (
     <li
       className={activeList === index ? "list-item active" : "list-item"}
@@ -21,13 +20,15 @@ const NavigationItem = ({
         <span className="emoji">{emoji && emoji}</span>
         <p className="list-item-title">{title && title}</p>
       </div>
-      <div className="hamburger-container">
-        <Hamburger
-          isActive={activeDropdown}
-          onClick={handleDropdownClick}
-          handleOpenModal={handleOpenListActionModal}
-        />
-      </div>
+      {index !== 99 && ( // 檢查index是否為99
+        <div className="hamburger-container">
+          <Hamburger
+            isActive={activeDropdown}
+            onClick={handleDropdownClick}
+            handleOpenModal={handleOpenListActionModal}
+          />
+        </div>
+      )}
     </li>
   );
 };

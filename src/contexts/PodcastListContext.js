@@ -44,6 +44,7 @@ const PodcastListProvider = ({ children }) => {
 
   const [currentAction, setCurrentAction] = useState(null);
   const [editInput, setEditInput] = useState("");
+  const [chosenEmoji, setChosenEmoji] = useState(null);
 
   const [activeEpisode, setActiveEpisode] = useState(null);
   const [currentPlayer, setCurrentPlayer] = useState({
@@ -55,6 +56,8 @@ const PodcastListProvider = ({ children }) => {
     title: "EP207 入魔眼藥水與社恐校友與可悲夜市",
     videoLength: 3837983,
   });
+
+  console.log("editInput:", editInput);
 
   //獲取db.json data
   useEffect(() => {
@@ -87,10 +90,6 @@ const PodcastListProvider = ({ children }) => {
       })
       .catch((error) => console.error("Error fetching favorite list:", error));
   }, []);
-
-  // console.log(
-  //   channelList && channelList[0] && channelList[0].episodes[0].videoLength
-  // );
 
   //轉換時長單位
   const convertMsToHoursAndMinutes = (milliseconds) => {
@@ -190,18 +189,6 @@ const PodcastListProvider = ({ children }) => {
       );
       if (selectedEpisode) {
         setCurrentPlayer(selectedEpisode);
-
-        // 向父窗口發送消息以更新播放器
-        window.parent.postMessage(
-          {
-            type: "UPDATE_CURRENT_PLAYER",
-            payload: {
-              id: selectedEpisode.id,
-            },
-          },
-          "*"
-        );
-
         return;
       }
     });
@@ -352,7 +339,6 @@ const PodcastListProvider = ({ children }) => {
 
   const handleEditInput = (event) => {
     setEditInput(event.target.value);
-    // console.log("input:", event.target.value);
   };
 
   //設置action為setCurrentAction & openModal
@@ -362,10 +348,11 @@ const PodcastListProvider = ({ children }) => {
   };
 
   //category action
-  const editListItem = (index, newTitle) => {
+  const editListItem = (index, newTitle, newEmoji) => {
     setCategoryContent((prevListContent) => {
       const updatedListContent = [...prevListContent];
-      updatedListContent[index].name = newTitle;
+      updatedListContent[index].emoji = newEmoji;
+      updatedListContent[index].title = newTitle;
       return updatedListContent;
     });
   };
@@ -378,18 +365,19 @@ const PodcastListProvider = ({ children }) => {
     });
   };
 
-  const addListItem = (newTitle) => {
-    AddCategory(newTitle);
-    // setCategoryContent((prevListContent) => {
-    //   const newListItem = {
-    //     emoji: "",
-    //     name: newTitle,
-    //     channelList: [],
-    //   };
-    //   return [...prevListContent, newListItem];
-    // });
+  const addListItem = (newTitle, newEmoji) => {
+    // AddCategory(newTitle);
+    setCategoryContent((prevListContent) => {
+      const newListItem = {
+        id: categoryContent.length + 1,
+        emoji: newEmoji,
+        title: newTitle,
+        channelList: [],
+      };
+      return [...prevListContent, newListItem];
+    });
   };
-
+  console.log("categoryContent:", categoryContent);
   // Swal
   function addFavoriteSuccess() {
     Swal.fire({
@@ -534,6 +522,13 @@ const PodcastListProvider = ({ children }) => {
         handleGetShowEpisodes,
 
         convertMsToHoursAndMinutes,
+
+        chosenEmoji,
+        setChosenEmoji,
+
+        // handleInput,
+        // handleEmoji,
+        // handleRevise,
       }}
     >
       {children}

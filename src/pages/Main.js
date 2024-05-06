@@ -3,11 +3,11 @@ import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
 import Player from "../components/Footer/Player";
-import PlayerTest from "../components/Footer/PlayerTest";
 import NavigationItem from "../components/Main/NavigationItem";
 import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
 import { useUser } from "../contexts/UserContext";
+
 import {
   getUserProfile,
   // getUserPlaylists,

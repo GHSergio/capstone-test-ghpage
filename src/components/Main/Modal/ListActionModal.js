@@ -1,16 +1,23 @@
 import { usePodcastList } from "../../../contexts/PodcastListContext";
+import { useState } from "react";
+// import Picker from "emoji-picker-react";
+import EmojiPicker from "emoji-picker-react";
 
 const ListActionModal = ({
   isOpen,
   onClose,
-  title,
+  header,
   text,
   confirmText,
   placeholder,
 
   index,
   currentAction,
+  defaultValue,
 }) => {
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const [chosenEmoji, setChosenEmoji] = useState("📚");
+
   const {
     editInput,
     setEditInput,
@@ -19,14 +26,17 @@ const ListActionModal = ({
     editListItem,
     deleteListItem,
     addListItem,
+
+    activeList,
+    categoryContent,
+    setCategoryContent,
   } = usePodcastList();
-  // console.log("editInput:", editInput);
 
   const handleConfirmAction = () => {
     switch ((index, currentAction)) {
       case "edit":
-        // 執行編輯操作
-        editListItem(index, editInput);
+        // 執行編輯操作 變更title
+        editListItem(index, editInput, chosenEmoji);
         setEditInput("");
 
         onClose();
@@ -39,7 +49,7 @@ const ListActionModal = ({
 
       case "add":
         // 執行添加操作
-        addListItem(editInput);
+        addListItem(editInput, chosenEmoji);
         setEditInput("");
 
         onClose();
@@ -50,6 +60,30 @@ const ListActionModal = ({
     }
   };
 
+  const handlePickerOpen = () => {
+    setPickerOpen(true);
+  };
+
+  //選取emoji 更新categoryContent.emoji
+  const onEmojiClick = (event, emojiObject) => {
+    const newEmoji = event.emoji;
+    setChosenEmoji(newEmoji);
+
+    // // 更新到context中
+    // const updatedCategoryContent = [...categoryContent];
+    // updatedCategoryContent[activeList].emoji = newEmoji;
+    // // 更新context中的值;
+    // setCategoryContent(updatedCategoryContent);
+    setPickerOpen(false);
+  };
+
+  const emoji = categoryContent[activeList]?.emoji;
+  const title = categoryContent[activeList]?.title;
+  console.log("categoryContent:", emoji, title);
+
+  console.log("editInput:", editInput);
+  console.log("defaultValue:", defaultValue);
+  console.log("chosenEmoji:", chosenEmoji);
   return (
     <>
       {isOpen && (
@@ -60,7 +94,7 @@ const ListActionModal = ({
           >
             <div className="modal-wrapper">
               <div className="modal-header">
-                <p className="modal-header-text">{title}</p>
+                <p className="modal-header-text">{header}</p>
                 <svg
                   className="button-close"
                   width="24"
@@ -86,17 +120,26 @@ const ListActionModal = ({
               <hr />
               <div className="list-modal-main">
                 {/* 刪除分類不用input */}
-                {title !== "刪除分類" && (
+                {header !== "刪除分類" && (
                   <div className="list-modal-search-container">
+                    {/* 拆分成emoji & title */}
+                    <div className="emoji-container" onClick={handlePickerOpen}>
+                      <span className="emoji">
+                        {header === "編輯名稱"
+                          ? chosenEmoji || (defaultValue && defaultValue.emoji)
+                          : chosenEmoji || "📚"}
+                      </span>
+                    </div>
                     <input
                       className="search-input"
                       type="text"
-                      placeholder={placeholder}
-                      value={editInput}
+                      placeholder={placeholder && placeholder}
+                      value={editInput || (defaultValue && defaultValue.title)}
                       onChange={handleEditInput}
                     />
                   </div>
                 )}
+
                 <div className="search-result">
                   {text && <p className="search-result-header">{text}</p>}
                   <div className="card-list-container"></div>
@@ -130,6 +173,21 @@ const ListActionModal = ({
               </div>
             </div>
           </div>
+        </div>
+      )}
+      {/* emoji選擇器 */}
+      {pickerOpen && (
+        <div
+          className="emoji-picker-container"
+          style={{
+            zIndex: "50",
+            position: "absolute",
+            bottom: "-100px",
+            left: "-100px",
+          }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <EmojiPicker onEmojiClick={onEmojiClick} />
         </div>
       )}
     </>
