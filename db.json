@@ -1768,7 +1768,6 @@
       ]
     }
   ],
-
   "categoryContent": [
     {
       "id": 1,
@@ -1798,7 +1797,7 @@
   "favoriteList": {
     "index": 99,
     "emoji": "❤️",
-    "title": "已收藏video",
+    "title": "已收藏項目",
     "episodes": [
       {
         "id": "6pcsEJ87l6CjoZkycHdW0H",
@@ -1817,5 +1816,15 @@
         "videoLength": 3837983
       }
     ]
-  }
+  },
+  "categoryEmoji": [
+    {
+      "emoji": "📚",
+      "id": "562"
+    },
+    {
+      "emoji": "📚",
+      "id": "569"
+    }
+  ]
 }

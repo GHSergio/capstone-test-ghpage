@@ -20,7 +20,10 @@ const CardList = ({
   } = usePodcastList();
 
   const activeCategoryContent =
-    categoryContent[activeList] && categoryContent[activeList].channelList;
+    categoryContent && categoryContent[activeList]
+      ? categoryContent[activeList].savedShows
+      : [];
+
   //分類清單
   const getCategoryContent = () => {
     //當List沒有內容

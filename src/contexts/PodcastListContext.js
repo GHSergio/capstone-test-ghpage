@@ -2,16 +2,16 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import {
-  // GetFavoriteIds,
+  GetFavoriteIds,
+  GetCategory,
   // CreateAccount,
   // PostFavorite,
   // RemoveFavorite,
-  // GetCategory,
   // deleteCategory,
   // putCategory,
   // addShowToCategory,
   AddCategory,
-} from "../api/acApi";
+} from "../api/acAPI";
 import {
   // getUserProfile,
   // getUserPlaylists,
@@ -56,11 +56,19 @@ const PodcastListProvider = ({ children }) => {
     title: "EP207 入魔眼藥水與社恐校友與可悲夜市",
     videoLength: 3837983,
   });
+  //要映射的emoji
+  const [categoryEmoji, setCategoryEmoji] = useState({});
 
-  console.log("editInput:", editInput);
-
-  //獲取db.json data
+  // console.log("當前分類:", categoryContent[activeList]);
+  // console.log("categoryEmoji:", categoryEmoji);
+  //獲取映射emoji
   useEffect(() => {
+    axios
+      .get("http://localhost:3333/categoryEmoji")
+      .then((response) => {
+        setCategoryEmoji(response.data);
+      })
+      .catch((error) => console.error("獲取categoryEmoji出現錯誤:", error));
     // 獲取 channelList data
     axios
       .get("http://localhost:3333/channelList")
@@ -68,28 +76,40 @@ const PodcastListProvider = ({ children }) => {
         // 設置 channelList 狀態
         setChannelList(response.data);
       })
-      .catch((error) => console.error("Error fetching channel list:", error));
+      .catch((error) => console.error("獲取channelList出現錯誤:", error));
+  }, [setCategoryEmoji]);
 
-    // 獲取 categoryContent data
-    axios
-      .get("http://localhost:3333/categoryContent")
-      .then((response) => {
-        // 設置 categoryContent 狀態
-        setCategoryContent(response.data);
-      })
-      .catch((error) =>
-        console.error("Error fetching category content:", error)
-      );
+  // //獲取db.json data
+  // useEffect(() => {
+  //   // 獲取 channelList data
+  //   axios
+  //     .get("http://localhost:3333/channelList")
+  //     .then((response) => {
+  //       // 設置 channelList 狀態
+  //       setChannelList(response.data);
+  //     })
+  //     .catch((error) => console.error("Error fetching channel list:", error));
 
-    // 獲取 favoriteList data
-    axios
-      .get("http://localhost:3333/favoriteList")
-      .then((response) => {
-        // 設置 favoriteList 狀態
-        setFavoriteList(response.data);
-      })
-      .catch((error) => console.error("Error fetching favorite list:", error));
-  }, []);
+  //   // // 獲取 categoryContent data
+  //   // axios
+  //   //   .get("http://localhost:3333/categoryContent")
+  //   //   .then((response) => {
+  //   //     // 設置 categoryContent 狀態
+  //   //     setCategoryContent(response.data);
+  //   //   })
+  //   //   .catch((error) =>
+  //   //     console.error("Error fetching category content:", error)
+  //   //   );
+
+  //   // // 獲取 favoriteList data
+  //   // axios
+  //   //   .get("http://localhost:3333/favoriteList")
+  //   //   .then((response) => {
+  //   //     // 設置 favoriteList 狀態
+  //   //     setFavoriteList(response.data);
+  //   //   })
+  //   //   .catch((error) => console.error("Error fetching favorite list:", error));
+  // }, []);
 
   //轉換時長單位
   const convertMsToHoursAndMinutes = (milliseconds) => {
@@ -119,45 +139,6 @@ const PodcastListProvider = ({ children }) => {
       console.error("Error:", error);
     }
   };
-
-  //將channelListItem 轉換成JSON, key添加"" 句尾,
-  // console.log("channelList:", channelList[3] && channelList[3]);
-  // const showOriginalObj1 = channelList[1] && channelList[1];
-  // const showOriginalObj1 = channelList[3] && {
-  //   ...channelList[3],
-  //   episodes: undefined,
-  // };
-  // const episodesOriginalObj1 = channelList[3] && channelList[3].episodes;
-  // function processObject(obj) {
-  //   // 移除物件前面的"number:"
-  //   let newObj = {};
-  //   for (let key in obj) {
-  //     if (key.startsWith("number:")) {
-  //       let newKey = key.replace("number:", "");
-  //       newObj[newKey] = obj[key];
-  //     } else {
-  //       newObj[key] = obj[key];
-  //     }
-  //   }
-
-  //   // 將date, title, description等鍵值加上雙引號
-  //   newObj.date = `"${newObj.date}"`;
-  //   newObj.title = `"${newObj.title}"`;
-  //   newObj.description = `"${newObj.description}"`;
-
-  //   // 在物件後面添加一個逗號
-  //   newObj = JSON.stringify(newObj) + ",";
-
-  //   return newObj;
-  // }
-
-  // let showOriginalObj = processObject(showOriginalObj1);
-  // let episodesOriginalObj = processObject(episodesOriginalObj1);
-
-  // console.log("showOriginalObj:", showOriginalObj);
-  // console.log("episodesOriginalObj:", episodesOriginalObj);
-
-  //Episode 添加 active
 
   //符合 episodeId 則 active
   const handleClickListItem = (episodeId) => {
@@ -193,9 +174,6 @@ const PodcastListProvider = ({ children }) => {
       }
     });
   };
-
-  // console.log("currentPlayer:", currentPlayer);
-  // console.log("activeEpisode:", activeEpisode);
 
   const handleSelectedChannelClick = (podcast) => {
     setSelectedChannel(podcast);
@@ -347,15 +325,41 @@ const PodcastListProvider = ({ children }) => {
     handleOpenListActionModal();
   };
 
+  // //更新emoji
+  // const handleEmojiUpdate = (categoryId, newEmoji) => {
+  //   const newCategoryEmoji = {
+  //     ...categoryEmoji,
+  //     [categoryId]: newEmoji,
+  //   };
+  //   setCategoryEmoji(newCategoryEmoji);
+  // };
+
   //category action
-  const editListItem = (index, newTitle, newEmoji) => {
-    setCategoryContent((prevListContent) => {
-      const updatedListContent = [...prevListContent];
-      updatedListContent[index].emoji = newEmoji;
-      updatedListContent[index].title = newTitle;
-      return updatedListContent;
-    });
-  };
+  // const editListItem = async (index, newTitle, newEmoji) => {
+  //   const category = categoryContent[index];
+  //   const updateResult = await putCategory({
+  //     categoriesId: category.id,
+  //     name: newTitle,
+  //   });
+
+  //   handleEmojiUpdate(category.id, newEmoji); // 使用 category.id 而非 index
+
+  //   if (updateResult === "success") {
+  //     // 更新本地分類清單狀態
+  //     setCategoryContent((prevListContent) =>
+  //       prevListContent.map((item, idx) => {
+  //         if (idx === index) {
+  //           return { ...item, name: newTitle, emoji: newEmoji };
+  //         }
+  //         return item;
+  //       })
+  //     );
+  //   } else {
+  //     console.error("Failed to update category name");
+  //   }
+  // };
+
+  console.log("categoryEmoji:", categoryEmoji);
 
   const deleteListItem = (index) => {
     setCategoryContent((prevListContent) => {
@@ -365,19 +369,40 @@ const PodcastListProvider = ({ children }) => {
     });
   };
 
-  const addListItem = (newTitle, newEmoji) => {
-    // AddCategory(newTitle);
-    setCategoryContent((prevListContent) => {
-      const newListItem = {
-        id: categoryContent.length + 1,
-        emoji: newEmoji,
-        title: newTitle,
-        channelList: [],
-      };
-      return [...prevListContent, newListItem];
-    });
+  // const addListItem = (newTitle, newEmoji) => {
+  //   // AddCategory(newTitle);
+  //   setCategoryContent((prevListContent) => {
+  //     const newListItem = {
+  //       id: categoryContent.length + 1,
+  //       emoji: newEmoji,
+  //       title: newTitle,
+  //       channelList: [],
+  //     };
+  //     return [...prevListContent, newListItem];
+  //   });
+  // };
+
+  const addListItem = async (newTitle) => {
+    try {
+      // 從 emoji 映射表中獲取相應的 emoji 符號
+      const emoji = chosenEmoji;
+      console.log(chosenEmoji);
+      // 調用新增分類的 API，傳遞名稱和 emoji 參數
+      const result = await AddCategory({ name: newTitle, emoji: emoji });
+      if (result === "success") {
+        // 如果成功新增分類，更新你的 UI 或做其他必要的處理
+        console.log("成功新增分類:", newTitle);
+        // 重新獲取最新的分類清單並更新 UI
+        const userCategoryContent = await GetCategory();
+        setCategoryContent(userCategoryContent);
+      } else {
+        console.log("新增分類失敗");
+      }
+    } catch (error) {
+      console.error("新增分類時出現錯誤:", error);
+    }
   };
-  console.log("categoryContent:", categoryContent);
+
   // Swal
   function addFavoriteSuccess() {
     Swal.fire({
@@ -505,7 +530,7 @@ const PodcastListProvider = ({ children }) => {
         setEditInput,
         handleEditInput,
 
-        editListItem,
+        // editListItem,
         deleteListItem,
         addListItem,
 
@@ -529,6 +554,12 @@ const PodcastListProvider = ({ children }) => {
         // handleInput,
         // handleEmoji,
         // handleRevise,
+
+        categoryEmoji,
+        setCategoryEmoji,
+
+        // favoriteListEmoji,
+        // setFavoriteListEmoji,
       }}
     >
       {children}

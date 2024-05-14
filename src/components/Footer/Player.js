@@ -77,7 +77,6 @@ const Player = () => {
                 ? `https://open.spotify.com/embed/episode/${currentPlayer.id}`
                 : "https://open.spotify.com/track/0Z0NuqK8ITGvhESAlbE7v9?si=23aa2606101c45cc"
             }
-            // ref={iframeRef}
             id="embed-iframe"
             //傳遞currentPlayer給html
             data-current-player={

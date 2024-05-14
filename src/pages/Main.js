@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect } from "react";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
@@ -21,23 +22,24 @@ import {
 
 import {
   CreateAccount,
-  // GetFavoriteIds,
+  GetFavoriteIds,
   // PostFavorite,
   // RemoveFavorite,
-  // GetCategory,
+  GetCategory,
   // AddCategory,
   // deleteCategory,
   // putCategory,
   // addShowToCategory,
-} from "../api/acApi";
+} from "../api/acAPI";
 
 const Main = () => {
-  const { userData, setUserData, token, setToken } = useUser();
+  const { setUserData, setToken } = useUser();
 
   const {
     categoryContent,
     setCategoryContent,
     favoriteList,
+    setFavoriteList,
 
     handleClickList,
 
@@ -54,11 +56,15 @@ const Main = () => {
     activeEpisode,
     setCurrentPlayer,
 
+    categoryEmoji,
+    setCategoryEmoji,
+
     // handleGetShowEpisodes,
   } = usePodcastList();
 
-  const categoryList = Object.values(categoryContent);
+  const categoryList = categoryContent && Object.values(categoryContent);
 
+  //取得驗證碼後
   useEffect(() => {
     const spotifyToken = localStorage.getItem("access_token");
     console.log("spotifyToken:", spotifyToken);
@@ -67,10 +73,15 @@ const Main = () => {
         //取得spotify使用者資訊
         const userProfileData = await getUserProfile();
         setUserData(userProfileData);
-        // getPlayerSrc("6pcsEJ87l6CjoZkycHdW0H?si=ColzloynQ1SAXoDG0DQiXw");
-        //取得spotify使用者分類清單(?)
-        // const userUserPlaylists = await getUserPlaylists();
-        // setCategoryContent(userUserPlaylists);
+        //取得acApi帳戶
+        await CreateAccount();
+        //取得我的最愛 單集id
+        const userFavoriteList = await GetFavoriteIds();
+        setFavoriteList(userFavoriteList);
+        // console.log(
+        //   "Main 接收到的 categoryContent:",
+        //   addedEmojiCategoryContent
+        // );
       } catch (error) {
         console.error("Failed to fetch user profile:", error);
       }
@@ -79,11 +90,6 @@ const Main = () => {
       setToken(spotifyToken);
       fetchUserProfile();
       CreateAccount();
-
-      // const acToken = localStorage.getItem("acToken");
-      // console.log(acToken);
-      // GetFavoriteIds();
-      // GetCategory();
     }
   }, [
     setToken,
@@ -91,7 +97,46 @@ const Main = () => {
     setCategoryContent,
     activeEpisode,
     setCurrentPlayer,
+    setFavoriteList,
+    categoryEmoji,
   ]);
+
+  //獲取清單內容,並且添加屬性 映射emoji到分類清單
+  useEffect(() => {
+    console.log("categoryEmoji:", categoryEmoji);
+    if (!Array.isArray(categoryEmoji)) {
+      console.log("Waiting for categoryEmoji to load");
+      return;
+    }
+    const fetchCategoryData = async () => {
+      try {
+        const userCategoryContent = await GetCategory();
+        console.log("categoryEmoji:", categoryEmoji);
+
+        const addedEmojiCategoryContent = userCategoryContent.map(
+          (category) => {
+            const emojiEntry = categoryEmoji.find(
+              (emoji) => emoji.id === category.id
+            );
+            return {
+              ...category,
+              emoji: emojiEntry ? emojiEntry.emoji : "❓",
+            };
+          }
+        );
+
+        setCategoryContent(addedEmojiCategoryContent);
+      } catch (error) {
+        console.error("Failed to load category data:", error);
+      }
+    };
+
+    fetchCategoryData();
+  }, [categoryEmoji, setCategoryContent]);
+
+  // console.log("Main 接收到的 favoriteList:", favoriteList);
+  // console.log("Main 接收到的 categoryEmoji:", categoryEmoji);
+  // console.log("Main 接收到的 categoryContent:", categoryContent);
 
   return (
     <div className="main-container">
@@ -176,7 +221,7 @@ const Main = () => {
                     index={index}
                     key={category.id}
                     emoji={category.emoji}
-                    title={category.title}
+                    title={category.name}
                     handleClickList={handleClickList}
                     activeDropdown={activeDropdown === index}
                     handleDropdownClick={() => handleClickDropdown(index)}
@@ -186,13 +231,9 @@ const Main = () => {
             })}
 
           <NavigationItem
-            index={favoriteList.index}
-            emoji={favoriteList.emoji}
-            title={favoriteList.title}
+            title="收藏清單"
+            emoji="🤎"
             handleClickList={handleClickList}
-            // activeDropdown={activeDropdown === favoriteList.index}
-            // handleDropdownClick={() => handleClickDropdown(favoriteList.index)}
-            // handleOpenModal={handleOpenListActionModal}
           />
 
           {/* addCategory */}

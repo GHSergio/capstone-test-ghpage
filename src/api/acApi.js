@@ -1,9 +1,34 @@
 import axios from "axios";
-// const corsURL = "https://cors-anywhere.herokuapp.com/";
 const baseUri = "https://spotify-backend.alphacamp.io/";
 // console.log(baseUri);
+// const corsURL = "https://cors-anywhere.herokuapp.com/";
 
-//取得用戶資訊
+// 創建acAPI帳戶
+export const CreateAccount = async () => {
+  const uri = baseUri + "api/users";
+  const spotifyToken = localStorage.getItem("access_token");
+  const bodyParameters = {
+    spotifyToken: spotifyToken,
+  };
+
+  axios
+    // .post(corsURL + uri, bodyParameters)
+    .post(uri, bodyParameters)
+    .then((data) => {
+      const token = data.data.token;
+      console.log(
+        "acAPI帳戶創建成功",
+        "[id]:",
+        data.data.id,
+        "[token]:",
+        data.data.token
+      );
+      localStorage.setItem("acToken", token);
+    })
+    .catch((err) => console.log(err));
+};
+
+//取得我的最愛
 export const GetFavoriteIds = async () => {
   const url = `${baseUri}api/me`;
   const acToken = localStorage.getItem("acToken");
@@ -15,6 +40,7 @@ export const GetFavoriteIds = async () => {
   };
 
   const response = await axios
+    // .get(corsURL + url, config)
     .get(url, config)
     .then((data) => {
       console.log("用戶資料:", data.data.favoriteEpisodeIds);
@@ -25,25 +51,30 @@ export const GetFavoriteIds = async () => {
   return response;
 };
 
-// 創建acAPI帳戶
-export const CreateAccount = async () => {
-  const uri = baseUri + "api/users";
-  const spotifyToken = localStorage.getItem("access_token");
-  const bodyParameters = {
-    spotifyToken: spotifyToken,
+//取得分類清單
+export const GetCategory = async () => {
+  const uri = baseUri + "api/categories";
+  const acToken = localStorage.getItem("acToken");
+
+  const config = {
+    headers: {
+      Authorization: "Bearer " + acToken,
+    },
   };
 
-  axios
-    .post(uri, bodyParameters)
+  const response = await axios
+    // .get(corsURL + uri, config)
+    .get(uri, config)
     .then((data) => {
-      // console.log("帳戶創建成功");
-      const token = data.data.token;
-      localStorage.setItem("acToken", token);
+      console.log("分類清單:", data.data.categories);
+      return data.data.categories;
     })
     .catch((err) => console.log(err));
+
+  return response;
 };
 
-//Favorite
+//移除episodeId至FavoriteList
 export const RemoveFavorite = async (episode) => {
   const uri = baseUri + "api/episodes/" + episode;
   const acToken = localStorage.getItem("acToken");
@@ -55,6 +86,7 @@ export const RemoveFavorite = async (episode) => {
   };
 
   const response = axios
+    // .delete(corsURL + uri, config)
     .delete(uri, config)
     .then(() => {
       return "success";
@@ -62,7 +94,7 @@ export const RemoveFavorite = async (episode) => {
     .catch((err) => console.log(err));
   return response;
 };
-
+//添加episodeId至FavoriteList
 export const PostFavorite = async (episode) => {
   const uri = baseUri + "api/episodes";
   const acToken = localStorage.getItem("acToken");
@@ -77,6 +109,7 @@ export const PostFavorite = async (episode) => {
   const response = await axios
     .post(uri, bodyParam, config)
     .then((data) => {
+      console.log(data);
       return "success";
     })
     .catch((err) => {
@@ -93,50 +126,35 @@ export const PostFavorite = async (episode) => {
   return response;
 };
 
-//category
-export const GetCategory = async () => {
-  const uri = baseUri + "api/categories";
-  const acToken = localStorage.getItem("acToken");
-
-  const config = {
-    headers: {
-      Authorization: "Bearer " + acToken,
-    },
-  };
-
-  const response = await axios
-    .get(uri, config)
-    .then((data) => {
-      return data.data.categories;
-    })
-    .catch((err) => console.log(err));
-
-  return response;
-};
-
 export const AddCategory = async ({ newTitle }) => {
-  const uri = baseUri + "api/categories";
+  const uri = `${baseUri}api/categories`;
   const acToken = localStorage.getItem("acToken");
-
   const config = {
     headers: {
-      Authorization: "Bearer " + acToken,
+      Authorization: `Bearer ${acToken}`,
     },
   };
-
   const bodyParameters = {
     name: newTitle,
   };
 
-  const response = await axios
-    .post(uri, bodyParameters, config)
-    .then((res) => {
-      console.log(res);
-      return "success";
-    })
-    .catch((err) => console.log(err));
-
-  return response;
+  try {
+    const response = await axios.post(uri, bodyParameters, config);
+    console.log("Response status:", response.status);
+    console.log("Response data:", response.data);
+    return response.status === 200
+      ? { success: true, data: response.data }
+      : { success: false, message: `Failed with status: ${response.status}` };
+  } catch (error) {
+    console.error("新增分類清單發生錯誤:", error);
+    return {
+      success: false,
+      message:
+        error.response?.data?.message ||
+        error.message ||
+        "Error connecting to server",
+    };
+  }
 };
 
 export const deleteCategory = async (categoriesId) => {
@@ -148,17 +166,23 @@ export const deleteCategory = async (categoriesId) => {
     },
   };
 
-  const response = await axios
-    .delete(uri, config)
-    .then(() => {
-      return "success";
-    })
-    .catch((err) => console.log(err));
-
-  return response;
+  try {
+    const response = await axios.delete(uri, config);
+    console.log("Response status:", response.status);
+    return response.status === 200
+      ? { success: true, data: response.data }
+      : { success: false, message: `Failed with status: ${response.status}` };
+  } catch (error) {
+    console.error("Error delete category:", error);
+    return {
+      success: false,
+      message: error.message || "Error connecting to server",
+    };
+  }
 };
 
 export const putCategory = async ({ categoriesId, name }) => {
+  console.log(categoriesId, name);
   const uri = `${baseUri}api/categories/${categoriesId}`;
   const acToken = localStorage.getItem("acToken");
   const config = {
@@ -171,14 +195,19 @@ export const putCategory = async ({ categoriesId, name }) => {
     name: name,
   };
 
-  const response = await axios
-    .put(uri, bodyParameters, config)
-    .then(() => {
-      return "success";
-    })
-    .catch((err) => console.log(err));
-
-  return response;
+  try {
+    const response = await axios.put(uri, bodyParameters, config);
+    console.log("Response status:", response.status);
+    return response.status === 200
+      ? { success: true, data: response.data }
+      : { success: false, message: `Failed with status: ${response.status}` };
+  } catch (error) {
+    console.error("Error updating category:", error);
+    return {
+      success: false,
+      message: error.message || "Error connecting to server",
+    };
+  }
 };
 
 //add show to category
@@ -193,6 +222,7 @@ export const addShowToCategory = async ({ categoryId, showId }) => {
   };
 
   const response = await axios
+    // .post(corsURL + uri, bodyParam, config)
     .post(uri, bodyParam, config)
     .then((res) => {
       return "success";

@@ -1,7 +1,22 @@
 import { usePodcastList } from "../../../contexts/PodcastListContext";
-import { useState } from "react";
-// import Picker from "emoji-picker-react";
+import { useState, useEffect } from "react";
 import EmojiPicker from "emoji-picker-react";
+import {
+  CreateAccount,
+  GetFavoriteIds,
+  // PostFavorite,
+  // RemoveFavorite,
+  GetCategory,
+  AddCategory,
+  deleteCategory,
+  putCategory,
+  // addShowToCategory,
+} from "../../../api/acAPI";
+import {
+  editCategoryEmoji,
+  addCategoryEmoji,
+  deleteCategoryEmoji,
+} from "../../../api/dbAPI";
 
 const ListActionModal = ({
   isOpen,
@@ -13,24 +28,155 @@ const ListActionModal = ({
 
   index,
   currentAction,
-  defaultValue,
 }) => {
   const [pickerOpen, setPickerOpen] = useState(false);
-  const [chosenEmoji, setChosenEmoji] = useState("📚");
+  const [chosenEmoji, setChosenEmoji] = useState("");
 
   const {
     editInput,
     setEditInput,
     handleEditInput,
 
-    editListItem,
-    deleteListItem,
+    // editListItem,
+    // deleteListItem,
     addListItem,
 
     activeList,
     categoryContent,
+
     setCategoryContent,
+    categoryEmoji,
+    setCategoryEmoji,
   } = usePodcastList();
+  console.log("categoryContent:", categoryContent);
+  console.log(" categoryEmoji:", categoryEmoji);
+  const currentCategory = categoryContent[[index]] && categoryContent[[index]];
+  const defaultTitle = currentCategory && currentCategory.name;
+  const defaultEmoji = currentCategory && currentCategory.emoji;
+  // console.log("defaultTitle:", defaultTitle, "defaultEmoji:", defaultEmoji);
+
+  const editListItem = async (index, newTitle, newEmoji) => {
+    const category = categoryContent[index];
+    try {
+      //發送請求更改category的name
+      console.log("Updating category:", category.id, newTitle);
+      const updateResult = await putCategory({
+        categoriesId: category.id,
+        name: newTitle,
+      });
+      console.log("Update result:", updateResult);
+
+      if (updateResult && updateResult.success) {
+        if (newEmoji && newEmoji !== category.emoji) {
+          try {
+            //修改db.json的emoji
+            console.log("Updating emoji for:", category.id, newEmoji);
+            const emojiUpdateResponse = await editCategoryEmoji(
+              category.id,
+              newEmoji
+            );
+            console.log("Emoji 更新成功:", emojiUpdateResponse);
+          } catch (error) {
+            console.error("更新 emoji 失敗:", error);
+          }
+        }
+        //更新分類清單內的title & emoji
+        setCategoryContent((prevListContent) =>
+          prevListContent.map((item, idx) => {
+            if (idx === index) {
+              return { ...item, name: newTitle, emoji: newEmoji || item.emoji };
+            }
+            return item;
+          })
+        );
+      } else {
+        console.error("分類名稱更新失敗:", updateResult.message);
+      }
+    } catch (error) {
+      console.error("更新分類名稱時發生錯誤:", error);
+    }
+  };
+
+  //刪除本地清單
+  const deleteLocalStateCategory = (categoryId) => {
+    setCategoryContent((prevListContent) => {
+      return prevListContent.filter((item) => item.id !== categoryId);
+    });
+  };
+
+  //向後端請求刪除分類 & 更新本地
+  const handleDeleteCategory = async (categoryId) => {
+    try {
+      //發送請求刪除category
+      const deleteResult = await deleteCategory(categoryId);
+      if (deleteResult && deleteResult.success) {
+        // 分類刪除成功後，刪除對應的 emoji
+        const emojiDeleteResult = await deleteCategoryEmoji(categoryId);
+        if (emojiDeleteResult.success) {
+          deleteLocalStateCategory(categoryId);
+        } else {
+          console.error("刪除emoji失敗:", emojiDeleteResult.message);
+        }
+      } else {
+        console.error("刪除分類失敗:", deleteResult.message);
+      }
+    } catch (err) {
+      console.error("刪除清單 發生錯誤:", err);
+    }
+  };
+
+  //請求後端新增分類 & 獲取分類
+  const addCategory = async (newTitle) => {
+    try {
+      const addResult = await AddCategory({ newTitle });
+      if (addResult && addResult.success) {
+        // 獲取最新的分類列表
+        const categories = await GetCategory();
+        // 找出ID最大的分類
+        const newCategory = categories.reduce((prev, current) => {
+          return prev.id > current.id ? prev : current;
+        });
+        console.log("新的分類id:", newCategory.id);
+        return newCategory; // 返回新分類，包括 ID
+      } else {
+        console.error("新增分類失敗:", addResult?.message);
+        return null;
+      }
+    } catch (error) {
+      console.error("新增分類清單發生錯誤:", error.message);
+      return null;
+    }
+  };
+
+  console.log("categoryEmoji:", categoryEmoji);
+
+  //添加新分類emoji
+  const createCategoryEmoji = async (categoryId, emoji = "") => {
+    try {
+      const result = await addCategoryEmoji(categoryId, emoji);
+      console.log("新增表情response:", result);
+      return result;
+    } catch (error) {
+      console.error("創建 emoji 失敗:", error);
+    }
+  };
+
+  //更新至本地清單state
+  const updateLocalStateWithNewCategory = (newCategory, emoji) => {
+    setCategoryContent((prevListContent) => [
+      ...prevListContent,
+      { ...newCategory, emoji: emoji },
+    ]);
+  };
+
+  //處理新增分類
+  const handleAddCategory = async (title) => {
+    const newCategory = await addCategory(title);
+    if (newCategory) {
+      await createCategoryEmoji(newCategory.id);
+      updateLocalStateWithNewCategory(newCategory, "");
+    }
+  };
 
   const handleConfirmAction = () => {
     switch ((index, currentAction)) {
@@ -38,20 +184,19 @@ const ListActionModal = ({
         // 執行編輯操作 變更title
         editListItem(index, editInput, chosenEmoji);
         setEditInput("");
-
+        setChosenEmoji("");
         onClose();
         break;
+
       case "delete":
-        // 執行刪除操作
-        deleteListItem(index);
+        handleDeleteCategory(currentCategory.id);
         onClose();
         break;
 
       case "add":
         // 執行添加操作
-        addListItem(editInput, chosenEmoji);
+        handleAddCategory(editInput);
         setEditInput("");
-
         onClose();
         break;
 
@@ -64,26 +209,23 @@ const ListActionModal = ({
     setPickerOpen(true);
   };
 
-  //選取emoji 更新categoryContent.emoji
+  //選取emoji  setChosenEmoji
   const onEmojiClick = (event, emojiObject) => {
     const newEmoji = event.emoji;
     setChosenEmoji(newEmoji);
-
-    // // 更新到context中
-    // const updatedCategoryContent = [...categoryContent];
-    // updatedCategoryContent[activeList].emoji = newEmoji;
-    // // 更新context中的值;
-    // setCategoryContent(updatedCategoryContent);
     setPickerOpen(false);
   };
 
-  const emoji = categoryContent[activeList]?.emoji;
-  const title = categoryContent[activeList]?.title;
-  console.log("categoryContent:", emoji, title);
+  console.log("ListModal 接收到的 editInput:", editInput);
+  // console.log("ListModal 接收到的 defaultValue:", defaultValue);
+  // console.log("chosenEmoji:", chosenEmoji);
 
-  console.log("editInput:", editInput);
-  console.log("defaultValue:", defaultValue);
-  console.log("chosenEmoji:", chosenEmoji);
+  useEffect(() => {
+    header === "編輯名稱" && defaultTitle
+      ? setEditInput(defaultTitle)
+      : setEditInput("");
+  }, [header, defaultTitle]);
+
   return (
     <>
       {isOpen && (
@@ -123,20 +265,36 @@ const ListActionModal = ({
                 {header !== "刪除分類" && (
                   <div className="list-modal-search-container">
                     {/* 拆分成emoji & title */}
-                    <div className="emoji-container" onClick={handlePickerOpen}>
-                      <span className="emoji">
-                        {header === "編輯名稱"
-                          ? chosenEmoji || (defaultValue && defaultValue.emoji)
-                          : chosenEmoji || "📚"}
-                      </span>
-                    </div>
-                    <input
-                      className="search-input"
-                      type="text"
-                      placeholder={placeholder && placeholder}
-                      value={editInput || (defaultValue && defaultValue.title)}
-                      onChange={handleEditInput}
-                    />
+                    {header === "編輯名稱" && (
+                      <div
+                        className="emoji-container"
+                        onClick={handlePickerOpen}
+                      >
+                        <span className="emoji">
+                          {chosenEmoji || (defaultEmoji && defaultEmoji)}
+                        </span>
+                      </div>
+                    )}
+                    {header === "編輯名稱" ? (
+                      <input
+                        className="search-input"
+                        type="text"
+                        value={
+                          editInput && editInput.length === 0
+                            ? defaultTitle
+                            : editInput
+                        }
+                        onChange={handleEditInput}
+                      />
+                    ) : (
+                      <input
+                        className="search-input"
+                        type="text"
+                        placeholder={placeholder && placeholder}
+                        value={editInput.length === 0 ? "" : editInput}
+                        onChange={handleEditInput}
+                      />
+                    )}
                   </div>
                 )}
 
@@ -153,11 +311,11 @@ const ListActionModal = ({
                 {currentAction !== "delete" ? (
                   <button
                     className={
-                      editInput.length !== 0
+                      editInput && editInput.length !== 0
                         ? "modal-button-add usable"
                         : "modal-button-add"
                     }
-                    disabled={editInput.length === 0}
+                    disabled={editInput && editInput.length === 0}
                     onClick={handleConfirmAction}
                   >
                     <p>{confirmText}</p>
@@ -182,7 +340,7 @@ const ListActionModal = ({
           style={{
             zIndex: "50",
             position: "absolute",
-            bottom: "-100px",
+            bottom: "-200px",
             left: "-100px",
           }}
           onClick={(e) => e.stopPropagation()}
