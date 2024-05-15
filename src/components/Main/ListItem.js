@@ -1,35 +1,35 @@
 import React from "react";
 import { usePodcastList } from "../../contexts/PodcastListContext";
 import "../../styles/favoriteList.scss";
-const ListItem = ({
-  item,
-  activeEpisode,
-  handleClickListItem,
-  handleClickPlayer,
-}) => {
+const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
   const {
     favoriteList,
     handleClickBookmark,
     currentPlayer,
     convertMsToHoursAndMinutes,
+    activeEpisodeId,
+    isFavorite,
   } = usePodcastList();
   // 提取item內的屬性
   const { id, title, imgSrc, description, date, videoLength } = item;
   // 判斷影片是否在最愛清單中
-  const isFavorite =
-    favoriteList.episodes &&
-    favoriteList.episodes.some((favorite) => favorite.title === item.title);
+  // const isFavorite =
+  //   favoriteList && favoriteList.some((favorite) => favorite.id === item.id);
 
   const formattedVideoLength = () => {
     const { hours, minutes } = convertMsToHoursAndMinutes(videoLength);
     return `${hours}小時${minutes}分鐘`;
   };
 
+  console.log("isFavorite:", isFavorite(activeEpisodeId));
+
   // console.log(currentPlayer);
   return (
     <>
       <div
-        className={`video-container ${activeEpisode ? "active" : ""}`}
+        className={`video-container ${
+          activeEpisodeId === item.id ? "active" : ""
+        }`}
         onClick={() => handleClickListItem(id)}
       >
         <div className="video-wrapper">
@@ -42,7 +42,7 @@ const ListItem = ({
             <div className="switch-wrapper">
               <div
                 className="player"
-                onClick={() => handleClickPlayer(activeEpisode)}
+                onClick={() => handleClickPlayer(activeEpisodeId)}
               >
                 {currentPlayer.title === title ? (
                   <svg
@@ -77,7 +77,10 @@ const ListItem = ({
               </p>
             </div>
 
-            <div className="bookmark" onClick={() => handleClickBookmark(item)}>
+            <div
+              className="bookmark"
+              onClick={() => handleClickBookmark(item.id)}
+            >
               <svg
                 width="20"
                 height="20"
@@ -88,7 +91,7 @@ const ListItem = ({
                 <g clipPath="url(#clip0_38_14)">
                   <path
                     d="M14.1667 2.5H5.83341C4.91675 2.5 4.16675 3.25 4.16675 4.16667V17.5L10.0001 15L15.8334 17.5V4.16667C15.8334 3.25 15.0834 2.5 14.1667 2.5Z"
-                    fill={isFavorite ? "#FF7F50" : "#FFFFFF"}
+                    fill={isFavorite(id) ? "#FF7F50" : "#FFFFFF"}
                     stroke="#FF7F50"
                     strokeWidth="1.5"
                   />

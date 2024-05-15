@@ -1,9 +1,10 @@
+import { useEffect } from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
 import AddCardModal from "./Modal/AddCardModal";
 import ListItem from "./ListItem";
 import { usePodcastList } from "../../contexts/PodcastListContext";
-
+import { GetFavoriteIds } from "../../api/acAPI";
 const CardList = ({
   showModal,
   handleOpenModal,
@@ -13,7 +14,9 @@ const CardList = ({
   const {
     activeList,
     categoryContent,
+    channelList,
     favoriteList,
+    setFavoriteList,
     activeEpisode,
     handleClickListItem,
     handleClickPlayer,
@@ -23,6 +26,31 @@ const CardList = ({
     categoryContent && categoryContent[activeList]
       ? categoryContent[activeList].savedShows
       : [];
+
+  console.log("channelList:", channelList);
+  // console.log("CardList 接收到的 savedShows:", activeCategoryContent);
+
+  //從 channelList 篩選出 id 與 saveShows匹配的item
+  const matchedShows = channelList.filter((channel) =>
+    activeCategoryContent.some((savedShow) => savedShow.id === channel.id)
+  );
+  // console.log("matchedShows:", matchedShows);
+
+  //回傳收藏內的id
+  console.log("favoriteList:", favoriteList.length !== 0 && favoriteList);
+  //避免 還沒獲取data 發生error
+  if (!Array.isArray(favoriteList) || favoriteList.length === 0) {
+    return <div>Loading favorites or no favorites found...</div>;
+  }
+  const favoriteIds = favoriteList && favoriteList.map((item) => item.id);
+  console.log("favoriteIds:", favoriteIds && favoriteIds);
+
+  // 從 channelList 篩選出符合 favoriteList id 的 episodes
+  const matchesEpisodes = channelList.flatMap((channel) =>
+    channel.episodes.filter((episode) => favoriteIds.includes(episode.id))
+  );
+
+  console.log("matchesEpisodes:", matchesEpisodes);
 
   //分類清單
   const getCategoryContent = () => {
@@ -53,8 +81,8 @@ const CardList = ({
       return (
         <>
           <div className="card-list-container">
-            {activeCategoryContent &&
-              activeCategoryContent.map((item, index) => (
+            {matchedShows &&
+              matchedShows.map((item, index) => (
                 <Card
                   key={index}
                   id={item.id}
@@ -78,7 +106,7 @@ const CardList = ({
   };
   //我的最愛
   const getFavoriteContent = () => {
-    if (!favoriteList.episodes || favoriteList.episodes.length === 0) {
+    if (!favoriteList || favoriteList.length === 0) {
       return (
         <>
           <div className="default">
@@ -95,23 +123,16 @@ const CardList = ({
       return (
         <>
           <div className="favorite-list-container">
-            {favoriteList.episodes &&
-              favoriteList.episodes.map((item) => (
+            {matchesEpisodes &&
+              matchesEpisodes.map((episode, index) => (
                 <ListItem
-                  item={item}
-                  activeEpisode={activeEpisode === item.id}
-                  handleClickListItem={() => handleClickListItem(item.id)}
+                  key={index}
+                  item={episode}
+                  activeEpisode={activeEpisode === episode.id}
+                  handleClickListItem={() => handleClickListItem(episode.id)}
                   handleClickPlayer={() => handleClickPlayer(activeEpisode)}
                 />
               ))}
-
-            {/* {showModal && (
-              <AddCardModal
-                isOpen={showModal}
-                onConfirm={handleConfirmModal}
-                onClose={handleCloseModal}
-              />
-            )} */}
           </div>
         </>
       );

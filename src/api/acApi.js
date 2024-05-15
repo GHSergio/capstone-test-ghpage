@@ -1,7 +1,6 @@
 import axios from "axios";
 const baseUri = "https://spotify-backend.alphacamp.io/";
 // console.log(baseUri);
-// const corsURL = "https://cors-anywhere.herokuapp.com/";
 
 // 創建acAPI帳戶
 export const CreateAccount = async () => {
@@ -75,57 +74,57 @@ export const GetCategory = async () => {
 };
 
 //移除episodeId至FavoriteList
-export const RemoveFavorite = async (episode) => {
-  const uri = baseUri + "api/episodes/" + episode;
+export const RemoveFavorite = async (episodeId) => {
+  const uri = `${baseUri}api/episodes/${episodeId}`;
   const acToken = localStorage.getItem("acToken");
-
   const config = {
     headers: {
       Authorization: "Bearer " + acToken,
     },
   };
-
-  const response = axios
-    // .delete(corsURL + uri, config)
-    .delete(uri, config)
-    .then(() => {
-      return "success";
-    })
-    .catch((err) => console.log(err));
-  return response;
+  try {
+    const response = await axios.delete(uri, config);
+    return response.status === 200
+      ? { success: true, data: response.data }
+      : { success: false, message: `Failed with status: ${response.status}` };
+  } catch (error) {
+    console.error("刪除收藏發生錯誤:", error);
+    if (error.response && error.response.status === 403) {
+      console.log("Invalid token!");
+    }
+    if (error.response && error.response.status === 404) {
+      console.log(" Episode is not liked by the user");
+    }
+  }
 };
 //添加episodeId至FavoriteList
-export const PostFavorite = async (episode) => {
-  const uri = baseUri + "api/episodes";
+export const PostFavorite = async (episodeId) => {
+  const uri = `${baseUri}api/episodes`;
   const acToken = localStorage.getItem("acToken");
-
-  const bodyParam = { episodeId: episode };
+  const bodyParam = { episodeId: episodeId };
   const config = {
     headers: {
       Authorization: `Bearer ${acToken}`,
     },
   };
 
-  const response = await axios
-    .post(uri, bodyParam, config)
-    .then((data) => {
-      console.log(data);
-      return "success";
-    })
-    .catch((err) => {
-      console.log("err: ", err);
-      if (err.error.status === 403) {
-        console.log("Invalid token!");
-      }
-
-      if (err.error.status === 409) {
-        console.log("User has already favorited this episode");
-      }
-    });
-
-  return response;
+  try {
+    const response = await axios.post(uri, bodyParam, config);
+    return response.status === 200
+      ? { success: true, data: response.data }
+      : { success: false, message: `Failed with status: ${response.status}` };
+  } catch (error) {
+    console.error("新增收藏發生錯誤:", error);
+    if (error.response && error.response.status === 403) {
+      console.log("Invalid token!");
+    }
+    if (error.response && error.response.status === 409) {
+      console.log("User has already favorited this episode");
+    }
+  }
 };
 
+//新增分類
 export const AddCategory = async ({ newTitle }) => {
   const uri = `${baseUri}api/categories`;
   const acToken = localStorage.getItem("acToken");
@@ -156,7 +155,7 @@ export const AddCategory = async ({ newTitle }) => {
     };
   }
 };
-
+//刪除分類
 export const deleteCategory = async (categoriesId) => {
   const uri = `${baseUri}api/categories/${categoriesId}`;
   const acToken = localStorage.getItem("acToken");
@@ -180,7 +179,7 @@ export const deleteCategory = async (categoriesId) => {
     };
   }
 };
-
+//修改分類
 export const putCategory = async ({ categoriesId, name }) => {
   console.log(categoriesId, name);
   const uri = `${baseUri}api/categories/${categoriesId}`;
@@ -190,7 +189,6 @@ export const putCategory = async ({ categoriesId, name }) => {
       Authorization: "Bearer " + acToken,
     },
   };
-
   const bodyParameters = {
     name: name,
   };
@@ -210,8 +208,12 @@ export const putCategory = async ({ categoriesId, name }) => {
   }
 };
 
-//add show to category
-export const addShowToCategory = async ({ categoryId, showId }) => {
+//添加show至分類
+export const addShowToCategory = async (categoryId, showId) => {
+  if (!categoryId) {
+    console.error("Category ID is undefined");
+    return;
+  }
   const uri = baseUri + `api/categories/${categoryId}/shows`;
   const acToken = localStorage.getItem("acToken");
   const bodyParam = { showId: showId };
@@ -221,13 +223,40 @@ export const addShowToCategory = async ({ categoryId, showId }) => {
     },
   };
 
-  const response = await axios
-    // .post(corsURL + uri, bodyParam, config)
-    .post(uri, bodyParam, config)
-    .then((res) => {
-      return "success";
-    })
-    .catch((err) => console.log(err));
+  try {
+    const response = await axios.post(uri, bodyParam, config);
+    return response.status === 200
+      ? { success: true, data: response.data }
+      : { success: false, message: `Failed with status: ${response.status}` };
+  } catch (error) {
+    console.error("新增show至分類時發生錯誤:", error);
+    return {
+      success: false,
+      message: error.message || "Error connecting to server",
+    };
+  }
+};
 
-  return response;
+//刪除show至分類
+export const deleteFromCategory = async ({ categoryId, showId }) => {
+  const uri = baseUri + `api/categories/${categoryId}/shows/${showId}`;
+  const acToken = localStorage.getItem("acToken");
+  const config = {
+    headers: {
+      Authorization: `Bearer ${acToken}`,
+    },
+  };
+
+  try {
+    const response = await axios.post(uri, config);
+    return response.status === 200
+      ? { success: true, data: response.data }
+      : { success: false, message: `Failed with status: ${response.status}` };
+  } catch (error) {
+    console.error("移除show從分類時發生錯誤:", error);
+    return {
+      success: false,
+      message: error.message || "Error connecting to server",
+    };
+  }
 };

@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
-import { searchShows } from "../../../api/spotify";
+// import { searchShows } from "../../../api/spotify";
+import { addShowToCategory } from "../../../api/acAPI";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const [searchInput, setSearchInput] = useState("");
   const [isAnyCardClicked, setIsAnyCardClicked] = useState(false);
 
-  const { channelList, selectedChannel, setSelectedChannel } = usePodcastList();
+  const {
+    channelList,
+    selectedChannel,
+    setSelectedChannel,
+    categoryContent,
+    activeList,
+  } = usePodcastList();
 
   const handleSearch = (event) => {
     setSearchInput(event.target.value);
     console.log(event.target.value);
-    // searchShows(event.target.value);
   };
 
-  // console.log("channelList:", channelList);
-  //篩選List內 title 包含 searchInput 的 item
   const filteredChannel =
     channelList &&
     channelList.filter((channel) =>
@@ -41,6 +45,18 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
     }
     setSelectedChannel(updatedChannel);
     setIsAnyCardClicked(!isSelected || updatedChannel.length > 0);
+  };
+
+  const currentCategory = categoryContent[activeList];
+  const categoryId = currentCategory && currentCategory.id;
+  // console.log("currentCategory ID:", currentCategory && currentCategory.id);
+  // console.log("selectedChannel:", selectedChannel);
+  const selectedShowIds = selectedChannel.map((show) => show.id);
+  // console.log("selectedChannel ID:", selectedShowIds);
+
+  const handleOnConfirm = (categoryId, selectedChannel) => {
+    addShowToCategory(categoryId, selectedChannel);
+    onConfirm(selectedChannel);
   };
 
   return (
@@ -133,7 +149,7 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                       : "modal-button-add usable"
                   }
                   disabled={!isAnyCardClicked}
-                  onClick={() => onConfirm(selectedChannel)}
+                  onClick={() => handleOnConfirm(categoryId, selectedShowIds)}
                 >
                   <p>確認新增</p>
                 </button>

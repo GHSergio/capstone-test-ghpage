@@ -5,8 +5,8 @@ import {
   GetFavoriteIds,
   GetCategory,
   // CreateAccount,
-  // PostFavorite,
-  // RemoveFavorite,
+  PostFavorite,
+  RemoveFavorite,
   // deleteCategory,
   // putCategory,
   // addShowToCategory,
@@ -46,7 +46,7 @@ const PodcastListProvider = ({ children }) => {
   const [editInput, setEditInput] = useState("");
   const [chosenEmoji, setChosenEmoji] = useState(null);
 
-  const [activeEpisode, setActiveEpisode] = useState(null);
+  const [activeEpisodeId, setActiveEpisodeId] = useState(null);
   const [currentPlayer, setCurrentPlayer] = useState({
     date: "2024-04-23",
     description:
@@ -59,9 +59,8 @@ const PodcastListProvider = ({ children }) => {
   //要映射的emoji
   const [categoryEmoji, setCategoryEmoji] = useState({});
 
-  // console.log("當前分類:", categoryContent[activeList]);
-  // console.log("categoryEmoji:", categoryEmoji);
-  //獲取映射emoji
+  console.log("當前分類:", categoryContent[activeList]);
+  //獲取映射emoji & channelList
   useEffect(() => {
     axios
       .get("http://localhost:3333/categoryEmoji")
@@ -81,15 +80,6 @@ const PodcastListProvider = ({ children }) => {
 
   // //獲取db.json data
   // useEffect(() => {
-  //   // 獲取 channelList data
-  //   axios
-  //     .get("http://localhost:3333/channelList")
-  //     .then((response) => {
-  //       // 設置 channelList 狀態
-  //       setChannelList(response.data);
-  //     })
-  //     .catch((error) => console.error("Error fetching channel list:", error));
-
   //   // // 獲取 categoryContent data
   //   // axios
   //   //   .get("http://localhost:3333/categoryContent")
@@ -140,35 +130,21 @@ const PodcastListProvider = ({ children }) => {
     }
   };
 
-  //符合 episodeId 則 active
+  //將 episodeId set activeEpisode
   const handleClickListItem = (episodeId) => {
-    setActiveEpisode(activeEpisode === episodeId ? null : episodeId);
+    console.log("active episodeId:", episodeId);
+    setActiveEpisodeId(activeEpisodeId === episodeId ? null : episodeId);
   };
-
-  // //代入id 取得 episode data 並 setCurrentPlayer
-  // const handleClickPlayer = async (Episode) => {
-  //   try {
-  //     const spotifyToken = localStorage.getItem("access_token");
-  //     // console.log("spotifyToken:", spotifyToken);
-  //     if (!spotifyToken) {
-  //       console.error("Access token not found in localStorage");
-  //       return;
-  //     }
-
-  //     const selectedEpisodeData = await getEpisode(Episode);
-  //     setCurrentPlayer(selectedEpisodeData);
-  //   } catch (error) {
-  //     console.error("Error fetching episode:", error);
-  //   }
-  // };
 
   //在 channelList 中查找id匹配的 episode
   const handleClickPlayer = (id) => {
+    console.log("PlayerId", id);
     channelList.forEach((channel) => {
       const selectedEpisode = channel.episodes.find(
         (episode) => episode.id === id
       );
       if (selectedEpisode) {
+        console.log(selectedEpisode);
         setCurrentPlayer(selectedEpisode);
         return;
       }
@@ -179,7 +155,8 @@ const PodcastListProvider = ({ children }) => {
     setSelectedChannel(podcast);
   };
 
-  const handleClickList = (index) => {
+  //設置當前NavigationItem
+  const handleNavigationItem = (index) => {
     setActiveList(index);
   };
 
@@ -197,35 +174,34 @@ const PodcastListProvider = ({ children }) => {
       // 確認目標類別存在並擁有 channelList 屬性
       const targetCategory = updatedCategoryContent[activeList];
       console.log(
-        targetCategory &&
-          targetCategory.channelList &&
-          targetCategory.channelList
+        "SavedShows:",
+        targetCategory && targetCategory.savedShows && targetCategory.savedShows
       );
       if (!targetCategory) {
         console.error("目標類別不存在");
         return updatedCategoryContent;
       }
 
-      // 如果 channelList 不存在，則初始化為空陣列
-      const currentChannelList = targetCategory.channelList || [];
-      console.log("currentChannelList:", currentChannelList);
+      // 如果 SavedShows 不存在，則初始化為空陣列
+      const currentSavedShows = targetCategory.savedShows || [];
+      console.log("currentSavedShows:", currentSavedShows);
 
-      // 檢查選取的頻道是否已經存在於目標類別的 channelList 中
-      const uniqueSelectedChannel = selectedChannel.filter((channel) => {
-        return !currentChannelList.some((existingChannel) => {
-          return existingChannel.id === channel.id;
+      // 檢查選取的頻道是否已經存在於目標類別的 savedShows 中
+      const uniqueSelectedSavedShows = selectedChannel.filter((show) => {
+        return !currentSavedShows.some((existingSavedShows) => {
+          return existingSavedShows.id === show.id;
         });
       });
 
-      // 將唯一的選取頻道添加到目標類別的 channelList 中
-      const updatedChannelList = [
-        ...currentChannelList,
-        ...uniqueSelectedChannel,
+      // 將唯一的選取頻道添加到目標類別的 savedShows
+      const updatedSavedShows = [
+        ...currentSavedShows,
+        ...uniqueSelectedSavedShows,
       ];
 
       updatedCategoryContent[activeList] = {
         ...targetCategory,
-        channelList: updatedChannelList,
+        savedShows: updatedSavedShows,
       };
 
       return updatedCategoryContent;
@@ -242,14 +218,14 @@ const PodcastListProvider = ({ children }) => {
   // };
 
   //待修正
-  const handleDeleteChannel = (videoId) => {
-    console.log(videoId);
-    const updatedChannelList = categoryContent[activeList].channelList.filter(
-      (item) => item.id !== videoId
+  const handleDeleteChannel = (episodeId) => {
+    console.log(episodeId);
+    const updatedChannelList = categoryContent[activeList].savedShows.filter(
+      (item) => item.id !== episodeId
     ); //從channelList內 篩選出 id!==video.id的item
     console.log(
       "這是activeList的channelList",
-      categoryContent[activeList].channelList,
+      categoryContent[activeList].savedShows,
       "這是filter後的chanelList",
       updatedChannelList
     );
@@ -257,7 +233,7 @@ const PodcastListProvider = ({ children }) => {
       ...prevCategoryContent,
       [activeList]: {
         ...prevCategoryContent[activeList],
-        channelList: updatedChannelList,
+        savedShows: updatedChannelList,
       },
     }));
   };
@@ -289,9 +265,10 @@ const PodcastListProvider = ({ children }) => {
     setSelectedChannel([]);
   };
 
-  const handleConfirmAddCardModal = (selectedChannel) => {
-    if (selectedChannel.length > 0) {
-      addChannelToCategoryContent(activeList, selectedChannel);
+  //處理addCardModal
+  const handleConfirmAddCardModal = (selectedShows) => {
+    if (selectedShows.length > 0) {
+      addChannelToCategoryContent(activeList, selectedShows);
       setAddCardModal(false);
       setSelectedChannel([]);
     }
@@ -325,49 +302,14 @@ const PodcastListProvider = ({ children }) => {
     handleOpenListActionModal();
   };
 
-  // //更新emoji
-  // const handleEmojiUpdate = (categoryId, newEmoji) => {
-  //   const newCategoryEmoji = {
-  //     ...categoryEmoji,
-  //     [categoryId]: newEmoji,
-  //   };
-  //   setCategoryEmoji(newCategoryEmoji);
-  // };
-
-  //category action
-  // const editListItem = async (index, newTitle, newEmoji) => {
-  //   const category = categoryContent[index];
-  //   const updateResult = await putCategory({
-  //     categoriesId: category.id,
-  //     name: newTitle,
+  // //移除
+  // const deleteNavigationItem = (index) => {
+  //   setCategoryContent((prevListContent) => {
+  //     const updatedListContent = [...prevListContent];
+  //     updatedListContent.splice(index, 1);
+  //     return updatedListContent;
   //   });
-
-  //   handleEmojiUpdate(category.id, newEmoji); // 使用 category.id 而非 index
-
-  //   if (updateResult === "success") {
-  //     // 更新本地分類清單狀態
-  //     setCategoryContent((prevListContent) =>
-  //       prevListContent.map((item, idx) => {
-  //         if (idx === index) {
-  //           return { ...item, name: newTitle, emoji: newEmoji };
-  //         }
-  //         return item;
-  //       })
-  //     );
-  //   } else {
-  //     console.error("Failed to update category name");
-  //   }
   // };
-
-  console.log("categoryEmoji:", categoryEmoji);
-
-  const deleteListItem = (index) => {
-    setCategoryContent((prevListContent) => {
-      const updatedListContent = [...prevListContent];
-      updatedListContent.splice(index, 1);
-      return updatedListContent;
-    });
-  };
 
   // const addListItem = (newTitle, newEmoji) => {
   //   // AddCategory(newTitle);
@@ -382,26 +324,26 @@ const PodcastListProvider = ({ children }) => {
   //   });
   // };
 
-  const addListItem = async (newTitle) => {
-    try {
-      // 從 emoji 映射表中獲取相應的 emoji 符號
-      const emoji = chosenEmoji;
-      console.log(chosenEmoji);
-      // 調用新增分類的 API，傳遞名稱和 emoji 參數
-      const result = await AddCategory({ name: newTitle, emoji: emoji });
-      if (result === "success") {
-        // 如果成功新增分類，更新你的 UI 或做其他必要的處理
-        console.log("成功新增分類:", newTitle);
-        // 重新獲取最新的分類清單並更新 UI
-        const userCategoryContent = await GetCategory();
-        setCategoryContent(userCategoryContent);
-      } else {
-        console.log("新增分類失敗");
-      }
-    } catch (error) {
-      console.error("新增分類時出現錯誤:", error);
-    }
-  };
+  // const addNavigationItem = async (newTitle) => {
+  //   try {
+  //     // 從 emoji 映射表中獲取相應的 emoji 符號
+  //     const emoji = chosenEmoji;
+  //     console.log(chosenEmoji);
+  //     // 調用新增分類的 API，傳遞名稱和 emoji 參數
+  //     const result = await AddCategory({ name: newTitle, emoji: emoji });
+  //     if (result === "success") {
+  //       // 如果成功新增分類，更新你的 UI 或做其他必要的處理
+  //       console.log("成功新增分類:", newTitle);
+  //       // 重新獲取最新的分類清單並更新 UI
+  //       const userCategoryContent = await GetCategory();
+  //       setCategoryContent(userCategoryContent);
+  //     } else {
+  //       console.log("新增分類失敗");
+  //     }
+  //   } catch (error) {
+  //     console.error("新增分類時出現錯誤:", error);
+  //   }
+  // };
 
   // Swal
   function addFavoriteSuccess() {
@@ -449,33 +391,24 @@ const PodcastListProvider = ({ children }) => {
   //   });
   // }
 
-  const handleClickBookmark = (episode) => {
-    // 檢查最愛清單中是否有與點擊的影片相同的標題
-    const isFavorite =
-      favoriteList.episodes &&
-      favoriteList.episodes.some((item) => item.title === episode.title);
+  //episode 是否在 favoriteList內
+  const isFavorite = (episodeId) => {
+    return favoriteList && favoriteList.some((item) => item.id === episodeId);
+  };
 
-    // 如果該影片已經在最愛清單中，則將其移除
-    if (isFavorite) {
-      const updatedList =
-        favoriteList.episodes &&
-        favoriteList.episodes.filter((item) => item.title !== episode.title);
-      setFavoriteList((prevList) => ({
-        ...prevList,
-        episodes: updatedList,
-      }));
+  //處理 書籤 在收藏? 移除 : 新增, 獲取更新的收藏清單
+  const handleClickBookmark = async (episodeId) => {
+    // 檢查最愛清單中是否有與點擊的影片相同的標題
+    if (isFavorite(episodeId)) {
+      await RemoveFavorite(episodeId);
       removeFavoriteSuccess();
     } else {
-      // 如果該影片不在最愛清單中，則將其添加
-      setFavoriteList((prevList) => ({
-        ...prevList,
-        episodes: [...prevList.episodes, episode],
-      }));
-
+      await PostFavorite(episodeId);
+      removeFavoriteSuccess();
       addFavoriteSuccess();
-      // addFavoriteFail();
-      // addFavoriteError();
     }
+    const updatedFavorites = await GetFavoriteIds();
+    setFavoriteList(updatedFavorites);
   };
 
   return (
@@ -496,7 +429,7 @@ const PodcastListProvider = ({ children }) => {
 
         activeList,
         setActiveList,
-        handleClickList,
+        handleNavigationItem,
 
         activeDropdown,
         setActiveDropdown,
@@ -531,13 +464,13 @@ const PodcastListProvider = ({ children }) => {
         handleEditInput,
 
         // editListItem,
-        deleteListItem,
-        addListItem,
-
+        // deleteNavigationItem,
+        // addNavigationItem,
+        isFavorite,
         handleClickBookmark,
 
-        activeEpisode,
-        setActiveEpisode,
+        activeEpisodeId,
+        setActiveEpisodeId,
         handleClickListItem,
 
         currentPlayer,

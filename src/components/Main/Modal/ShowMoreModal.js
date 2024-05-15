@@ -7,7 +7,7 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
     handleDeleteChannel,
     selectedCard,
     setSelectedCard,
-    activeEpisode,
+    activeEpisodeId,
     handleClickListItem,
     handleClickPlayer,
   } = usePodcastList();
@@ -17,6 +17,7 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
     setSelectedCard(null);
     onClose();
   };
+  console.log("activeEpisodeId:", activeEpisodeId);
 
   // console.log(card && card, selectedCard && selectedCard);
   return (
@@ -73,9 +74,8 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
                   <ListItem
                     key={index}
                     item={item}
-                    activeEpisode={activeEpisode === item.id}
-                    handleClickListItem={() => handleClickListItem(item.id)}
-                    handleClickPlayer={() => handleClickPlayer(activeEpisode)}
+                    handleClickListItem={() => handleClickListItem?.(item.id)}
+                    handleClickPlayer={() => handleClickPlayer?.(item.id)}
                   />
                 ))}
             </div>

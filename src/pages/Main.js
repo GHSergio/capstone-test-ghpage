@@ -23,9 +23,9 @@ import {
 import {
   CreateAccount,
   GetFavoriteIds,
+  GetCategory,
   // PostFavorite,
   // RemoveFavorite,
-  GetCategory,
   // AddCategory,
   // deleteCategory,
   // putCategory,
@@ -40,8 +40,9 @@ const Main = () => {
     setCategoryContent,
     favoriteList,
     setFavoriteList,
+    activeList,
 
-    handleClickList,
+    handleNavigationItem,
 
     activeDropdown,
     handleClickDropdown,
@@ -78,10 +79,6 @@ const Main = () => {
         //取得我的最愛 單集id
         const userFavoriteList = await GetFavoriteIds();
         setFavoriteList(userFavoriteList);
-        // console.log(
-        //   "Main 接收到的 categoryContent:",
-        //   addedEmojiCategoryContent
-        // );
       } catch (error) {
         console.error("Failed to fetch user profile:", error);
       }
@@ -89,17 +86,8 @@ const Main = () => {
     if (spotifyToken) {
       setToken(spotifyToken);
       fetchUserProfile();
-      CreateAccount();
     }
-  }, [
-    setToken,
-    setUserData,
-    setCategoryContent,
-    activeEpisode,
-    setCurrentPlayer,
-    setFavoriteList,
-    categoryEmoji,
-  ]);
+  }, [setToken, setUserData, setFavoriteList]);
 
   //獲取清單內容,並且添加屬性 映射emoji到分類清單
   useEffect(() => {
@@ -137,7 +125,7 @@ const Main = () => {
   // console.log("Main 接收到的 favoriteList:", favoriteList);
   // console.log("Main 接收到的 categoryEmoji:", categoryEmoji);
   // console.log("Main 接收到的 categoryContent:", categoryContent);
-
+  // console.log("activeList:", activeList);
   return (
     <div className="main-container">
       <nav className="navigation">
@@ -222,7 +210,7 @@ const Main = () => {
                     key={category.id}
                     emoji={category.emoji}
                     title={category.name}
-                    handleClickList={handleClickList}
+                    handleNavigationItem={handleNavigationItem}
                     activeDropdown={activeDropdown === index}
                     handleDropdownClick={() => handleClickDropdown(index)}
                   />
@@ -231,9 +219,10 @@ const Main = () => {
             })}
 
           <NavigationItem
+            index={99}
             title="收藏清單"
             emoji="🤎"
-            handleClickList={handleClickList}
+            handleNavigationItem={() => handleNavigationItem(99)}
           />
 
           {/* addCategory */}
@@ -259,7 +248,6 @@ const Main = () => {
       <div className="footer">
         <User />
         <Player />
-        {/* <PlayerTest /> */}
       </div>
     </div>
   );

@@ -36,26 +36,22 @@ const ListActionModal = ({
     editInput,
     setEditInput,
     handleEditInput,
-
-    // editListItem,
-    // deleteListItem,
-    addListItem,
-
-    activeList,
     categoryContent,
-
     setCategoryContent,
     categoryEmoji,
-    setCategoryEmoji,
+    // editListItem,
+    // deleteListItem,
+    // addNavigationItem,
   } = usePodcastList();
-  console.log("categoryContent:", categoryContent);
-  console.log(" categoryEmoji:", categoryEmoji);
+  // console.log("categoryContent:", categoryContent);
+  // console.log(" categoryEmoji:", categoryEmoji);
   const currentCategory = categoryContent[[index]] && categoryContent[[index]];
   const defaultTitle = currentCategory && currentCategory.name;
   const defaultEmoji = currentCategory && currentCategory.emoji;
   // console.log("defaultTitle:", defaultTitle, "defaultEmoji:", defaultEmoji);
 
-  const editListItem = async (index, newTitle, newEmoji) => {
+  //處理修改 發送ac修改category & 發送db修改emoji & 更新本地分類name & emoji
+  const handleEditNavigationItem = async (index, newTitle, newEmoji) => {
     const category = categoryContent[index];
     try {
       //發送請求更改category的name
@@ -178,11 +174,12 @@ const ListActionModal = ({
     }
   };
 
+  //處理confirm
   const handleConfirmAction = () => {
     switch ((index, currentAction)) {
       case "edit":
         // 執行編輯操作 變更title
-        editListItem(index, editInput, chosenEmoji);
+        handleEditNavigationItem(index, editInput, chosenEmoji);
         setEditInput("");
         setChosenEmoji("");
         onClose();
@@ -205,6 +202,7 @@ const ListActionModal = ({
     }
   };
 
+  //開啟表情選擇器
   const handlePickerOpen = () => {
     setPickerOpen(true);
   };
