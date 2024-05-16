@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import axios from "axios";
 import {
   GetFavoriteIds,
@@ -23,6 +23,14 @@ import {
   // getArtistProfile,
   // searchShows,
 } from "../api/spotify";
+import {
+  addFavoriteSuccess,
+  removeFavoriteSuccess,
+  addFavoriteFail,
+  addFavoriteError,
+  removeFavoriteFail,
+  removeFavoriteError,
+} from "../components/Swal";
 
 const PodcastListContext = createContext();
 export const usePodcastList = () => useContext(PodcastListContext);
@@ -30,7 +38,7 @@ export const usePodcastList = () => useContext(PodcastListContext);
 const PodcastListProvider = ({ children }) => {
   const [channelList, setChannelList] = useState([]);
   const [categoryContent, setCategoryContent] = useState([]);
-  const [favoriteList, setFavoriteList] = useState({});
+  const [favoriteList, setFavoriteList] = useState([]);
   const [selectedChannel, setSelectedChannel] = useState([]);
 
   const [activeList, setActiveList] = useState(0);
@@ -77,6 +85,11 @@ const PodcastListProvider = ({ children }) => {
       })
       .catch((error) => console.error("獲取channelList出現錯誤:", error));
   }, [setCategoryEmoji]);
+  console.log("selectedCard:", selectedCard);
+  // //避免 還沒獲取data 發生error
+  // if (!Array.isArray(favoriteList) || favoriteList.length === 0) {
+  //   return <div>Loading favorites or no favorites found...</div>;
+  // }
 
   // //獲取db.json data
   // useEffect(() => {
@@ -302,98 +315,33 @@ const PodcastListProvider = ({ children }) => {
     handleOpenListActionModal();
   };
 
-  // //移除
-  // const deleteNavigationItem = (index) => {
-  //   setCategoryContent((prevListContent) => {
-  //     const updatedListContent = [...prevListContent];
-  //     updatedListContent.splice(index, 1);
-  //     return updatedListContent;
-  //   });
-  // };
-
-  // const addListItem = (newTitle, newEmoji) => {
-  //   // AddCategory(newTitle);
-  //   setCategoryContent((prevListContent) => {
-  //     const newListItem = {
-  //       id: categoryContent.length + 1,
-  //       emoji: newEmoji,
-  //       title: newTitle,
-  //       channelList: [],
-  //     };
-  //     return [...prevListContent, newListItem];
-  //   });
-  // };
-
-  // const addNavigationItem = async (newTitle) => {
-  //   try {
-  //     // 從 emoji 映射表中獲取相應的 emoji 符號
-  //     const emoji = chosenEmoji;
-  //     console.log(chosenEmoji);
-  //     // 調用新增分類的 API，傳遞名稱和 emoji 參數
-  //     const result = await AddCategory({ name: newTitle, emoji: emoji });
-  //     if (result === "success") {
-  //       // 如果成功新增分類，更新你的 UI 或做其他必要的處理
-  //       console.log("成功新增分類:", newTitle);
-  //       // 重新獲取最新的分類清單並更新 UI
-  //       const userCategoryContent = await GetCategory();
-  //       setCategoryContent(userCategoryContent);
-  //     } else {
-  //       console.log("新增分類失敗");
-  //     }
-  //   } catch (error) {
-  //     console.error("新增分類時出現錯誤:", error);
-  //   }
-  // };
-
-  // Swal
-  function addFavoriteSuccess() {
-    Swal.fire({
-      icon: "success",
-      width: "250px",
-      text: "成功加入收藏  😊",
-      heightAuto: false,
-      position: "bottom-end",
-      timer: 1000,
-      showConfirmButton: false,
-    });
-  }
-  function removeFavoriteSuccess() {
-    Swal.fire({
-      icon: "success",
-      width: "250px",
-      text: "成功移除收藏  😊",
-      heightAuto: false,
-      position: "bottom-end",
-      timer: 1000,
-      showConfirmButton: false,
-    });
-  }
-  // function addFavoriteFail() {
-  //   Swal.fire({
-  //     icon: "error",
-  //     width: "250px",
-  //     text: "加入收藏失敗  😢",
-  //     heightAuto: false,
-  //     position: "bottom-end",
-  //     timer: 1000,
-  //     showConfirmButton: false,
-  //   });
-  // }
-  // function addFavoriteError() {
-  //   Swal.fire({
-  //     icon: "warning",
-  //     width: "250px",
-  //     text: "發生未知錯誤  🤔",
-  //     heightAuto: false,
-  //     position: "bottom-end",
-  //     timer: 1000,
-  //     showConfirmButton: false,
-  //   });
-  // }
-
+  //favoriteList 相關
   //episode 是否在 favoriteList內
   const isFavorite = (episodeId) => {
-    return favoriteList && favoriteList.some((item) => item.id === episodeId);
+    return (
+      favoriteList &&
+      favoriteList.length !== 0 &&
+      favoriteList.some((item) => item.id === episodeId)
+    );
+  };
+
+  //添加收藏
+  const handleAddFavorite = async (episodeId) => {
+    try {
+      const result = await PostFavorite(episodeId);
+      result.success ? addFavoriteSuccess() : addFavoriteFail();
+    } catch (error) {
+      addFavoriteError();
+    }
+  };
+  //移除收藏
+  const handleRemoveFavorite = async (episodeId) => {
+    try {
+      const result = await RemoveFavorite(episodeId);
+      result.success ? removeFavoriteSuccess() : removeFavoriteFail();
+    } catch (error) {
+      removeFavoriteError();
+    }
   };
 
   //處理 書籤 在收藏? 移除 : 新增, 獲取更新的收藏清單
@@ -401,11 +349,10 @@ const PodcastListProvider = ({ children }) => {
     // 檢查最愛清單中是否有與點擊的影片相同的標題
     if (isFavorite(episodeId)) {
       await RemoveFavorite(episodeId);
-      removeFavoriteSuccess();
+      handleRemoveFavorite();
     } else {
       await PostFavorite(episodeId);
-      removeFavoriteSuccess();
-      addFavoriteSuccess();
+      handleAddFavorite();
     }
     const updatedFavorites = await GetFavoriteIds();
     setFavoriteList(updatedFavorites);

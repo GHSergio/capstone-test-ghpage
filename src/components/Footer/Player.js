@@ -3,24 +3,24 @@ import React from "react";
 import { usePodcastList } from "../../contexts/PodcastListContext";
 
 const Player = () => {
-  const { channelList, favoriteList, currentPlayer, handleClickBookmark } =
-    usePodcastList();
-
-  const isFavorite =
-    currentPlayer &&
-    favoriteList &&
-    favoriteList.episodes &&
-    favoriteList.episodes.some((item) => item.title === currentPlayer.title);
+  const {
+    channelList,
+    favoriteList,
+    currentPlayer,
+    handleClickBookmark,
+    isFavorite,
+  } = usePodcastList();
 
   //從player bookmark 增刪入收藏
-  const handleClickBookmarkPlayer = (title) => {
+  const handleClickBookmarkPlayer = (episodeId) => {
     // 在 channelList 中查找匹配的 episode
     channelList.forEach((channel) => {
       const selectedEpisode = channel.episodes.find(
-        (episode) => episode.title === title
+        (episode) => episode.id === episodeId
       );
       if (selectedEpisode) {
-        handleClickBookmark(selectedEpisode);
+        // console.log(selectedEpisode);
+        handleClickBookmark(selectedEpisode.id);
         return;
       }
     });
@@ -34,7 +34,7 @@ const Player = () => {
 
           <div
             className="bookmark"
-            onClick={() => handleClickBookmarkPlayer(currentPlayer.title)}
+            onClick={() => handleClickBookmarkPlayer(currentPlayer.id)}
           >
             <svg
               width="20"
@@ -45,7 +45,7 @@ const Player = () => {
               <g clipPath="url(#clip0_38_14)">
                 <path
                   d="M14.1667 2.5H5.83341C4.91675 2.5 4.16675 3.25 4.16675 4.16667V17.5L10.0001 15L15.8334 17.5V4.16667C15.8334 3.25 15.0834 2.5 14.1667 2.5Z"
-                  fill={isFavorite ? "#FF7F50" : "#FFFFFF"}
+                  fill={isFavorite(currentPlayer.id) ? "#FF7F50" : "#FFFFFF"}
                   stroke="#FF7F50"
                   strokeWidth="1.5"
                 />

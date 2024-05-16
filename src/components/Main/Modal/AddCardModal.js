@@ -24,21 +24,17 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const filteredChannel =
     channelList &&
     channelList.filter((channel) =>
-      channel.title.toLowerCase().includes(searchInput.toLowerCase())
+      channel.id.toLowerCase().includes(searchInput.toLowerCase())
     );
 
   const handleChannelClick = (channel) => {
     // 重複:傳入的id 已存在selectedChannel
-    const isSelected = selectedChannel.some(
-      (item) => item.title === channel.title
-    );
-    console.log(channel.title);
+    console.log(channel.id);
+    const isSelected = selectedChannel.some((item) => item.id === channel.id);
     let updatedChannel = [...selectedChannel];
     //重複則 篩選出 除了傳入的podcast以外的項目
     if (isSelected) {
-      updatedChannel = selectedChannel.filter(
-        (item) => item.title !== channel.title
-      );
+      updatedChannel = selectedChannel.filter((item) => item.id !== channel.id);
     } else {
       // 沒重複則 該項目更新isSelected
       updatedChannel = [...selectedChannel, { ...channel, active: true }];
@@ -52,10 +48,10 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   // console.log("currentCategory ID:", currentCategory && currentCategory.id);
   // console.log("selectedChannel:", selectedChannel);
   const selectedShowIds = selectedChannel.map((show) => show.id);
-  // console.log("selectedChannel ID:", selectedShowIds);
+  console.log("selectedChannel ID:", selectedShowIds);
 
-  const handleOnConfirm = (categoryId, selectedChannel) => {
-    addShowToCategory(categoryId, selectedChannel);
+  const handleOnConfirm = async (categoryId, selectedChannel) => {
+    await addShowToCategory(categoryId, selectedChannel);
     onConfirm(selectedChannel);
   };
 

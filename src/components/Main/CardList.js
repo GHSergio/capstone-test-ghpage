@@ -20,6 +20,9 @@ const CardList = ({
     activeEpisode,
     handleClickListItem,
     handleClickPlayer,
+
+    selectedCard,
+    setSelectedCard,
   } = usePodcastList();
 
   const activeCategoryContent =
@@ -27,9 +30,10 @@ const CardList = ({
       ? categoryContent[activeList].savedShows
       : [];
 
-  console.log("channelList:", channelList);
-  // console.log("CardList 接收到的 savedShows:", activeCategoryContent);
+  // console.log("channelList:", channelList);
+  console.log("CardList 接收到的 savedShows:", activeCategoryContent);
 
+  //取得 data 傳遞給 card 渲染
   //從 channelList 篩選出 id 與 saveShows匹配的item
   const matchedShows = channelList.filter((channel) =>
     activeCategoryContent.some((savedShow) => savedShow.id === channel.id)
@@ -37,13 +41,8 @@ const CardList = ({
   // console.log("matchedShows:", matchedShows);
 
   //回傳收藏內的id
-  console.log("favoriteList:", favoriteList.length !== 0 && favoriteList);
-  //避免 還沒獲取data 發生error
-  if (!Array.isArray(favoriteList) || favoriteList.length === 0) {
-    return <div>Loading favorites or no favorites found...</div>;
-  }
   const favoriteIds = favoriteList && favoriteList.map((item) => item.id);
-  console.log("favoriteIds:", favoriteIds && favoriteIds);
+  // console.log("favoriteIds:", favoriteIds && favoriteIds);
 
   // 從 channelList 篩選出符合 favoriteList id 的 episodes
   const matchesEpisodes = channelList.flatMap((channel) =>
@@ -130,7 +129,7 @@ const CardList = ({
                   item={episode}
                   activeEpisode={activeEpisode === episode.id}
                   handleClickListItem={() => handleClickListItem(episode.id)}
-                  handleClickPlayer={() => handleClickPlayer(activeEpisode)}
+                  handleClickPlayer={() => handleClickPlayer(episode.id)}
                 />
               ))}
           </div>

@@ -1,48 +1,97 @@
 import axios from "axios";
+import { refreshToken } from "./Author";
 const baseUri = "https://spotify-backend.alphacamp.io/";
 // console.log(baseUri);
 
+const apiClient = axios.create({
+  baseURL: baseUri,
+});
+
+//使用於 用acToken 當 headers 的fn(也就是除了創建帳戶以外的fn)
+apiClient.interceptors.request.use(
+  async (config) => {
+    const expires = new Date(localStorage.getItem("expires"));
+    if (new Date() >= expires) {
+      //刷新spotifyToken & 設置為headers & 創建新帳戶 取得acToken
+      console.log("Access token expired, refreshing...");
+      const newTokens = await refreshToken();
+      localStorage.setItem("access_token", newTokens.access_token);
+      localStorage.setItem(
+        "expires",
+        new Date(new Date().getTime() + newTokens.expires_in * 1000)
+      );
+      // 调用 CreateAccount & 使用現有的 acToken 當 headers
+      await CreateAccount();
+      const newAcToken = localStorage.getItem("acToken");
+      config.headers.Authorization = `Bearer ${newAcToken}`;
+    } else {
+      //沒超時 則獲取Spotify的access_token
+      const acToken = localStorage.getItem("acToken");
+      config.headers.Authorization = `Bearer ${acToken}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+//access_token 當 headers 使用 axios
 // 創建acAPI帳戶
 export const CreateAccount = async () => {
-  const uri = baseUri + "api/users";
   const spotifyToken = localStorage.getItem("access_token");
+  const url = `${baseUri}api/users`;
   const bodyParameters = {
     spotifyToken: spotifyToken,
   };
 
-  axios
-    // .post(corsURL + uri, bodyParameters)
-    .post(uri, bodyParameters)
-    .then((data) => {
-      const token = data.data.token;
-      console.log(
-        "acAPI帳戶創建成功",
-        "[id]:",
-        data.data.id,
-        "[token]:",
-        data.data.token
-      );
-      localStorage.setItem("acToken", token);
-    })
-    .catch((err) => console.log(err));
+  try {
+    const response = await axios.post(url, bodyParameters);
+    const token = response.data.token;
+    console.log(
+      "acAPI帳戶創建成功",
+      "[id]:",
+      response.data.id,
+      "[token]:",
+      token
+    );
+    localStorage.setItem("acToken", token);
+  } catch (err) {
+    console.error("创建账户时发生错误:", err);
+    // 可能需要在这里处理错误，例如重试或通知用户
+  }
+  // axios
+  //   .post(url, bodyParameters)
+  //   .then((data) => {
+  //     const token = data.data.token;
+  //     console.log(
+  //       "acAPI帳戶創建成功",
+  //       "[id]:",
+  //       data.data.id,
+  //       "[token]:",
+  //       data.data.token
+  //     );
+  //     localStorage.setItem("acToken", token);
+  //   })
+  //   .catch((err) => console.log(err));
 };
 
+//使用 acToken 當 headers 使用攔截器 apiClient 取代 axios
 //取得我的最愛
 export const GetFavoriteIds = async () => {
-  const url = `${baseUri}api/me`;
-  const acToken = localStorage.getItem("acToken");
-  console.log("acToken:", acToken);
-  const config = {
-    headers: {
-      Authorization: `Bearer ${acToken}`,
-    },
-  };
+  // const acToken = localStorage.getItem("acToken");
+  const url = `api/me`;
+  // console.log("acToken:", acToken);
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${acToken}`,
+  //   },
+  // };
 
-  const response = await axios
-    // .get(corsURL + url, config)
-    .get(url, config)
+  const response = await apiClient
+    .get(url)
     .then((data) => {
-      console.log("用戶資料:", data.data.favoriteEpisodeIds);
+      console.log("用戶收藏清單:", data.data.favoriteEpisodeIds);
       return data.data.favoriteEpisodeIds;
     })
     .catch((err) => console.log(err));
@@ -52,18 +101,16 @@ export const GetFavoriteIds = async () => {
 
 //取得分類清單
 export const GetCategory = async () => {
-  const uri = baseUri + "api/categories";
-  const acToken = localStorage.getItem("acToken");
+  const url = `api/categories`;
+  // const acToken = localStorage.getItem("acToken");
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${acToken}`,
+  //   },
+  // };
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + acToken,
-    },
-  };
-
-  const response = await axios
-    // .get(corsURL + uri, config)
-    .get(uri, config)
+  const response = await apiClient
+    .get(url)
     .then((data) => {
       console.log("分類清單:", data.data.categories);
       return data.data.categories;
@@ -75,15 +122,20 @@ export const GetCategory = async () => {
 
 //移除episodeId至FavoriteList
 export const RemoveFavorite = async (episodeId) => {
-  const uri = `${baseUri}api/episodes/${episodeId}`;
-  const acToken = localStorage.getItem("acToken");
-  const config = {
-    headers: {
-      Authorization: "Bearer " + acToken,
-    },
-  };
+  // const acToken = localStorage.getItem("acToken");
+  const url = `api/episodes/${episodeId}`;
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${acToken}`,
+  //   },
+  // };
   try {
-    const response = await axios.delete(uri, config);
+    const response = await apiClient.delete(url);
+    console.log(
+      "RemoveFavorite:",
+      response,
+      "status 200 還出現error? 是為了測試?"
+    );
     return response.status === 200
       ? { success: true, data: response.data }
       : { success: false, message: `Failed with status: ${response.status}` };
@@ -99,17 +151,21 @@ export const RemoveFavorite = async (episodeId) => {
 };
 //添加episodeId至FavoriteList
 export const PostFavorite = async (episodeId) => {
-  const uri = `${baseUri}api/episodes`;
-  const acToken = localStorage.getItem("acToken");
+  // const acToken = localStorage.getItem("acToken");
+  const url = `api/episodes`;
   const bodyParam = { episodeId: episodeId };
-  const config = {
-    headers: {
-      Authorization: `Bearer ${acToken}`,
-    },
-  };
-
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${acToken}`,
+  //   },
+  // };
   try {
-    const response = await axios.post(uri, bodyParam, config);
+    const response = await apiClient.post(url, bodyParam);
+    console.log(
+      "PostFavorite:",
+      response,
+      "status 200 還出現error? 是為了測試?"
+    );
     return response.status === 200
       ? { success: true, data: response.data }
       : { success: false, message: `Failed with status: ${response.status}` };
@@ -126,19 +182,19 @@ export const PostFavorite = async (episodeId) => {
 
 //新增分類
 export const AddCategory = async ({ newTitle }) => {
-  const uri = `${baseUri}api/categories`;
-  const acToken = localStorage.getItem("acToken");
-  const config = {
-    headers: {
-      Authorization: `Bearer ${acToken}`,
-    },
-  };
+  // const acToken = localStorage.getItem("acToken");
+  const url = `api/categories`;
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${acToken}`,
+  //   },
+  // };
   const bodyParameters = {
     name: newTitle,
   };
 
   try {
-    const response = await axios.post(uri, bodyParameters, config);
+    const response = await apiClient.post(url, bodyParameters);
     console.log("Response status:", response.status);
     console.log("Response data:", response.data);
     return response.status === 200
@@ -157,16 +213,16 @@ export const AddCategory = async ({ newTitle }) => {
 };
 //刪除分類
 export const deleteCategory = async (categoriesId) => {
-  const uri = `${baseUri}api/categories/${categoriesId}`;
-  const acToken = localStorage.getItem("acToken");
-  const config = {
-    headers: {
-      Authorization: "Bearer " + acToken,
-    },
-  };
+  const url = `api/categories/${categoriesId}`;
+  // const acToken = localStorage.getItem("acToken");
+  // const config = {
+  //   headers: {
+  //     Authorization: "Bearer " + acToken,
+  //   },
+  // };
 
   try {
-    const response = await axios.delete(uri, config);
+    const response = await apiClient.delete(url);
     console.log("Response status:", response.status);
     return response.status === 200
       ? { success: true, data: response.data }
@@ -182,19 +238,19 @@ export const deleteCategory = async (categoriesId) => {
 //修改分類
 export const putCategory = async ({ categoriesId, name }) => {
   console.log(categoriesId, name);
-  const uri = `${baseUri}api/categories/${categoriesId}`;
-  const acToken = localStorage.getItem("acToken");
-  const config = {
-    headers: {
-      Authorization: "Bearer " + acToken,
-    },
-  };
+  const url = `api/categories/${categoriesId}`;
+  // const acToken = localStorage.getItem("acToken");
+  // const config = {
+  //   headers: {
+  //     Authorization: "Bearer " + acToken,
+  //   },
+  // };
   const bodyParameters = {
     name: name,
   };
 
   try {
-    const response = await axios.put(uri, bodyParameters, config);
+    const response = await apiClient.put(url, bodyParameters);
     console.log("Response status:", response.status);
     return response.status === 200
       ? { success: true, data: response.data }
@@ -214,17 +270,18 @@ export const addShowToCategory = async (categoryId, showId) => {
     console.error("Category ID is undefined");
     return;
   }
-  const uri = baseUri + `api/categories/${categoryId}/shows`;
-  const acToken = localStorage.getItem("acToken");
+  const url = `api/categories/${categoryId}/shows`;
+  // const acToken = localStorage.getItem("acToken");
   const bodyParam = { showId: showId };
-  const config = {
-    headers: {
-      Authorization: `Bearer ${acToken}`,
-    },
-  };
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${acToken}`,
+  //   },
+  // };
 
   try {
-    const response = await axios.post(uri, bodyParam, config);
+    const response = await apiClient.post(url, bodyParam);
+    console.log("添加show至分類:", response);
     return response.status === 200
       ? { success: true, data: response.data }
       : { success: false, message: `Failed with status: ${response.status}` };
@@ -238,17 +295,18 @@ export const addShowToCategory = async (categoryId, showId) => {
 };
 
 //刪除show至分類
-export const deleteFromCategory = async ({ categoryId, showId }) => {
-  const uri = baseUri + `api/categories/${categoryId}/shows/${showId}`;
-  const acToken = localStorage.getItem("acToken");
-  const config = {
-    headers: {
-      Authorization: `Bearer ${acToken}`,
-    },
-  };
+export const deleteFromCategory = async (categoryId, showId) => {
+  const url = `api/categories/${categoryId}/shows/${showId}`;
+  // const acToken = localStorage.getItem("acToken");
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${acToken}`,
+  //   },
+  // };
 
   try {
-    const response = await axios.post(uri, config);
+    const response = await apiClient.delete(url);
+    console.log("移除show從分類:", response);
     return response.status === 200
       ? { success: true, data: response.data }
       : { success: false, message: `Failed with status: ${response.status}` };

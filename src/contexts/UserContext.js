@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
+// import { useNavigate } from "react-router-dom";
 
 // 建立 UserContext
 const UserContext = createContext();
@@ -8,6 +9,7 @@ export const useUser = () => useContext(UserContext);
 
 // UserProvider 元件，用於將用戶資訊和 token 存儲在上下文中
 const UserProvider = ({ children }) => {
+  // const { navigate } = useNavigate();
   const [userData, setUserData] = useState(null);
   const [token, setToken] = useState(null);
 

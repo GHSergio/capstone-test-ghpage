@@ -12,16 +12,14 @@ const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
   } = usePodcastList();
   // 提取item內的屬性
   const { id, title, imgSrc, description, date, videoLength } = item;
-  // 判斷影片是否在最愛清單中
-  // const isFavorite =
-  //   favoriteList && favoriteList.some((favorite) => favorite.id === item.id);
 
   const formattedVideoLength = () => {
     const { hours, minutes } = convertMsToHoursAndMinutes(videoLength);
     return `${hours}小時${minutes}分鐘`;
   };
 
-  console.log("isFavorite:", isFavorite(activeEpisodeId));
+  // console.log("isFavorite:", isFavorite(activeEpisodeId));
+  // console.log(item && item.id);
 
   // console.log(currentPlayer);
   return (

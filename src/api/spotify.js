@@ -1,4 +1,4 @@
-import { refreshToken, refreshTokenClick } from "./Author";
+// import { refreshToken, refreshTokenClick } from "./Author";
 import axios from "axios";
 
 const baseUri = "https://api.spotify.com";
@@ -186,7 +186,7 @@ export const searchShows = async (input) => {
     .catch(async (err) => {
       //If token is expired, refresh token
       if (err.error.status === 401) {
-        await refreshToken();
+        // await refreshToken();
       } else {
         console.log("request failed!!!");
         return "failed";

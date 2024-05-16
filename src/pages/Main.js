@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
@@ -34,6 +34,7 @@ import {
 
 const Main = () => {
   const { setUserData, setToken } = useUser();
+  const [loading, setLoading] = useState(true);
 
   const {
     categoryContent,
@@ -86,6 +87,7 @@ const Main = () => {
     if (spotifyToken) {
       setToken(spotifyToken);
       fetchUserProfile();
+      setLoading(false);
     }
   }, [setToken, setUserData, setFavoriteList]);
 
@@ -121,6 +123,10 @@ const Main = () => {
 
     fetchCategoryData();
   }, [categoryEmoji, setCategoryContent]);
+
+  if (loading) {
+    return <div className="loader"></div>;
+  }
 
   // console.log("Main 接收到的 favoriteList:", favoriteList);
   // console.log("Main 接收到的 categoryEmoji:", categoryEmoji);

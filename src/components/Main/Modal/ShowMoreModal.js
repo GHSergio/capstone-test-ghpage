@@ -1,6 +1,7 @@
 import "../../../styles/showMoreModal.scss";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
 import ListItem from "../ListItem";
+import { deleteFromCategory } from "../../../api/acAPI";
 
 const ShowMoreModal = ({ isOpen, onClose, card }) => {
   const {
@@ -10,10 +11,15 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
     activeEpisodeId,
     handleClickListItem,
     handleClickPlayer,
+    categoryContent,
+    activeList,
   } = usePodcastList();
 
-  const handleDelete = (id) => {
-    handleDeleteChannel(id);
+  const currentCategoryId = categoryContent[activeList].id;
+  console.log("currentCategoryId:", currentCategoryId);
+  const handleDelete = async (currentCategoryId, id) => {
+    // handleDeleteChannel(id);
+    await deleteFromCategory(currentCategoryId, id);
     setSelectedCard(null);
     onClose();
   };
@@ -62,7 +68,7 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
                 </svg>
                 <button
                   className="button-delete"
-                  onClick={() => handleDelete(card.id)}
+                  onClick={() => handleDelete(currentCategoryId, card.id)}
                 >
                   <p>刪除</p>
                 </button>
