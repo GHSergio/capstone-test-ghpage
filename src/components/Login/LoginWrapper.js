@@ -1,4 +1,4 @@
-import SpotifyAuthButton from "../SpotifyAuthButton";
+import SpotifyAuthButton from "./SpotifyAuthButton";
 const LoginWrapper = () => {
   return (
     <>

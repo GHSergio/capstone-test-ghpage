@@ -53,6 +53,32 @@
   }
 }
 
+//logout
+.logout-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-dropdown button {
+  width: 100%;
+  height: 100%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-dropdown button:hover {
+  background-color: #2980b9;
+}
+
 // player
 .player-container {
   position: absolute;

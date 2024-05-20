@@ -28,11 +28,9 @@ const Callback = () => {
     const fetchData = async () => {
       try {
         setToken(spotifyToken);
-
         // 1. 取得 Spotify 使用者資訊
         const userProfileData = await getUserProfile(spotifyToken);
         console.log("取得使用者資訊", userProfileData);
-
         setProgress(10);
         // 2. 取得 acApi 帳戶 & acToken
         await CreateAccount();
@@ -94,7 +92,9 @@ const Callback = () => {
       }
     };
 
-    fetchData();
+    if (spotifyToken) {
+      fetchData();
+    }
   }, [setToken, navigate]);
 
   return (

@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
-import LoginWrapper from "../components/LoginPage/LoginWrapper.js";
-import SideIllustration from "../components/LoginPage/SideIllustration.js";
+import LoginWrapper from "../components/Login/LoginWrapper.js";
+import SideIllustration from "../components/Login/SideIllustration.js";
 import "../styles/loginContainer.scss";
 import Login1 from "../assets/Login1.svg";
 import Login2 from "../assets/Login2.svg";

@@ -1,5 +1,5 @@
-import Login from "./Login";
-import Main from "./Main";
-import Callback from "./Callback";
+import Login from "./LoginPage";
+import Main from "./MainPage";
+import Callback from "./CallbackPage";
 
 export { Login, Main, Callback };

@@ -4,10 +4,14 @@ import axios from "axios";
 const baseUri = "https://api.spotify.com";
 // 從 localStorage 中獲取 accessToken
 const spotifyToken = localStorage.getItem("access_token");
-// console.log(spotifyToken);
 
 //獲取使用者資訊
 export const getUserProfile = async () => {
+  //在全域spotifyToken 初始化讀取不到?
+  //放在fn內 每次fn執行 都獲取最新
+  const spotifyToken = localStorage.getItem("access_token");
+  console.log(spotifyToken);
+
   const userProfileEndpoint = baseUri + "/v1/me";
   try {
     const response = await axios.get(userProfileEndpoint, {

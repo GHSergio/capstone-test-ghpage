@@ -1,9 +1,25 @@
 import "../../styles/footer.scss";
 import { useUser } from "../../contexts/UserContext";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const User = () => {
+  const [showLogout, setShowLogout] = useState(false);
   const { userData } = useUser();
+  const navigate = useNavigate();
   // console.log(userData && userData.display_name);
+
+  const handleLogout = () => {
+    // 移除所有 localStorage 項目
+    localStorage.clear();
+    // 跳轉到登錄頁面
+    navigate("/login");
+  };
+
+  const toggleLogout = () => {
+    setShowLogout(!showLogout);
+  };
+
   return (
     <>
       <div className="user-container">
@@ -15,7 +31,7 @@ const User = () => {
           />
           <span className="user-name">{userData && userData.display_name}</span>
         </div>
-        <div className="chevron-down">
+        <div className="chevron-down" onClick={toggleLogout}>
           <svg
             width="10"
             height="6"
@@ -33,6 +49,11 @@ const User = () => {
           </svg>
         </div>
       </div>
+      {showLogout && (
+        <div className="logout-dropdown">
+          <button onClick={handleLogout}>登出</button>
+        </div>
+      )}
     </>
   );
 };
