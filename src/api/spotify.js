@@ -18,6 +18,7 @@ export const getUserProfile = async () => {
 
     const userProfileData = response.data;
     // console.log("User Profile Data:", userProfileData);
+    localStorage.setItem("userProfileData", JSON.stringify(userProfileData));
     return userProfileData;
   } catch (error) {
     console.error("Error:", error);

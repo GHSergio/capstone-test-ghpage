@@ -1,28 +1,6 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
-// import Swal from "sweetalert2";
-import axios from "axios";
-import {
-  GetFavoriteIds,
-  GetCategory,
-  // CreateAccount,
-  PostFavorite,
-  RemoveFavorite,
-  // deleteCategory,
-  // putCategory,
-  // addShowToCategory,
-  AddCategory,
-} from "../api/acAPI";
-import {
-  // getUserProfile,
-  // getUserPlaylists,
-  // getPlaylistTracks,
-  getShowWithEpisodes,
-  getShowEpisodes,
-  getEpisode,
-  // getUserShowList,
-  // getArtistProfile,
-  // searchShows,
-} from "../api/spotify";
+import React, { createContext, useState, useContext } from "react";
+import { GetFavoriteIds, PostFavorite, RemoveFavorite } from "../api/acAPI";
+import { getShowWithEpisodes, getShowEpisodes } from "../api/spotify";
 import {
   addFavoriteSuccess,
   removeFavoriteSuccess,
@@ -66,53 +44,6 @@ const PodcastListProvider = ({ children }) => {
   });
   //要映射的emoji
   const [categoryEmoji, setCategoryEmoji] = useState({});
-
-  console.log("當前分類:", categoryContent[activeList]);
-  //獲取映射emoji & channelList
-  useEffect(() => {
-    axios
-      .get("http://localhost:3333/categoryEmoji")
-      .then((response) => {
-        setCategoryEmoji(response.data);
-      })
-      .catch((error) => console.error("獲取categoryEmoji出現錯誤:", error));
-    // 獲取 channelList data
-    axios
-      .get("http://localhost:3333/channelList")
-      .then((response) => {
-        // 設置 channelList 狀態
-        setChannelList(response.data);
-      })
-      .catch((error) => console.error("獲取channelList出現錯誤:", error));
-  }, [setCategoryEmoji]);
-  console.log("selectedCard:", selectedCard);
-  // //避免 還沒獲取data 發生error
-  // if (!Array.isArray(favoriteList) || favoriteList.length === 0) {
-  //   return <div>Loading favorites or no favorites found...</div>;
-  // }
-
-  // //獲取db.json data
-  // useEffect(() => {
-  //   // // 獲取 categoryContent data
-  //   // axios
-  //   //   .get("http://localhost:3333/categoryContent")
-  //   //   .then((response) => {
-  //   //     // 設置 categoryContent 狀態
-  //   //     setCategoryContent(response.data);
-  //   //   })
-  //   //   .catch((error) =>
-  //   //     console.error("Error fetching category content:", error)
-  //   //   );
-
-  //   // // 獲取 favoriteList data
-  //   // axios
-  //   //   .get("http://localhost:3333/favoriteList")
-  //   //   .then((response) => {
-  //   //     // 設置 favoriteList 狀態
-  //   //     setFavoriteList(response.data);
-  //   //   })
-  //   //   .catch((error) => console.error("Error fetching favorite list:", error));
-  // }, []);
 
   //轉換時長單位
   const convertMsToHoursAndMinutes = (milliseconds) => {

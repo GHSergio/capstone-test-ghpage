@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "../styles/main.scss";
 import CardList from "../components/Main/CardList";
 import User from "../components/Footer/User";
@@ -9,32 +8,8 @@ import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
 import { useUser } from "../contexts/UserContext";
 
-import {
-  getUserProfile,
-  // getUserPlaylists,
-  getEpisode,
-  getPlayerSrc,
-  // getPlaylistTracks,
-  // getUserShowList,
-  // getArtistProfile,
-  // searchShows,
-} from "../api/spotify";
-
-import {
-  CreateAccount,
-  GetFavoriteIds,
-  GetCategory,
-  // PostFavorite,
-  // RemoveFavorite,
-  // AddCategory,
-  // deleteCategory,
-  // putCategory,
-  // addShowToCategory,
-} from "../api/acAPI";
-
 const Main = () => {
-  const { setUserData, setToken } = useUser();
-  const [loading, setLoading] = useState(true);
+  const { setUserData } = useUser();
 
   const {
     categoryContent,
@@ -60,78 +35,55 @@ const Main = () => {
 
     categoryEmoji,
     setCategoryEmoji,
+    channelList,
+    setChannelList,
+
+    mergeCategoryAndEmoji,
 
     // handleGetShowEpisodes,
   } = usePodcastList();
 
   const categoryList = categoryContent && Object.values(categoryContent);
 
-  //取得驗證碼後
+  //初始獲取各項localStorage set 進 state
+  //由於只有一開始會從伺服器獲取資訊,從callback切到main都要從localStorage拿
   useEffect(() => {
-    const spotifyToken = localStorage.getItem("access_token");
-    console.log("spotifyToken:", spotifyToken);
-    const fetchUserProfile = async () => {
-      try {
-        //取得spotify使用者資訊
-        const userProfileData = await getUserProfile();
-        setUserData(userProfileData);
-        //取得acApi帳戶
-        await CreateAccount();
-        //取得我的最愛 單集id
-        const userFavoriteList = await GetFavoriteIds();
-        setFavoriteList(userFavoriteList);
-      } catch (error) {
-        console.error("Failed to fetch user profile:", error);
-      }
-    };
-    if (spotifyToken) {
-      setToken(spotifyToken);
-      fetchUserProfile();
-      setLoading(false);
-    }
-  }, [setToken, setUserData, setFavoriteList]);
+    const userProfileData = JSON.parse(localStorage.getItem("userProfileData"));
+    const userFavoriteList = JSON.parse(
+      localStorage.getItem("userFavoriteList")
+    );
+    const channelListData = JSON.parse(localStorage.getItem("channelListData"));
+    const userCategoryContent = JSON.parse(
+      localStorage.getItem("userCategoryContent")
+    );
+    const categoryEmojiData = JSON.parse(
+      localStorage.getItem("categoryEmojiData")
+    );
 
-  //獲取清單內容,並且添加屬性 映射emoji到分類清單
-  useEffect(() => {
-    console.log("categoryEmoji:", categoryEmoji);
-    if (!Array.isArray(categoryEmoji)) {
-      console.log("Waiting for categoryEmoji to load");
-      return;
-    }
-    const fetchCategoryData = async () => {
-      try {
-        const userCategoryContent = await GetCategory();
-        console.log("categoryEmoji:", categoryEmoji);
+    console.log("userProfileData:", userProfileData);
+    console.log("userFavoriteList:", userFavoriteList);
+    console.log("channelListData:", channelListData);
+    console.log("userCategoryContent:", userCategoryContent);
+    console.log("categoryEmojiData:", categoryEmojiData);
 
-        const addedEmojiCategoryContent = userCategoryContent.map(
-          (category) => {
-            const emojiEntry = categoryEmoji.find(
-              (emoji) => emoji.id === category.id
-            );
-            return {
-              ...category,
-              emoji: emojiEntry ? emojiEntry.emoji : "❓",
-            };
-          }
-        );
+    setUserData(userProfileData); //使用者資訊
+    setFavoriteList(userFavoriteList); //使用者收藏
+    setChannelList(channelListData); //channelList
+    setCategoryEmoji(categoryEmojiData); //映射表情
+    setCategoryContent(userCategoryContent); //映射後的分類清單
+  }, [
+    setUserData,
+    setFavoriteList,
+    setChannelList,
+    setCategoryEmoji,
+    setCategoryContent,
+  ]);
 
-        setCategoryContent(addedEmojiCategoryContent);
-      } catch (error) {
-        console.error("Failed to load category data:", error);
-      }
-    };
-
-    fetchCategoryData();
-  }, [categoryEmoji, setCategoryContent]);
-
-  if (loading) {
-    return <div className="loader"></div>;
-  }
-
-  // console.log("Main 接收到的 favoriteList:", favoriteList);
-  // console.log("Main 接收到的 categoryEmoji:", categoryEmoji);
+  // console.log("Main 接收到的 收藏清單:", favoriteList);
+  // console.log("Main 接收到的 頻道清單:", channelList);
   // console.log("Main 接收到的 categoryContent:", categoryContent);
-  // console.log("activeList:", activeList);
+  // console.log("Main 接收到的 分類清單映射表情:", categoryEmoji);
+
   return (
     <div className="main-container">
       <nav className="navigation">
@@ -213,9 +165,9 @@ const Main = () => {
                 <>
                   <NavigationItem
                     index={index}
-                    key={category.id}
-                    emoji={category.emoji}
-                    title={category.name}
+                    key={category?.id}
+                    emoji={category?.emoji}
+                    title={category?.name}
                     handleNavigationItem={handleNavigationItem}
                     activeDropdown={activeDropdown === index}
                     handleDropdownClick={() => handleClickDropdown(index)}

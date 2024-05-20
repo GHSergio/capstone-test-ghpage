@@ -43,7 +43,7 @@ const ListActionModal = ({
     // deleteListItem,
     // addNavigationItem,
   } = usePodcastList();
-  // console.log("categoryContent:", categoryContent);
+  console.log("categoryContent:", categoryContent);
   // console.log(" categoryEmoji:", categoryEmoji);
   const currentCategory = categoryContent[[index]] && categoryContent[[index]];
   const defaultTitle = currentCategory && currentCategory.name;
@@ -76,15 +76,25 @@ const ListActionModal = ({
             console.error("更新 emoji 失敗:", error);
           }
         }
-        //更新分類清單內的title & emoji
-        setCategoryContent((prevListContent) =>
-          prevListContent.map((item, idx) => {
+        // 更新分類清單內的 title & emoji
+        const updatedCategoryContent =
+          categoryContent &&
+          categoryContent.map((item, idx) => {
             if (idx === index) {
               return { ...item, name: newTitle, emoji: newEmoji || item.emoji };
             }
             return item;
-          })
+          });
+
+        console.log("Modal的 updatedCategoryContent:", updatedCategoryContent);
+
+        // 更新 localStorage 中的 userCategoryContent
+        localStorage.setItem(
+          "userCategoryContent",
+          JSON.stringify(updatedCategoryContent)
         );
+
+        setCategoryContent(updatedCategoryContent);
       } else {
         console.error("分類名稱更新失敗:", updateResult.message);
       }
@@ -100,7 +110,7 @@ const ListActionModal = ({
     });
   };
 
-  //向後端請求刪除分類 & 更新本地
+  //處理刪除 向後端請求刪除分類 & 更新本地
   const handleDeleteCategory = async (categoryId) => {
     try {
       //發送請求刪除category
@@ -126,7 +136,7 @@ const ListActionModal = ({
     try {
       const addResult = await AddCategory({ newTitle });
       if (addResult && addResult.success) {
-        // 獲取最新的分類列表
+        // 獲取最新的分類列表 & 更新localStorage
         const categories = await GetCategory();
         // 找出ID最大的分類
         const newCategory = categories.reduce((prev, current) => {

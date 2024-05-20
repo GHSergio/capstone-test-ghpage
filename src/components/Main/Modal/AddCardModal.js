@@ -45,10 +45,8 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
 
   const currentCategory = categoryContent[activeList];
   const categoryId = currentCategory && currentCategory.id;
-  // console.log("currentCategory ID:", currentCategory && currentCategory.id);
-  // console.log("selectedChannel:", selectedChannel);
   const selectedShowIds = selectedChannel.map((show) => show.id);
-  console.log("selectedChannel ID:", selectedShowIds);
+  // console.log("selectedChannel ID:", selectedShowIds);
 
   const handleOnConfirm = async (categoryId, selectedChannel) => {
     await addShowToCategory(categoryId, selectedChannel);

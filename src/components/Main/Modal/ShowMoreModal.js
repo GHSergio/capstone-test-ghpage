@@ -16,14 +16,13 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
   } = usePodcastList();
 
   const currentCategoryId = categoryContent[activeList].id;
-  console.log("currentCategoryId:", currentCategoryId);
+  // console.log("currentCategoryId:", currentCategoryId);
   const handleDelete = async (currentCategoryId, id) => {
-    // handleDeleteChannel(id);
     await deleteFromCategory(currentCategoryId, id);
     setSelectedCard(null);
     onClose();
   };
-  console.log("activeEpisodeId:", activeEpisodeId);
+  // console.log("activeEpisodeId:", activeEpisodeId);
 
   // console.log(card && card, selectedCard && selectedCard);
   return (

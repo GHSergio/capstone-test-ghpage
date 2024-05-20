@@ -60,75 +60,47 @@ export const CreateAccount = async () => {
     console.error("创建账户时发生错误:", err);
     // 可能需要在这里处理错误，例如重试或通知用户
   }
-  // axios
-  //   .post(url, bodyParameters)
-  //   .then((data) => {
-  //     const token = data.data.token;
-  //     console.log(
-  //       "acAPI帳戶創建成功",
-  //       "[id]:",
-  //       data.data.id,
-  //       "[token]:",
-  //       data.data.token
-  //     );
-  //     localStorage.setItem("acToken", token);
-  //   })
-  //   .catch((err) => console.log(err));
 };
 
 //使用 acToken 當 headers 使用攔截器 apiClient 取代 axios
 //取得我的最愛
 export const GetFavoriteIds = async () => {
-  // const acToken = localStorage.getItem("acToken");
   const url = `api/me`;
-  // console.log("acToken:", acToken);
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${acToken}`,
-  //   },
-  // };
-
-  const response = await apiClient
-    .get(url)
-    .then((data) => {
-      console.log("用戶收藏清單:", data.data.favoriteEpisodeIds);
-      return data.data.favoriteEpisodeIds;
-    })
-    .catch((err) => console.log(err));
-
-  return response;
+  try {
+    const response = await apiClient.get(url);
+    console.log("用戶收藏清單:", response.data.favoriteEpisodeIds);
+    localStorage.setItem(
+      "userFavoriteList",
+      JSON.stringify(response.data.favoriteEpisodeIds)
+    );
+    return response.data.favoriteEpisodeIds;
+  } catch (err) {
+    console.error("獲取收藏清單時發生錯誤:", err);
+    return null;
+  }
 };
 
 //取得分類清單
 export const GetCategory = async () => {
   const url = `api/categories`;
-  // const acToken = localStorage.getItem("acToken");
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${acToken}`,
-  //   },
-  // };
-
-  const response = await apiClient
-    .get(url)
-    .then((data) => {
-      console.log("分類清單:", data.data.categories);
-      return data.data.categories;
-    })
-    .catch((err) => console.log(err));
-
-  return response;
+  try {
+    const response = await apiClient.get(url);
+    console.log("分類清單:", response.data.categories);
+    localStorage.setItem(
+      "userCategoryContent",
+      JSON.stringify(response.data.categories)
+    );
+    console.log("獲取分類:", response.data.categories);
+    return response.data.categories;
+  } catch (err) {
+    console.error("獲取分類清單時發生錯誤:", err);
+    return null;
+  }
 };
 
 //移除episodeId至FavoriteList
 export const RemoveFavorite = async (episodeId) => {
-  // const acToken = localStorage.getItem("acToken");
   const url = `api/episodes/${episodeId}`;
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${acToken}`,
-  //   },
-  // };
   try {
     const response = await apiClient.delete(url);
     console.log(
@@ -136,9 +108,24 @@ export const RemoveFavorite = async (episodeId) => {
       response,
       "status 200 還出現error? 是為了測試?"
     );
-    return response.status === 200
-      ? { success: true, data: response.data }
-      : { success: false, message: `Failed with status: ${response.status}` };
+    if (response.status === 200) {
+      // 更新 localStorage
+      const userFavoriteList =
+        JSON.parse(localStorage.getItem("userFavoriteList")) || [];
+      const updatedFavoriteList = userFavoriteList.filter(
+        (id) => id !== episodeId
+      );
+      localStorage.setItem(
+        "userFavoriteList",
+        JSON.stringify(updatedFavoriteList)
+      );
+      return { success: true, data: response.data };
+    } else {
+      return {
+        success: false,
+        message: `Failed with status: ${response.status}`,
+      };
+    }
   } catch (error) {
     console.error("刪除收藏發生錯誤:", error);
     if (error.response && error.response.status === 403) {
@@ -151,14 +138,8 @@ export const RemoveFavorite = async (episodeId) => {
 };
 //添加episodeId至FavoriteList
 export const PostFavorite = async (episodeId) => {
-  // const acToken = localStorage.getItem("acToken");
   const url = `api/episodes`;
   const bodyParam = { episodeId: episodeId };
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${acToken}`,
-  //   },
-  // };
   try {
     const response = await apiClient.post(url, bodyParam);
     console.log(
@@ -166,9 +147,22 @@ export const PostFavorite = async (episodeId) => {
       response,
       "status 200 還出現error? 是為了測試?"
     );
-    return response.status === 200
-      ? { success: true, data: response.data }
-      : { success: false, message: `Failed with status: ${response.status}` };
+    if (response.status === 200) {
+      // 更新 localStorage
+      const userFavoriteList =
+        JSON.parse(localStorage.getItem("userFavoriteList")) || [];
+      userFavoriteList.push(episodeId);
+      localStorage.setItem(
+        "userFavoriteList",
+        JSON.stringify(userFavoriteList)
+      );
+      return { success: true, data: response.data };
+    } else {
+      return {
+        success: false,
+        message: `Failed with status: ${response.status}`,
+      };
+    }
   } catch (error) {
     console.error("新增收藏發生錯誤:", error);
     if (error.response && error.response.status === 403) {
@@ -182,24 +176,31 @@ export const PostFavorite = async (episodeId) => {
 
 //新增分類
 export const AddCategory = async ({ newTitle }) => {
-  // const acToken = localStorage.getItem("acToken");
   const url = `api/categories`;
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${acToken}`,
-  //   },
-  // };
   const bodyParameters = {
     name: newTitle,
   };
 
   try {
     const response = await apiClient.post(url, bodyParameters);
-    console.log("Response status:", response.status);
-    console.log("Response data:", response.data);
-    return response.status === 200
-      ? { success: true, data: response.data }
-      : { success: false, message: `Failed with status: ${response.status}` };
+    if (response.status === 200) {
+      // 更新 localStorage
+      console.log("新增分類回傳結果:", response.data);
+      const userCategoryContent =
+        JSON.parse(localStorage.getItem("userCategoryContent")) || [];
+      userCategoryContent.push(response.data.category);
+
+      localStorage.setItem(
+        "userCategoryContent",
+        JSON.stringify(userCategoryContent)
+      );
+      return { success: true, data: response.data };
+    } else {
+      return {
+        success: false,
+        message: `Failed with status: ${response.status}`,
+      };
+    }
   } catch (error) {
     console.error("新增分類清單發生錯誤:", error);
     return {
@@ -214,19 +215,28 @@ export const AddCategory = async ({ newTitle }) => {
 //刪除分類
 export const deleteCategory = async (categoriesId) => {
   const url = `api/categories/${categoriesId}`;
-  // const acToken = localStorage.getItem("acToken");
-  // const config = {
-  //   headers: {
-  //     Authorization: "Bearer " + acToken,
-  //   },
-  // };
 
   try {
     const response = await apiClient.delete(url);
     console.log("Response status:", response.status);
-    return response.status === 200
-      ? { success: true, data: response.data }
-      : { success: false, message: `Failed with status: ${response.status}` };
+    if (response.status === 200) {
+      // 更新 localStorage
+      const userCategoryContent =
+        JSON.parse(localStorage.getItem("userCategoryContent")) || [];
+      const updatedCategoryContent = userCategoryContent.filter(
+        (category) => category.id !== categoriesId
+      );
+      localStorage.setItem(
+        "userCategoryContent",
+        JSON.stringify(updatedCategoryContent)
+      );
+      return { success: true, data: response.data };
+    } else {
+      return {
+        success: false,
+        message: `Failed with status: ${response.status}`,
+      };
+    }
   } catch (error) {
     console.error("Error delete category:", error);
     return {
@@ -239,12 +249,6 @@ export const deleteCategory = async (categoriesId) => {
 export const putCategory = async ({ categoriesId, name }) => {
   console.log(categoriesId, name);
   const url = `api/categories/${categoriesId}`;
-  // const acToken = localStorage.getItem("acToken");
-  // const config = {
-  //   headers: {
-  //     Authorization: "Bearer " + acToken,
-  //   },
-  // };
   const bodyParameters = {
     name: name,
   };
@@ -252,9 +256,25 @@ export const putCategory = async ({ categoriesId, name }) => {
   try {
     const response = await apiClient.put(url, bodyParameters);
     console.log("Response status:", response.status);
-    return response.status === 200
-      ? { success: true, data: response.data }
-      : { success: false, message: `Failed with status: ${response.status}` };
+    if (response.status === 200) {
+      // 更新 localStorage
+      const userCategoryContent =
+        JSON.parse(localStorage.getItem("userCategoryContent")) || [];
+      const updatedCategoryContent = userCategoryContent.map((category) =>
+        category.id === categoriesId ? { ...category, name: name } : category
+      );
+      localStorage.setItem(
+        "userCategoryContent",
+        JSON.stringify(updatedCategoryContent)
+      );
+      console.log("請求API修改分類名稱:", updatedCategoryContent);
+      return { success: true, data: response.data };
+    } else {
+      return {
+        success: false,
+        message: `Failed with status: ${response.status}`,
+      };
+    }
   } catch (error) {
     console.error("Error updating category:", error);
     return {
@@ -264,27 +284,39 @@ export const putCategory = async ({ categoriesId, name }) => {
   }
 };
 
-//添加show至分類
+//添加show至分類 502?
 export const addShowToCategory = async (categoryId, showId) => {
   if (!categoryId) {
     console.error("Category ID is undefined");
     return;
   }
   const url = `api/categories/${categoryId}/shows`;
-  // const acToken = localStorage.getItem("acToken");
   const bodyParam = { showId: showId };
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${acToken}`,
-  //   },
-  // };
 
   try {
     const response = await apiClient.post(url, bodyParam);
     console.log("添加show至分類:", response);
-    return response.status === 200
-      ? { success: true, data: response.data }
-      : { success: false, message: `Failed with status: ${response.status}` };
+    if (response.status === 200) {
+      // 更新 localStorage
+      const userCategoryContent =
+        JSON.parse(localStorage.getItem("userCategoryContent")) || [];
+      console.log("將要添加新saveShows的分類清單內容:", userCategoryContent);
+      const updatedCategoryContent = userCategoryContent.map((category) =>
+        category.id === categoryId
+          ? { ...category, saveShows: [...category.saveShows, showId] }
+          : category
+      );
+      localStorage.setItem(
+        "userCategoryContent",
+        JSON.stringify(updatedCategoryContent)
+      );
+      return { success: true, data: response.data };
+    } else {
+      return {
+        success: false,
+        message: `Failed with status: ${response.status}`,
+      };
+    }
   } catch (error) {
     console.error("新增show至分類時發生錯誤:", error);
     return {
@@ -294,22 +326,36 @@ export const addShowToCategory = async (categoryId, showId) => {
   }
 };
 
-//刪除show至分類
+//刪除show至分類 404?
 export const deleteFromCategory = async (categoryId, showId) => {
   const url = `api/categories/${categoryId}/shows/${showId}`;
-  // const acToken = localStorage.getItem("acToken");
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${acToken}`,
-  //   },
-  // };
 
   try {
     const response = await apiClient.delete(url);
     console.log("移除show從分類:", response);
-    return response.status === 200
-      ? { success: true, data: response.data }
-      : { success: false, message: `Failed with status: ${response.status}` };
+    if (response.status === 200) {
+      // 更新 localStorage
+      const userCategoryContent =
+        JSON.parse(localStorage.getItem("userCategoryContent")) || [];
+      const updatedCategoryContent = userCategoryContent.map((category) =>
+        category.id === categoryId
+          ? {
+              ...category,
+              saveShows: category.saveShows.filter((id) => id !== showId),
+            }
+          : category
+      );
+      localStorage.setItem(
+        "userCategoryContent",
+        JSON.stringify(updatedCategoryContent)
+      );
+      return { success: true, data: response.data };
+    } else {
+      return {
+        success: false,
+        message: `Failed with status: ${response.status}`,
+      };
+    }
   } catch (error) {
     console.error("移除show從分類時發生錯誤:", error);
     return {

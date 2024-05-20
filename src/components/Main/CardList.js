@@ -1,10 +1,8 @@
-import { useEffect } from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
 import AddCardModal from "./Modal/AddCardModal";
 import ListItem from "./ListItem";
 import { usePodcastList } from "../../contexts/PodcastListContext";
-import { GetFavoriteIds } from "../../api/acAPI";
 const CardList = ({
   showModal,
   handleOpenModal,
@@ -16,11 +14,11 @@ const CardList = ({
     categoryContent,
     channelList,
     favoriteList,
-    setFavoriteList,
     activeEpisode,
     handleClickListItem,
     handleClickPlayer,
 
+    setFavoriteList,
     selectedCard,
     setSelectedCard,
   } = usePodcastList();
@@ -30,14 +28,14 @@ const CardList = ({
       ? categoryContent[activeList].savedShows
       : [];
 
-  // console.log("channelList:", channelList);
-  console.log("CardList 接收到的 savedShows:", activeCategoryContent);
-
   //取得 data 傳遞給 card 渲染
   //從 channelList 篩選出 id 與 saveShows匹配的item
-  const matchedShows = channelList.filter((channel) =>
-    activeCategoryContent.some((savedShow) => savedShow.id === channel.id)
-  );
+  const matchedShows =
+    channelList &&
+    channelList.length !== 0 &&
+    channelList.filter((channel) =>
+      activeCategoryContent.some((savedShow) => savedShow.id === channel.id)
+    );
   // console.log("matchedShows:", matchedShows);
 
   //回傳收藏內的id
@@ -49,7 +47,7 @@ const CardList = ({
     channel.episodes.filter((episode) => favoriteIds.includes(episode.id))
   );
 
-  console.log("matchesEpisodes:", matchesEpisodes);
+  // console.log("matchesEpisodes:", matchesEpisodes);
 
   //分類清單
   const getCategoryContent = () => {
