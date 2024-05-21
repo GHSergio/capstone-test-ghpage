@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/assets/screenshot.png)
+![Screenshot](./src/assets//AlphaCast登入頁面.png)
 
 ### Links
 
@@ -60,4 +60,4 @@ Users should be able to:
 
 ## Author
 
-- Github - [Ming Hsu](https://github.com/Sergio)
+- Github - [Ming Hsu](https://github.com/GHSergio)
