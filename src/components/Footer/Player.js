@@ -45,7 +45,11 @@ const Player = () => {
               <g clipPath="url(#clip0_38_14)">
                 <path
                   d="M14.1667 2.5H5.83341C4.91675 2.5 4.16675 3.25 4.16675 4.16667V17.5L10.0001 15L15.8334 17.5V4.16667C15.8334 3.25 15.0834 2.5 14.1667 2.5Z"
-                  fill={isFavorite(currentPlayer.id) ? "#FF7F50" : "#FFFFFF"}
+                  fill={
+                    isFavorite(currentPlayer && currentPlayer.id)
+                      ? "#FF7F50"
+                      : "#FFFFFF"
+                  }
                   stroke="#FF7F50"
                   strokeWidth="1.5"
                 />
