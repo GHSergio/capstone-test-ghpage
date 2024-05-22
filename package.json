@@ -2,7 +2,7 @@
   "name": "my-capstone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ghsergio.github.io/capstone>",
+  "homepage": "https://ghsergio.github.io/capstone-test-ghpage>",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
