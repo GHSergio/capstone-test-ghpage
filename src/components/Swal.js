@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+
 const addFavoriteSuccess = () => {
   Swal.fire({
     icon: "success",
