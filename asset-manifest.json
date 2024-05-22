@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/capstone%3E/static/css/main.0d94beff.css",
+    "main.js": "/capstone%3E/static/js/main.d5c8a27f.js",
+    "static/media/Login1.svg": "/capstone%3E/static/media/Login1.c87b526193fc6a989b8ce9bd9596ddc0.svg",
+    "static/media/Login3.svg": "/capstone%3E/static/media/Login3.399fee72e825249083fb6c12759c1a4e.svg",
+    "static/media/Login2.svg": "/capstone%3E/static/media/Login2.6b3276e7ec567e7118a99904618488a8.svg",
+    "index.html": "/capstone%3E/index.html",
+    "main.0d94beff.css.map": "/capstone%3E/static/css/main.0d94beff.css.map",
+    "main.d5c8a27f.js.map": "/capstone%3E/static/js/main.d5c8a27f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d94beff.css",
+    "static/js/main.d5c8a27f.js"
+  ]
+}
