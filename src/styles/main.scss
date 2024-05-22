@@ -13,6 +13,8 @@ body {
   box-sizing: border-box;
   font-family: "Noto Sans TC";
   font-style: normal;
+  width: 1440px;
+  height: 1024px;
 }
 
 $link-item-color: #718096;
@@ -43,8 +45,8 @@ button {
 .main-container {
   position: relative;
   display: flex;
-  height: 1024px;
   width: 1440px;
+  height: 1024px;
 }
 
 //navigation
