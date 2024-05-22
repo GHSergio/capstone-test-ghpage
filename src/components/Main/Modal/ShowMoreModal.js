@@ -1,7 +1,7 @@
 import "../../../styles/showMoreModal.scss";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
 import ListItem from "../ListItem";
-import { deleteFromCategory } from "../../../api/acAPI";
+import { deleteFromCategory } from "../../../api/acRequest";
 
 const ShowMoreModal = ({ isOpen, onClose, card }) => {
   const {

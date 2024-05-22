@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUserProfile } from "../api/spotify";
-import { CreateAccount, GetFavoriteIds, GetCategory } from "../api/acAPI";
-import { getCategoryEmoji, getChannelList } from "../api/dbAPI";
+import { CreateAccount, GetFavoriteIds, GetCategory } from "../api/acRequest";
+import { getCategoryEmoji, getChannelList } from "../api/dbRequest";
 import { useNavigate } from "react-router-dom";
 // import { usePodcastList } from "../contexts/PodcastListContext";
 import { useUser } from "../contexts/UserContext";

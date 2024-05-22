@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
-import { GetFavoriteIds, PostFavorite, RemoveFavorite } from "../api/acAPI";
+import { GetFavoriteIds, PostFavorite, RemoveFavorite } from "../api/acRequest";
 import { getShowWithEpisodes, getShowEpisodes } from "../api/spotify";
 import {
   addFavoriteSuccess,

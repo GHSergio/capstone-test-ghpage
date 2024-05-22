@@ -2,8 +2,8 @@ import { usePodcastList } from "../../../contexts/PodcastListContext";
 import { useState, useEffect } from "react";
 import EmojiPicker from "emoji-picker-react";
 import {
-  CreateAccount,
-  GetFavoriteIds,
+  // CreateAccount,
+  // GetFavoriteIds,
   // PostFavorite,
   // RemoveFavorite,
   GetCategory,
@@ -11,12 +11,12 @@ import {
   deleteCategory,
   putCategory,
   // addShowToCategory,
-} from "../../../api/acAPI";
+} from "../../../api/acRequest";
 import {
   editCategoryEmoji,
   addCategoryEmoji,
   deleteCategoryEmoji,
-} from "../../../api/dbAPI";
+} from "../../../api/dbRequest";
 
 const ListActionModal = ({
   isOpen,
