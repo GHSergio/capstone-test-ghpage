@@ -17,7 +17,6 @@ const PodcastListProvider = ({ children }) => {
   const [channelList, setChannelList] = useState([]);
   const [categoryContent, setCategoryContent] = useState([]);
   const [favoriteList, setFavoriteList] = useState([]);
-  const [selectedChannel, setSelectedChannel] = useState([]);
 
   const [activeList, setActiveList] = useState(0);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -26,6 +25,7 @@ const PodcastListProvider = ({ children }) => {
   const [selectedCard, setSelectedCard] = useState(null);
 
   const [addCardModal, setAddCardModal] = useState(false);
+  const [selectedChannel, setSelectedChannel] = useState([]);
   const [listActionModal, setListActionModal] = useState(false);
 
   const [currentAction, setCurrentAction] = useState(null);
@@ -33,6 +33,7 @@ const PodcastListProvider = ({ children }) => {
   const [chosenEmoji, setChosenEmoji] = useState(null);
 
   const [activeEpisodeId, setActiveEpisodeId] = useState(null);
+  // const [currentPlayer, setCurrentPlayer] = useState(null)
   const [currentPlayer, setCurrentPlayer] = useState({
     date: "2024-04-23",
     description:
@@ -96,7 +97,7 @@ const PodcastListProvider = ({ children }) => {
   };
 
   const handleSelectedChannelClick = (podcast) => {
-    setSelectedChannel(podcast);
+    setSelectedChannel(podcast.id);
   };
 
   //設置當前NavigationItem

@@ -12,18 +12,27 @@ const Callback = () => {
   const { setToken } = useUser();
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0); // 進度狀態
+  const [error, setError] = useState(null); // 錯誤狀態
   const navigate = useNavigate();
   // console.log("目前進度:", progress);
+
+  // 進度更新的函數，確保進度條隨時更新
+  const updateProgress = (value) => {
+    setProgress((prev) => {
+      const newValue = prev + value;
+      return newValue > 100 ? 100 : newValue;
+    });
+  };
 
   //取得驗證碼後 獲取各項data 並且存入localStorage
   useEffect(() => {
     const spotifyToken = localStorage.getItem("access_token");
     console.log("spotifyToken:", spotifyToken);
 
-    if (!spotifyToken) {
-      navigate("/login");
-      return;
-    }
+    // if (!spotifyToken) {
+    //   navigate("/login");
+    //   return;
+    // }
 
     const fetchData = async () => {
       try {
@@ -31,26 +40,33 @@ const Callback = () => {
         // 1. 取得 Spotify 使用者資訊
         const userProfileData = await getUserProfile(spotifyToken);
         console.log("取得使用者資訊", userProfileData);
-        setProgress(10);
+        // setProgress(10);
+        updateProgress(10);
         // 2. 取得 acApi 帳戶 & acToken
         await CreateAccount();
-        setProgress(20);
+        // setProgress(20);
+        updateProgress(10);
+
         // 3. 取得ac收藏清單 單集 ID
         const userFavoriteList = await GetFavoriteIds();
         console.log("取得使用者收藏清單:", userFavoriteList);
 
-        setProgress(40);
+        // setProgress(40);
+        updateProgress(20);
+
         // 4. 取得db.json分類清單映射表情
         const categoryEmojiData = await getCategoryEmoji();
         console.log("取得清單映射表情:", categoryEmojiData.data);
 
-        setProgress(60);
+        // setProgress(60);
+        updateProgress(20);
 
         // 5. 取得db.json頻道清單
         const channelListData = await getChannelList();
         console.log("取得頻道清單:", channelListData.data);
 
-        setProgress(80);
+        // setProgress(80);
+        updateProgress(20);
 
         // 6. 獲取ac清單內容
         const userCategoryContent = await GetCategory();
@@ -74,12 +90,14 @@ const Callback = () => {
           "userCategoryContent",
           JSON.stringify(addedEmojiCategoryContent)
         );
-        console.log(
-          "映射表情後的userCategoryContent:",
-          addedEmojiCategoryContent
-        );
+        // console.log(
+        //   "映射表情後的userCategoryContent:",
+        //   addedEmojiCategoryContent
+        // );
 
-        setProgress(100); // 更新進度
+        // setProgress(100); // 更新進度
+        updateProgress(20);
+
         console.log("progress:100%, 獲取初始資料完畢");
         // 初始化完成，延遲 2 秒后重定向到主頁
         setTimeout(() => {
@@ -87,6 +105,7 @@ const Callback = () => {
         }, 2000);
       } catch (error) {
         console.error("初始化過程中發生錯誤:", error);
+        setError(error.message); // 設置錯誤信息
       } finally {
         setLoading(false); // 關閉加載動畫
       }
@@ -109,9 +128,12 @@ const Callback = () => {
               ></div>
             </div>
             <div className="text">
+              {" "}
               獲取初始數據中, 請耐心等待...目前進度:{progress}%
             </div>
           </>
+        ) : error ? (
+          <h1 className="error-message">發生錯誤: {error}</h1>
         ) : (
           <h1>數據獲取完成，即將前往主頁...</h1>
         )}

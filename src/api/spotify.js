@@ -169,8 +169,8 @@ export const getPlayerSrc = async (id) => {
 // 4. Search Shows Info
 
 export const searchShows = async (input) => {
+  const spotifyToken = localStorage.getItem("access_token");
   const url = baseUri + "/v1/search";
-  const spotifyToken = localStorage.getItem("spotifyToken");
   const params = {
     q: input,
     type: "show",
@@ -185,7 +185,7 @@ export const searchShows = async (input) => {
   const response = await axios
     .get(url, config)
     .then((data) => {
-      console.log(data);
+      console.log(data.data.shows.items);
       return data.data.shows.items;
     })
     .catch(async (err) => {

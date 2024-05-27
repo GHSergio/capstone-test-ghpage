@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [未完成](URL)
+- Live Site URL: [未完成](https://ghsergio.github.io/capstone-test-ghpage/)
 
 ## My process
 

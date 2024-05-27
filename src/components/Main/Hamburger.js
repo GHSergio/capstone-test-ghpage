@@ -25,9 +25,10 @@ const Hamburger = ({ isActive, onClick, disabled }) => {
         return (
           <ListActionModal
             isOpen={listActionModal}
-            header="編輯名稱"
+            header="編輯分類名稱"
             confirmText="儲存"
             onClose={handleCloseListActionModal}
+            placeholder="請輸入分類名稱（前方可變更 emoji）"
             index={activeList}
             currentAction={currentAction}
           />

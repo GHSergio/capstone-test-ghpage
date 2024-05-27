@@ -13,8 +13,9 @@ body {
   box-sizing: border-box;
   font-family: "Noto Sans TC";
   font-style: normal;
-  width: 1440px;
-  height: 1024px;
+  min-width: 1440px;
+  min-height: 1024px;
+  // overflow: hidden;
 }
 
 $link-item-color: #718096;
@@ -200,3 +201,16 @@ button {
   height: 120px;
   animation: spin 2s linear infinite;
 }
+
+// /* 使用媒體查詢確保在不同設備上的顯示效果 */
+// @media (max-width: 1440px) {
+//   .main-container {
+//     width: 100%; /* 在小於1440px寬度的設備上，設置為100%寬度 */
+//   }
+// }
+
+// @media (max-height: 1024px) {
+//   .main-container {
+//     height: 100%; /* 在小於1024px高度的設備上，設置為100%高度 */
+//   }
+// }

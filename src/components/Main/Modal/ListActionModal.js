@@ -25,7 +25,6 @@ const ListActionModal = ({
   text,
   confirmText,
   placeholder,
-
   index,
   currentAction,
 }) => {
@@ -46,27 +45,73 @@ const ListActionModal = ({
   console.log("categoryContent:", categoryContent);
   // console.log(" categoryEmoji:", categoryEmoji);
   const currentCategory = categoryContent[[index]] && categoryContent[[index]];
-  const defaultTitle = currentCategory && currentCategory.name;
-  const defaultEmoji = currentCategory && currentCategory.emoji;
-  // console.log("defaultTitle:", defaultTitle, "defaultEmoji:", defaultEmoji);
+  const defaultTitle = currentCategory?.name;
+  const defaultEmoji = currentCategory?.emoji;
+  console.log("currentCategory:", currentCategory);
+  console.log("defaultTitle:", defaultTitle);
 
   //處理修改 發送ac修改category & 發送db修改emoji & 更新本地分類name & emoji
+  // const handleEditNavigationItem = async (index, newTitle, newEmoji) => {
+  //   const category = categoryContent[index];
+  //   try {
+  //     //發送請求更改category的name
+  //     console.log("Updating category:", category.id, newTitle);
+  //     const updateResult = await putCategory({
+  //       categoriesId: category.id,
+  //       name: newTitle,
+  //     });
+  //     console.log("Update result:", updateResult);
+
+  //     if (updateResult?.success) {
+  //       if (newEmoji && newEmoji !== category.emoji) {
+  //         try {
+  //           //修改db.json的emoji
+  //           // console.log("Updating emoji for:", category.id, newEmoji);
+  //           const emojiUpdateResponse = await editCategoryEmoji(
+  //             category.id,
+  //             newEmoji
+  //           );
+  //           console.log("Emoji 更新成功:", emojiUpdateResponse);
+  //         } catch (error) {
+  //           console.error("更新 emoji 失敗:", error);
+  //         }
+  //       }
+  //       // 更新分類清單內的 title & emoji
+  //       const updatedCategoryContent =
+  //         categoryContent &&
+  //         categoryContent.map((item, idx) => {
+  //           if (idx === index) {
+  //             return { ...item, name: newTitle, emoji: newEmoji || item.emoji };
+  //           }
+  //           return item;
+  //         });
+
+  //       console.log("Modal的 updatedCategoryContent:", updatedCategoryContent);
+
+  //       // 更新 localStorage 中的 userCategoryContent
+  //       localStorage.setItem(
+  //         "userCategoryContent",
+  //         JSON.stringify(updatedCategoryContent)
+  //       );
+
+  //       setCategoryContent(updatedCategoryContent);
+  //     } else {
+  //       console.error("分類名稱更新失敗:", updateResult.message);
+  //     }
+  //   } catch (error) {
+  //     console.error("更新分類名稱時發生錯誤:", error);
+  //   }
+  // };
   const handleEditNavigationItem = async (index, newTitle, newEmoji) => {
     const category = categoryContent[index];
     try {
-      //發送請求更改category的name
-      console.log("Updating category:", category.id, newTitle);
       const updateResult = await putCategory({
         categoriesId: category.id,
         name: newTitle,
       });
-      console.log("Update result:", updateResult);
-
-      if (updateResult && updateResult.success) {
+      if (updateResult?.success) {
         if (newEmoji && newEmoji !== category.emoji) {
           try {
-            //修改db.json的emoji
-            console.log("Updating emoji for:", category.id, newEmoji);
             const emojiUpdateResponse = await editCategoryEmoji(
               category.id,
               newEmoji
@@ -76,19 +121,19 @@ const ListActionModal = ({
             console.error("更新 emoji 失敗:", error);
           }
         }
-        // 更新分類清單內的 title & emoji
         const updatedCategoryContent =
           categoryContent &&
           categoryContent.map((item, idx) => {
             if (idx === index) {
-              return { ...item, name: newTitle, emoji: newEmoji || item.emoji };
+              return {
+                ...item,
+                name: newTitle,
+                emoji: newEmoji || item.emoji,
+              };
             }
             return item;
           });
 
-        console.log("Modal的 updatedCategoryContent:", updatedCategoryContent);
-
-        // 更新 localStorage 中的 userCategoryContent
         localStorage.setItem(
           "userCategoryContent",
           JSON.stringify(updatedCategoryContent)
@@ -115,7 +160,7 @@ const ListActionModal = ({
     try {
       //發送請求刪除category
       const deleteResult = await deleteCategory(categoryId);
-      if (deleteResult && deleteResult.success) {
+      if (deleteResult?.success) {
         // 分類刪除成功後，刪除對應的 emoji
         const emojiDeleteResult = await deleteCategoryEmoji(categoryId);
         if (emojiDeleteResult.success) {
@@ -135,7 +180,7 @@ const ListActionModal = ({
   const addCategory = async (newTitle) => {
     try {
       const addResult = await AddCategory({ newTitle });
-      if (addResult && addResult.success) {
+      if (addResult?.success) {
         // 獲取最新的分類列表 & 更新localStorage
         const categories = await GetCategory();
         // 找出ID最大的分類
@@ -186,7 +231,7 @@ const ListActionModal = ({
 
   //處理confirm
   const handleConfirmAction = () => {
-    switch ((index, currentAction)) {
+    switch (currentAction) {
       case "edit":
         // 執行編輯操作 變更title
         handleEditNavigationItem(index, editInput, chosenEmoji);
@@ -228,11 +273,21 @@ const ListActionModal = ({
   // console.log("ListModal 接收到的 defaultValue:", defaultValue);
   // console.log("chosenEmoji:", chosenEmoji);
 
+  // 在模態框打開時重置 editInput
   useEffect(() => {
-    header === "編輯名稱" && defaultTitle
-      ? setEditInput(defaultTitle)
-      : setEditInput("");
-  }, [header, defaultTitle]);
+    if (isOpen) {
+      setEditInput(defaultTitle || "");
+      setChosenEmoji(defaultEmoji || "");
+    }
+  }, [isOpen, defaultTitle, defaultEmoji, setEditInput]);
+
+  useEffect(() => {
+    if (header === "編輯分類名稱" && currentCategory) {
+      setEditInput(currentCategory.name);
+    } else {
+      setEditInput("");
+    }
+  }, [header, currentCategory, setEditInput]);
 
   return (
     <>
@@ -273,7 +328,7 @@ const ListActionModal = ({
                 {header !== "刪除分類" && (
                   <div className="list-modal-search-container">
                     {/* 拆分成emoji & title */}
-                    {header === "編輯名稱" && (
+                    {header === "編輯分類名稱" && (
                       <div
                         className="emoji-container"
                         onClick={handlePickerOpen}
@@ -283,7 +338,7 @@ const ListActionModal = ({
                         </span>
                       </div>
                     )}
-                    {header === "編輯名稱" ? (
+                    {header === "編輯分類名稱" ? (
                       <input
                         className="search-input"
                         type="text"
@@ -292,6 +347,7 @@ const ListActionModal = ({
                             ? defaultTitle
                             : editInput
                         }
+                        placeholder={placeholder && placeholder}
                         onChange={handleEditInput}
                       />
                     ) : (

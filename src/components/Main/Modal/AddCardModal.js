@@ -1,31 +1,50 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
-// import { searchShows } from "../../../api/spotify";
+import { searchShows } from "../../../api/spotify";
 import { addShowToCategory } from "../../../api/acRequest";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const [searchInput, setSearchInput] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [isAnyCardClicked, setIsAnyCardClicked] = useState(false);
 
   const {
-    channelList,
+    // channelList,
     selectedChannel,
     setSelectedChannel,
     categoryContent,
     activeList,
   } = usePodcastList();
+  console.log("selectedChannel:", selectedChannel);
 
-  const handleSearch = (event) => {
-    setSearchInput(event.target.value);
-    console.log(event.target.value);
+  const handleSearch = async (event) => {
+    const value = event.target.value;
+    console.log(value);
+    setSearchInput(value);
+    if (value) {
+      setIsLoading(true);
+      try {
+        const response = await searchShows(value);
+        console.log(response);
+        setSearchResult(response);
+      } catch (error) {
+        console.error("搜尋失敗:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    } else {
+      setSearchResult([]);
+    }
   };
 
-  const filteredChannel =
-    channelList &&
-    channelList.filter((channel) =>
-      channel.id.toLowerCase().includes(searchInput.toLowerCase())
-    );
+  //連結不到spotify的話
+  // const filteredChannel =
+  //   channelList &&
+  //   channelList.filter((channel) =>
+  //     channel.id.toLowerCase().includes(searchInput.toLowerCase())
+  //   );
 
   const handleChannelClick = (channel) => {
     // 重複:傳入的id 已存在selectedChannel
@@ -117,18 +136,22 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                 <div className="search-result">
                   <p className="search-result-header">搜尋結果</p>
                   <div className="card-list-container">
-                    {filteredChannel.map((channel) => (
-                      <Card
-                        key={channel.id}
-                        title={channel.title}
-                        publisher={channel.publisher}
-                        imageUrl={channel.imageUrl}
-                        onClick={() => handleChannelClick(channel)}
-                        active={selectedChannel.some(
-                          (item) => item.title === channel.title
-                        )}
-                      />
-                    ))}
+                    {isLoading ? (
+                      <p>載入中...</p>
+                    ) : (
+                      searchResult.map((channel) => (
+                        <Card
+                          key={channel.id}
+                          title={channel.name}
+                          publisher={channel.publisher}
+                          imageUrl={channel.images[0].url}
+                          onClick={() => handleChannelClick(channel)}
+                          active={selectedChannel.some(
+                            (item) => item.id === channel.id
+                          )}
+                        />
+                      ))
+                    )}
                   </div>
                 </div>
               </div>

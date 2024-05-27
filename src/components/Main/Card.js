@@ -8,7 +8,7 @@ const Card = ({
   description,
   episodes,
   onClick,
-  active,
+  active, //從addCardModal傳入
 }) => {
   const {
     showMoreModal,
@@ -20,10 +20,12 @@ const Card = ({
   } = usePodcastList();
 
   //傳遞參數給setSelectedCard
-  const handleClickMore = () => {
+  const handleClickMore = (e) => {
+    e.stopPropagation(); // 阻止事件冒泡
     setSelectedCard({ id, title, publisher, imageUrl, description, episodes });
     handleOpenShowMoreModal();
   };
+
   return (
     <>
       <div

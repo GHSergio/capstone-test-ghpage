@@ -17,10 +17,6 @@ const CardList = ({
     activeEpisode,
     handleClickListItem,
     handleClickPlayer,
-
-    setFavoriteList,
-    selectedCard,
-    setSelectedCard,
   } = usePodcastList();
 
   const activeCategoryContent =
