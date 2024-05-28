@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext } from "react";
 import { GetFavoriteIds, PostFavorite, RemoveFavorite } from "../api/acRequest";
-import { getShowWithEpisodes, getShowEpisodes } from "../api/spotify";
+
 import {
   addFavoriteSuccess,
   removeFavoriteSuccess,
@@ -33,7 +33,7 @@ const PodcastListProvider = ({ children }) => {
   const [chosenEmoji, setChosenEmoji] = useState(null);
 
   const [activeEpisodeId, setActiveEpisodeId] = useState(null);
-  // const [currentPlayer, setCurrentPlayer] = useState(null)
+
   const [currentPlayer, setCurrentPlayer] = useState({
     date: "2024-04-23",
     description:
@@ -61,19 +61,6 @@ const PodcastListProvider = ({ children }) => {
 
     return { hours, minutes: remainingMinutes, seconds: remainingSeconds };
   };
-
-  // //添加Shows & Episode 到 channelList (get spotify data)
-  // const handleGetShowEpisodes = async (id) => {
-  //   try {
-  //     const show = await getShowWithEpisodes(id);
-  //     const episodes = await getShowEpisodes(id);
-  //     // 將 episodes 添加到 show.episodes
-  //     show.episodes = episodes;
-  //     setChannelList((prevList) => [...prevList, show]);
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   }
-  // };
 
   //將 episodeId set activeEpisode
   const handleClickListItem = (episodeId) => {
@@ -144,53 +131,6 @@ const PodcastListProvider = ({ children }) => {
       return updatedCategoryContent;
     });
   };
-
-  // const addChannelToCategoryContent = async () => {
-  //   try {
-  //     const response = await addChannel({ activeList, selectedChannel });
-  //     setCategoryContent(response.updatedCategoryContent);
-  //   } catch (error) {
-  //     console.error("Error adding channel to category:", error);
-  //   }
-  // };
-
-  //待修正
-  const handleDeleteChannel = (episodeId) => {
-    console.log(episodeId);
-    const updatedChannelList = categoryContent[activeList].savedShows.filter(
-      (item) => item.id !== episodeId
-    ); //從channelList內 篩選出 id!==video.id的item
-    console.log(
-      "這是activeList的channelList",
-      categoryContent[activeList].savedShows,
-      "這是filter後的chanelList",
-      updatedChannelList
-    );
-    setCategoryContent((prevCategoryContent) => ({
-      ...prevCategoryContent,
-      [activeList]: {
-        ...prevCategoryContent[activeList],
-        savedShows: updatedChannelList,
-      },
-    }));
-  };
-  // const handleDeleteChannel = async (videoId) => {
-  //   try {
-  //     const response = await deleteChannel(videoId);
-  //     setCategoryContent(response.updatedCategoryContent);
-  //   } catch (error) {
-  //     console.error("Error deleting channel:", error);
-  //   }
-  // };
-
-  // const handleUpdateChannel = async (channelId, newData) => {
-  //   try {
-  //     const response = await updateChannel(channelId, newData);
-  //     setCategoryContent(response.updatedCategoryContent);
-  //   } catch (error) {
-  //     console.error("Error updating channel:", error);
-  //   }
-  // };
 
   // addCardModal
   const handleOpenAddCardModal = () => {
@@ -268,15 +208,12 @@ const PodcastListProvider = ({ children }) => {
     }
   };
 
-  //處理 書籤 在收藏? 移除 : 新增, 獲取更新的收藏清單
-  const handleClickBookmark = async (episodeId) => {
-    // 檢查最愛清單中是否有與點擊的影片相同的標題
+  // 處理書籤：在收藏中則移除，否則新增；並獲取更新的收藏清單
+  const handleToggleFromBookmark = async (episodeId) => {
     if (isFavorite(episodeId)) {
-      await RemoveFavorite(episodeId);
-      handleRemoveFavorite();
+      await handleRemoveFavorite(episodeId);
     } else {
-      await PostFavorite(episodeId);
-      handleAddFavorite();
+      await handleAddFavorite(episodeId);
     }
     const updatedFavorites = await GetFavoriteIds();
     setFavoriteList(updatedFavorites);
@@ -317,7 +254,6 @@ const PodcastListProvider = ({ children }) => {
         handleConfirmAddCardModal,
 
         addChannelToCategoryContent,
-        handleDeleteChannel,
 
         showMoreModal,
         setShowMoreModal,
@@ -338,7 +274,7 @@ const PodcastListProvider = ({ children }) => {
         // deleteNavigationItem,
         // addNavigationItem,
         isFavorite,
-        handleClickBookmark,
+        handleToggleFromBookmark,
 
         activeEpisodeId,
         setActiveEpisodeId,

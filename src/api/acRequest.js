@@ -10,6 +10,7 @@ const apiClient = axios.create({
 //使用於 用acToken 當 headers 的fn(也就是除了創建帳戶以外的fn)
 apiClient.interceptors.request.use(
   async (config) => {
+    // const spotifyToken = localStorage.getItem("acToken");
     const expires = new Date(localStorage.getItem("expires"));
     if (new Date() >= expires) {
       //刷新spotifyToken & 設置為headers & 創建新帳戶 取得acToken
@@ -151,7 +152,7 @@ export const PostFavorite = async (episodeId) => {
       // 更新 localStorage
       const userFavoriteList =
         JSON.parse(localStorage.getItem("userFavoriteList")) || [];
-      userFavoriteList.push(episodeId);
+      userFavoriteList.push({ id: episodeId });
       localStorage.setItem(
         "userFavoriteList",
         JSON.stringify(userFavoriteList)
@@ -169,7 +170,7 @@ export const PostFavorite = async (episodeId) => {
       console.log("Invalid token!");
     }
     if (error.response && error.response.status === 409) {
-      console.log("User has already favorited this episode");
+      console.log("episode 已在收藏內");
     }
   }
 };

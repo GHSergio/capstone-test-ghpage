@@ -108,7 +108,9 @@ export const getShowWithEpisodes = async (id) => {
 };
 
 export const getShowEpisodes = async (id) => {
-  const endpoint = `${baseUri}/v1/shows/${id}/episodes?limit=10`;
+  const spotifyToken = localStorage.getItem("access_token");
+
+  const endpoint = `${baseUri}/v1/episodes/${id}/`;
   try {
     const response = await axios.get(endpoint, {
       headers: {
@@ -116,19 +118,22 @@ export const getShowEpisodes = async (id) => {
       },
     });
 
-    const rawData = response.data.episodes.items;
-    // 構建需要的屬性
-    const formattedEpisodes = rawData.map((item) => ({
-      id: item.id,
-      title: item.name,
-      description: item.description,
-      imgSrc: item.images[0].url,
-      date: item.release_date,
-      videoLength: item.duration_ms,
-    }));
-    // console.log(formattedEpisodes);
+    console.log("getShowEpisodes:", response.data);
+    return response.data;
 
-    return formattedEpisodes;
+    // const rawData = response.data.episodes.items;
+    // // 構建需要的屬性
+    // const formattedEpisodes = rawData.map((item) => ({
+    //   id: item.id,
+    //   title: item.name,
+    //   description: item.description,
+    //   imgSrc: item.images[0].url,
+    //   date: item.release_date,
+    //   videoLength: item.duration_ms,
+    // }));
+    // // console.log(formattedEpisodes);
+
+    // return rawData;
   } catch (error) {
     console.error("Error:", error);
     throw error;

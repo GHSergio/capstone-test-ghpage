@@ -4,7 +4,7 @@ import Card from "./Card";
 import AddCardModal from "./Modal/AddCardModal";
 import ListItem from "./ListItem";
 import { usePodcastList } from "../../contexts/PodcastListContext";
-import { searchShows, getShows, getShowWithEpisodes } from "../../api/spotify";
+import { getShowWithEpisodes, getShowEpisodes } from "../../api/spotify";
 import EmptyFolder from "../../assets/EmptyFolder.svg";
 const CardList = ({
   showModal,
@@ -17,18 +17,23 @@ const CardList = ({
     categoryContent,
     channelList,
     favoriteList,
-    activeEpisode,
+    // activeEpisode,
     handleClickListItem,
     handleClickPlayer,
+    activeEpisodeId,
   } = usePodcastList();
 
   const [showResults, setShowResults] = useState([]);
+  const [favoriteEpisodes, setFavoriteEpisodes] = useState([]);
   // const [shouldFetchData, setShouldFetchData] = useState(true);
 
   const activeCategoryContent = categoryContent && categoryContent[activeList];
 
+  console.log("activeEpisodeId:", activeEpisodeId);
+
   //取得 data 傳遞給 card 渲染
   console.log("activeCategoryContent saveShows:", activeCategoryContent);
+  console.log("favoriteList:", favoriteList);
 
   useEffect(() => {
     const fetchShows = async () => {
@@ -61,17 +66,37 @@ const CardList = ({
   }, [activeCategoryContent]);
 
   useEffect(() => {
+    const fetchFavoriteEpisodes = async () => {
+      try {
+        // 确保 favoriteList 存在 & 是 Array
+        if (!favoriteList || !Array.isArray(favoriteList)) {
+          console.warn("favoriteList is not an array");
+          return;
+        }
+
+        // 使用 map 遍历 favoriteList
+        const promises =
+          favoriteList && favoriteList.map((item) => getShowEpisodes(item.id));
+
+        // 使用 Promise.all 确保所有的 getShowEpisodes 调用都完成
+        const results = await Promise.all(promises);
+
+        // 扁平化处理 favoriteEpisodes 以获取所有 episode
+        setFavoriteEpisodes(results.flat());
+      } catch (error) {
+        console.error("Error fetching favorite episodes:", error);
+      }
+    };
+
+    fetchFavoriteEpisodes();
+  }, [favoriteList]);
+
+  useEffect(() => {
     console.log("showResults:", showResults);
-  }, [showResults]);
+    console.log("favoriteEpisodes:", favoriteEpisodes);
+  }, [showResults, favoriteEpisodes]);
 
-  //回傳收藏內的id
-  const favoriteIds = favoriteList && favoriteList.map((item) => item.id);
-  // console.log("favoriteIds:", favoriteIds && favoriteIds);
-
-  // 從 channelList 篩選出符合 favoriteList id 的 episodes
-  const matchesEpisodes = channelList.flatMap((channel) =>
-    channel.episodes.filter((episode) => favoriteIds.includes(episode.id))
-  );
+  console.log("favoriteList:", favoriteList);
 
   //分類清單
   const getCategoryContent = () => {
@@ -142,14 +167,14 @@ const CardList = ({
       return (
         <>
           <div className="favorite-list-container">
-            {matchesEpisodes &&
-              matchesEpisodes.map((episode, index) => (
+            {favoriteEpisodes &&
+              favoriteEpisodes.map((episode, index) => (
                 <ListItem
                   key={index}
                   item={episode}
-                  activeEpisode={activeEpisode === episode.id}
+                  activeEpisode={activeEpisodeId === episode.id}
                   handleClickListItem={() => handleClickListItem(episode.id)}
-                  handleClickPlayer={() => handleClickPlayer(episode.id)}
+                  handleClickPlayer={() => handleClickPlayer(episode)}
                 />
               ))}
           </div>

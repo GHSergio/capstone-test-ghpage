@@ -1,31 +1,16 @@
 import "../../styles/footer.scss";
 import React from "react";
 import { usePodcastList } from "../../contexts/PodcastListContext";
-
+import { PostFavorite, RemoveFavorite } from "../../api/acRequest.js";
 const Player = () => {
   const {
-    channelList,
-    favoriteList,
+    // favoriteList,
+    // setFavoriteList,
+    // activeEpisodeId,
     currentPlayer,
-    handleClickBookmark,
+    handleToggleFromBookmark,
     isFavorite,
-    activeEpisodeId,
   } = usePodcastList();
-
-  //從player bookmark 增刪入收藏
-  const handleClickBookmarkPlayer = (episodeId) => {
-    // 在 channelList 中查找匹配的 episode
-    channelList.forEach((channel) => {
-      const selectedEpisode = channel.episodes.find(
-        (episode) => episode.id === episodeId
-      );
-      if (selectedEpisode) {
-        // console.log(selectedEpisode);
-        handleClickBookmark(selectedEpisode.id);
-        return;
-      }
-    });
-  };
 
   return (
     <div className="player-container">
@@ -35,7 +20,7 @@ const Player = () => {
 
           <div
             className="bookmark"
-            onClick={() => handleClickBookmarkPlayer(currentPlayer.id)}
+            onClick={() => handleToggleFromBookmark(currentPlayer.id)}
           >
             <svg
               width="20"

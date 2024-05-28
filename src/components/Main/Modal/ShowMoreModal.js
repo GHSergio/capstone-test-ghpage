@@ -8,7 +8,6 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
     handleDeleteChannel,
     selectedCard,
     setSelectedCard,
-    activeEpisodeId,
     handleClickListItem,
     handleClickPlayer,
     categoryContent,

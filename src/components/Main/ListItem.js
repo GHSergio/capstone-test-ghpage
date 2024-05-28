@@ -4,7 +4,7 @@ import "../../styles/favoriteList.scss";
 const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
   const {
     favoriteList,
-    handleClickBookmark,
+    handleToggleFromBookmark,
     currentPlayer,
     convertMsToHoursAndMinutes,
     activeEpisodeId,
@@ -21,8 +21,8 @@ const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
   // console.log("isFavorite:", isFavorite(activeEpisodeId));
   // console.log(item && item.id);
 
-  console.log("currentPlayer:", currentPlayer);
-  console.log("activeEpisodeId:", activeEpisodeId);
+  // console.log("currentPlayer:", currentPlayer);
+  // console.log("activeEpisodeId:", activeEpisodeId);
   return (
     <>
       <div
@@ -78,7 +78,7 @@ const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
 
             <div
               className="bookmark"
-              onClick={() => handleClickBookmark(item.id)}
+              onClick={() => handleToggleFromBookmark(item.id)}
             >
               <svg
                 width="20"
