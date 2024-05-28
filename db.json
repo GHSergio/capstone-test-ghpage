@@ -1779,25 +1779,25 @@
       "id": 1,
       "emoji": "🚌",
       "title": "通勤清單",
-      "channelList": []
+      "savedShows": []
     },
     {
       "id": 2,
       "emoji": "📚",
       "title": "學習清單",
-      "channelList": []
+      "savedShows": []
     },
     {
       "id": 3,
       "emoji": "💤",
       "title": "睡前清單",
-      "channelList": []
+      "savedShows": []
     },
     {
       "id": 4,
       "emoji": "🏘️",
       "title": "我的Podcast",
-      "channelList": []
+      "savedShows": []
     }
   ],
   "favoriteList": {
@@ -1825,12 +1825,12 @@
   },
   "categoryEmoji": [
     {
-      "emoji": "💤",
-      "id": "569"
-    },
-    {
       "emoji": "🦍",
       "id": "587"
+    },
+    {
+      "emoji": "💤",
+      "id": "591"
     }
   ]
 }

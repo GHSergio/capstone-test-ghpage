@@ -9,6 +9,7 @@ const Player = () => {
     currentPlayer,
     handleClickBookmark,
     isFavorite,
+    activeEpisodeId,
   } = usePodcastList();
 
   //從player bookmark 增刪入收藏
@@ -65,14 +66,9 @@ const Player = () => {
         <hr />
         <div className="player-content">
           <h2 className="player-content-title">
-            {currentPlayer && currentPlayer.title}
+            {currentPlayer && currentPlayer.name}
           </h2>
-          <p className="player-content-text">
-            A Spotify podcast sharing fresh insights on important topics of the
-            moment—in a way only Spotify can. You’ll hear from experts in the
-            music, podcast and tech industries as we discover and uncover
-            stories about our work and the world around us.
-          </p>
+          <p className="player-content-text">{currentPlayer.description}</p>
         </div>
         <div id="spotify-player">
           <iframe

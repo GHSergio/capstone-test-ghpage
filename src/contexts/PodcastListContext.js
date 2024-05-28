@@ -62,18 +62,18 @@ const PodcastListProvider = ({ children }) => {
     return { hours, minutes: remainingMinutes, seconds: remainingSeconds };
   };
 
-  //添加Shows & Episode 到 channelList (get spotify data)
-  const handleGetShowEpisodes = async (id) => {
-    try {
-      const show = await getShowWithEpisodes(id);
-      const episodes = await getShowEpisodes(id);
-      // 將 episodes 添加到 show.episodes
-      show.episodes = episodes;
-      setChannelList((prevList) => [...prevList, show]);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
+  // //添加Shows & Episode 到 channelList (get spotify data)
+  // const handleGetShowEpisodes = async (id) => {
+  //   try {
+  //     const show = await getShowWithEpisodes(id);
+  //     const episodes = await getShowEpisodes(id);
+  //     // 將 episodes 添加到 show.episodes
+  //     show.episodes = episodes;
+  //     setChannelList((prevList) => [...prevList, show]);
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // };
 
   //將 episodeId set activeEpisode
   const handleClickListItem = (episodeId) => {
@@ -82,18 +82,10 @@ const PodcastListProvider = ({ children }) => {
   };
 
   //在 channelList 中查找id匹配的 episode
-  const handleClickPlayer = (id) => {
-    console.log("PlayerId", id);
-    channelList.forEach((channel) => {
-      const selectedEpisode = channel.episodes.find(
-        (episode) => episode.id === id
-      );
-      if (selectedEpisode) {
-        console.log(selectedEpisode);
-        setCurrentPlayer(selectedEpisode);
-        return;
-      }
-    });
+  const handleClickPlayer = (item) => {
+    console.log(item);
+    setCurrentPlayer(item);
+    console.log("currentPlayer:", currentPlayer);
   };
 
   const handleSelectedChannelClick = (podcast) => {
@@ -356,7 +348,7 @@ const PodcastListProvider = ({ children }) => {
         setCurrentPlayer,
         handleClickPlayer,
 
-        handleGetShowEpisodes,
+        // handleGetShowEpisodes,
 
         convertMsToHoursAndMinutes,
 

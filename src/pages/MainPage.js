@@ -6,10 +6,10 @@ import Player from "../components/Footer/Player";
 import NavigationItem from "../components/Main/NavigationItem";
 import { usePodcastList } from "../contexts/PodcastListContext";
 import { AddIcon } from "../components/FontAwesome/FontAwesome";
-import { useUser } from "../contexts/UserContext";
+// import { useUser } from "../contexts/UserContext";
 
 const Main = () => {
-  const { setUserData } = useUser();
+  // const { setUserData } = useUser();
 
   const {
     categoryContent,
@@ -48,11 +48,12 @@ const Main = () => {
   //初始獲取各項localStorage set 進 state
   //由於只有一開始會從伺服器獲取資訊,從callback切到main都要從localStorage拿
   useEffect(() => {
-    const userProfileData = JSON.parse(localStorage.getItem("userProfileData"));
+    // const channelListData = JSON.parse(localStorage.getItem("channelListData"));
+    // const userProfileData = JSON.parse(localStorage.getItem("userProfileData"));
     const userFavoriteList = JSON.parse(
       localStorage.getItem("userFavoriteList")
     );
-    const channelListData = JSON.parse(localStorage.getItem("channelListData"));
+
     const userCategoryContent = JSON.parse(
       localStorage.getItem("userCategoryContent")
     );
@@ -60,19 +61,19 @@ const Main = () => {
       localStorage.getItem("categoryEmojiData")
     );
 
-    console.log("userProfileData:", userProfileData);
+    // console.log("userProfileData:", userProfileData);
+    // console.log("channelListData:", channelListData);
     console.log("userFavoriteList:", userFavoriteList);
-    console.log("channelListData:", channelListData);
     console.log("userCategoryContent:", userCategoryContent);
     console.log("categoryEmojiData:", categoryEmojiData);
 
-    setUserData(userProfileData); //使用者資訊
+    // setUserData(userProfileData); //使用者資訊
+    // setChannelList(channelListData); //channelList
     setFavoriteList(userFavoriteList); //使用者收藏
-    setChannelList(channelListData); //channelList
     setCategoryEmoji(categoryEmojiData); //映射表情
     setCategoryContent(userCategoryContent); //映射後的分類清單
   }, [
-    setUserData,
+    // setUserData,
     setFavoriteList,
     setChannelList,
     setCategoryEmoji,
@@ -179,7 +180,7 @@ const Main = () => {
           <NavigationItem
             index={99}
             title="收藏清單"
-            emoji="🤎"
+            emoji="❤️"
             handleNavigationItem={() => handleNavigationItem(99)}
           />
 

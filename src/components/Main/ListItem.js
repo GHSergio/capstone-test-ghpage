@@ -11,17 +11,18 @@ const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
     isFavorite,
   } = usePodcastList();
   // 提取item內的屬性
-  const { id, title, imgSrc, description, date, videoLength } = item;
+  const { id, name, images, description, release_date, duration_ms } = item;
 
   const formattedVideoLength = () => {
-    const { hours, minutes } = convertMsToHoursAndMinutes(videoLength);
+    const { hours, minutes } = convertMsToHoursAndMinutes(duration_ms);
     return `${hours}小時${minutes}分鐘`;
   };
 
   // console.log("isFavorite:", isFavorite(activeEpisodeId));
   // console.log(item && item.id);
 
-  // console.log(currentPlayer);
+  console.log("currentPlayer:", currentPlayer);
+  console.log("activeEpisodeId:", activeEpisodeId);
   return (
     <>
       <div
@@ -32,17 +33,17 @@ const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
       >
         <div className="video-wrapper">
           <div className="video-image">
-            <img src={imgSrc} alt="" />
+            <img src={images[0].url} alt="" />
           </div>
           <div className="video-content">
-            <span className="title">{title}</span>
+            <span className="title">{name}</span>
             <span className="description">{description}</span>
             <div className="switch-wrapper">
               <div
                 className="player"
                 onClick={() => handleClickPlayer(activeEpisodeId)}
               >
-                {currentPlayer.title === title ? (
+                {currentPlayer.id === id ? (
                   <svg
                     width="34"
                     height="34"
@@ -71,7 +72,7 @@ const ListItem = ({ item, handleClickListItem, handleClickPlayer }) => {
                 )}
               </div>
               <p className="date">
-                {date} - {formattedVideoLength()}
+                {release_date} - {formattedVideoLength()}
               </p>
             </div>
 

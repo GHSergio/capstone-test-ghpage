@@ -4,12 +4,12 @@ import { CreateAccount, GetFavoriteIds, GetCategory } from "../api/acRequest";
 import { getCategoryEmoji, getChannelList } from "../api/dbRequest";
 import { useNavigate } from "react-router-dom";
 // import { usePodcastList } from "../contexts/PodcastListContext";
-import { useUser } from "../contexts/UserContext";
+// import { useUser } from "../contexts/UserContext";
 import "../styles/progressBar.scss";
 
 const Callback = () => {
   // const {} = usePodcastList();
-  const { setToken } = useUser();
+  // const { setToken } = useUser();
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0); // 進度狀態
   const [error, setError] = useState(null); // 錯誤狀態
@@ -24,29 +24,37 @@ const Callback = () => {
     });
   };
 
+  // const defaultEmojis = [
+  //   {
+  //     emoji: "💤",
+  //     id: "569",
+  //   },
+  //   {
+  //     emoji: "🦍",
+  //     id: "587",
+  //   },
+  // ];
+
   //取得驗證碼後 獲取各項data 並且存入localStorage
   useEffect(() => {
     const spotifyToken = localStorage.getItem("access_token");
     console.log("spotifyToken:", spotifyToken);
 
-    // if (!spotifyToken) {
-    //   navigate("/login");
-    //   return;
-    // }
-
     const fetchData = async () => {
       try {
-        setToken(spotifyToken);
+        // setToken(spotifyToken);
         // 1. 取得 Spotify 使用者資訊
         const userProfileData = await getUserProfile(spotifyToken);
         console.log("取得使用者資訊", userProfileData);
         // setProgress(10);
         updateProgress(10);
+
         // 2. 取得 acApi 帳戶 & acToken
         await CreateAccount();
         // setProgress(20);
         updateProgress(10);
 
+        updateProgress(20);
         // 3. 取得ac收藏清單 單集 ID
         const userFavoriteList = await GetFavoriteIds();
         console.log("取得使用者收藏清單:", userFavoriteList);
@@ -57,15 +65,8 @@ const Callback = () => {
         // 4. 取得db.json分類清單映射表情
         const categoryEmojiData = await getCategoryEmoji();
         console.log("取得清單映射表情:", categoryEmojiData.data);
-
-        // setProgress(60);
-        updateProgress(20);
-
-        // 5. 取得db.json頻道清單
-        const channelListData = await getChannelList();
-        console.log("取得頻道清單:", channelListData.data);
-
-        // setProgress(80);
+        // 存儲到localStorage
+        localStorage.setItem("userEmojis", JSON.stringify(categoryEmojiData));
         updateProgress(20);
 
         // 6. 獲取ac清單內容
@@ -90,10 +91,10 @@ const Callback = () => {
           "userCategoryContent",
           JSON.stringify(addedEmojiCategoryContent)
         );
-        // console.log(
-        //   "映射表情後的userCategoryContent:",
-        //   addedEmojiCategoryContent
-        // );
+        console.log(
+          "映射表情後的userCategoryContent:",
+          addedEmojiCategoryContent
+        );
 
         // setProgress(100); // 更新進度
         updateProgress(20);
@@ -114,7 +115,13 @@ const Callback = () => {
     if (spotifyToken) {
       fetchData();
     }
-  }, [setToken, navigate]);
+  }, [navigate]);
+
+  //驗證失敗時 onClick引導回login
+  const handleLoginAgain = () => {
+    localStorage.removeItem("access_token");
+    navigate("/login");
+  };
 
   return (
     <>
@@ -133,7 +140,26 @@ const Callback = () => {
             </div>
           </>
         ) : error ? (
-          <h1 className="error-message">發生錯誤: {error}</h1>
+          <>
+            <h1 className="error-message">發生錯誤: {error}</h1>
+            {(error.includes("Unauthorized") ||
+              error.includes("Forbidden")) && (
+              <button
+                style={{
+                  padding: "10px 20px",
+                  fontSize: "25px",
+                  backgroundColor: "blue",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "px",
+                  cursor: "pointer",
+                }}
+                onClick={handleLoginAgain}
+              >
+                重新登入
+              </button>
+            )}
+          </>
         ) : (
           <h1>數據獲取完成，即將前往主頁...</h1>
         )}

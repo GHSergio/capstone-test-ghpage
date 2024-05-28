@@ -296,7 +296,7 @@ export const addShowToCategory = async (categoryId, showId) => {
   try {
     const response = await apiClient.post(url, bodyParam);
     console.log("添加show至分類:", response);
-    if (response.status === 200) {
+    if (response.success) {
       // 更新 localStorage
       const userCategoryContent =
         JSON.parse(localStorage.getItem("userCategoryContent")) || [];
@@ -326,14 +326,14 @@ export const addShowToCategory = async (categoryId, showId) => {
   }
 };
 
-//刪除show至分類 404?
+//刪除showh從分類 404?
 export const deleteFromCategory = async (categoryId, showId) => {
   const url = `api/categories/${categoryId}/shows/${showId}`;
 
   try {
     const response = await apiClient.delete(url);
     console.log("移除show從分類:", response);
-    if (response.status === 200) {
+    if (response.success) {
       // 更新 localStorage
       const userCategoryContent =
         JSON.parse(localStorage.getItem("userCategoryContent")) || [];

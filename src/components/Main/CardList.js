@@ -1,8 +1,11 @@
+import React, { useState, useEffect } from "react";
 import "../../styles/content.scss";
 import Card from "./Card";
 import AddCardModal from "./Modal/AddCardModal";
 import ListItem from "./ListItem";
 import { usePodcastList } from "../../contexts/PodcastListContext";
+import { searchShows, getShows, getShowWithEpisodes } from "../../api/spotify";
+import EmptyFolder from "../../assets/EmptyFolder.svg";
 const CardList = ({
   showModal,
   handleOpenModal,
@@ -19,20 +22,47 @@ const CardList = ({
     handleClickPlayer,
   } = usePodcastList();
 
-  const activeCategoryContent =
-    categoryContent && categoryContent[activeList]
-      ? categoryContent[activeList].savedShows
-      : [];
+  const [showResults, setShowResults] = useState([]);
+  // const [shouldFetchData, setShouldFetchData] = useState(true);
+
+  const activeCategoryContent = categoryContent && categoryContent[activeList];
 
   //取得 data 傳遞給 card 渲染
-  //從 channelList 篩選出 id 與 saveShows匹配的item
-  const matchedShows =
-    channelList &&
-    channelList.length !== 0 &&
-    channelList.filter((channel) =>
-      activeCategoryContent.some((savedShow) => savedShow.id === channel.id)
-    );
-  // console.log("matchedShows:", matchedShows);
+  console.log("activeCategoryContent saveShows:", activeCategoryContent);
+
+  useEffect(() => {
+    const fetchShows = async () => {
+      try {
+        // 確保 activeCategoryContent 存在 & saveShows 是 Array
+        if (
+          !activeCategoryContent ||
+          !Array.isArray(activeCategoryContent.savedShows)
+        ) {
+          console.warn("activeCategoryContent.savedShows is not an array");
+          return;
+        }
+
+        // 使用 map 遍歷 savedShows
+        const promises = activeCategoryContent.savedShows.map((show) =>
+          getShowWithEpisodes(show.id)
+        );
+
+        // 使用 Promise.all 確保所有的 getShowWithEpisodes 調用都完成
+        const results = await Promise.all(promises);
+
+        // 更新 showResults
+        setShowResults(results);
+      } catch (error) {
+        console.error("Error fetching shows:", error);
+      }
+    };
+
+    fetchShows();
+  }, [activeCategoryContent]);
+
+  useEffect(() => {
+    console.log("showResults:", showResults);
+  }, [showResults]);
 
   //回傳收藏內的id
   const favoriteIds = favoriteList && favoriteList.map((item) => item.id);
@@ -43,19 +73,18 @@ const CardList = ({
     channel.episodes.filter((episode) => favoriteIds.includes(episode.id))
   );
 
-  // console.log("matchesEpisodes:", matchesEpisodes);
-
   //分類清單
   const getCategoryContent = () => {
     //當List沒有內容
-    if (!activeCategoryContent || activeCategoryContent.length === 0) {
+    if (
+      !activeCategoryContent ||
+      !activeCategoryContent.savedShows ||
+      activeCategoryContent.savedShows.length === 0
+    ) {
       return (
         <>
           <div className="default">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/ffc9/7d3e/dc49d88c06298a4fee08f03125d1b0b0?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n6FlrVOU48~GWCRifV8fGuwCwwoG-YHOvz7NC8gGig4YsGQ48mDkr37S7iYtHfeo7BJsrIwbkq5F8ts~cdKIgGQ31WZuFKwREa~o1bFThq1z2uOiFfH5skwZAGRtk5ffSZ~d107W5cBvI2SJtZpX30I5y1K4Uqb5xX-tFa3c42gRv8x2syMJYQEXAPfCV~h7Ke9Vj4qyj--0UM7IxxaocnX7jAs6Tyb7Ysv-TP~VnN3YNz1~VCpqwaX6n4FPYBo5D0P3baECwUPc0uTulm~r8YaURPBU4MFeHHDlcRJN277rsuH0hVGDAZt-du7CICPvpcYSQt63qvw2gFOhSQnSgA__"
-              alt=""
-            />
+            <img src={EmptyFolder} alt="EmptyFolder" />
             <span>您尚未加入任何 Podcast，可以點擊按鈕新增！</span>
             <button className="button-add" onClick={handleOpenModal}>
               <p>新增 Podcast</p>
@@ -74,14 +103,14 @@ const CardList = ({
       return (
         <>
           <div className="card-list-container">
-            {matchedShows &&
-              matchedShows.map((item, index) => (
+            {showResults.length > 0 &&
+              showResults.map((item, index) => (
                 <Card
                   key={index}
                   id={item.id}
-                  title={item.title}
+                  title={item.name}
                   publisher={item.publisher}
-                  imageUrl={item.imageUrl}
+                  imageUrl={item.images[0].url}
                   description={item.description}
                   episodes={item.episodes}
                 />
@@ -103,10 +132,7 @@ const CardList = ({
       return (
         <>
           <div className="default">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/ffc9/7d3e/dc49d88c06298a4fee08f03125d1b0b0?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n6FlrVOU48~GWCRifV8fGuwCwwoG-YHOvz7NC8gGig4YsGQ48mDkr37S7iYtHfeo7BJsrIwbkq5F8ts~cdKIgGQ31WZuFKwREa~o1bFThq1z2uOiFfH5skwZAGRtk5ffSZ~d107W5cBvI2SJtZpX30I5y1K4Uqb5xX-tFa3c42gRv8x2syMJYQEXAPfCV~h7Ke9Vj4qyj--0UM7IxxaocnX7jAs6Tyb7Ysv-TP~VnN3YNz1~VCpqwaX6n4FPYBo5D0P3baECwUPc0uTulm~r8YaURPBU4MFeHHDlcRJN277rsuH0hVGDAZt-du7CICPvpcYSQt63qvw2gFOhSQnSgA__"
-              alt=""
-            />
+            <img src={EmptyFolder} alt="EmptyFolder" />
             <span>您尚未收藏任何 Podcast</span>
           </div>
         </>

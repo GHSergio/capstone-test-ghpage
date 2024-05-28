@@ -24,7 +24,7 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
   };
   // console.log("activeEpisodeId:", activeEpisodeId);
 
-  // console.log(card && card, selectedCard && selectedCard);
+  console.log(card && card, selectedCard && selectedCard);
   return (
     <>
       {isOpen && card && (
@@ -75,12 +75,12 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
 
               {/* videoList */}
               {card.episodes &&
-                card.episodes.map((item, index) => (
+                card.episodes.items.map((item, index) => (
                   <ListItem
                     key={index}
                     item={item}
                     handleClickListItem={() => handleClickListItem?.(item.id)}
-                    handleClickPlayer={() => handleClickPlayer?.(item.id)}
+                    handleClickPlayer={() => handleClickPlayer?.(item)}
                   />
                 ))}
             </div>

@@ -39,13 +39,6 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
     }
   };
 
-  //連結不到spotify的話
-  // const filteredChannel =
-  //   channelList &&
-  //   channelList.filter((channel) =>
-  //     channel.id.toLowerCase().includes(searchInput.toLowerCase())
-  //   );
-
   const handleChannelClick = (channel) => {
     // 重複:傳入的id 已存在selectedChannel
     console.log(channel.id);
