@@ -23,7 +23,7 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
   };
   // console.log("activeEpisodeId:", activeEpisodeId);
 
-  console.log(card && card, selectedCard && selectedCard);
+  // console.log(card && card, selectedCard && selectedCard);
   return (
     <>
       {isOpen && card && (

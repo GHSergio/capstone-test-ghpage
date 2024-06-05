@@ -4,7 +4,8 @@ const baseUri = "https://spotify-backend.alphacamp.io/";
 // console.log(baseUri);
 
 const apiClient = axios.create({
-  baseURL: baseUri,
+  // baseURL: baseUri,
+  baseURL: "https://spotify-backend.alphacamp.io/",
 });
 
 //使用於 用acToken 當 headers 的fn(也就是除了創建帳戶以外的fn)
