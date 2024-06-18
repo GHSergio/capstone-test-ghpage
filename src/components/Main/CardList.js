@@ -74,14 +74,14 @@ const CardList = ({
           return;
         }
 
-        // 使用 map 遍历 favoriteList
+        // 使用 map 遍歷 favoriteList
         const promises =
           favoriteList && favoriteList.map((item) => getShowEpisodes(item.id));
 
         // 使用 Promise.all 确保所有的 getShowEpisodes 调用都完成
         const results = await Promise.all(promises);
 
-        // 扁平化处理 favoriteEpisodes 以获取所有 episode
+        // 扁平化處理 favoriteEpisodes 以獲取所有 episode
         setFavoriteEpisodes(results.flat());
       } catch (error) {
         console.error("Error fetching favorite episodes:", error);
