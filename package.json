@@ -33,6 +33,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "proxy": "https://spotify-backend.alphacamp.io/",
   "eslintConfig": {
     "extends": [
       "react-app",
