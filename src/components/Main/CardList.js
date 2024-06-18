@@ -10,7 +10,7 @@ const CardList = ({
   showModal,
   handleOpenModal,
   handleCloseModal,
-  handleConfirmModal,
+  // handleConfirmModal,
 }) => {
   const {
     activeList,
@@ -21,12 +21,11 @@ const CardList = ({
     handleClickListItem,
     handleClickPlayer,
     activeEpisodeId,
+    addChannelToCategoryContent,
   } = usePodcastList();
 
   const [showResults, setShowResults] = useState([]);
   const [favoriteEpisodes, setFavoriteEpisodes] = useState([]);
-  // const [shouldFetchData, setShouldFetchData] = useState(true);
-
   const activeCategoryContent = categoryContent && categoryContent[activeList];
 
   console.log("activeEpisodeId:", activeEpisodeId);
@@ -96,8 +95,6 @@ const CardList = ({
     console.log("favoriteEpisodes:", favoriteEpisodes);
   }, [showResults, favoriteEpisodes]);
 
-  console.log("favoriteList:", favoriteList);
-
   //分類清單
   const getCategoryContent = () => {
     //當List沒有內容
@@ -117,7 +114,7 @@ const CardList = ({
 
             <AddCardModal
               isOpen={showModal}
-              onConfirm={handleConfirmModal}
+              // onConfirm={addChannelToCategoryContent}
               onClose={handleCloseModal}
             />
           </div>
@@ -143,7 +140,7 @@ const CardList = ({
 
             <AddCardModal
               isOpen={showModal}
-              onConfirm={handleConfirmModal}
+              // onConfirm={addChannelToCategoryContent}
               onClose={handleCloseModal}
             />
           </div>

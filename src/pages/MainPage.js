@@ -28,7 +28,7 @@ const Main = () => {
 
     handleOpenAddCardModal,
     handleCloseAddCardModal,
-    handleConfirmAddCardModal,
+    // handleConfirmAddCardModal,
 
     activeEpisode,
     setCurrentPlayer,
@@ -201,7 +201,7 @@ const Main = () => {
           showModal={addCardModal}
           handleOpenModal={handleOpenAddCardModal}
           handleCloseModal={handleCloseAddCardModal}
-          handleConfirmModal={handleConfirmAddCardModal}
+          // handleConfirmModal={handleConfirmAddCardModal}
         />
       </div>
       <div className="footer">

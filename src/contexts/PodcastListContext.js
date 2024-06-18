@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
 import { GetFavoriteIds, PostFavorite, RemoveFavorite } from "../api/acRequest";
-
 import {
   addFavoriteSuccess,
   removeFavoriteSuccess,
@@ -9,6 +8,7 @@ import {
   removeFavoriteFail,
   removeFavoriteError,
 } from "../components/Swal";
+import { addShowToCategory } from "../api/acRequest";
 
 const PodcastListContext = createContext();
 export const usePodcastList = () => useContext(PodcastListContext);
@@ -90,46 +90,46 @@ const PodcastListProvider = ({ children }) => {
     );
   };
 
-  // // 將 Podcast 添加到指定的列表中
-  const addChannelToCategoryContent = () => {
+  // // 將 show 添加到指定的分類中
+  const addChannelToCategoryContent = (categoryId, selectedShows) => {
     setCategoryContent((prevCategoryContent) => {
-      const updatedCategoryContent = [...prevCategoryContent];
-
-      // 確認目標類別存在並擁有 channelList 屬性
-      const targetCategory = updatedCategoryContent[activeList];
-      console.log(
-        "SavedShows:",
-        targetCategory && targetCategory.savedShows && targetCategory.savedShows
-      );
-      if (!targetCategory) {
-        console.error("目標類別不存在");
-        return updatedCategoryContent;
-      }
-
-      // 如果 SavedShows 不存在，則初始化為空陣列
-      const currentSavedShows = targetCategory.savedShows || [];
-      console.log("currentSavedShows:", currentSavedShows);
-
-      // 檢查選取的頻道是否已經存在於目標類別的 savedShows 中
-      const uniqueSelectedSavedShows = selectedChannel.filter((show) => {
-        return !currentSavedShows.some((existingSavedShows) => {
-          return existingSavedShows.id === show.id;
-        });
+      const updatedCategoryContent = prevCategoryContent.map((category) => {
+        if (category.id === categoryId) {
+          const currentSavedShows = category.savedShows || [];
+          const uniqueSelectedSavedShows = selectedShows.filter((show) => {
+            return !currentSavedShows.some(
+              (existingShow) => existingShow.id === show.id
+            );
+          });
+          return {
+            ...category,
+            savedShows: [...currentSavedShows, ...uniqueSelectedSavedShows],
+          };
+        }
+        return category;
       });
 
-      // 將唯一的選取頻道添加到目標類別的 savedShows
-      const updatedSavedShows = [
-        ...currentSavedShows,
-        ...uniqueSelectedSavedShows,
-      ];
-
-      updatedCategoryContent[activeList] = {
-        ...targetCategory,
-        savedShows: updatedSavedShows,
-      };
-
+      localStorage.setItem(
+        "userCategoryContent",
+        JSON.stringify(updatedCategoryContent)
+      );
       return updatedCategoryContent;
     });
+  };
+
+  const handleConfirmAddCardModal = async (categoryId, selectedShows) => {
+    if (selectedShows.length > 0) {
+      for (let show of selectedShows) {
+        const result = await addShowToCategory(categoryId, show.id);
+        if (!result.success) {
+          console.error(`Failed to add show ${show.id}:`, result.message);
+          return; // 如果 API 請求失敗，則退出函數
+        }
+      }
+      addChannelToCategoryContent(categoryId, selectedShows);
+      setAddCardModal(false);
+      setSelectedChannel([]);
+    }
   };
 
   // addCardModal
@@ -143,13 +143,13 @@ const PodcastListProvider = ({ children }) => {
   };
 
   //處理addCardModal
-  const handleConfirmAddCardModal = (selectedShows) => {
-    if (selectedShows.length > 0) {
-      addChannelToCategoryContent(activeList, selectedShows);
-      setAddCardModal(false);
-      setSelectedChannel([]);
-    }
-  };
+  // const handleConfirmAddCardModal = (selectedShows) => {
+  //   if (selectedShows.length > 0) {
+  //     addChannelToCategoryContent(activeList, selectedShows);
+  //     setAddCardModal(false);
+  //     setSelectedChannel([]);
+  //   }
+  // };
 
   //showMoreModal
   const handleOpenShowMoreModal = () => {

@@ -286,34 +286,24 @@ export const putCategory = async ({ categoriesId, name }) => {
   }
 };
 
-//添加show至分類 502?
+//添加show至分類
 export const addShowToCategory = async (categoryId, showId) => {
   console.log(categoryId, showId);
   if (!categoryId) {
     console.error("Category ID is undefined");
-    return;
+    return {
+      success: false,
+      message: "Category ID is undefined",
+    };
   }
   const url = `api/categories/${categoryId}/shows`;
   const bodyParam = { showId: showId };
-  const response = await apiClient.post(url, bodyParam);
-  console.log("添加show至分類的response:", response);
+  // const response = await apiClient.post(url, bodyParam);
+  // console.log("添加show至分類的response:", response);
   try {
     const response = await apiClient.post(url, bodyParam);
     console.log("添加show至分類的response:", response);
-    if (response.success) {
-      // 更新 localStorage
-      const userCategoryContent =
-        JSON.parse(localStorage.getItem("userCategoryContent")) || [];
-      console.log("將要添加新saveShows的分類清單內容:", userCategoryContent);
-      const updatedCategoryContent = userCategoryContent.map((category) =>
-        category.id === categoryId
-          ? { ...category, saveShows: [...category.saveShows, showId] }
-          : category
-      );
-      localStorage.setItem(
-        "userCategoryContent",
-        JSON.stringify(updatedCategoryContent)
-      );
+    if (response.data.success) {
       return { success: true, data: response.data };
     } else {
       return {
@@ -330,49 +320,15 @@ export const addShowToCategory = async (categoryId, showId) => {
   }
 };
 
-//刪除show從分類 404?
+// 刪除show從分類;
 export const deleteFromCategory = async (categoryId, showId) => {
   const url = `api/categories/${categoryId}/shows/${showId}`;
-
-  console.log(`嘗試刪除節目，URL: ${url}`);
-  console.log(`categoryId: ${categoryId}, showId: ${showId}`);
-  // const response = await apiClient.delete(url);
-  // console.log("移除show從分類的response:", response);
   try {
     const response = await apiClient.delete(url);
     console.log("移除show從分類的response:", response);
-
     if (response.data.success) {
-      console.log("成功刪除:", response.data.success);
-      // 獲取 localStorage 中的 userCategoryContent
-      const userCategoryContent =
-        JSON.parse(localStorage.getItem("userCategoryContent")) || [];
-      console.log("原始的 userCategoryContent:", userCategoryContent);
-      // 更新 localStorage
-      const updatedCategoryContent = userCategoryContent.map((category) => {
-        console.log(`正在處理 category.id: ${category.id}`);
-        if (category.id === categoryId) {
-          const updatedShows = category.savedShows.filter(
-            (show) => show.id !== showId
-          );
-          console.log(`更新後的 savedShows:`, updatedShows);
-          return {
-            ...category,
-            savedShows: updatedShows,
-          };
-        }
-        return category;
-      });
-
-      console.log("更新後的 userCategoryContent:", updatedCategoryContent);
-
-      localStorage.setItem(
-        "userCategoryContent",
-        JSON.stringify(updatedCategoryContent)
-      );
       return { success: true, data: response.data };
     } else {
-      console.log("API 回應非成功狀態:", response);
       return {
         success: false,
         message: `Failed with status: ${response.status}`,

@@ -10,14 +10,35 @@ const ShowMoreModal = ({ isOpen, onClose, card }) => {
     setSelectedCard,
     handleClickListItem,
     handleClickPlayer,
-    categoryContent,
     activeList,
+    categoryContent,
+    setCategoryContent,
   } = usePodcastList();
 
   const currentCategoryId = categoryContent[activeList].id;
   // console.log("currentCategoryId:", currentCategoryId);
-  const handleDelete = async (currentCategoryId, id) => {
-    await deleteFromCategory(currentCategoryId, id);
+  //處理delete
+  const handleDelete = async (categoryId, showId) => {
+    const result = await deleteFromCategory(categoryId, showId);
+    if (result.data.success) {
+      const updatedCategories = categoryContent.map((category) =>
+        category.id === categoryId
+          ? {
+              ...category,
+              savedShows: category.savedShows.filter(
+                (show) => show.id !== showId
+              ),
+            }
+          : category
+      );
+      setCategoryContent(updatedCategories);
+      localStorage.setItem(
+        "userCategoryContent",
+        JSON.stringify(updatedCategories)
+      );
+    } else {
+      console.error(result.message);
+    }
     setSelectedCard(null);
     onClose();
   };

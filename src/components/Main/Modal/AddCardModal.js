@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Card from "../Card";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
 import { searchShows } from "../../../api/spotify";
-import { addShowToCategory } from "../../../api/acRequest";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -11,11 +10,12 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const [isAnyCardClicked, setIsAnyCardClicked] = useState(false);
 
   const {
-    // channelList,
     selectedChannel,
     setSelectedChannel,
     categoryContent,
     activeList,
+    handleConfirmAddCardModal,
+    // handleCloseAddCardModal,
   } = usePodcastList();
   console.log("selectedChannel:", selectedChannel);
 
@@ -60,15 +60,22 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const selectedShowIds = selectedChannel.map((show) => show.id);
   // console.log("selectedChannel ID:", selectedShowIds);
 
-  const handleOnConfirm = async (categoryId, selectedChannel) => {
-    await addShowToCategory(categoryId, selectedChannel);
-    onConfirm(selectedChannel);
+  const handleOnConfirm = () => {
+    handleConfirmAddCardModal(categoryId, selectedChannel);
+    setSearchInput("");
+    setSelectedChannel([]);
+  };
+
+  const handleOnClose = () => {
+    setSearchInput(""); // 重置搜索輸入
+    setSelectedChannel([]); // 重置選擇的頻道
+    onClose();
   };
 
   return (
     <>
       {isOpen && (
-        <div className="modal-overlay" onClick={onClose}>
+        <div className="modal-overlay" onClick={handleOnClose}>
           <div className="modal-container" onClick={(e) => e.stopPropagation()}>
             <div className="modal-wrapper">
               <div className="modal-header">
@@ -149,7 +156,7 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
                 </div>
               </div>
               <div className="modal-footer">
-                <button className="modal-button-close" onClick={onClose}>
+                <button className="modal-button-close" onClick={handleOnClose}>
                   <p>取消</p>
                 </button>
                 <button
