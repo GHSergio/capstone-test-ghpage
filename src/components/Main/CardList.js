@@ -126,6 +126,7 @@ const CardList = ({
         <>
           <div className="card-list-container">
             {showResults.length > 0 &&
+              showResults &&
               showResults.map((item, index) => (
                 <Card
                   key={index}

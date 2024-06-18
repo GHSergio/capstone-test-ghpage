@@ -5,7 +5,7 @@ const baseUri = process.env.REACT_APP_API_BASE_URL;
 
 const apiClient = axios.create({
   // baseURL: baseUri,
-  // baseURL: "https://spotify-backend.alphacamp.io/",
+  // baseURL: "https://spotify-backend.alphacamp.io",
   baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 
@@ -43,7 +43,7 @@ apiClient.interceptors.request.use(
 // 創建acAPI帳戶
 export const CreateAccount = async () => {
   const spotifyToken = localStorage.getItem("access_token");
-  const url = `${baseUri}api/users`;
+  const url = `${baseUri}/api/users`;
   const bodyParameters = {
     spotifyToken: spotifyToken,
   };

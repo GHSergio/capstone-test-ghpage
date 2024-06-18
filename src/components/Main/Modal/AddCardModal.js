@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "../Card";
 import { usePodcastList } from "../../../contexts/PodcastListContext";
 import { searchShows } from "../../../api/spotify";
+// import { addShowToCategory } from "../../../api/acRequest";
 
 const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -15,6 +16,9 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
     categoryContent,
     activeList,
     handleConfirmAddCardModal,
+
+    // addShowToCategory,
+    // addChannelToCategoryContent,
     // handleCloseAddCardModal,
   } = usePodcastList();
   console.log("selectedChannel:", selectedChannel);
@@ -65,6 +69,29 @@ const AddCardModal = ({ isOpen, onConfirm, onClose }) => {
     setSearchInput("");
     setSelectedChannel([]);
   };
+
+  // const handleOnConfirm = async () => {
+  //   if (selectedChannel.length > 0) {
+  //     try {
+  //       // 並行發送所有添加請求
+  //       await Promise.all(
+  //         selectedChannel.map((show) => addShowToCategory(categoryId, show.id))
+  //       );
+
+  //       // 更新 categoryContent
+  //       addChannelToCategoryContent(categoryId, selectedChannel);
+
+  //       // 重置狀態
+  //       setSearchInput("");
+  //       setSelectedChannel([]);
+
+  //       // 關閉模態框
+  //       onClose();
+  //     } catch (error) {
+  //       console.error("Error adding shows to category:", error);
+  //     }
+  //   }
+  // };
 
   const handleOnClose = () => {
     setSearchInput(""); // 重置搜索輸入
