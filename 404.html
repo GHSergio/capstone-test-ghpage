@@ -2,8 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <script type="text/javascript">
+      // 獲取當前路徑
+      var currentPath = window.location.pathname + window.location.search;
+      // 將當前路徑存入 localStorage
+      localStorage.setItem("redirectPath", currentPath);
+      // 將使用者重定向到 index.html
+      window.location.replace("/capstone-test-ghpage/index.html");
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="refresh" content="0; URL=./index.html" />
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       // 在重新導向之前檢查 URL
       var currentLocation = window.location;
       var newPath =
@@ -14,16 +30,11 @@
         currentLocation.pathname +
         currentLocation.search;
       window.history.replaceState({}, document.title, newPath);
-      // window.location.replace("/capstone-test-ghpage/index.html");
-      window.location.replace("/capstone-test-ghpage/CallbackPage.js");
-    </script> -->
-    <script type="text/javascript">
-      // 直接重定向到 /callback 路徑
-      window.location.replace("/capstone-test-ghpage/callback");
+      window.location.replace("/capstone-test-ghpage/index.html");
     </script>
   </head>
   <body></body>
-</html>
+</html> -->
 
 <!-- <!DOCTYPE html>
 <html>
