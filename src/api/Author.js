@@ -50,6 +50,7 @@ const code = args.get("code");
 // If we find a code, we're in a callback, do a token exchange
 if (code) {
   const token = await getToken(code);
+  console.log("Received token:", token);
   currentToken.save(token);
 
   // Remove code from URL so we can refresh correctly.
@@ -65,12 +66,14 @@ if (currentToken.access_token) {
   const userData = await getUserData();
   renderTemplate("main", "logged-in-template", userData);
   renderTemplate("oauth", "oauth-template", currentToken);
-}
-
-// Otherwise we're not logged in, so render the login template
-if (!currentToken.access_token) {
+} else {
   renderTemplate("main", "login");
 }
+
+// // Otherwise we're not logged in, so render the login template
+// if (!currentToken.access_token) {
+//   renderTemplate("main", "login");
+// }
 
 async function redirectToSpotifyAuthorize() {
   const possible =
