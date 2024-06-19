@@ -1,12 +1,13 @@
 import axios from "axios";
 import { refreshToken } from "./Author";
-const baseUri = process.env.REACT_APP_API_BASE_URL;
-// console.log(baseUri);
+const baseUri = process.env.REACT_APP_AC_API_BASE_URL;
+// const baseUri = "https://spotify-backend.alphacamp.io";
+console.log("acAPI env:", baseUri);
 
 const apiClient = axios.create({
   // baseURL: baseUri,
-  // baseURL: "https://spotify-backend.alphacamp.io",
-  baseURL: process.env.REACT_APP_API_BASE_URL,
+  baseURL: "https://spotify-backend.alphacamp.io",
+  // baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 
 //使用於 用acToken 當 headers 的fn(也就是除了創建帳戶以外的fn)
