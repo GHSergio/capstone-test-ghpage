@@ -5,6 +5,7 @@ import PodcastListContext from "./contexts/PodcastListContext";
 import PrivateRoute from "./components/PrivateRoute";
 
 const basename = process.env.REACT_APP_BASENAME;
+console.log("basename:", basename);
 
 function App() {
   return (
