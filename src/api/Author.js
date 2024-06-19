@@ -4,13 +4,12 @@ const clientId = process.env.REACT_APP_CLIENT_ID;
 // const tokenEndpoint = "https://accounts.spotify.com/api/token";
 
 const redirectUrl = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
-console.log(redirectUrl);
-
 const authorizationEndpoint =
   process.env.REACT_APP_SPOTIFY_AUTHORIZATION_ENDPOINT;
-console.log(authorizationEndpoint);
-
 const tokenEndpoint = process.env.REACT_APP_SPOTIFY_TOKEN_ENDPOINT;
+
+console.log(authorizationEndpoint);
+console.log(redirectUrl);
 console.log(tokenEndpoint);
 
 const scope =
