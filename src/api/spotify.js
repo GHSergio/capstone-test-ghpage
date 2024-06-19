@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // const baseUri = "https://api.spotify.com";
-const baseUri = process.env.REACT_APP_SPOTIFY_API_BASE_URL;
+const baseUri = process.env.REACT_APP_SPOTIFY_API_BASE_URI;
 console.log("spotify env:", baseUri);
 // 從 localStorage 中獲取 accessToken
 const spotifyToken = localStorage.getItem("access_token");

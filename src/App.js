@@ -4,15 +4,15 @@ import PodcastListContext from "./contexts/PodcastListContext";
 // import UserContext from "./contexts/UserContext";
 import PrivateRoute from "./components/PrivateRoute";
 
-const basename = process.env.REACT_APP_BASENAME || "";
+// const basename = process.env.REACT_APP_BASENAME || "";
 
 function App() {
   return (
     <>
       {/* <UserContext> */}
       <PodcastListContext>
-        <BrowserRouter basename={basename}>
-          {/* <BrowserRouter> */}
+        {/* <BrowserRouter basename={basename}> */}
+        <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/callback" element={<Callback />} />

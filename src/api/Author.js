@@ -1,10 +1,18 @@
 const clientId = process.env.REACT_APP_CLIENT_ID;
 // const redirectUrl = "http://localhost:3000/callback";
+// const authorizationEndpoint = "https://accounts.spotify.com/authorize";
+// const tokenEndpoint = "https://accounts.spotify.com/api/token";
+
 const redirectUrl = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
 console.log(redirectUrl);
 
-const authorizationEndpoint = "https://accounts.spotify.com/authorize";
-const tokenEndpoint = "https://accounts.spotify.com/api/token";
+const authorizationEndpoint =
+  process.env.REACT_APP_SPOTIFY_AUTHORIZATION_ENDPOINT;
+console.log(authorizationEndpoint);
+
+const tokenEndpoint = process.env.REACT_APP_SPOTIFY_TOKEN_ENDPOINT;
+console.log(tokenEndpoint);
+
 const scope =
   "streaming user-read-playback-position user-library-read user-modify-playback-state user-read-playback-state user-read-private user-read-email";
 

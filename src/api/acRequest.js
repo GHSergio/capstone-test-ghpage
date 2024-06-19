@@ -1,6 +1,6 @@
 import axios from "axios";
 import { refreshToken } from "./Author";
-const baseUri = process.env.REACT_APP_AC_API_BASE_URL;
+const baseUri = process.env.REACT_APP_AC_API_BASE_URI;
 // const baseUri = "https://spotify-backend.alphacamp.io";
 console.log("acAPI env:", baseUri);
 
