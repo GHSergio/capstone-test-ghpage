@@ -1,6 +1,7 @@
 const clientId = process.env.REACT_APP_CLIENT_ID;
-const redirectUrl = "http://localhost:3000/callback";
-// const redirectUrl = process.env.REACT_REDIRECT_URI;
+// const redirectUrl = "http://localhost:3000/callback";
+const redirectUrl = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
+console.log(redirectUrl);
 
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const tokenEndpoint = "https://accounts.spotify.com/api/token";
