@@ -29,16 +29,8 @@ const Main = () => {
     handleOpenAddCardModal,
     handleCloseAddCardModal,
     // handleConfirmAddCardModal,
-
-    activeEpisode,
-    setCurrentPlayer,
-
-    categoryEmoji,
     setCategoryEmoji,
-    channelList,
     setChannelList,
-
-    mergeCategoryAndEmoji,
 
     // handleGetShowEpisodes,
   } = usePodcastList();
@@ -48,12 +40,9 @@ const Main = () => {
   //初始獲取各項localStorage set 進 state
   //由於只有一開始會從伺服器獲取資訊,從callback切到main都要從localStorage拿
   useEffect(() => {
-    // const channelListData = JSON.parse(localStorage.getItem("channelListData"));
-    // const userProfileData = JSON.parse(localStorage.getItem("userProfileData"));
     const userFavoriteList = JSON.parse(
       localStorage.getItem("userFavoriteList")
     );
-
     const userCategoryContent = JSON.parse(
       localStorage.getItem("userCategoryContent")
     );
@@ -61,14 +50,11 @@ const Main = () => {
       localStorage.getItem("categoryEmojiData")
     );
 
-    // console.log("userProfileData:", userProfileData);
-    // console.log("channelListData:", channelListData);
     console.log("userFavoriteList:", userFavoriteList);
     console.log("userCategoryContent:", userCategoryContent);
     console.log("categoryEmojiData:", categoryEmojiData);
 
     // setUserData(userProfileData); //使用者資訊
-    // setChannelList(channelListData); //channelList
     setFavoriteList(userFavoriteList); //使用者收藏
     setCategoryEmoji(categoryEmojiData); //映射表情
     setCategoryContent(userCategoryContent); //映射後的分類清單

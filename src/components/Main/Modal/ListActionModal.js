@@ -2,10 +2,6 @@ import { usePodcastList } from "../../../contexts/PodcastListContext";
 import { useState, useEffect } from "react";
 import EmojiPicker from "emoji-picker-react";
 import {
-  // CreateAccount,
-  // GetFavoriteIds,
-  // PostFavorite,
-  // RemoveFavorite,
   GetCategory,
   AddCategory,
   deleteCategory,
@@ -16,7 +12,7 @@ import {
   editCategoryEmoji,
   addCategoryEmoji,
   deleteCategoryEmoji,
-} from "../../../api/dbRequest";
+} from "../../../api/supabaseApi";
 
 const ListActionModal = ({
   isOpen,
@@ -264,6 +260,7 @@ const ListActionModal = ({
 
   //選取emoji  setChosenEmoji
   const onEmojiClick = (event, emojiObject) => {
+    // const newEmoji = emojiObject.emoji;
     const newEmoji = event.emoji;
     setChosenEmoji(newEmoji);
     setPickerOpen(false);

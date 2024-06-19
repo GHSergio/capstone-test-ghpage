@@ -94,7 +94,6 @@ export const GetCategory = async () => {
       "userCategoryContent",
       JSON.stringify(response.data.categories)
     );
-    console.log("獲取分類:", response.data.categories);
     return response.data.categories;
   } catch (err) {
     console.error("獲取分類清單時發生錯誤:", err);

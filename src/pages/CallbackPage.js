@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { getUserProfile } from "../api/spotify";
 import { CreateAccount, GetFavoriteIds, GetCategory } from "../api/acRequest";
-import { getCategoryEmoji, getChannelList } from "../api/dbRequest";
+// import { getCategoryEmoji, getChannelList } from "../api/dbRequest";
 import { useNavigate } from "react-router-dom";
-// import { usePodcastList } from "../contexts/PodcastListContext";
-// import { useUser } from "../contexts/UserContext";
+import { getCategoryEmoji, addTestData } from "../api/supabaseApi";
 import "../styles/progressBar.scss";
 
 const Callback = () => {
-  // const {} = usePodcastList();
-  // const { setToken } = useUser();
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0); // 進度狀態
   const [error, setError] = useState(null); // 錯誤狀態
@@ -23,17 +20,6 @@ const Callback = () => {
       return newValue > 100 ? 100 : newValue;
     });
   };
-
-  // const defaultEmojis = [
-  //   {
-  //     emoji: "💤",
-  //     id: "569",
-  //   },
-  //   {
-  //     emoji: "🦍",
-  //     id: "587",
-  //   },
-  // ];
 
   //取得驗證碼後 獲取各項data 並且存入localStorage
   useEffect(() => {
@@ -62,24 +48,28 @@ const Callback = () => {
         // setProgress(40);
         updateProgress(20);
 
-        // 4. 取得db.json分類清單映射表情
+        // // 插入測試數據
+        // await addTestData();
+
+        // 4. 使用 supabase API 獲取 categoryEmoji
         const categoryEmojiData = await getCategoryEmoji();
-        console.log("取得清單映射表情:", categoryEmojiData.data);
+        console.log("取得清單映射表情categoryEmojiData:", categoryEmojiData);
         // 存儲到localStorage
-        localStorage.setItem("userEmojis", JSON.stringify(categoryEmojiData));
+        // localStorage.setItem("userEmojis", JSON.stringify(categoryEmojiData));
         updateProgress(20);
 
-        // 6. 獲取ac清單內容
+        // 5. 獲取ac清單內容
         const userCategoryContent = await GetCategory();
 
-        // console.log("映射表情之前userCategoryContent:", userCategoryContent);
+        console.log("映射表情之前userCategoryContent:", userCategoryContent);
 
         //添加屬性映射 emoji 到分類清單 & 存入localStorage
         const addedEmojiCategoryContent = userCategoryContent.map(
           (category) => {
             const emojiEntry = categoryEmojiData.data.find(
-              (emoji) => emoji.id === category.id
+              (emoji) => parseInt(emoji.id) === parseInt(category.id)
             );
+            console.log("emojiEntry:", emojiEntry);
             return {
               ...category,
               emoji: emojiEntry ? emojiEntry.emoji : "❓",

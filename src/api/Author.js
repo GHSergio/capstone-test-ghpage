@@ -7,10 +7,10 @@ const redirectUrl = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
 const authorizationEndpoint =
   process.env.REACT_APP_SPOTIFY_AUTHORIZATION_ENDPOINT;
 const tokenEndpoint = process.env.REACT_APP_SPOTIFY_TOKEN_ENDPOINT;
-
-console.log(authorizationEndpoint);
-console.log(redirectUrl);
-console.log(tokenEndpoint);
+console.log("clientId:", clientId);
+console.log("authorizationEndpoint:", authorizationEndpoint);
+console.log("redirectUrl:", redirectUrl);
+console.log("tokenEndpoint:", tokenEndpoint);
 
 const scope =
   "streaming user-read-playback-position user-library-read user-modify-playback-state user-read-playback-state user-read-private user-read-email";
