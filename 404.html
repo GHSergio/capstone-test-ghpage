@@ -1,27 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Alpha capstone</title>
+    <meta charset="UTF-8" />
     <script type="text/javascript">
-      window.addEventListener("DOMContentLoaded", (event) => {
-        // 檢查是否有重定向路徑
-        var redirectPath = localStorage.getItem("redirectPath");
-        if (redirectPath) {
-          // 清除重定向路徑
-          localStorage.removeItem("redirectPath");
-          // 重定向到原始路徑
-          window.history.replaceState({}, document.title, redirectPath);
-          window.location.replace(redirectPath);
-        }
-      });
+      var currentPath = window.location.pathname + window.location.search;
+      localStorage.setItem("redirectPath", currentPath);
+      window.location.replace("/capstone-test-ghpage/index.html");
     </script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
-  </body>
+  <body></body>
 </html>
 
 <!-- <!DOCTYPE html>
